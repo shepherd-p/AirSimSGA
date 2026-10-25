@@ -2,8 +2,13 @@
   "schema": 1,
   "project": "AirSimSGA",
   "version": "0.1.0",
-  "created_utc": "2026-10-25T23:30:02.280943+00:00",
+  "created_utc": "2026-10-25T23:33:36.629082+00:00",
   "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 166,
+      "sha256": "46d70be950c3744465dc8a7755b29f3edbc8bb31ab776f339a659f337e5c9c49"
+    },
     {
       "path": ".gitignore",
       "bytes": 275,

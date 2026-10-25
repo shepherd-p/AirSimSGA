@@ -1,0 +1,3 @@
+# Preserve the exact bytes of source overlays and recorded evidence on checkout.
+# RELEASE_MANIFEST.json and native profile hashes use these canonical bytes.
+* -text
