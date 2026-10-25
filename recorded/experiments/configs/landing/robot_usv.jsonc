@@ -1,0 +1,288 @@
+{
+  "physics-type": "fast-physics",
+  "links": [
+    {
+      "name": "hull",
+      "inertial": {
+        "mass": 750.0,
+        "inertia": {
+          "type": "matrix",
+          "geometry": {
+            "box": {
+              "size": "5.0 2.0 1.0"
+            }
+          }
+        }
+      },
+      "collision": {
+        "restitution": 0.0,
+        "friction": 0.5,
+        "enabled": false
+      },
+      "visual": {
+        "origin": {
+          "xyz": "0 0 -1.2",
+          "rpy-deg": "0 0 0"
+        },
+        "geometry": {
+          "type": "unreal_mesh",
+          "name": "/Game/Models/Vessel/Boat"
+        }
+      }
+    },
+    {
+      "name": "landing_tag",
+      "visual": {
+        "origin": {
+          "xyz": "-3.0 0.0 -2.77",
+          "rpy-deg": "0 0 180"
+        },
+        "geometry": {
+          "type": "unreal_mesh",
+          "name": "/Game/Models/Vessel/Apriltag/Game/CityPark/Maps/_GENERATED/Stephen/SM_Apriltag_1_Plane",
+          "scale": "0.45 0.5319 0.3"
+        }
+      },
+      "inertial": {
+        "mass": 0.01,
+        "inertia": {
+          "type": "point-mass"
+        }
+      },
+      "collision": {
+        "enabled": false
+      }
+    },
+    {
+      "name": "landing_support",
+      "inertial": {
+        "mass": 0.1,
+        "inertia": {
+          "type": "point-mass"
+        }
+      },
+      "collision": {
+        "enabled": true,
+        "restitution": 0.02,
+        "friction": 0.85
+      },
+      "visual": {
+        "origin": {
+          "xyz": "-3.0 0.0 -2.75",
+          "rpy-deg": "0 0 180"
+        },
+        "geometry": {
+          "type": "unreal_mesh",
+          "scale": "2.2 1.6 1.0",
+          "name": "/Game/Models/Vessel/Apriltag/Game/CityPark/Maps/_GENERATED/Stephen/SM_Landing_Tag"
+        }
+      }
+    }
+  ],
+  "joints": [
+    {
+      "id": "hull_landing_tag",
+      "type": "fixed",
+      "parent-link": "hull",
+      "child-link": "landing_tag",
+      "axis": "0 0 1"
+    },
+    {
+      "id": "hull_support",
+      "type": "fixed",
+      "parent-link": "hull",
+      "child-link": "landing_support",
+      "axis": "0 0 1"
+    }
+  ],
+  "sensors": [],
+  "robot-type": "vessel",
+  "environment": {
+    "water_level": 8.8,
+    "wave_interaction": true,
+    "current_interaction": true,
+    "wind_interaction": true
+  },
+  "vessel": {
+    "physics": {
+      "engine": "vessel_physics",
+      "mass": 750.0,
+      "inertia": {
+        "xx": 100.0,
+        "yy": 500.0,
+        "zz": 400.0
+      },
+      "center_of_mass": [
+        0.0,
+        0.0,
+        -0.2
+      ],
+      "center_of_buoyancy": [
+        0.0,
+        0.0,
+        -0.1
+      ],
+      "hydrodynamics": {
+        "model": "fossen_3dof",
+        "added_mass": {
+          "xu_dot": -25.0,
+          "yv_dot": -240.0,
+          "nr_dot": -50.0
+        },
+        "linear_damping": {
+          "xu": -70.0,
+          "yv": -100.0,
+          "nr": -50.0
+        },
+        "quadratic_damping": {
+          "xu_abs_u": -135.0,
+          "yv_abs_v": -2000.0,
+          "nr_abs_r": -50.0
+        }
+      }
+    },
+    "actuators": {
+      "thrusters": [
+        {
+          "name": "bow_thruster",
+          "type": "tunnel",
+          "max_force": 200.0,
+          "position": [
+            2.0,
+            0.0,
+            -0.5
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            90.0
+          ]
+        },
+        {
+          "name": "main_thruster_port",
+          "type": "azimuth",
+          "max_force": 500.0,
+          "position": [
+            -2.0,
+            -0.5,
+            -0.5
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "azimuth_range": [
+            -45.0,
+            45.0
+          ]
+        },
+        {
+          "name": "main_thruster_starboard",
+          "type": "azimuth",
+          "max_force": 500.0,
+          "position": [
+            -2.0,
+            0.5,
+            -0.5
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "azimuth_range": [
+            -45.0,
+            45.0
+          ]
+        }
+      ]
+    },
+    "sensors": [
+      {
+        "name": "imu",
+        "type": "imu",
+        "enabled": true,
+        "position": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "gps",
+        "type": "gps",
+        "enabled": true,
+        "position": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "noise": {
+          "position": 0.1,
+          "velocity": 0.05
+        }
+      },
+      {
+        "name": "maritime_radar",
+        "type": "maritime_radar",
+        "enabled": true,
+        "position": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "range_max": 5000.0,
+          "range_min": 10.0,
+          "azimuth_fov": 360.0,
+          "range_resolution": 1.0,
+          "azimuth_resolution": 1.0,
+          "update_rate": 10.0,
+          "psf_enabled": true
+        }
+      },
+      {
+        "name": "front_camera",
+        "type": "camera",
+        "enabled": true,
+        "position": [
+          1.5,
+          0.0,
+          1.0
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "width": 1920,
+          "height": 1080,
+          "fov": 90.0
+        }
+      }
+    ],
+    "environment": {
+      "water_level": 8.8,
+      "wave_interaction": true,
+      "current_interaction": true,
+      "wind_interaction": true
+    }
+  }
+}

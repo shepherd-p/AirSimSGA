@@ -1,0 +1,3223 @@
+{
+  "schema": 1,
+  "project": "AirSimSGA",
+  "version": "0.1.0",
+  "created_utc": "2026-10-25T23:30:02.280943+00:00",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 275,
+      "sha256": "87644936a13979588a135fc9b58fe97068d76270b5265ec6b02dc25f44065421"
+    },
+    {
+      "path": "airsimsga/__init__.py",
+      "bytes": 183,
+      "sha256": "d9975c252d0d8e27c8cfe3bcef42977f9e029b2e77239ee26ed8ab527d94a8df"
+    },
+    {
+      "path": "airsimsga/__main__.py",
+      "bytes": 49,
+      "sha256": "8134dc71036ab6fef7cb605ec59b400b2864890fc00526f9763c447e2937e295"
+    },
+    {
+      "path": "airsimsga/cli.py",
+      "bytes": 7236,
+      "sha256": "0c812aefe22e6e818ea77b3828e32ed16fc8a1159ab220800573008f6ec964e0"
+    },
+    {
+      "path": "airsimsga/surface_vehicle.py",
+      "bytes": 1291,
+      "sha256": "7fd409227c73a5df1ce6d538793be2673c8e360109c99800f69f39ed0daff3db"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 732,
+      "sha256": "bc1992357c3bfc69f7f8b0e2207f7db1d36fb5c5a2ccf906f8d614460e2dc439"
+    },
+    {
+      "path": "data/paper/evidence/figure_sources_sha256.json",
+      "bytes": 1767,
+      "sha256": "ff2d9b75568790f805e7299f96530277e31919bd02be575c608e463247b27681"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012212_495574_1uav_1ugv/config.json",
+      "bytes": 1101,
+      "sha256": "60c52a175cb3759d549212fcab7aee7e67e7e676df5cc8db7d35f82a4c57bad6"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012212_495574_1uav_1ugv/provenance.json",
+      "bytes": 1098,
+      "sha256": "8a3d4571a016ad3f7ca8cf5d6396a92acbd2dc71a3bfc36a912c202d11fea803"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012212_495574_1uav_1ugv/resources.csv",
+      "bytes": 22787,
+      "sha256": "9ad9043667aa2c244ea1c0cb722ded5d9f791412aeb4e0c12ac5088ec6b0555a"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012212_495574_1uav_1ugv/summary.json",
+      "bytes": 1975,
+      "sha256": "28ffb673fd6302e72e13d7505bcc1fe435e172748135a430d5bcd8b637d95acb"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012446_347613_2uav_2ugv/config.json",
+      "bytes": 1101,
+      "sha256": "48fbbc13c3546648adbe892be81eed145067132bbd977755fa99ec11755983e9"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012446_347613_2uav_2ugv/provenance.json",
+      "bytes": 1098,
+      "sha256": "3c380ace13ff8d2f6233c8d24eda5dbb608b70df7a4ad6480fb0d8b7f1f78efa"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012446_347613_2uav_2ugv/resources.csv",
+      "bytes": 10085,
+      "sha256": "46bb24d653b34faa15dfd334e66fa279b46c118ef42bccc0dfb8fdd652835689"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012446_347613_2uav_2ugv/summary.json",
+      "bytes": 2475,
+      "sha256": "33456e076bffb535dcec5af203bf8fd9fff3186dbf403d1be7775251c28ec4b4"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012618_432574_3uav_3ugv/config.json",
+      "bytes": 1101,
+      "sha256": "a191a6434c916fe93ae8cac2a48536a10d1b7a8d363958e627e55c93b04ddcef"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012618_432574_3uav_3ugv/provenance.json",
+      "bytes": 1098,
+      "sha256": "388b230fd46157f5373c248ed7007b6f2ba7cbe603d80c1a3ad973c681be46e6"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012618_432574_3uav_3ugv/resources.csv",
+      "bytes": 10263,
+      "sha256": "563438cc2461753e022ec19bd265ce258f1519414bca95f2566a6e3fda3f775e"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012618_432574_3uav_3ugv/summary.json",
+      "bytes": 2848,
+      "sha256": "c20c20306cdbe009d143804a448785f345de347943895f7843bb7af071dd9c69"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012748_397268_1uav_1ugv/config.json",
+      "bytes": 1101,
+      "sha256": "60c52a175cb3759d549212fcab7aee7e67e7e676df5cc8db7d35f82a4c57bad6"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012748_397268_1uav_1ugv/provenance.json",
+      "bytes": 1098,
+      "sha256": "8a3d4571a016ad3f7ca8cf5d6396a92acbd2dc71a3bfc36a912c202d11fea803"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012748_397268_1uav_1ugv/resources.csv",
+      "bytes": 18327,
+      "sha256": "7696f9f2b38fd0d1a9e70dd8cd1938d07e0b902562be5ca8e3b34440e9e0e3e2"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_012748_397268_1uav_1ugv/summary.json",
+      "bytes": 1971,
+      "sha256": "486e44eb0fa6a643df6e36cfb482380605f9f57737723b4006bca8eb47b27d23"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_013029_166926_2uav_2ugv/config.json",
+      "bytes": 1101,
+      "sha256": "48fbbc13c3546648adbe892be81eed145067132bbd977755fa99ec11755983e9"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_013029_166926_2uav_2ugv/provenance.json",
+      "bytes": 1098,
+      "sha256": "3c380ace13ff8d2f6233c8d24eda5dbb608b70df7a4ad6480fb0d8b7f1f78efa"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_013029_166926_2uav_2ugv/resources.csv",
+      "bytes": 27319,
+      "sha256": "23045e858590e19244802e382eb850928b6fdc0353337e1114bea464c2d92561"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_013029_166926_2uav_2ugv/summary.json",
+      "bytes": 2427,
+      "sha256": "79ed99e3f21a228934a0c04993c2d6a7f01fa2d5ad9b55dbdf6a3052923592f7"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_013345_775193_3uav_3ugv/config.json",
+      "bytes": 1101,
+      "sha256": "a191a6434c916fe93ae8cac2a48536a10d1b7a8d363958e627e55c93b04ddcef"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_013345_775193_3uav_3ugv/provenance.json",
+      "bytes": 1098,
+      "sha256": "388b230fd46157f5373c248ed7007b6f2ba7cbe603d80c1a3ad973c681be46e6"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_013345_775193_3uav_3ugv/resources.csv",
+      "bytes": 29122,
+      "sha256": "923a19ed203c266510aafdf2b9d20a9842a87dad1dd7bcfc7801e8f23916a829"
+    },
+    {
+      "path": "data/paper/evidence/fleet/20260929_013345_775193_3uav_3ugv/summary.json",
+      "bytes": 2811,
+      "sha256": "8e0ec05a733209b75509a5653a7d460481ccdc3c23b0e05ce51376d33147750e"
+    },
+    {
+      "path": "data/paper/evidence/fleet_diagnostics.json",
+      "bytes": 11864,
+      "sha256": "99b0bf7b75dc7b98cf1c4ba53bf53ffd57b64087f34a669b0197c3ca3926e31b"
+    },
+    {
+      "path": "data/paper/evidence/landing_config.json",
+      "bytes": 4630,
+      "sha256": "e98090eeb0b2b92b347aa7be29f7142d3fd50eb6728de255f8bf470156c8ab38"
+    },
+    {
+      "path": "data/paper/evidence/landing_diagnostics.json",
+      "bytes": 1121,
+      "sha256": "bd03abadfb5412f75409c83889736dc283b0136ee296fd854f0a4a7362f9b810"
+    },
+    {
+      "path": "data/paper/evidence/landing_events.csv",
+      "bytes": 110,
+      "sha256": "c615efd4b38faf6c617fd796ff184727aae51cc22831cf3de7de5dabe1afc562"
+    },
+    {
+      "path": "data/paper/evidence/landing_receipt.json",
+      "bytes": 227,
+      "sha256": "232ccbb72b895ab375ad472a51db04fb166b12e600e16421a533b215bea2543d"
+    },
+    {
+      "path": "data/paper/evidence/landing_trajectory.csv",
+      "bytes": 289342,
+      "sha256": "a7dac8636bea8801baa86999af7609a7b2e0729cc7ab451df1b3ba4efe28dd4f"
+    },
+    {
+      "path": "data/paper/evidence/mapping/config.json",
+      "bytes": 6781,
+      "sha256": "d892f9176d65c8e316bce4fe4731274f9d814b91bab859832f52ca4d57556a72"
+    },
+    {
+      "path": "data/paper/evidence/mapping/images.csv",
+      "bytes": 13241,
+      "sha256": "f6313d8d9ee5550cf7d5516cd30deab7b099f19d0405426ad0d184c082ffde98"
+    },
+    {
+      "path": "data/paper/evidence/mapping/lidar_capture.json",
+      "bytes": 329,
+      "sha256": "ecde48b9fa08e116e1fdfec4281b3a6f87ee37c13f444acfe4da7d2b813c6fde"
+    },
+    {
+      "path": "data/paper/evidence/mapping/loop_completion.json",
+      "bytes": 134,
+      "sha256": "0bd05f3cd020009ac161b0b6c0a4acb9e0491c96d051d70bcf72fb7ad66f3d2e"
+    },
+    {
+      "path": "data/paper/evidence/mapping/manifest.json",
+      "bytes": 1212,
+      "sha256": "2c767d324c2444bbad0712703df37aa8b2d44dc499ce4c60c0930a343b53ca1e"
+    },
+    {
+      "path": "data/paper/evidence/mapping/plaza_results/lidar_quality.json",
+      "bytes": 583,
+      "sha256": "a29838f6db0910615f41ceea3c35d8f5db003a0c1b04dbdf55fbdbeae5c0ecbc"
+    },
+    {
+      "path": "data/paper/evidence/mapping/plaza_results/surface/pose_refinement.json",
+      "bytes": 224719,
+      "sha256": "8b136ea5bd55fcb638332f5d7a6ff2c9f368cc31c6198ff90413b5d132e52553"
+    },
+    {
+      "path": "data/paper/evidence/mapping/plaza_results/surface/quality.json",
+      "bytes": 1447,
+      "sha256": "4dd2ec3b9d153da16457c1b5eb2e17c527b8ddc82a814fba8df150bda84b6452"
+    },
+    {
+      "path": "data/paper/evidence/mapping/reference_routes.json",
+      "bytes": 4187,
+      "sha256": "f75560d4423c510afede0a61fb4b71b4b22a8340974fb9ffb05d03bb70eb0923"
+    },
+    {
+      "path": "data/paper/evidence/mapping/scans.csv",
+      "bytes": 1721534,
+      "sha256": "36778e8ebe242d4cfcb29f1055960b99716be409aef338f295c76e9b4bc2ccee"
+    },
+    {
+      "path": "data/paper/evidence/mapping/trajectories.csv",
+      "bytes": 164130,
+      "sha256": "9a3424e751a472d03fcb8500b015acbd17805ea3758e89271a4f8cfe82e597fd"
+    },
+    {
+      "path": "data/paper/evidence/mapping/verification/plaza_lidar_replay_audit.json",
+      "bytes": 809,
+      "sha256": "8a1407416424225a405b641f0f25cea1c57de4bd9940d898ac7db746e73f1ce6"
+    },
+    {
+      "path": "data/paper/evidence/mapping/verification/plaza_records_audit.json",
+      "bytes": 2981,
+      "sha256": "bbf423bbaaf76fe5e54f8ad077108bde837ce9ce68f66dda44f4b18f11a355c5"
+    },
+    {
+      "path": "data/paper/evidence/metrics.json",
+      "bytes": 5922,
+      "sha256": "24c511d8020d9920e8ddc49177fa36dca11ed3057014f5ee2ec82936d3e06131"
+    },
+    {
+      "path": "data/paper/evidence/navigation_committed_plan.json",
+      "bytes": 5169,
+      "sha256": "0334d0d53fcc96fe625a5adbcf61a34f948dd9db094855d3a70ab828e81340bb"
+    },
+    {
+      "path": "data/paper/evidence/navigation_derived.csv",
+      "bytes": 20143,
+      "sha256": "9599a77b696db9bb870dc1f3068e0d872d514182e26008fd1098f4e65bbe2c91"
+    },
+    {
+      "path": "data/paper/evidence/navigation_scenario.json",
+      "bytes": 1761,
+      "sha256": "8bf8d557fdbd8ef90240714d21c3676c9eb639a76aaeddca59ff2606fc670c28"
+    },
+    {
+      "path": "data/paper/evidence/navigation_summary.json",
+      "bytes": 17254,
+      "sha256": "94aab2dead6d981dfe32c05609f03452198159d2dbbb4e92c7d3585b27402602"
+    },
+    {
+      "path": "data/paper/evidence/navigation_trajectories_controls.csv",
+      "bytes": 273639,
+      "sha256": "2f58d0a358b62cd9cf55c999f643d087a1d399c02639fd4964a95d90c0df878c"
+    },
+    {
+      "path": "data/paper/evidence/recomputed_task_metrics.json",
+      "bytes": 1607,
+      "sha256": "b5d033652add71616bb297e3e1996a8188ff7d7531995811041ca8856b5b3010"
+    },
+    {
+      "path": "data/paper/evidence/task_metrics.json",
+      "bytes": 5922,
+      "sha256": "24c511d8020d9920e8ddc49177fa36dca11ed3057014f5ee2ec82936d3e06131"
+    },
+    {
+      "path": "data/paper/evidence/tracking_config.json",
+      "bytes": 1461,
+      "sha256": "ddcce413bf5fb647a98ce870db583335fe0b200c45563a42845dfdd9063b9754"
+    },
+    {
+      "path": "data/paper/evidence/tracking_derived.csv",
+      "bytes": 15833,
+      "sha256": "26a5f848113f75bbceed976fd061a1c1e23b5217183126bc9958af64d33ceb7d"
+    },
+    {
+      "path": "data/paper/evidence/tracking_events.jsonl",
+      "bytes": 598,
+      "sha256": "c7ad6876ea5562502a54f1f31f4634e509afbb3fb78ee29f94f07651a1fcb384"
+    },
+    {
+      "path": "data/paper/evidence/tracking_scenario.json",
+      "bytes": 2607,
+      "sha256": "a8e7034fe26b3a280014d57cb78480023392e1bd4c28ccc0395fb864e83ae6d8"
+    },
+    {
+      "path": "data/paper/evidence/tracking_summary.json",
+      "bytes": 5280,
+      "sha256": "41fbad335d25d0b2361588fd533db0688bfa4fe44e611ddfec2926d7305867af"
+    },
+    {
+      "path": "data/paper/evidence/tracking_tracking.csv",
+      "bytes": 19595,
+      "sha256": "861021b32789d9da0f45968dbe32710cb0d1ad0013dd00ec722dda0c6e79dfd7"
+    },
+    {
+      "path": "data/paper/evidence/tracking_trajectories_controls.csv",
+      "bytes": 175741,
+      "sha256": "0ec62d9fff7845898e2e3648f6f2185e1b52fb2d89aef7fe836b217de02321be"
+    },
+    {
+      "path": "data/paper/README.md",
+      "bytes": 2362,
+      "sha256": "f5b06a54664cf1d841290d0db20c95487681760e0553a52ab5a718798309c263"
+    },
+    {
+      "path": "data/paper/tools/recompute_archive_diagnostics.py",
+      "bytes": 5075,
+      "sha256": "e5363b4a5d60d724399266c40c673ffdbb430f031442db8b73148df01c77486b"
+    },
+    {
+      "path": "data/paper/tools/recompute_task_metrics.py",
+      "bytes": 3896,
+      "sha256": "45f269a84b15d6f53c40880c80e78a14bb40e10b982c42fda782ca453386abde"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 1504,
+      "sha256": "fc2ee7646062363745e6f55f3e6ee600cc27bd2fb1b90e684fa1ae7f8cebc673"
+    },
+    {
+      "path": "docs/asset_requirements.json",
+      "bytes": 3411,
+      "sha256": "2b71138ea2b936bcf046d0a4c8bc778e4bb6b8e4750c8095feab34766bd0e148"
+    },
+    {
+      "path": "docs/assets.md",
+      "bytes": 1833,
+      "sha256": "e491ddd9889f7ec63f166b7bb07f56bd979ea0449a38552ddceb27688e869558"
+    },
+    {
+      "path": "docs/build.md",
+      "bytes": 4576,
+      "sha256": "4a368e6615431481faae3b3a3446f7a96e504a19c4fe4a7b733170bd6f3d8403"
+    },
+    {
+      "path": "docs/CITYSAMPLE_RESTORE.md",
+      "bytes": 1801,
+      "sha256": "07810490baa2fcc5d646819031ef9387daf3e7cae8d81c46084e7336451248d0"
+    },
+    {
+      "path": "docs/contributions.md",
+      "bytes": 1123,
+      "sha256": "7cae57c9d2497bdf48fc81cf149973deca20c107464f6f87198bf6cb01200e9d"
+    },
+    {
+      "path": "docs/DATA_INDEX.md",
+      "bytes": 1940,
+      "sha256": "776e3ea7ac1d2a03700bcd1044e844df669f151847ee7621380b34c2f26005a7"
+    },
+    {
+      "path": "docs/experiments.md",
+      "bytes": 3951,
+      "sha256": "24b1ef0e153278315abb3995d7d17e3cf7b102fa56ab29547efdcc722f04c157"
+    },
+    {
+      "path": "docs/limitations.md",
+      "bytes": 1006,
+      "sha256": "52af5c9006c28d3794d4eebd0e1dfeff1478c987e5a5eef2e876f5cf041ffc7f"
+    },
+    {
+      "path": "docs/recorded_release.md",
+      "bytes": 3721,
+      "sha256": "512485e52edfd0d691f8b3415f6b9d4742daa1e1f602b389bd1a61b966cbce91"
+    },
+    {
+      "path": "docs/reviewer_reproduction.md",
+      "bytes": 1717,
+      "sha256": "38473a2cef9ba82dc639fd318cba00662e0315a6533d0d360ce92c27c4e842d9"
+    },
+    {
+      "path": "docs/source_package_guide.md",
+      "bytes": 504,
+      "sha256": "492aae1faee16389aaec2ca601d1a2d521d179b8847ebd64fad6facabd38b639"
+    },
+    {
+      "path": "evidence/containment/config.json",
+      "bytes": 1461,
+      "sha256": "ddcce413bf5fb647a98ce870db583335fe0b200c45563a42845dfdd9063b9754"
+    },
+    {
+      "path": "evidence/containment/events.jsonl",
+      "bytes": 598,
+      "sha256": "c7ad6876ea5562502a54f1f31f4634e509afbb3fb78ee29f94f07651a1fcb384"
+    },
+    {
+      "path": "evidence/containment/scenario.json",
+      "bytes": 2607,
+      "sha256": "a8e7034fe26b3a280014d57cb78480023392e1bd4c28ccc0395fb864e83ae6d8"
+    },
+    {
+      "path": "evidence/containment/summary.json",
+      "bytes": 5280,
+      "sha256": "41fbad335d25d0b2361588fd533db0688bfa4fe44e611ddfec2926d7305867af"
+    },
+    {
+      "path": "evidence/containment/tracking.csv",
+      "bytes": 19595,
+      "sha256": "861021b32789d9da0f45968dbe32710cb0d1ad0013dd00ec722dda0c6e79dfd7"
+    },
+    {
+      "path": "evidence/containment/trajectories_controls.csv",
+      "bytes": 175741,
+      "sha256": "0ec62d9fff7845898e2e3648f6f2185e1b52fb2d89aef7fe836b217de02321be"
+    },
+    {
+      "path": "evidence/current_paper_metrics.json",
+      "bytes": 5922,
+      "sha256": "24c511d8020d9920e8ddc49177fa36dca11ed3057014f5ee2ec82936d3e06131"
+    },
+    {
+      "path": "evidence/index.json",
+      "bytes": 13143,
+      "sha256": "eebb1c65edb777e341cbbaa4acf51fd059990279db0029ea27a07b76f68acb0e"
+    },
+    {
+      "path": "evidence/landing/config.json",
+      "bytes": 4630,
+      "sha256": "e98090eeb0b2b92b347aa7be29f7142d3fd50eb6728de255f8bf470156c8ab38"
+    },
+    {
+      "path": "evidence/landing/events.csv",
+      "bytes": 110,
+      "sha256": "c615efd4b38faf6c617fd796ff184727aae51cc22831cf3de7de5dabe1afc562"
+    },
+    {
+      "path": "evidence/landing/receipt.json",
+      "bytes": 227,
+      "sha256": "232ccbb72b895ab375ad472a51db04fb166b12e600e16421a533b215bea2543d"
+    },
+    {
+      "path": "evidence/landing/resolved_scene.json",
+      "bytes": 18991,
+      "sha256": "e8aa1c82f287bcd6a72c035fe03af72b50412cc4fa0428df4724168cf38c0553"
+    },
+    {
+      "path": "evidence/landing/trajectory.csv",
+      "bytes": 289342,
+      "sha256": "a7dac8636bea8801baa86999af7609a7b2e0729cc7ab451df1b3ba4efe28dd4f"
+    },
+    {
+      "path": "evidence/mapping/controls.csv",
+      "bytes": 47772,
+      "sha256": "4eeffd6f7526c2888a67d76ba70e1627b16ed4683b4c7b36a5f18db43bd64bb8"
+    },
+    {
+      "path": "evidence/mapping/loop_completion.json",
+      "bytes": 129,
+      "sha256": "a903a80a73bc9c4c1828a5d5afdc5b09bb7fd37294818393d2da1ae432602c9c"
+    },
+    {
+      "path": "evidence/mapping/manifest.json",
+      "bytes": 1171,
+      "sha256": "fbb6f3015b9a1fb1de3e9ec3c92cf88f82e8677869cbf82ce1de86fe555bd026"
+    },
+    {
+      "path": "evidence/mapping/plaza_lidar_replay_audit.json",
+      "bytes": 787,
+      "sha256": "4dcd6698a941b9b6644b2fe7d0b0a88b2bf77851bb62c144ce931602279822f4"
+    },
+    {
+      "path": "evidence/mapping/plaza_records_audit.json",
+      "bytes": 2882,
+      "sha256": "908ac88b44ef8ae038b5f9f7c29d3c74e775ddc59609c9edc380db4401f209b6"
+    },
+    {
+      "path": "evidence/mapping/reference_routes.json",
+      "bytes": 3878,
+      "sha256": "979229f937483627292d1d5bcd50a53ba673d9f28e29f3817b06997ed2a8e248"
+    },
+    {
+      "path": "evidence/mapping/source_sha256.json",
+      "bytes": 2831,
+      "sha256": "f97328c2d257ce943474803ce5e286d97242db8ec5530f1483ea4242fe0bf662"
+    },
+    {
+      "path": "evidence/mapping/trajectories.csv",
+      "bytes": 164130,
+      "sha256": "9a3424e751a472d03fcb8500b015acbd17805ea3758e89271a4f8cfe82e597fd"
+    },
+    {
+      "path": "evidence/native_historical/build_identity.json",
+      "bytes": 3730,
+      "sha256": "79430fd2324ed87cc5486ff47716b958194ecda4672e5639f921b8a1ebf3272a"
+    },
+    {
+      "path": "evidence/native_historical/firmware_tests.json",
+      "bytes": 762,
+      "sha256": "7f805c18535186f085bb5bb4bd73d1d6a2e5f9dd942f2f6d6d6ea63006554517"
+    },
+    {
+      "path": "evidence/native_historical/physics_tests.json",
+      "bytes": 3863,
+      "sha256": "d6c72e1c7a86b09dd9af0ca3eddf5396893f22f3d6a8db1f2f6872b47171916c"
+    },
+    {
+      "path": "evidence/native_historical/regression_tests.json",
+      "bytes": 10139,
+      "sha256": "7bbee9b6291cb7233bbf8a27a2db8d31840904a110cfabd9dabdd5109bd068f9"
+    },
+    {
+      "path": "evidence/navigation/committed_plan.json",
+      "bytes": 5169,
+      "sha256": "0334d0d53fcc96fe625a5adbcf61a34f948dd9db094855d3a70ab828e81340bb"
+    },
+    {
+      "path": "evidence/navigation/config.json",
+      "bytes": 1272,
+      "sha256": "393d3bbad0e0ac0a6744280d7707c892cd60cd8688010707ebfc288feafa3d77"
+    },
+    {
+      "path": "evidence/navigation/events.jsonl",
+      "bytes": 6978,
+      "sha256": "974e82bc99a191b579378523ceec2d3655013cc5bdd33058b8462d2bddb1a08e"
+    },
+    {
+      "path": "evidence/navigation/scenario.json",
+      "bytes": 1761,
+      "sha256": "8bf8d557fdbd8ef90240714d21c3676c9eb639a76aaeddca59ff2606fc670c28"
+    },
+    {
+      "path": "evidence/navigation/summary.json",
+      "bytes": 17254,
+      "sha256": "94aab2dead6d981dfe32c05609f03452198159d2dbbb4e92c7d3585b27402602"
+    },
+    {
+      "path": "evidence/navigation/trajectories_controls.csv",
+      "bytes": 273639,
+      "sha256": "2f58d0a358b62cd9cf55c999f643d087a1d399c02639fd4964a95d90c0df878c"
+    },
+    {
+      "path": "experiments/ag/__init__.py",
+      "bytes": 80,
+      "sha256": "acd39db8fc52a5d5394b5d94d736ffa4651bb1368e96c6b5783c7d8b56041f37"
+    },
+    {
+      "path": "experiments/ag/backend.py",
+      "bytes": 16518,
+      "sha256": "5f916ff4f30e9e77d9eb978d1f5b557893b2cec91cbfeac7d1df7252028b98d9"
+    },
+    {
+      "path": "experiments/ag/cli.py",
+      "bytes": 5346,
+      "sha256": "29c2e73c19d76445b9cbf57b87810607182637a82b5d6ba116956b73e5af406c"
+    },
+    {
+      "path": "experiments/ag/contact.py",
+      "bytes": 373,
+      "sha256": "197b447847430c5b8ebc7e2b1139ca58f18c4723778cb1aab79cfac24375e65c"
+    },
+    {
+      "path": "experiments/ag/cooperative_study.py",
+      "bytes": 17391,
+      "sha256": "7268d4962591653fb8f3701bf4b9ed65766e9d809c616be43d7d244d7c1538c5"
+    },
+    {
+      "path": "experiments/ag/dense_capture.py",
+      "bytes": 3500,
+      "sha256": "cab913f236c7405aa6e967cbe2b35c86254e59615b88d6b9bea953d6f013cb4f"
+    },
+    {
+      "path": "experiments/ag/experiments.py",
+      "bytes": 25833,
+      "sha256": "2cb4ff04145b26526cd7b5b04d2e6d5abb041c709e9807452a667bc6221e1959"
+    },
+    {
+      "path": "experiments/ag/figure_plot.py",
+      "bytes": 5820,
+      "sha256": "39f7b71aa133d9ea473b38dedf4487566307adc68e39792f08dbac38d89c5800"
+    },
+    {
+      "path": "experiments/ag/figure_render.py",
+      "bytes": 5944,
+      "sha256": "f385e3f8fec48b0a1740edd13a0c018d88f9146467fa9a9dde47198be4041963"
+    },
+    {
+      "path": "experiments/ag/fonts.py",
+      "bytes": 427,
+      "sha256": "8edeba84cd01e88f09c1fa5d96dc06f8efd511c181426b2023be40f3e5df36a4"
+    },
+    {
+      "path": "experiments/ag/landing_core.py",
+      "bytes": 5116,
+      "sha256": "0e1476362c7b0b6d43fe7fa14fccf496424534e58c14c35d5a2cb031ed9a30d8"
+    },
+    {
+      "path": "experiments/ag/landing_evidence.py",
+      "bytes": 7480,
+      "sha256": "89fe82f2f2f043de032137a237e7367a8d5e2750f7f42169cd35b0c02911b7be"
+    },
+    {
+      "path": "experiments/ag/landing_figures.py",
+      "bytes": 11502,
+      "sha256": "70e2586df1d6b05b1d9479c7950187b42a32178544ccff688b066ffb1b3b2518"
+    },
+    {
+      "path": "experiments/ag/landing_runtime.py",
+      "bytes": 20420,
+      "sha256": "4faf9cccfc4ee4e06c31faa5439ee93768c7d534bde62a675c749e43cfaa0775"
+    },
+    {
+      "path": "experiments/ag/landing_vision.py",
+      "bytes": 3652,
+      "sha256": "434d5f66b72917c69033c298bbd4fd513477b3546bae0baa0a6cffe234099de7"
+    },
+    {
+      "path": "experiments/ag/map3d.py",
+      "bytes": 2828,
+      "sha256": "ca7ab2819cccb30aeee6508ce9ce1468b4afe8e86dca176f0676fad44694c1df"
+    },
+    {
+      "path": "experiments/ag/map3d_template.html",
+      "bytes": 15537,
+      "sha256": "18230535756dd9fd051a954e8af32d64798b88144872667d6a8e8a836aa51b97"
+    },
+    {
+      "path": "experiments/ag/math3d.py",
+      "bytes": 4614,
+      "sha256": "499e1306db53642546d966e3bf8d76e6db41e8905e858cfbbb073efcc2b257c3"
+    },
+    {
+      "path": "experiments/ag/planning.py",
+      "bytes": 6578,
+      "sha256": "dcd932fa2390aa167e8e46f3ea4e892344556a63a1af66cdb030d17573971239"
+    },
+    {
+      "path": "experiments/ag/plaza.py",
+      "bytes": 4565,
+      "sha256": "0bb1f5a31e91473d723ab4c5d908c4a98494bfe06fb8bad0ff8aecee20bb598b"
+    },
+    {
+      "path": "experiments/ag/plaza_reconstruction.py",
+      "bytes": 7421,
+      "sha256": "54779d5540de906f2bf1b4412d58ade713c4a93f526e7bc60816d3b3b5db945b"
+    },
+    {
+      "path": "experiments/ag/portable.py",
+      "bytes": 2266,
+      "sha256": "d9d02fa431639b130562424647dd0f9dedb649764ca2c1aacd40e5f86c94ebca"
+    },
+    {
+      "path": "experiments/ag/reconstruction.py",
+      "bytes": 17107,
+      "sha256": "a5d74e02cbc7696604f6c81607f7446b70e68c7170cb24e27a8146121a29b268"
+    },
+    {
+      "path": "experiments/ag/scan_capture.py",
+      "bytes": 3796,
+      "sha256": "5c7a8fb36fe5fc6271817639edce857844e4d32e511bbacd3f84aa0ec31f4e72"
+    },
+    {
+      "path": "experiments/ag/scene_figure.py",
+      "bytes": 2735,
+      "sha256": "f2074aba5c2fb15a8cba292fba47fa1e3728692d22dec98d217b058e7072324b"
+    },
+    {
+      "path": "experiments/ag/storage.py",
+      "bytes": 4159,
+      "sha256": "a799a64193eb920bda1cd50346d80405262d0fdca89b33006968fab2c0f52aa7"
+    },
+    {
+      "path": "experiments/ag/study_audit.py",
+      "bytes": 27470,
+      "sha256": "36fcbed3187c8f3829ad0f4d4eac1a88aa5c637d32892f3323535f113d907a67"
+    },
+    {
+      "path": "experiments/ag/study_figures.py",
+      "bytes": 32506,
+      "sha256": "870c3e6ceb61e393f08a84e3698e7e0ee5fb21dd3d6ce9d8e388011689ed139d"
+    },
+    {
+      "path": "experiments/ag/study_planning.py",
+      "bytes": 4958,
+      "sha256": "12f14abc2854372a900422a1c432110d7457b2948a77ca73ca34d073243e8a78"
+    },
+    {
+      "path": "experiments/ag/study_recording.py",
+      "bytes": 7321,
+      "sha256": "2a4da246c19b90e4ca4f96a699c2946138f00221eb9bf602546f632432dc60bc"
+    },
+    {
+      "path": "experiments/archive_landing_study.py",
+      "bytes": 3185,
+      "sha256": "d93c5f2c5a4a23200d46270cf8199d81a5077c14b9af148f008a8c96a78575c6"
+    },
+    {
+      "path": "experiments/archive_plaza_evidence.py",
+      "bytes": 7929,
+      "sha256": "29b9999c1fd54cbc5c0f22f43742e7e4ada0908ca8f29bfd753d0fd8a9283a5b"
+    },
+    {
+      "path": "experiments/audit_landing_study.py",
+      "bytes": 5996,
+      "sha256": "fa7ec2d30efc0b66ee8e2ef83f6fece032d8790e9cc444fdd011e388cd17dffe"
+    },
+    {
+      "path": "experiments/audit_plaza_evidence.py",
+      "bytes": 13173,
+      "sha256": "fc53717f0376228980f29766f8d167293cbfb15107df467acbce0c28624a014a"
+    },
+    {
+      "path": "experiments/calibrate_landing_tag.py",
+      "bytes": 4304,
+      "sha256": "6554de237f76f9529ac06b094768baf24f003dddcce0dd632d13e03c9abeb322"
+    },
+    {
+      "path": "experiments/citysample_scene/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "experiments/citysample_scene/annotate_aerial_route_navigation.py",
+      "bytes": 9371,
+      "sha256": "ecd5ebc8e39ac0633980db026237bbf5e27857f41448f341216f30f53de88bce"
+    },
+    {
+      "path": "experiments/citysample_scene/annotate_district_navigation.py",
+      "bytes": 10545,
+      "sha256": "997d62e2cc7dfbf98e6d9dbbd131b8c686ad2496943c44675ad51e788acf01f5"
+    },
+    {
+      "path": "experiments/citysample_scene/audit_aerial_route_navigation.py",
+      "bytes": 6693,
+      "sha256": "6d5e2a518ab4499a7b357502d12a599b6567d3deea3afa1379ad834e00d30498"
+    },
+    {
+      "path": "experiments/citysample_scene/check_depth_projection.py",
+      "bytes": 3079,
+      "sha256": "6bf6b6f548bee4bccabda92ea844dfbd39fc832f41c1dc31794cc7e2de976be1"
+    },
+    {
+      "path": "experiments/citysample_scene/citysample_runtime.py",
+      "bytes": 5099,
+      "sha256": "54d3387a3ea424dc61f173ab2917c2c2de51bf883defd28289f17e333ac00dea"
+    },
+    {
+      "path": "experiments/citysample_scene/district_routes.py",
+      "bytes": 3095,
+      "sha256": "f3a7cc2a27badc6d89541f574db3508739e67d0c7909a2ee0b4b77834bc4b7b5"
+    },
+    {
+      "path": "experiments/citysample_scene/generated/aerial_route_scenario.json",
+      "bytes": 1763,
+      "sha256": "26a8b8579eacc9cc72ad7b354ebd02fe8bfb0b259cbb1466e684487360c4e2d4"
+    },
+    {
+      "path": "experiments/citysample_scene/generated/pursuit_scenario.json",
+      "bytes": 2609,
+      "sha256": "49308fbaa84b85fbc4e3a79d13e5984f3d8f11363880b474c7b12f7fac004f6a"
+    },
+    {
+      "path": "experiments/citysample_scene/generated/pursuit_tracker_ugv.jsonc",
+      "bytes": 7742,
+      "sha256": "f131536259fdf839100844dda4560f05e74abd3df982aa17e04c5a91117894b1"
+    },
+    {
+      "path": "experiments/citysample_scene/generated/robot_ugv_aerial_route.jsonc",
+      "bytes": 10516,
+      "sha256": "e6108df674635616884b0ae01c2cd965cbcc164200471915292b8d13bda35bcf"
+    },
+    {
+      "path": "experiments/citysample_scene/generated/scene_navigation_aerial_route.jsonc",
+      "bytes": 1118,
+      "sha256": "62f2f85f0dbaa077bc4df60db24731e3b5888bb4561b7863a0d57bcade8267ec"
+    },
+    {
+      "path": "experiments/citysample_scene/generated/scene_pursuit.jsonc",
+      "bytes": 1874,
+      "sha256": "cc16fa25dc8a366f02f4f9887ec1ffa03f0e3e25727eb7dd9056de069e337a01"
+    },
+    {
+      "path": "experiments/citysample_scene/generated/scene_pursuit_views.jsonc",
+      "bytes": 1867,
+      "sha256": "3178a3eb49b49673c7157b63c3056bd71eb4f3af0bdd59af541b5d5b237ed1d0"
+    },
+    {
+      "path": "experiments/citysample_scene/inspect_zonegraph.py",
+      "bytes": 3636,
+      "sha256": "5bbbb84c79c94ce8090d4501a5151cc101e2bfa7c7a5cedb394c1fcae9e1dbeb"
+    },
+    {
+      "path": "experiments/citysample_scene/plan_routes.py",
+      "bytes": 4749,
+      "sha256": "e7d6c86013aa44d64bf538c656b3dd88ccedd4a14ad93f6f7228c55699798f97"
+    },
+    {
+      "path": "experiments/citysample_scene/prepare_aerial_route_navigation.py",
+      "bytes": 5875,
+      "sha256": "ccf509d29e5952a72011f3d48ed1a0444342bed773be9a195d17df24a1fbf164"
+    },
+    {
+      "path": "experiments/citysample_scene/prepare_pursuit.py",
+      "bytes": 6297,
+      "sha256": "afffcb303e6174e272858ae6771c4b310f3213cf8155e7e5c38e052b9632c07c"
+    },
+    {
+      "path": "experiments/citysample_scene/run_aerial_route_navigation.py",
+      "bytes": 23985,
+      "sha256": "6373b4e1c16920c68041c8224db25c3d83f64c827a91e058877091c4ffe0e2d5"
+    },
+    {
+      "path": "experiments/citysample_scene/run_pursuit.py",
+      "bytes": 23983,
+      "sha256": "8501483f169749896b68b92fa2ed4b0ce26a6b8bdc1285412038cb6a60f995df"
+    },
+    {
+      "path": "experiments/citysample_scene/validate_pursuit_roads.py",
+      "bytes": 5270,
+      "sha256": "dc0073c12caf3f78b7d56bc0bcf6c2c68a7749e052c94fef2473bdafcd50aabb"
+    },
+    {
+      "path": "experiments/configs/landing/robot_observer.jsonc",
+      "bytes": 992,
+      "sha256": "3a8d4cdb8e33626a8cccceae9632c92f6250d9b0ce9a1689178333acf66ca849"
+    },
+    {
+      "path": "experiments/configs/landing/robot_uav.jsonc",
+      "bytes": 6996,
+      "sha256": "8e309453a211a474ee81381cb01a6037059523a5b18783b9d0d592368912f6be"
+    },
+    {
+      "path": "experiments/configs/landing/robot_usv.jsonc",
+      "bytes": 6066,
+      "sha256": "44f0af5cba1fb3907fde7320c889f662881a1972e4948b42d97fd38373ba72e6"
+    },
+    {
+      "path": "experiments/configs/landing/scene_landing.jsonc",
+      "bytes": 1040,
+      "sha256": "ab11803dbc72393d54c45b15554a1e9a21d5b5eda89d46e90e52558b13b269ff"
+    },
+    {
+      "path": "experiments/configs/landing/study.json",
+      "bytes": 3017,
+      "sha256": "b75431bc61e15e09397fed7a5cf01e41866b2596dea28d8525aa61170f2be711"
+    },
+    {
+      "path": "experiments/configs/landing/tag_calibration.reference.json",
+      "bytes": 29838,
+      "sha256": "ca7754855eedf6a517108f6c8ca4a15b3a79cab5be3faeb38ea1c4709b2dac77"
+    },
+    {
+      "path": "experiments/configs/mapping_plaza.json",
+      "bytes": 6332,
+      "sha256": "eb619992684cf6fed1764cb1c5c0c1c1810cebb0abe01a028e9c21f67516ecda"
+    },
+    {
+      "path": "experiments/configs/robot_observer_formation_study.jsonc",
+      "bytes": 1839,
+      "sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833"
+    },
+    {
+      "path": "experiments/configs/robot_observer_navigation_study.jsonc",
+      "bytes": 1839,
+      "sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833"
+    },
+    {
+      "path": "experiments/configs/robot_observer_tracking_study.jsonc",
+      "bytes": 1839,
+      "sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833"
+    },
+    {
+      "path": "experiments/configs/robot_overview_camera.jsonc",
+      "bytes": 992,
+      "sha256": "dfcd7960539e1aac30fc1f15bdaf21db07e57027774b1c7daf2ef4b51111dae6"
+    },
+    {
+      "path": "experiments/configs/robot_region_survey.jsonc",
+      "bytes": 996,
+      "sha256": "a9424b62c0d58975c7873c6dd6fdd890b32772e28836158911272fb93effe977"
+    },
+    {
+      "path": "experiments/configs/robot_target_tracking_study.jsonc",
+      "bytes": 7739,
+      "sha256": "21a9bc99840c0111c557df136fb017765d4966efb23db73c5ad3a982cb1d7201"
+    },
+    {
+      "path": "experiments/configs/robot_uav.jsonc",
+      "bytes": 7947,
+      "sha256": "d3af0d186817add657187654d31a609deace3a1ea5232a3f4fcb959de7907563"
+    },
+    {
+      "path": "experiments/configs/robot_uav_dense.jsonc",
+      "bytes": 7946,
+      "sha256": "17337515ad23a27b8e38529cc3643e871700fa4869e0623068af8e911c519a96"
+    },
+    {
+      "path": "experiments/configs/robot_uav_formation_study.jsonc",
+      "bytes": 8061,
+      "sha256": "4e009c8686fe18fefddc9f7497bec3ebecefca30dc25043033f7b6201498ba47"
+    },
+    {
+      "path": "experiments/configs/robot_uav_navigation_study.jsonc",
+      "bytes": 8061,
+      "sha256": "8a4257e313d09d8da9b9828332c78c356b5bd47db706288e53ff483c043e1aa5"
+    },
+    {
+      "path": "experiments/configs/robot_uav_plaza.jsonc",
+      "bytes": 8062,
+      "sha256": "fc793c8eea78f8fb1898e604ccf993d2ac82dbe0c08188b5dc2ee4cec19afd5b"
+    },
+    {
+      "path": "experiments/configs/robot_uav_tracking_study.jsonc",
+      "bytes": 8061,
+      "sha256": "1af8b033b496e83820d73f158f78b297f3810395d037c16ec25561dabb911dc6"
+    },
+    {
+      "path": "experiments/configs/robot_ugv.jsonc",
+      "bytes": 7626,
+      "sha256": "770daedb2236ea30576d3e6bcfb68b381ceabe2c1bc581e97fc99adc5dae4094"
+    },
+    {
+      "path": "experiments/configs/robot_ugv_dense.jsonc",
+      "bytes": 7626,
+      "sha256": "f584cde500ec0fba27c5240e580c18174a5c700304fef53aa12519fc54e9681e"
+    },
+    {
+      "path": "experiments/configs/robot_ugv_formation_study.jsonc",
+      "bytes": 7738,
+      "sha256": "8eb26c67ff002f6d2f39ac44c0d497d711393d1ca9c6b7d130ab5ce391c6e535"
+    },
+    {
+      "path": "experiments/configs/robot_ugv_navigation_study.jsonc",
+      "bytes": 7738,
+      "sha256": "59c51c0820073157efe572432bd7ee57241f0034ff941f08efd2a580424414f3"
+    },
+    {
+      "path": "experiments/configs/robot_ugv_plaza.jsonc",
+      "bytes": 7739,
+      "sha256": "bf1288101b5fcde08a4ae13403bf3aa9fd9eff5b1adc3d706b6dd9e916ba9654"
+    },
+    {
+      "path": "experiments/configs/robot_ugv_tracking_study.jsonc",
+      "bytes": 7738,
+      "sha256": "f123a6c0724deac896b4a58567bd525b958b5a55013152b9f77e158a548dcc5f"
+    },
+    {
+      "path": "experiments/configs/scene_formation.jsonc",
+      "bytes": 1833,
+      "sha256": "527cfd6bf9f85795ae61e5be3385c0684261ade40c9390044b7493a011f22124"
+    },
+    {
+      "path": "experiments/configs/scene_formation_study.jsonc",
+      "bytes": 2166,
+      "sha256": "55aab7436358251b35ccca75627d353af6dc6d3ef5b2b5345ba310d7b6b0e6c4"
+    },
+    {
+      "path": "experiments/configs/scene_mapping.jsonc",
+      "bytes": 823,
+      "sha256": "387d9afbc380ad8021171e27d21e7c0294807e912c4e076a8ed6316da641de88"
+    },
+    {
+      "path": "experiments/configs/scene_mapping_dense.jsonc",
+      "bytes": 840,
+      "sha256": "7d7c366f1c403631fc8979c1b9fac3baf7418911c33416e533d30b4d3a218251"
+    },
+    {
+      "path": "experiments/configs/scene_mapping_plaza.jsonc",
+      "bytes": 842,
+      "sha256": "d53e0bd71cfd0bb43bed31e73718499fe4e34a182e089b4a3cc88375e852fb7f"
+    },
+    {
+      "path": "experiments/configs/scene_navigation.jsonc",
+      "bytes": 826,
+      "sha256": "9ec932735bf8d222f7c4c62ec9685d7501539cfa9b12dd20ae4670452f642c75"
+    },
+    {
+      "path": "experiments/configs/scene_navigation_study.jsonc",
+      "bytes": 1076,
+      "sha256": "6d42185a1cd1ae84800812cecda5e13f5d2b70607823132c3f1123485e8c11f3"
+    },
+    {
+      "path": "experiments/configs/scene_plaza_overview.jsonc",
+      "bytes": 1044,
+      "sha256": "ee00a2d6b6b0cf78dec80a76e651c7e4b89ebf782de241a6c6f1e026a29ec3c8"
+    },
+    {
+      "path": "experiments/configs/scene_region_survey.jsonc",
+      "bytes": 651,
+      "sha256": "c1c5307b9ea78f154584bed4e15d0c772fdce546419ca21e76a394672eb24be5"
+    },
+    {
+      "path": "experiments/configs/scene_tracking.jsonc",
+      "bytes": 1019,
+      "sha256": "b8b21b5c8a23e93306f42971d7e063a2e60c99551afda9f011e2500d947c7a2e"
+    },
+    {
+      "path": "experiments/configs/scene_tracking_study.jsonc",
+      "bytes": 1283,
+      "sha256": "a9498de52a64c634749490df2fb49448c13838c7a710d93741a77df88b5eb59c"
+    },
+    {
+      "path": "experiments/export_landing_study.py",
+      "bytes": 247,
+      "sha256": "10c2d566db1e97502a8cf12e99296ab4125cd9f0a4e8dba0df9beb4639f89214"
+    },
+    {
+      "path": "experiments/export_plaza_figures.py",
+      "bytes": 1565,
+      "sha256": "176ba1d338cc2fc981dc9a8225f8165b47db9ec814c337f514c9c2f263fcccbd"
+    },
+    {
+      "path": "experiments/export_pointcloud_structure.py",
+      "bytes": 1348,
+      "sha256": "3072317e9e38d0edbb7fc5f3cedf0d34cb62e9729cc9fb45213d9db16748ff45"
+    },
+    {
+      "path": "experiments/plot_plaza.py",
+      "bytes": 281,
+      "sha256": "4f976e781ad31844b96d2aa12992be491ad2c594dfb1e581ceb111c5ebae3f37"
+    },
+    {
+      "path": "experiments/prepare_plaza_configs.py",
+      "bytes": 2647,
+      "sha256": "31496bf5726354d3299dc819c293d9e162098a0dd03b1c87806822f8a7e132d7"
+    },
+    {
+      "path": "experiments/reconstruct_plaza.py",
+      "bytes": 1290,
+      "sha256": "d05e00bb16e570d1838be15df6fbfe4232c32ebf74beab7dd49e70d6fb0b38d7"
+    },
+    {
+      "path": "experiments/refine_plaza_surface.py",
+      "bytes": 4327,
+      "sha256": "bccfd08d054f652537d2ef0fb8edfa123a656a43c1be8b0a4ebc2e8e5b09e311"
+    },
+    {
+      "path": "experiments/render_plaza.py",
+      "bytes": 339,
+      "sha256": "a96dd02e1411985604836e18d9b27b7c145a0ad27f78cd99ac6e3e2ab6e94ed4"
+    },
+    {
+      "path": "experiments/render_structural_cloud.py",
+      "bytes": 5439,
+      "sha256": "d32f8758db60cde9ecd07bd5d2947ba5cec424a6fdc0c7e79945fc8b0c29fd6f"
+    },
+    {
+      "path": "experiments/run_landing_study.py",
+      "bytes": 2685,
+      "sha256": "b664087dd6b5d8eefd30f8f9a67e993498b756136ff083c02d6b57a75427b151"
+    },
+    {
+      "path": "experiments/run_mapping_plaza.py",
+      "bytes": 2203,
+      "sha256": "44a8722bb3e74c83ee121e3af594069095d77d1dad014eee1f39a6ba77f2f49d"
+    },
+    {
+      "path": "experiments/tests/test_algorithms.py",
+      "bytes": 4000,
+      "sha256": "96211a70964e2fcff0a3bbe0a049b7fbc35b2a91323ca40b31e316bc5e08575d"
+    },
+    {
+      "path": "experiments/tests/test_cooperative_studies.py",
+      "bytes": 3767,
+      "sha256": "a6769d20023ac89761b33fc61408fd3a3fd69244d71ef038cc09d00e2ae555e5"
+    },
+    {
+      "path": "experiments/tests/test_evidence_archive.py",
+      "bytes": 1844,
+      "sha256": "d96cd3e4599ae06c963fa52fbf0c41a4de3c02f9beebc3794e72526be88ddad6"
+    },
+    {
+      "path": "experiments/tests/test_figure_render.py",
+      "bytes": 1618,
+      "sha256": "502d954120fae14695b1e890142ce14d49b12c41c1b1aec80b038fe843f21726"
+    },
+    {
+      "path": "experiments/tests/test_landing_core.py",
+      "bytes": 3598,
+      "sha256": "071734c9dcd8f457f99a8ce4be77202ee09019b060eb6ea328f73f4e35b9b835"
+    },
+    {
+      "path": "experiments/tests/test_plaza_reconstruction.py",
+      "bytes": 1578,
+      "sha256": "8c1d35f832bc20818dc96b91005427ee2f0b7865398035f2f3638a19033778db"
+    },
+    {
+      "path": "experiments/tests/test_reconstruction.py",
+      "bytes": 2102,
+      "sha256": "19e52b981ca68375cb96acd20a5f62fe7403c5d2a63b8ac154734c0ff6ef5577"
+    },
+    {
+      "path": "experiments/tests/test_scan_capture.py",
+      "bytes": 1387,
+      "sha256": "b9ad3853e4bd0b546fc02970e691274ada7e11d0028d74ebd6a8b3fa245ff015"
+    },
+    {
+      "path": "experiments/tests/test_scene_figure.py",
+      "bytes": 1149,
+      "sha256": "f714fe968f0a707312e8495cff7d9aa178d5a02bf4ae8bc5d656668eb4dfc749"
+    },
+    {
+      "path": "experiments/tests/test_structural_cloud.py",
+      "bytes": 1398,
+      "sha256": "88b9fd474cd440581ccbf7f8e683a86df8c40af47e994ed2f6e0ae8ee2034fb5"
+    },
+    {
+      "path": "experiments/urban_scene/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "experiments/urban_scene/observer_probe.jsonc",
+      "bytes": 553,
+      "sha256": "185ca37cdb9a169f6bbca890578e5bb6a10cdccfc530bd6fe3d9610ba901e1f0"
+    },
+    {
+      "path": "experiments/urban_scene/probe_urban_scene.py",
+      "bytes": 5284,
+      "sha256": "08c1051213b4c2745ca038df5f4e44a0bb45006a08c258d74f5bddef3e1bf395"
+    },
+    {
+      "path": "experiments/urban_scene/robots/pursuit_interceptor.jsonc",
+      "bytes": 7197,
+      "sha256": "dcc1e38a90aa2a26158435ec7bf42cf572e4b6b4782e183461b81bdf86d0331c"
+    },
+    {
+      "path": "experiments/urban_scene/robots/pursuit_target.jsonc",
+      "bytes": 7741,
+      "sha256": "cc620eef29ddc9158352a271621def70b008ef8ab2142cc4e67bb4802d9e0044"
+    },
+    {
+      "path": "experiments/urban_scene/robots/pursuit_uav.jsonc",
+      "bytes": 8064,
+      "sha256": "2f180c121696c9b13d66f050b09a59e6f5ecd2a282b5d0f2f1c307807ba18eb9"
+    },
+    {
+      "path": "experiments/urban_scene/urban_runtime.py",
+      "bytes": 9840,
+      "sha256": "848ff9c5c96562ba7ac0975554f1e0f167c38551b7eb851c08c00284018c2da0"
+    },
+    {
+      "path": "experiments/verification/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "experiments/view_plaza_map.py",
+      "bytes": 910,
+      "sha256": "813e68a77dee51cd2792bc5dc45f8845ba93130bdea3122772aed1aa085b062f"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1261,
+      "sha256": "3b654d151ae5aba6539dfa107af3912a63f4d98c5ea42730be33bcecb5f82762"
+    },
+    {
+      "path": "licenses/ProjectAirSim.LICENSE",
+      "bytes": 1162,
+      "sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b"
+    },
+    {
+      "path": "licenses/ProjectAirSim.NOTICE.txt",
+      "bytes": 203889,
+      "sha256": "52d180a6eb3a9d85776057cfdf61a1321a7c7b2e8274a6c4ae254dd2c73d98e7"
+    },
+    {
+      "path": "MANIFEST.in",
+      "bytes": 332,
+      "sha256": "2d70390d4e98e2985964cf1236bf8d2e512867fe43e3546b5577f7682a661fb5"
+    },
+    {
+      "path": "native/build_support/CMakeLists.txt",
+      "bytes": 4228,
+      "sha256": "be996f0f272db06360b12be4a7d08c3b8c1c499792079213d734ecb5fedda18b"
+    },
+    {
+      "path": "native/citysample/AGZoneGraphExport.cpp",
+      "bytes": 3560,
+      "sha256": "662a79b8d807c236ffb614155200a0a3112cf50129aa4ea7edc1592ab3091199"
+    },
+    {
+      "path": "native/profiles/main/changes.patch",
+      "bytes": 35416,
+      "sha256": "d0b068abe9193c9949460cc2b8dede626ab3561533587b8cda8217863cd77d66"
+    },
+    {
+      "path": "native/profiles/main/overlay/client/python/projectairsim/src/projectairsim/client.py",
+      "bytes": 20802,
+      "sha256": "a6b9da8fa6096266d43857f2205cff76dabdab9adb855262d4683b028a0a22cc"
+    },
+    {
+      "path": "native/profiles/main/overlay/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc",
+      "bytes": 17344,
+      "sha256": "a7d9a3a07f652a00d914b5dbcdcf7ea409b4f8c5ab4c1f174a012eb8598a3797"
+    },
+    {
+      "path": "native/profiles/main/overlay/client/python/projectairsim/src/projectairsim/utils.py",
+      "bytes": 24136,
+      "sha256": "4c5b802fc172b1a2947cf65447b415fd013bc54a2aaa254291042efef92e2a2a"
+    },
+    {
+      "path": "native/profiles/main/overlay/core_sim/include/core_sim/actor/vessel_actor.hpp",
+      "bytes": 5577,
+      "sha256": "cf995c0b625fbc3b85372da07ca32589fa8087cc7530bfd36cab8edbff8fe85f"
+    },
+    {
+      "path": "native/profiles/main/overlay/core_sim/include/core_sim/actor.hpp",
+      "bytes": 895,
+      "sha256": "fa1d2bc01fd6a0f86f4b3414c1cfa357fb81269cb6765e078c7d186eaa4230e0"
+    },
+    {
+      "path": "native/profiles/main/overlay/core_sim/src/actor/vessel_actor.cpp",
+      "bytes": 9144,
+      "sha256": "fb3e97fe785ffccb15f0d6176f1acd85a971a55c2866e0ccf099910ebadd3683"
+    },
+    {
+      "path": "native/profiles/main/overlay/core_sim/src/CMakeLists.txt",
+      "bytes": 5261,
+      "sha256": "71a50827d19ab8d561079c1262f28006fc1fee0a23d0160a7076b17f4e937f0e"
+    },
+    {
+      "path": "native/profiles/main/overlay/core_sim/src/constant.hpp",
+      "bytes": 27767,
+      "sha256": "4472098d9254a192124c4f79bab8b9011bfc47688057ef4a339092d215d35ce5"
+    },
+    {
+      "path": "native/profiles/main/overlay/core_sim/src/scene.cpp",
+      "bytes": 61499,
+      "sha256": "bb5db3c8d0242bc263d8a9400ee7e5554c7a63a8eee93614d1c28f459c757cde"
+    },
+    {
+      "path": "native/profiles/main/profile.json",
+      "bytes": 2538,
+      "sha256": "5e0c2a8250882a8696e9d454f623faa918fb7cf8fb8bb5fe1824f0b613f026a6"
+    },
+    {
+      "path": "native/profiles/moving-deck/changes.patch",
+      "bytes": 69561,
+      "sha256": "ad9ff4d6ebed6505f3e0f0c76d57faf2440e2a9dd13afb0d32baf23603394539"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/client/python/projectairsim/src/projectairsim/client.py",
+      "bytes": 20802,
+      "sha256": "a6b9da8fa6096266d43857f2205cff76dabdab9adb855262d4683b028a0a22cc"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc",
+      "bytes": 17344,
+      "sha256": "a7d9a3a07f652a00d914b5dbcdcf7ea409b4f8c5ab4c1f174a012eb8598a3797"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/client/python/projectairsim/src/projectairsim/utils.py",
+      "bytes": 24136,
+      "sha256": "4c5b802fc172b1a2947cf65447b415fd013bc54a2aaa254291042efef92e2a2a"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/core_sim/include/core_sim/actor/robot.hpp",
+      "bytes": 6056,
+      "sha256": "11f8fffde6753a6dd190ff5a1db521db6072002a59d8ecefa8f02e7164c8d265"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/core_sim/include/core_sim/actor/vessel_actor.hpp",
+      "bytes": 5577,
+      "sha256": "cf995c0b625fbc3b85372da07ca32589fa8087cc7530bfd36cab8edbff8fe85f"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/core_sim/include/core_sim/actor.hpp",
+      "bytes": 895,
+      "sha256": "fa1d2bc01fd6a0f86f4b3414c1cfa357fb81269cb6765e078c7d186eaa4230e0"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/core_sim/include/core_sim/physics_common_types.hpp",
+      "bytes": 8860,
+      "sha256": "9c3ad57af904c591cf14b397dc4a828f6abf18a90573fc45edd5949fb8b1ecfb"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/core_sim/src/actor/robot.cpp",
+      "bytes": 49988,
+      "sha256": "a9df90ac0a27da4eaf4a7e5152fd0b7540d2a748e08f0b7ea1e077a98be85862"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/core_sim/src/actor/vessel_actor.cpp",
+      "bytes": 9144,
+      "sha256": "fb3e97fe785ffccb15f0d6176f1acd85a971a55c2866e0ccf099910ebadd3683"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/core_sim/src/CMakeLists.txt",
+      "bytes": 5261,
+      "sha256": "71a50827d19ab8d561079c1262f28006fc1fee0a23d0160a7076b17f4e937f0e"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/core_sim/src/constant.hpp",
+      "bytes": 27767,
+      "sha256": "4472098d9254a192124c4f79bab8b9011bfc47688057ef4a339092d215d35ce5"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/core_sim/src/message/collision_info_message.cpp",
+      "bytes": 4028,
+      "sha256": "b515e858dc5cb90f57ca7c98160441c9a71b3d572969b104a1c002956b3f505c"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/core_sim/src/scene.cpp",
+      "bytes": 60015,
+      "sha256": "0adfe2f2b49f50e42538f6c0ba760ebb02fa56ac24392d7ed0caeeecd1e14677"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/physics/include/support_contact.hpp",
+      "bytes": 2387,
+      "sha256": "012fbe79729eafc2a7efd545cd460a89857054ab740cfa8042f9ddfeb26ab4d8"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/physics/src/fast_physics.cpp",
+      "bytes": 39701,
+      "sha256": "83be4b38532777ed23ea59bf8a1c51dc66dbeeaa2a7134954a2e986d898b6938"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/physics/test/gtest_fast_physics.cpp",
+      "bytes": 31874,
+      "sha256": "7437c72dee90175fcba2c75c4f44e9c008b83f510550cfd3221a843c17e0180a"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.cpp",
+      "bytes": 31657,
+      "sha256": "c43027c9a76b8ed3665001aede9008900cb1b09420e6740a73fe32bc6b97aca1"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.h",
+      "bytes": 4380,
+      "sha256": "81417500f3c8e2e89ad7132fa6b54bdf796c237fa7b2d01fbc3394f68139de9a"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.cpp",
+      "bytes": 16468,
+      "sha256": "af3a941c1b37d03d5f4f06c3be97da135cbca61d22abe6eb4483ac4960bb50ec"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.h",
+      "bytes": 3442,
+      "sha256": "d9ccb0ec5c57ca6d481d469cc46b9f19d7e515fc7af28a03f38c6705c27533a5"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Sensors/UnrealCamera.cpp",
+      "bytes": 53918,
+      "sha256": "210ffd6b2e0c13ac0f5805c54f1a7b48e40065a4cfe982d0ee6dc97a5c1db39b"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/World/WorldSimApi.cpp",
+      "bytes": 79369,
+      "sha256": "76e35188ceb4661797505ada5400a28fc868c30718f37c7cb91792fa359ee100"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/vehicle_apis/multirotor_api/include/simple_flight/firmware/Firmware.hpp",
+      "bytes": 4295,
+      "sha256": "624132ee82d4f7abb6f8f7db2b372bf6b5f28c80caa7c64c272f2a1c191a4750"
+    },
+    {
+      "path": "native/profiles/moving-deck/overlay/vehicle_apis/multirotor_api/include/simple_flight/firmware/OffboardApi.hpp",
+      "bytes": 8525,
+      "sha256": "2b6de33bbe54dad9a18ec085e9510ae1c188f7ebebce67e02b0ab21753ab6a0c"
+    },
+    {
+      "path": "native/profiles/moving-deck/profile.json",
+      "bytes": 7057,
+      "sha256": "bb45616db564066d44770a863bd90b0b8ac4ba819943c7ccd9bddd1ecb2eeccb"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/client/python/projectairsim/src/projectairsim/client.py",
+      "bytes": 20802,
+      "sha256": "a6b9da8fa6096266d43857f2205cff76dabdab9adb855262d4683b028a0a22cc"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc",
+      "bytes": 17344,
+      "sha256": "a7d9a3a07f652a00d914b5dbcdcf7ea409b4f8c5ab4c1f174a012eb8598a3797"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/client/python/projectairsim/src/projectairsim/utils.py",
+      "bytes": 24136,
+      "sha256": "4c5b802fc172b1a2947cf65447b415fd013bc54a2aaa254291042efef92e2a2a"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/include/core_sim/actor/robot.hpp",
+      "bytes": 6056,
+      "sha256": "11f8fffde6753a6dd190ff5a1db521db6072002a59d8ecefa8f02e7164c8d265"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/include/core_sim/actor/vessel_actor.hpp",
+      "bytes": 5577,
+      "sha256": "cf995c0b625fbc3b85372da07ca32589fa8087cc7530bfd36cab8edbff8fe85f"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/include/core_sim/actor.hpp",
+      "bytes": 895,
+      "sha256": "fa1d2bc01fd6a0f86f4b3414c1cfa357fb81269cb6765e078c7d186eaa4230e0"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/include/core_sim/physics_common_types.hpp",
+      "bytes": 8860,
+      "sha256": "9c3ad57af904c591cf14b397dc4a828f6abf18a90573fc45edd5949fb8b1ecfb"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/include/core_sim/vessel_planar_dynamics.hpp",
+      "bytes": 2034,
+      "sha256": "a6ae78d88e211c39e7bc6b4a528619268107a76e01b9403232f9f660d7b68775"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/src/actor/robot.cpp",
+      "bytes": 49988,
+      "sha256": "a9df90ac0a27da4eaf4a7e5152fd0b7540d2a748e08f0b7ea1e077a98be85862"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/src/actor/vessel_actor.cpp",
+      "bytes": 9144,
+      "sha256": "fb3e97fe785ffccb15f0d6176f1acd85a971a55c2866e0ccf099910ebadd3683"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/src/CMakeLists.txt",
+      "bytes": 5261,
+      "sha256": "71a50827d19ab8d561079c1262f28006fc1fee0a23d0160a7076b17f4e937f0e"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/src/constant.hpp",
+      "bytes": 27767,
+      "sha256": "4472098d9254a192124c4f79bab8b9011bfc47688057ef4a339092d215d35ce5"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/src/message/collision_info_message.cpp",
+      "bytes": 4028,
+      "sha256": "b515e858dc5cb90f57ca7c98160441c9a71b3d572969b104a1c002956b3f505c"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/core_sim/src/scene.cpp",
+      "bytes": 64900,
+      "sha256": "ca0010493492962931ddbe51b7e9d00d70409b31ade7a8dd782cecdae6db750f"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/physics/include/support_contact.hpp",
+      "bytes": 2387,
+      "sha256": "012fbe79729eafc2a7efd545cd460a89857054ab740cfa8042f9ddfeb26ab4d8"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/physics/src/fast_physics.cpp",
+      "bytes": 39701,
+      "sha256": "83be4b38532777ed23ea59bf8a1c51dc66dbeeaa2a7134954a2e986d898b6938"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/physics/test/gtest_fast_physics.cpp",
+      "bytes": 31874,
+      "sha256": "7437c72dee90175fcba2c75c4f44e9c008b83f510550cfd3221a843c17e0180a"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.cpp",
+      "bytes": 31657,
+      "sha256": "c43027c9a76b8ed3665001aede9008900cb1b09420e6740a73fe32bc6b97aca1"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.h",
+      "bytes": 4380,
+      "sha256": "81417500f3c8e2e89ad7132fa6b54bdf796c237fa7b2d01fbc3394f68139de9a"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.cpp",
+      "bytes": 13271,
+      "sha256": "166c88e276d46eb0723a491b897a6db72e11fe408dd99b06977f3d9bffb80ef9"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.h",
+      "bytes": 3442,
+      "sha256": "d9ccb0ec5c57ca6d481d469cc46b9f19d7e515fc7af28a03f38c6705c27533a5"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Sensors/UnrealCamera.cpp",
+      "bytes": 53918,
+      "sha256": "210ffd6b2e0c13ac0f5805c54f1a7b48e40065a4cfe982d0ee6dc97a5c1db39b"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/World/WorldSimApi.cpp",
+      "bytes": 79140,
+      "sha256": "594606c4497c9a44727423a5b77f8845abb53fe7f637309e4fd296c57edb831d"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/vehicle_apis/multirotor_api/include/simple_flight/firmware/Firmware.hpp",
+      "bytes": 4295,
+      "sha256": "624132ee82d4f7abb6f8f7db2b372bf6b5f28c80caa7c64c272f2a1c191a4750"
+    },
+    {
+      "path": "native/profiles/recorded-landing/overlay/vehicle_apis/multirotor_api/include/simple_flight/firmware/OffboardApi.hpp",
+      "bytes": 8525,
+      "sha256": "2b6de33bbe54dad9a18ec085e9510ae1c188f7ebebce67e02b0ab21753ab6a0c"
+    },
+    {
+      "path": "native/profiles/recorded-landing/profile.json",
+      "bytes": 7546,
+      "sha256": "6b9b56372a53c88eb03d41f1c224a756012160aee8ae01eaa4827c5bd13cc980"
+    },
+    {
+      "path": "native/tests/firmware_disarm_tests.cpp",
+      "bytes": 2543,
+      "sha256": "775a7f196c782f7013358aab6c58955fb97a36b4ba8e49eefea4f9c262e04337"
+    },
+    {
+      "path": "native/tests/support_contact_tests.cpp",
+      "bytes": 2798,
+      "sha256": "b1c37a4c2cf825d2e28a7c258f007fab584b7775879e82f3bad8a92926438cad"
+    },
+    {
+      "path": "native/upstream.lock.json",
+      "bytes": 454,
+      "sha256": "8b4b3c3a003513f3264e588b99875b7e99925cddbaf6fd846cc95d394da55b7c"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 665,
+      "sha256": "2a23bde50a7b0149887908215946825c83b6bef56f7811bfc2759dc9b8017f0e"
+    },
+    {
+      "path": "QA/cli_entry_points.json",
+      "bytes": 384,
+      "sha256": "4c57b004914a0e54e95be17bf99e9a0d7cc3129659b76f3e24ad528f85ea7ced"
+    },
+    {
+      "path": "QA/native_profiles.json",
+      "bytes": 693,
+      "sha256": "c40402c546fb30b80c665e91a2801ff55e29394427a32886fab159ecde3759ef"
+    },
+    {
+      "path": "QA/offline_tests.json",
+      "bytes": 640,
+      "sha256": "658c49f63481a6f0b66d2c9f09d449253dfb8767152a754d301017827149d3a5"
+    },
+    {
+      "path": "QA/public_release_checks.json",
+      "bytes": 520,
+      "sha256": "6ba0b9d4972825c2938d3db6eb97e7c5a34f31b31132df7166f9107e0e2a3edc"
+    },
+    {
+      "path": "QA/public_release_offline_tests.json",
+      "bytes": 640,
+      "sha256": "3cfbee32a546a2367efb665c08050acd60f2c67a1e0c54b69f2c9cd83704297e"
+    },
+    {
+      "path": "QA/README.md",
+      "bytes": 793,
+      "sha256": "c238fcf76d0d3bfe292f932ebca4f515ba0fe04431528ea018caf946bbf64915"
+    },
+    {
+      "path": "QA/source_preservation.json",
+      "bytes": 3675,
+      "sha256": "8018f77c68d4ef39f14893fc926ce15cae37437172a93ccea06e237407038c56"
+    },
+    {
+      "path": "QA/validation.json",
+      "bytes": 2120,
+      "sha256": "5fbc983bedc6765e2859fffebe6dc661cb8e5086778893235668bcdb6f675199"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3586,
+      "sha256": "7309b8dbb569bad31d986096f6f511e882024241a6fe92731276fcc5773b272c"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 1794,
+      "sha256": "188210559386a8bab0fafeefbca821a35c4fc421d845afd5c7df9cea67cd9fe3"
+    },
+    {
+      "path": "README_CURRENT.md",
+      "bytes": 543,
+      "sha256": "cebca0a9b778fe1b20b04bf9633f569fd330ca224e68a5eaa3db411a4fcc59d8"
+    },
+    {
+      "path": "recorded/experiments/ag/__init__.py",
+      "bytes": 80,
+      "sha256": "acd39db8fc52a5d5394b5d94d736ffa4651bb1368e96c6b5783c7d8b56041f37"
+    },
+    {
+      "path": "recorded/experiments/ag/backend.py",
+      "bytes": 16518,
+      "sha256": "5f916ff4f30e9e77d9eb978d1f5b557893b2cec91cbfeac7d1df7252028b98d9"
+    },
+    {
+      "path": "recorded/experiments/ag/cli.py",
+      "bytes": 5173,
+      "sha256": "aba48653d1ae9ceaa8edf678a9dcba7c9501ce867b682c6b3d6204a0f8b3cd19"
+    },
+    {
+      "path": "recorded/experiments/ag/contact.py",
+      "bytes": 373,
+      "sha256": "197b447847430c5b8ebc7e2b1139ca58f18c4723778cb1aab79cfac24375e65c"
+    },
+    {
+      "path": "recorded/experiments/ag/cooperative_study.py",
+      "bytes": 17391,
+      "sha256": "7268d4962591653fb8f3701bf4b9ed65766e9d809c616be43d7d244d7c1538c5"
+    },
+    {
+      "path": "recorded/experiments/ag/dense_capture.py",
+      "bytes": 3500,
+      "sha256": "cab913f236c7405aa6e967cbe2b35c86254e59615b88d6b9bea953d6f013cb4f"
+    },
+    {
+      "path": "recorded/experiments/ag/experiments.py",
+      "bytes": 25833,
+      "sha256": "2cb4ff04145b26526cd7b5b04d2e6d5abb041c709e9807452a667bc6221e1959"
+    },
+    {
+      "path": "recorded/experiments/ag/figure_plot.py",
+      "bytes": 5747,
+      "sha256": "0c4161088ff851eec97940c5b9e94fab84be76b943daf23fe40833e7b29af5c9"
+    },
+    {
+      "path": "recorded/experiments/ag/figure_render.py",
+      "bytes": 5944,
+      "sha256": "f385e3f8fec48b0a1740edd13a0c018d88f9146467fa9a9dde47198be4041963"
+    },
+    {
+      "path": "recorded/experiments/ag/landing_core.py",
+      "bytes": 5116,
+      "sha256": "0e1476362c7b0b6d43fe7fa14fccf496424534e58c14c35d5a2cb031ed9a30d8"
+    },
+    {
+      "path": "recorded/experiments/ag/landing_evidence.py",
+      "bytes": 7480,
+      "sha256": "89fe82f2f2f043de032137a237e7367a8d5e2750f7f42169cd35b0c02911b7be"
+    },
+    {
+      "path": "recorded/experiments/ag/landing_figures.py",
+      "bytes": 11323,
+      "sha256": "66fd1f943e1ae3a656730c92c098b2e77d10b59d1d7d58cf8ed19538361e3207"
+    },
+    {
+      "path": "recorded/experiments/ag/landing_runtime.py",
+      "bytes": 20420,
+      "sha256": "4faf9cccfc4ee4e06c31faa5439ee93768c7d534bde62a675c749e43cfaa0775"
+    },
+    {
+      "path": "recorded/experiments/ag/landing_vision.py",
+      "bytes": 3652,
+      "sha256": "434d5f66b72917c69033c298bbd4fd513477b3546bae0baa0a6cffe234099de7"
+    },
+    {
+      "path": "recorded/experiments/ag/map3d.py",
+      "bytes": 2828,
+      "sha256": "ca7ab2819cccb30aeee6508ce9ce1468b4afe8e86dca176f0676fad44694c1df"
+    },
+    {
+      "path": "recorded/experiments/ag/math3d.py",
+      "bytes": 4614,
+      "sha256": "499e1306db53642546d966e3bf8d76e6db41e8905e858cfbbb073efcc2b257c3"
+    },
+    {
+      "path": "recorded/experiments/ag/planning.py",
+      "bytes": 6578,
+      "sha256": "dcd932fa2390aa167e8e46f3ea4e892344556a63a1af66cdb030d17573971239"
+    },
+    {
+      "path": "recorded/experiments/ag/plaza.py",
+      "bytes": 4565,
+      "sha256": "0bb1f5a31e91473d723ab4c5d908c4a98494bfe06fb8bad0ff8aecee20bb598b"
+    },
+    {
+      "path": "recorded/experiments/ag/plaza_reconstruction.py",
+      "bytes": 7421,
+      "sha256": "54779d5540de906f2bf1b4412d58ade713c4a93f526e7bc60816d3b3b5db945b"
+    },
+    {
+      "path": "recorded/experiments/ag/reconstruction.py",
+      "bytes": 17107,
+      "sha256": "a5d74e02cbc7696604f6c81607f7446b70e68c7170cb24e27a8146121a29b268"
+    },
+    {
+      "path": "recorded/experiments/ag/scan_capture.py",
+      "bytes": 3796,
+      "sha256": "5c7a8fb36fe5fc6271817639edce857844e4d32e511bbacd3f84aa0ec31f4e72"
+    },
+    {
+      "path": "recorded/experiments/ag/scene_figure.py",
+      "bytes": 2659,
+      "sha256": "68d0ef48405a180c3e4c089df0789b80f28165a108b3b8df232bff2c7dad4c88"
+    },
+    {
+      "path": "recorded/experiments/ag/storage.py",
+      "bytes": 3804,
+      "sha256": "a70ca936b532f1e14b6030373d6f227fe5c531f9eeed8d145154c8de47081f70"
+    },
+    {
+      "path": "recorded/experiments/ag/study_audit.py",
+      "bytes": 27470,
+      "sha256": "36fcbed3187c8f3829ad0f4d4eac1a88aa5c637d32892f3323535f113d907a67"
+    },
+    {
+      "path": "recorded/experiments/ag/study_figures.py",
+      "bytes": 32521,
+      "sha256": "abc606c9bc66f7e268d273b4b87585e57c05dce73bf24abfa6df9833dd8e603c"
+    },
+    {
+      "path": "recorded/experiments/ag/study_planning.py",
+      "bytes": 4958,
+      "sha256": "12f14abc2854372a900422a1c432110d7457b2948a77ca73ca34d073243e8a78"
+    },
+    {
+      "path": "recorded/experiments/ag/study_recording.py",
+      "bytes": 7321,
+      "sha256": "2a4da246c19b90e4ca4f96a699c2946138f00221eb9bf602546f632432dc60bc"
+    },
+    {
+      "path": "recorded/experiments/analyze_results.py",
+      "bytes": 6667,
+      "sha256": "acdabf0db654b7b5310dd3a4daeb3d1c661ae7226e49cf5b825dc0ef370fe7a7"
+    },
+    {
+      "path": "recorded/experiments/archive_cooperative_evidence.py",
+      "bytes": 7641,
+      "sha256": "4fcdc817b67d92749450fb148f543263f5c3e7ad184ca558fc70cb7ae8f8ab8f"
+    },
+    {
+      "path": "recorded/experiments/archive_landing_study.py",
+      "bytes": 3185,
+      "sha256": "d93c5f2c5a4a23200d46270cf8199d81a5077c14b9af148f008a8c96a78575c6"
+    },
+    {
+      "path": "recorded/experiments/archive_plaza_evidence.py",
+      "bytes": 8257,
+      "sha256": "f44600c4edd9f16c108ad83385736a1c8b30fafb48feafbb1f725b7af38e2085"
+    },
+    {
+      "path": "recorded/experiments/audit_cooperative_study.py",
+      "bytes": 454,
+      "sha256": "9d4565e019d4cd1b84afceb0204f79a63b0a17a0fdae31295d986539ccdbaa97"
+    },
+    {
+      "path": "recorded/experiments/audit_landing_study.py",
+      "bytes": 5996,
+      "sha256": "fa7ec2d30efc0b66ee8e2ef83f6fece032d8790e9cc444fdd011e388cd17dffe"
+    },
+    {
+      "path": "recorded/experiments/audit_plaza_evidence.py",
+      "bytes": 13173,
+      "sha256": "fc53717f0376228980f29766f8d167293cbfb15107df467acbce0c28624a014a"
+    },
+    {
+      "path": "recorded/experiments/build_study_delivery.py",
+      "bytes": 7771,
+      "sha256": "429ab311c2132fd0b12e03613d34d64f2ef68c313f81e24ad9cc9beaa4171ea0"
+    },
+    {
+      "path": "recorded/experiments/build_task_region_atlas.py",
+      "bytes": 3251,
+      "sha256": "4fa8545c18228dbea787223a6c038b8e6f1b1bac040de3273088e1dd6717bea2"
+    },
+    {
+      "path": "recorded/experiments/calibrate_landing_tag.py",
+      "bytes": 4304,
+      "sha256": "6554de237f76f9529ac06b094768baf24f003dddcce0dd632d13e03c9abeb322"
+    },
+    {
+      "path": "recorded/experiments/capture_scene_overview.py",
+      "bytes": 6797,
+      "sha256": "49b55d0c12b6c8feef66c848f40b7c4ffaddbe76804e68d72eb0c7adf3f39b19"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/annotate_aerial_route_navigation.py",
+      "bytes": 9371,
+      "sha256": "ecd5ebc8e39ac0633980db026237bbf5e27857f41448f341216f30f53de88bce"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/annotate_district_navigation.py",
+      "bytes": 10291,
+      "sha256": "9ea42a54517342b4514d5b13fdce0424a38aff66eef6ee70e7db5fef0a596592"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/annotate_vehicle_bypass.py",
+      "bytes": 6622,
+      "sha256": "5f1001b129447c3bfa7ed5cd743df53123063eb419b95a50550545c003f486ef"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/audit_aerial_route_navigation.py",
+      "bytes": 6693,
+      "sha256": "6d5e2a518ab4499a7b357502d12a599b6567d3deea3afa1379ad834e00d30498"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/capture_live_overview.py",
+      "bytes": 3424,
+      "sha256": "458277fe9ac7ad818312954f37c1602b8011fd65a6e734c5640f997df9b186c0"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/check_depth_projection.py",
+      "bytes": 3018,
+      "sha256": "cf818ecdb77e91e5e23143cf91646863cca63467e2eb12faf25991c9cac60cbd"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/citysample_runtime.py",
+      "bytes": 5099,
+      "sha256": "54d3387a3ea424dc61f173ab2917c2c2de51bf883defd28289f17e333ac00dea"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/diagnose_ugv_pose_jump.py",
+      "bytes": 8329,
+      "sha256": "03fba2a60296b2cb337c4204177c44dbd372146a5d32247270d1b4b654a77200"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/district_routes.py",
+      "bytes": 3095,
+      "sha256": "f3a7cc2a27badc6d89541f574db3508739e67d0c7909a2ee0b4b77834bc4b7b5"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/drive_probe.py",
+      "bytes": 6931,
+      "sha256": "26e4a3be8d03af91b11ad553b24e723e2d8c2c7b49f81989ec137f0d2b4276d3"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/find_district_navigation.py",
+      "bytes": 7430,
+      "sha256": "cf3ffe2b6353d463deac26d1b5aeeab13e05a21be2bf53756f317f990ce5a95d"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/aerial_route_scenario.json",
+      "bytes": 1763,
+      "sha256": "26a8b8579eacc9cc72ad7b354ebd02fe8bfb0b259cbb1466e684487360c4e2d4"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/district_navigation_candidates.json",
+      "bytes": 19221,
+      "sha256": "df99fbdda0ff04d4c13667b83046e040bc02ecaaa1d5e4d788848d1391bcb309"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/district_navigation_local_candidates.json",
+      "bytes": 19066,
+      "sha256": "0a6c50de56f1975fb0035bd25aef17acfc3d237f0909ae8c9f44fba7e3519fe7"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/district_navigation_scenario.json",
+      "bytes": 2217,
+      "sha256": "836137eb83f0d7380494a22cad68478ad2fd04899d01a714faa51f9951b6ca1a"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/district_navigation_west_candidates.json",
+      "bytes": 19951,
+      "sha256": "6dafa2c0cc7e1a3b7d67b90baae8e0a76aa57f860e1b0bbf91af346e61ae0de7"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/navigation_scenario.json",
+      "bytes": 2203,
+      "sha256": "f539687aa84ba81b84bfd90f74d1adaf6732d817409765e4f20925772966452f"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/pursuit_junction_candidates.json",
+      "bytes": 15905,
+      "sha256": "b6eba1722f6c961895be388adc9604806071ef0f75dc9db5391cd3e1cd20df69"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/pursuit_scenario.json",
+      "bytes": 2609,
+      "sha256": "49308fbaa84b85fbc4e3a79d13e5984f3d8f11363880b474c7b12f7fac004f6a"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/pursuit_surface_validation.json",
+      "bytes": 29189,
+      "sha256": "77de5126ced1bc795a89a708ba16c3a5a44f501614eb8c324a7a877ade3ff900"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/pursuit_tracker_ugv.jsonc",
+      "bytes": 7742,
+      "sha256": "f131536259fdf839100844dda4560f05e74abd3df982aa17e04c5a91117894b1"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/robot_ugv_aerial_route.jsonc",
+      "bytes": 10516,
+      "sha256": "e6108df674635616884b0ae01c2cd965cbcc164200471915292b8d13bda35bcf"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/robot_ugv_pose_diagnostic.jsonc",
+      "bytes": 10518,
+      "sha256": "db8dfe368136dd24cbc20930e20eafdd014463a4afa26a8e5dace2fb5650575b"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/scene_navigation_aerial_route.jsonc",
+      "bytes": 1118,
+      "sha256": "62f2f85f0dbaa077bc4df60db24731e3b5888bb4561b7863a0d57bcade8267ec"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/scene_navigation_district.jsonc",
+      "bytes": 1134,
+      "sha256": "33576932a8cd9f77db3274a39556dd8335c67250b042a77b7f88f356a8fd6a51"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/scene_pursuit.jsonc",
+      "bytes": 1874,
+      "sha256": "cc16fa25dc8a366f02f4f9887ec1ffa03f0e3e25727eb7dd9056de069e337a01"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/scene_pursuit_views.jsonc",
+      "bytes": 1867,
+      "sha256": "3178a3eb49b49673c7157b63c3056bd71eb4f3af0bdd59af541b5d5b237ed1d0"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/scene_ugv_pose_diagnostic.jsonc",
+      "bytes": 678,
+      "sha256": "438cb33625603599dc46caf5cbac6b6d6701c44421dd2f971dfe8474544801e1"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/generated/zonegraph_inspection/inspection.json",
+      "bytes": 1004,
+      "sha256": "49fceb2a909b44d5ab44f3cf1862f515044c25acc5a946cb2ee595892c07e94c"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/inspect_nearby_lanes.py",
+      "bytes": 1930,
+      "sha256": "e2c71f4e93f6e689b65780cc92d2aa3d9cfc0b85f87720637faeef4f04f5182e"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/inspect_zonegraph.py",
+      "bytes": 3518,
+      "sha256": "7bd06b42581e7ec236fcdf82582fa6f23b6b6894bdf5ed2193647b33e7d7878f"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/plan_routes.py",
+      "bytes": 4749,
+      "sha256": "e7d6c86013aa44d64bf538c656b3dd88ccedd4a14ad93f6f7228c55699798f97"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/prepare_aerial_route_navigation.py",
+      "bytes": 5706,
+      "sha256": "3b75f55a555ec82c077344f2743151993dec3185d4b16d325d13561b34cb6a27"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/prepare_district_navigation.py",
+      "bytes": 4295,
+      "sha256": "40d5b66f3ad7376000484fe8ced386190c3c394ba49950c69a0500af62443f5e"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/prepare_navigation.py",
+      "bytes": 3091,
+      "sha256": "7a59b30bb1e536f00e727647aa60717368bd31f9effcb8944d591a0bef304241"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/prepare_pursuit.py",
+      "bytes": 6297,
+      "sha256": "afffcb303e6174e272858ae6771c4b310f3213cf8155e7e5c38e052b9632c07c"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/README.md",
+      "bytes": 7574,
+      "sha256": "b069735f42b01ffb7f041b105b476abe2c53caf63b0def7196e9a16044d73543"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/run_aerial_route_navigation.py",
+      "bytes": 23986,
+      "sha256": "531cf9880ac7a30585e4b94833d2e17d0a821da5c85904ce150f456e51bcf1b2"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/run_district_navigation.py",
+      "bytes": 20372,
+      "sha256": "5d976183ae2bbc09a2525e9449aa9537e16c99e9e16377bb8c4d4fa91beda2d5"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/run_navigation.py",
+      "bytes": 19385,
+      "sha256": "38e347448f7b3a3ea57fe9f8cb29b91a6091c16be66a0d4cc9d3a464d0d13363"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/run_pursuit.py",
+      "bytes": 23984,
+      "sha256": "38fb46772f17c95fc48801c726480e22b38888f6faa64c1392032429524b8859"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/scene_drive_probe.jsonc",
+      "bytes": 453,
+      "sha256": "58bf507c4654917861ba05a5fc79396e172f0cca1b5c8b79efdfca60c1eb7834"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/scene_navigation_air.jsonc",
+      "bytes": 896,
+      "sha256": "98607c8b5526d4cd807f4ba4f55804da7c4ec524ac2235a92f22fe7be1b57d2f"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/scene_scout.jsonc",
+      "bytes": 429,
+      "sha256": "466ab6e715353cbd47e67c198096dd79654fd6c6cd6c45c5bdd7155f6c0ee979"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/scout_citysample.py",
+      "bytes": 5283,
+      "sha256": "a32e55cad7842e6e90fa2a82c3c2db1e1cf3100c03bf5daf822bcf915a5ee017"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/start_citysample_simulator.ps1",
+      "bytes": 2556,
+      "sha256": "0bc9412ce1d7fb3f707f75d271abc213d6bda30b5f5ec10d808a1dcdd0c6f6fc"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/survey_pursuit_junctions.py",
+      "bytes": 2828,
+      "sha256": "1951402f5fb533aa7baa081677bc6903c5f96aebe99aa92bde0f5a49448712ba"
+    },
+    {
+      "path": "recorded/experiments/citysample_scene/validate_pursuit_roads.py",
+      "bytes": 5199,
+      "sha256": "f6742d45bcc896c5d900cdb2a606c86df753d77de8da6c61d041ee0d76d4aa98"
+    },
+    {
+      "path": "recorded/experiments/collect_latest_figures_20261001.py",
+      "bytes": 14747,
+      "sha256": "60e056cf9aa116bac18c60b287c61d1d5affe6031c2e3e8fa58c21e5252900c4"
+    },
+    {
+      "path": "recorded/experiments/configs/formation.json",
+      "bytes": 2166,
+      "sha256": "a938a1461e09f1e6621c289251e90612c7213b5d52778726b4194a73acfe47f3"
+    },
+    {
+      "path": "recorded/experiments/configs/formation_study.json",
+      "bytes": 2784,
+      "sha256": "8f8a508eafcdd26c6596923cdc8d30837c1396dbf2b25083816394c5b7b98a59"
+    },
+    {
+      "path": "recorded/experiments/configs/landing/robot_observer.jsonc",
+      "bytes": 992,
+      "sha256": "3a8d4cdb8e33626a8cccceae9632c92f6250d9b0ce9a1689178333acf66ca849"
+    },
+    {
+      "path": "recorded/experiments/configs/landing/robot_uav.jsonc",
+      "bytes": 6996,
+      "sha256": "8e309453a211a474ee81381cb01a6037059523a5b18783b9d0d592368912f6be"
+    },
+    {
+      "path": "recorded/experiments/configs/landing/robot_usv.jsonc",
+      "bytes": 6067,
+      "sha256": "5b50b9a753d062a1b41361ad5110268fb290e6370c22ff69c1451a06105fe56c"
+    },
+    {
+      "path": "recorded/experiments/configs/landing/scene_landing.jsonc",
+      "bytes": 1040,
+      "sha256": "ab11803dbc72393d54c45b15554a1e9a21d5b5eda89d46e90e52558b13b269ff"
+    },
+    {
+      "path": "recorded/experiments/configs/landing/study.json",
+      "bytes": 2761,
+      "sha256": "cc8ae520376bfedcec2aab9e496f537d4d4ecae8100acaa7d64149a674bba815"
+    },
+    {
+      "path": "recorded/experiments/configs/mapping.json",
+      "bytes": 2162,
+      "sha256": "f392b50a6c82b5e9dd1c16ecca81fd8e16f88e5a16151a6166510180aa7a19f7"
+    },
+    {
+      "path": "recorded/experiments/configs/mapping_dense.json",
+      "bytes": 2509,
+      "sha256": "f34a6fb82e29d073aaa6639de23ca593002d210689d6e8943b77473f64acd875"
+    },
+    {
+      "path": "recorded/experiments/configs/mapping_plaza.json",
+      "bytes": 6781,
+      "sha256": "d892f9176d65c8e316bce4fe4731274f9d814b91bab859832f52ca4d57556a72"
+    },
+    {
+      "path": "recorded/experiments/configs/navigation.json",
+      "bytes": 2168,
+      "sha256": "8449f603914f054958ace9613662a8c2761f25f89b1282168598a1876a4096da"
+    },
+    {
+      "path": "recorded/experiments/configs/navigation_study.json",
+      "bytes": 2876,
+      "sha256": "de4f46c8cc24a7d44d4751fd71fdae76bd6be8d25c6cbe0de1e70018e6a0e27f"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_observer_formation_study.jsonc",
+      "bytes": 1839,
+      "sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_observer_navigation_study.jsonc",
+      "bytes": 1839,
+      "sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_observer_tracking_study.jsonc",
+      "bytes": 1839,
+      "sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_overview_camera.jsonc",
+      "bytes": 992,
+      "sha256": "dfcd7960539e1aac30fc1f15bdaf21db07e57027774b1c7daf2ef4b51111dae6"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_region_survey.jsonc",
+      "bytes": 996,
+      "sha256": "a9424b62c0d58975c7873c6dd6fdd890b32772e28836158911272fb93effe977"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_target_tracking_study.jsonc",
+      "bytes": 7739,
+      "sha256": "21a9bc99840c0111c557df136fb017765d4966efb23db73c5ad3a982cb1d7201"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_uav.jsonc",
+      "bytes": 7947,
+      "sha256": "d3af0d186817add657187654d31a609deace3a1ea5232a3f4fcb959de7907563"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_uav_dense.jsonc",
+      "bytes": 7946,
+      "sha256": "17337515ad23a27b8e38529cc3643e871700fa4869e0623068af8e911c519a96"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_uav_formation_study.jsonc",
+      "bytes": 8061,
+      "sha256": "4e009c8686fe18fefddc9f7497bec3ebecefca30dc25043033f7b6201498ba47"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_uav_navigation_study.jsonc",
+      "bytes": 8061,
+      "sha256": "8a4257e313d09d8da9b9828332c78c356b5bd47db706288e53ff483c043e1aa5"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_uav_plaza.jsonc",
+      "bytes": 8062,
+      "sha256": "fc793c8eea78f8fb1898e604ccf993d2ac82dbe0c08188b5dc2ee4cec19afd5b"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_uav_tracking_study.jsonc",
+      "bytes": 8061,
+      "sha256": "1af8b033b496e83820d73f158f78b297f3810395d037c16ec25561dabb911dc6"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_ugv.jsonc",
+      "bytes": 7626,
+      "sha256": "770daedb2236ea30576d3e6bcfb68b381ceabe2c1bc581e97fc99adc5dae4094"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_ugv_dense.jsonc",
+      "bytes": 7626,
+      "sha256": "f584cde500ec0fba27c5240e580c18174a5c700304fef53aa12519fc54e9681e"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_ugv_formation_study.jsonc",
+      "bytes": 7738,
+      "sha256": "8eb26c67ff002f6d2f39ac44c0d497d711393d1ca9c6b7d130ab5ce391c6e535"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_ugv_navigation_study.jsonc",
+      "bytes": 7738,
+      "sha256": "59c51c0820073157efe572432bd7ee57241f0034ff941f08efd2a580424414f3"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_ugv_plaza.jsonc",
+      "bytes": 7739,
+      "sha256": "bf1288101b5fcde08a4ae13403bf3aa9fd9eff5b1adc3d706b6dd9e916ba9654"
+    },
+    {
+      "path": "recorded/experiments/configs/robot_ugv_tracking_study.jsonc",
+      "bytes": 7738,
+      "sha256": "f123a6c0724deac896b4a58567bd525b958b5a55013152b9f77e158a548dcc5f"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_formation.jsonc",
+      "bytes": 1833,
+      "sha256": "527cfd6bf9f85795ae61e5be3385c0684261ade40c9390044b7493a011f22124"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_formation_study.jsonc",
+      "bytes": 2166,
+      "sha256": "55aab7436358251b35ccca75627d353af6dc6d3ef5b2b5345ba310d7b6b0e6c4"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_mapping.jsonc",
+      "bytes": 823,
+      "sha256": "387d9afbc380ad8021171e27d21e7c0294807e912c4e076a8ed6316da641de88"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_mapping_dense.jsonc",
+      "bytes": 840,
+      "sha256": "7d7c366f1c403631fc8979c1b9fac3baf7418911c33416e533d30b4d3a218251"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_mapping_plaza.jsonc",
+      "bytes": 842,
+      "sha256": "d53e0bd71cfd0bb43bed31e73718499fe4e34a182e089b4a3cc88375e852fb7f"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_navigation.jsonc",
+      "bytes": 826,
+      "sha256": "9ec932735bf8d222f7c4c62ec9685d7501539cfa9b12dd20ae4670452f642c75"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_navigation_study.jsonc",
+      "bytes": 1076,
+      "sha256": "6d42185a1cd1ae84800812cecda5e13f5d2b70607823132c3f1123485e8c11f3"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_plaza_overview.jsonc",
+      "bytes": 1044,
+      "sha256": "ee00a2d6b6b0cf78dec80a76e651c7e4b89ebf782de241a6c6f1e026a29ec3c8"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_region_survey.jsonc",
+      "bytes": 651,
+      "sha256": "c1c5307b9ea78f154584bed4e15d0c772fdce546419ca21e76a394672eb24be5"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_tracking.jsonc",
+      "bytes": 1019,
+      "sha256": "b8b21b5c8a23e93306f42971d7e063a2e60c99551afda9f011e2500d947c7a2e"
+    },
+    {
+      "path": "recorded/experiments/configs/scene_tracking_study.jsonc",
+      "bytes": 1283,
+      "sha256": "a9498de52a64c634749490df2fb49448c13838c7a710d93741a77df88b5eb59c"
+    },
+    {
+      "path": "recorded/experiments/configs/tracking.json",
+      "bytes": 2164,
+      "sha256": "e0900ceb3612c649c5d5b34620a8ecffc1ede8f8a7e51f0192ae89ecb6325bd1"
+    },
+    {
+      "path": "recorded/experiments/configs/tracking_study.json",
+      "bytes": 4990,
+      "sha256": "5842d7ca66a4e5fac1c66ae77c3afce84a3e545c0a0e94523ae568ef06434869"
+    },
+    {
+      "path": "recorded/experiments/diagnose_landing_camera_sync.py",
+      "bytes": 3348,
+      "sha256": "eb20215c7d00f059308aab28ddaa0d0f258b912a9e1c1b449d0a5a0badf6be4c"
+    },
+    {
+      "path": "recorded/experiments/diagnose_landing_contact.py",
+      "bytes": 2887,
+      "sha256": "70b43150773994fc258c53488e7444c821c923a0e58166374d44da141171a0c8"
+    },
+    {
+      "path": "recorded/experiments/export_cooperative_figures.py",
+      "bytes": 268,
+      "sha256": "04c5064c78ee85b06135642f6e257be1666e69dc723dbc9bc20aacd7e645d335"
+    },
+    {
+      "path": "recorded/experiments/export_landing_study.py",
+      "bytes": 247,
+      "sha256": "10c2d566db1e97502a8cf12e99296ab4125cd9f0a4e8dba0df9beb4639f89214"
+    },
+    {
+      "path": "recorded/experiments/export_plaza_figures.py",
+      "bytes": 1565,
+      "sha256": "176ba1d338cc2fc981dc9a8225f8165b47db9ec814c337f514c9c2f263fcccbd"
+    },
+    {
+      "path": "recorded/experiments/export_pointcloud_structure.py",
+      "bytes": 1348,
+      "sha256": "3072317e9e38d0edbb7fc5f3cedf0d34cb62e9729cc9fb45213d9db16748ff45"
+    },
+    {
+      "path": "recorded/experiments/plot_plaza.py",
+      "bytes": 281,
+      "sha256": "4f976e781ad31844b96d2aa12992be491ad2c594dfb1e581ceb111c5ebae3f37"
+    },
+    {
+      "path": "recorded/experiments/preflight.py",
+      "bytes": 72,
+      "sha256": "404a6f0c774c160368a1490bf66170054285c58ad6e0eace2b734e35c9ce08cd"
+    },
+    {
+      "path": "recorded/experiments/prepare_bridge_tracking.py",
+      "bytes": 3482,
+      "sha256": "ff8bd2bc607216a9746b05e3df2f6f31ca70bd7309469f2aa575391db514e380"
+    },
+    {
+      "path": "recorded/experiments/prepare_configs.py",
+      "bytes": 5329,
+      "sha256": "55406d28404bcdb3d68309ae2992b3720400d36acba8180cadbe7ad5ea12da64"
+    },
+    {
+      "path": "recorded/experiments/prepare_cooperative_studies.py",
+      "bytes": 6150,
+      "sha256": "403021a32c5fb623fb594ab1991ed7fd4097dbd46000a4541494f1cf65731a4e"
+    },
+    {
+      "path": "recorded/experiments/prepare_dense_configs.py",
+      "bytes": 1892,
+      "sha256": "53928224d5b8937887c25f16e5f526e287e1561e8aa09f1b7f05afba4b3b9096"
+    },
+    {
+      "path": "recorded/experiments/prepare_landing_study.py",
+      "bytes": 6698,
+      "sha256": "94d3169da3122f368f1a57ee6ac254e5ada04cb2fb8c775c7e645298de8b0bc4"
+    },
+    {
+      "path": "recorded/experiments/prepare_physics_sandbox.py",
+      "bytes": 2474,
+      "sha256": "30fbc77153998b93a6568a832a22d24605d2235964aabee245416e60e6a4f55f"
+    },
+    {
+      "path": "recorded/experiments/prepare_plaza_configs.py",
+      "bytes": 2647,
+      "sha256": "31496bf5726354d3299dc819c293d9e162098a0dd03b1c87806822f8a7e132d7"
+    },
+    {
+      "path": "recorded/experiments/prepare_region_navigation.py",
+      "bytes": 2712,
+      "sha256": "7cf47f46967384bad0d8f7f0e96bbc64f86a4c7b2c4d7cdd9b5d7499a7e1e44c"
+    },
+    {
+      "path": "recorded/experiments/prepare_scale_matrix.py",
+      "bytes": 3488,
+      "sha256": "19841944d703034261370e4bd684c64f8d05a0a509a692be608da9c799d7ad2d"
+    },
+    {
+      "path": "recorded/experiments/reconstruct_map.py",
+      "bytes": 2436,
+      "sha256": "10595fbde1805ec2acfc4c24b88539e4bd44891f7d6d16c03ee52ae566215d19"
+    },
+    {
+      "path": "recorded/experiments/reconstruct_plaza.py",
+      "bytes": 1290,
+      "sha256": "d05e00bb16e570d1838be15df6fbfe4232c32ebf74beab7dd49e70d6fb0b38d7"
+    },
+    {
+      "path": "recorded/experiments/refine_plaza_surface.py",
+      "bytes": 4327,
+      "sha256": "bccfd08d054f652537d2ef0fb8edfa123a656a43c1be8b0a4ebc2e8e5b09e311"
+    },
+    {
+      "path": "recorded/experiments/render_plaza.py",
+      "bytes": 339,
+      "sha256": "a96dd02e1411985604836e18d9b27b7c145a0ad27f78cd99ac6e3e2ab6e94ed4"
+    },
+    {
+      "path": "recorded/experiments/render_structural_cloud.py",
+      "bytes": 5439,
+      "sha256": "d32f8758db60cde9ecd07bd5d2947ba5cec424a6fdc0c7e79945fc8b0c29fd6f"
+    },
+    {
+      "path": "recorded/experiments/restore_scene.py",
+      "bytes": 812,
+      "sha256": "47e01d024e323ec9454adec1a4ad7f57e7e3025b4bdcb85392dc8eaf506c4b3b"
+    },
+    {
+      "path": "recorded/experiments/run.ps1",
+      "bytes": 1028,
+      "sha256": "ad0d0073e0c62efdc30f969b18d8c974d4d4d0a3166b1cfdcea08a0d317aa858"
+    },
+    {
+      "path": "recorded/experiments/run_cooperative_study.py",
+      "bytes": 2181,
+      "sha256": "44a7ef98fde6e7a5a5dab16982955e2143832fd7a38a53db79a36569643920c3"
+    },
+    {
+      "path": "recorded/experiments/run_formation.py",
+      "bytes": 73,
+      "sha256": "fbd0d3007a0c5de1b669e8523d092c92836408f464a0256d3808c48ba2173c70"
+    },
+    {
+      "path": "recorded/experiments/run_landing.ps1",
+      "bytes": 2122,
+      "sha256": "ef5086825c9641839bfd3994ada1183feb8dc5fe8a3d94f408d7f8c63235a589"
+    },
+    {
+      "path": "recorded/experiments/run_landing_study.py",
+      "bytes": 2409,
+      "sha256": "260d42ec1073cfb1fc798b0e00c68f134070ee6e733a29438d59c78729f5b8ea"
+    },
+    {
+      "path": "recorded/experiments/run_mapping.py",
+      "bytes": 71,
+      "sha256": "e7a9c60f600fda6bba07891b3200f8496d7a6188a86a2da74d800cab77df1b73"
+    },
+    {
+      "path": "recorded/experiments/run_mapping_dense.py",
+      "bytes": 1356,
+      "sha256": "4a0a9690b485fe68cd4607e9cb7cf65fe79b665963f6e36bed44f3c45820214c"
+    },
+    {
+      "path": "recorded/experiments/run_mapping_plaza.py",
+      "bytes": 2056,
+      "sha256": "13158568a35d1d994b0fbd5e64928c10e0f30f7310a47b80ab1a715342292c05"
+    },
+    {
+      "path": "recorded/experiments/run_navigation.py",
+      "bytes": 74,
+      "sha256": "9eb29b551e2072dcf4f3d6422ccb96081e4e4315e6fa237c360fbac0ae96f800"
+    },
+    {
+      "path": "recorded/experiments/run_study.ps1",
+      "bytes": 869,
+      "sha256": "a142bd0091a35af6545e643703f245ada1a90b4c1a9c2fcdb9fc711206b8baff"
+    },
+    {
+      "path": "recorded/experiments/run_tracking.py",
+      "bytes": 72,
+      "sha256": "9899a4001d359fe279fad39866a088665157859a25a3eea3754ec12adb697f7a"
+    },
+    {
+      "path": "recorded/experiments/setup_reconstruction.ps1",
+      "bytes": 623,
+      "sha256": "387918c3869a63142d39aa701cdb6acf483726f7b35b6bc46b9f53eccc0d14c4"
+    },
+    {
+      "path": "recorded/experiments/start_simulator.ps1",
+      "bytes": 1446,
+      "sha256": "bb08453ca20a3cc91dec00067a2c1d978ba166e4432dd0bd55df56472c9aaac7"
+    },
+    {
+      "path": "recorded/experiments/survey_task_regions.py",
+      "bytes": 3976,
+      "sha256": "930146a527c8baf11a1decc742919656a5da316788d2e381201d70f9c3fef053"
+    },
+    {
+      "path": "recorded/experiments/tests/test_algorithms.py",
+      "bytes": 4000,
+      "sha256": "96211a70964e2fcff0a3bbe0a049b7fbc35b2a91323ca40b31e316bc5e08575d"
+    },
+    {
+      "path": "recorded/experiments/tests/test_cooperative_studies.py",
+      "bytes": 3767,
+      "sha256": "a6769d20023ac89761b33fc61408fd3a3fd69244d71ef038cc09d00e2ae555e5"
+    },
+    {
+      "path": "recorded/experiments/tests/test_evidence_archive.py",
+      "bytes": 1844,
+      "sha256": "d96cd3e4599ae06c963fa52fbf0c41a4de3c02f9beebc3794e72526be88ddad6"
+    },
+    {
+      "path": "recorded/experiments/tests/test_figure_render.py",
+      "bytes": 1618,
+      "sha256": "502d954120fae14695b1e890142ce14d49b12c41c1b1aec80b038fe843f21726"
+    },
+    {
+      "path": "recorded/experiments/tests/test_landing_core.py",
+      "bytes": 3598,
+      "sha256": "071734c9dcd8f457f99a8ce4be77202ee09019b060eb6ea328f73f4e35b9b835"
+    },
+    {
+      "path": "recorded/experiments/tests/test_plaza_reconstruction.py",
+      "bytes": 1578,
+      "sha256": "8c1d35f832bc20818dc96b91005427ee2f0b7865398035f2f3638a19033778db"
+    },
+    {
+      "path": "recorded/experiments/tests/test_reconstruction.py",
+      "bytes": 2102,
+      "sha256": "19e52b981ca68375cb96acd20a5f62fe7403c5d2a63b8ac154734c0ff6ef5577"
+    },
+    {
+      "path": "recorded/experiments/tests/test_scan_capture.py",
+      "bytes": 1387,
+      "sha256": "b9ad3853e4bd0b546fc02970e691274ada7e11d0028d74ebd6a8b3fa245ff015"
+    },
+    {
+      "path": "recorded/experiments/tests/test_scene_figure.py",
+      "bytes": 1149,
+      "sha256": "f714fe968f0a707312e8495cff7d9aa178d5a02bf4ae8bc5d656668eb4dfc749"
+    },
+    {
+      "path": "recorded/experiments/tests/test_structural_cloud.py",
+      "bytes": 1398,
+      "sha256": "88b9fd474cd440581ccbf7f8e683a86df8c40af47e994ed2f6e0ae8ee2034fb5"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/analyze_road_network.py",
+      "bytes": 6808,
+      "sha256": "ede7210eaa58e223fb5799f72bd290a758c346878e63e1f40f150e938d6c0fdc"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/audit_results.py",
+      "bytes": 6787,
+      "sha256": "83494f0c9bf83e448702cdae9a3d5bc2f414ab26e7ebfda4b94c0078c256e3b3"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/capture_location.py",
+      "bytes": 2242,
+      "sha256": "bec6dad4c4feac78d1482e51924ddc10fd6911f93a417ca4b36b2ed9eaae731b"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/create_ue_level.py",
+      "bytes": 1282,
+      "sha256": "e09cbba17a2a180175231c16f06d203c19e46b19f7e82020393f4fe3abf5b026"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/drive_marking_probe.py",
+      "bytes": 3829,
+      "sha256": "384800c497e12eaade869aba9f2ca5fc0616330ec69016efc6c0aa2ee49242bd"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/drive_urban_probe.py",
+      "bytes": 7970,
+      "sha256": "208ec05bfe2958abaecf2a5c096a6b1aa8f98a1ea52d6ecbee283246103b01d1"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/export_results.py",
+      "bytes": 11195,
+      "sha256": "fccd07c92eeb10eee10683b8db08aa635198690d316415e15daaca5f4fa5ef18"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/bellevue_gltfpack_report.json",
+      "bytes": 410,
+      "sha256": "9f4a02c3a60e4289208252cca7a6fbb814c58f9a9941b75dd26a6845d94882e5"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/bellevue_probe.json",
+      "bytes": 3303,
+      "sha256": "a8e8b727ca1344a7caf4ad0288d34c41130cfad47b0a9a735c7ef8e310917774"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/bellevue_road_network_report.json",
+      "bytes": 5900,
+      "sha256": "8bdfeb20d1b0277441daccd4304207b772b82339fbbce40fa7d6b5789c0e613c"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/bellevue_scale_1.jsonc",
+      "bytes": 857,
+      "sha256": "97d6287ab685437451736a9bd864251554fceeda29a1245a608325ddf315c46f"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/bellevue_scale_2.jsonc",
+      "bytes": 1272,
+      "sha256": "4e4f824e35c793733044b9dead47ad41588eee705311ceac2456e2161617c8ef"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/bellevue_scale_3.jsonc",
+      "bytes": 1688,
+      "sha256": "9bdcdbf3aef40b3d3450baaee34075f06acc124bd60015d5a8300015156f7b9d"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/drive_probe/summary.json",
+      "bytes": 839,
+      "sha256": "79e65887898c8d5497bb7897bb23fd03c162c7c3416c3e5f8cd988f7d66eadc1"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/drive_probe_rounded_corner/summary.json",
+      "bytes": 1801,
+      "sha256": "607a6d6a856364e65b5fcc97a97e642149c616036a0d41e7c7668604bc3c24e0"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/drive_probe_straight/summary.json",
+      "bytes": 806,
+      "sha256": "68bdd84a63b8e30d9842ce18386d2a5e21a4a60422b8506b14b363106523726a"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/gltfpack_report.json",
+      "bytes": 410,
+      "sha256": "553ece26ac72a32c20256877b498385d44215653ec86a953d07332230d0807f8"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/road_network_report.json",
+      "bytes": 6139,
+      "sha256": "ba42a0bdcf748e4d68056867a8703e2e2ea5f94fc8ebd8b65910d44551b3e90f"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/south_lake_union_runtime_512_no_markings.json",
+      "bytes": 979,
+      "sha256": "9c2ec17804723fcc8469307d2b3405406a51f3e515eae99dc2948bfdfe345423"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/south_lake_union_runtime_matte.json",
+      "bytes": 4019,
+      "sha256": "4b3d6f672f8308d561e51319d5afbba17c3090482d0860f820a78f642510582f"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/urban_probe.json",
+      "bytes": 1763,
+      "sha256": "e1777115389dc32eba88276416e4fd9eb7ab89eb3cd349658ec590c1bd1b0751"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/urban_probe_512.json",
+      "bytes": 3305,
+      "sha256": "2525803df62b603b4ae93f13d48bf0b90e977049cc1bc06bd1d77d11a928f723"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/urban_probe_matte.json",
+      "bytes": 3313,
+      "sha256": "6c0c42d136eeb45fd92224233963222658e8e2fda854f7a0b57ca6d92bea0827"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/generated/urban_probe_no_markings.json",
+      "bytes": 3341,
+      "sha256": "74c04f8d5a3de8b5d965534a0e7a461102952ec5186282f9bae4f92e21e732ec"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/inspect_collision_mesh.py",
+      "bytes": 2899,
+      "sha256": "9e45c199bcdf169436a0e6eccee943b087e61ad946f94e69085f766fc8d4cc01"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/observer_probe.jsonc",
+      "bytes": 553,
+      "sha256": "185ca37cdb9a169f6bbca890578e5bb6a10cdccfc530bd6fe3d9610ba901e1f0"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/prepare_bellevue.py",
+      "bytes": 1744,
+      "sha256": "0971889f629f0f7e7d2a683e098a9801a71e746631f8f0e6db20f7eb99adfd41"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/prepare_osm.py",
+      "bytes": 3334,
+      "sha256": "7c254e40f1e647ecc917339ad9ee5c3b25bc6c2eb9f7b55377ec13ed739a2f87"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/prepare_pursuit_configs.py",
+      "bytes": 1305,
+      "sha256": "034032b6a3dbf3245021c81fb9b2119beb2ace93d4fa02457dfd679d47765435"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/probe_urban_scene.py",
+      "bytes": 5074,
+      "sha256": "8d2fbb36c10f9534c024aef708e625ff6b74047720f3ee31f25b608490ae71cb"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/README.md",
+      "bytes": 4485,
+      "sha256": "3421f0edb729217834ce8d0539885cf78b71eedff445c684dfd35c8c227940be"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/remove_road_markings.py",
+      "bytes": 2665,
+      "sha256": "731b1693cd88c2a9ae3c97e68a5e0c27b68cf17b5233de4b017592c11386a46f"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/resize_glb_textures.py",
+      "bytes": 4076,
+      "sha256": "c3fbe79559d693e443a751dcfb93bbde5d562f6c657996b88f9bdee4f0bf911e"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/road_graph.py",
+      "bytes": 6707,
+      "sha256": "46189cdbbd18a356e194cda6d10a18456a3b77006eed0b8b3094451f351b3b7d"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/robots/pursuit_interceptor.jsonc",
+      "bytes": 7197,
+      "sha256": "dcc1e38a90aa2a26158435ec7bf42cf572e4b6b4782e183461b81bdf86d0331c"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/robots/pursuit_target.jsonc",
+      "bytes": 7741,
+      "sha256": "cc620eef29ddc9158352a271621def70b008ef8ab2142cc4e67bb4802d9e0044"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/robots/pursuit_uav.jsonc",
+      "bytes": 8064,
+      "sha256": "2f180c121696c9b13d66f050b09a59e6f5ecd2a282b5d0f2f1c307807ba18eb9"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/run_navigation.py",
+      "bytes": 19153,
+      "sha256": "041e51273c19cc4cc475d3db7f271dc310951b71ef2a14fbbe0289e9512dbdad"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/run_pursuit.py",
+      "bytes": 21849,
+      "sha256": "bee382992872f7858ac9123f7e0f8f9b73e9975070a4d7c8cc60b90d2007bbcf"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/run_scale.py",
+      "bytes": 13855,
+      "sha256": "b1970533fa322dbcb3f42c6e7adc8c685d4151c7b077b16536c78e130cbeee3a"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/scene_bellevue_drive_probe.jsonc",
+      "bytes": 573,
+      "sha256": "eac7d0c9f9c0b4dae27d0b6360d8190fa1f0e017bf1cd555c44abb9befdd1e85"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/scene_bellevue_pursuit.jsonc",
+      "bytes": 1247,
+      "sha256": "d13d9c087d7074ccce8ff46cc88b68d2d1a6e45b24afa7119e6779f12b974c3f"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/scene_drive_probe.jsonc",
+      "bytes": 664,
+      "sha256": "8725c7533197e459fad9419f5c8b156490841ce80852cd966e47fa4f44983bf3"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/scene_marking_probe.jsonc",
+      "bytes": 568,
+      "sha256": "5ddf89b58509ecf4d1362fde78e0a64c2968c045158c9268165a11b4709e295a"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/scene_navigation_air.jsonc",
+      "bytes": 828,
+      "sha256": "72e6d99b79a360d6a1a2b45b1b402a3f6623c5727fdc79cb3acd8c54e6681493"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/scene_navigation_ground.jsonc",
+      "bytes": 668,
+      "sha256": "b2144d786fdb7a7f5d995baa91eb3001351707282ebac91d067b93aea97b3165"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/scene_probe.jsonc",
+      "bytes": 451,
+      "sha256": "927463d36d516d57f56080330f14a9b6b8d3206cb9fa8d43300a20a12cba86ab"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/source/bellevue_provenance.json",
+      "bytes": 702,
+      "sha256": "87009ca8b8a1d7436214e2b394fb21b9f7b07812d3dd6d1fb711666f8cd64474"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/source/provenance.json",
+      "bytes": 700,
+      "sha256": "de8bdcd78b4179e7c166a37997b5716a0b108cbcc5f72a5350e261b50fce3f53"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/start_urban_simulator.ps1",
+      "bytes": 2054,
+      "sha256": "53ba1162866c372fd18286b59d764f401731068646550b8a874e988a0e785f9a"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/tune_glb_materials.py",
+      "bytes": 3000,
+      "sha256": "91568b2c204ff90ed5e213d4372708fd3fd13a2cb379523b29e6062518a1f657"
+    },
+    {
+      "path": "recorded/experiments/urban_scene/urban_runtime.py",
+      "bytes": 9610,
+      "sha256": "c5f4a255c471036dc02ecdad001f9e06d28d227153ead3a8c3878ca0be6c7f23"
+    },
+    {
+      "path": "recorded/experiments/verify_preservation.py",
+      "bytes": 309,
+      "sha256": "9d6cba7d53c1c15c9f6a43c6a6e915ba4046c32d57402a50055d15f3e11356f7"
+    },
+    {
+      "path": "recorded/experiments/verify_study_tests.py",
+      "bytes": 1350,
+      "sha256": "f5cbe661a6c91bb5f7b13d396e3f83397df5e99df2e497ebf298bd1b012f9c64"
+    },
+    {
+      "path": "recorded/experiments/video_tools/audit_tracking_video.py",
+      "bytes": 6431,
+      "sha256": "468050d4d8337fe56b4b90059dffa2798253e2345a5959f1e4d57e506fb7b80a"
+    },
+    {
+      "path": "recorded/experiments/video_tools/compose_video.py",
+      "bytes": 16267,
+      "sha256": "9ef29fd946f788c59f5e3f3db7242a39137a6ecf791fa4cc01da03c7cb0bd1f7"
+    },
+    {
+      "path": "recorded/experiments/video_tools/deliver_videos.py",
+      "bytes": 8165,
+      "sha256": "3d1b4071becb84f59bd5b73be3bb4925c9402b46f7f9493b94b8481108b3b9fe"
+    },
+    {
+      "path": "recorded/experiments/video_tools/record_experiment.py",
+      "bytes": 25153,
+      "sha256": "5eee31ca63c1a8b893598089ea2f582e24abf66e88905ba65c84d31160213bb5"
+    },
+    {
+      "path": "recorded/experiments/video_tools/start_recording_simulator.ps1",
+      "bytes": 2839,
+      "sha256": "0832fda8c956988268bc00485a5627a2ffc202f5b873fb72d649d673e11105cd"
+    },
+    {
+      "path": "recorded/experiments/view_map_3d.py",
+      "bytes": 1791,
+      "sha256": "4af5cd97435dd80c3e3e2ea2d3ec5e05e359eb44992703cb5df5e0714692ab2b"
+    },
+    {
+      "path": "recorded/experiments/view_plaza_map.py",
+      "bytes": 910,
+      "sha256": "813e68a77dee51cd2792bc5dc45f8845ba93130bdea3122772aed1aa085b062f"
+    },
+    {
+      "path": "recorded/landing/build_support/CMakeLists.txt",
+      "bytes": 1392,
+      "sha256": "c21b646ee5121621ed49dd52318fd3d42c285b2126b766299aff338f3b423aa1"
+    },
+    {
+      "path": "recorded/landing/configs/bridge_tracking/robot_observer_tracking_study.jsonc",
+      "bytes": 1852,
+      "sha256": "b6244dc9e1d564a711a8464c5dbbae07c2b2bee36a41146857fdaa66494082f4"
+    },
+    {
+      "path": "recorded/landing/configs/bridge_tracking/robot_target_tracking_study.jsonc",
+      "bytes": 7739,
+      "sha256": "a015a88c9dd72f48d74ce6b5d27ef3fadeba4a9346293852ae646226505fa1a1"
+    },
+    {
+      "path": "recorded/landing/configs/bridge_tracking/robot_uav_tracking_study.jsonc",
+      "bytes": 8061,
+      "sha256": "5eabb14cad4f8714d934bcfc5ef54c7f95b79a1f0962c7efb7499b443a11aae1"
+    },
+    {
+      "path": "recorded/landing/configs/bridge_tracking/robot_ugv_tracking_study.jsonc",
+      "bytes": 7738,
+      "sha256": "282c2b84faf99f141c1ab9537c264e5db5eeaaba2ac96edcea5f49ae5ba0fb96"
+    },
+    {
+      "path": "recorded/landing/configs/bridge_tracking/scene_tracking_study.jsonc",
+      "bytes": 1292,
+      "sha256": "21c6e1d520a8c4f13a951d8464a7c1e2efe9cb30d4b608895b2662e0957b96dc"
+    },
+    {
+      "path": "recorded/landing/configs/bridge_tracking/study.json",
+      "bytes": 3312,
+      "sha256": "f61a0b30b35e473333fa63530c863febe433a65f2338a3850a8c7f74dd9cb2c0"
+    },
+    {
+      "path": "recorded/landing/configs/garden_navigation/robot_observer_navigation_study.jsonc",
+      "bytes": 1855,
+      "sha256": "f91555db10e57f2fa22671e8f5aecba57982d3f2d4fd3a944a7b21ec2c38db0b"
+    },
+    {
+      "path": "recorded/landing/configs/garden_navigation/robot_uav_navigation_study.jsonc",
+      "bytes": 8061,
+      "sha256": "8a4257e313d09d8da9b9828332c78c356b5bd47db706288e53ff483c043e1aa5"
+    },
+    {
+      "path": "recorded/landing/configs/garden_navigation/robot_ugv_navigation_study.jsonc",
+      "bytes": 7738,
+      "sha256": "59c51c0820073157efe572432bd7ee57241f0034ff941f08efd2a580424414f3"
+    },
+    {
+      "path": "recorded/landing/configs/garden_navigation/scene_navigation_study.jsonc",
+      "bytes": 1082,
+      "sha256": "64c43832ccd895e119b02c521601d226e580526477c361c3f4e4fae2b6f29aaf"
+    },
+    {
+      "path": "recorded/landing/configs/garden_navigation/study.json",
+      "bytes": 3725,
+      "sha256": "995ccf3559cb737c346e62e9b2972652536aa0189a4e6e394e2dd193228fa917"
+    },
+    {
+      "path": "recorded/landing/configs/landing/robot_observer.jsonc",
+      "bytes": 992,
+      "sha256": "3a8d4cdb8e33626a8cccceae9632c92f6250d9b0ce9a1689178333acf66ca849"
+    },
+    {
+      "path": "recorded/landing/configs/landing/robot_uav.jsonc",
+      "bytes": 6996,
+      "sha256": "8e309453a211a474ee81381cb01a6037059523a5b18783b9d0d592368912f6be"
+    },
+    {
+      "path": "recorded/landing/configs/landing/robot_usv.jsonc",
+      "bytes": 6066,
+      "sha256": "44f0af5cba1fb3907fde7320c889f662881a1972e4948b42d97fd38373ba72e6"
+    },
+    {
+      "path": "recorded/landing/configs/landing/scene_landing.jsonc",
+      "bytes": 1040,
+      "sha256": "ab11803dbc72393d54c45b15554a1e9a21d5b5eda89d46e90e52558b13b269ff"
+    },
+    {
+      "path": "recorded/landing/configs/landing/study.json",
+      "bytes": 3523,
+      "sha256": "955eea5adfdabceb01fec0ba8d3cf7a20c6f3d875373cdf89d3c283eddef2ccd"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/matrix.json",
+      "bytes": 401,
+      "sha256": "c4b63e86c7ef02ebb68f2169272e0eb96e893c9e49ccd35e15a6f4256f2f0235"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav1_ugv1/observer.jsonc",
+      "bytes": 1867,
+      "sha256": "9463c3a7f3fec778c3cbe4294d57b66a424c5edeb3681f503c93a2295c258ca1"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav1_ugv1/robot_uav.jsonc",
+      "bytes": 8061,
+      "sha256": "4e009c8686fe18fefddc9f7497bec3ebecefca30dc25043033f7b6201498ba47"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav1_ugv1/robot_ugv.jsonc",
+      "bytes": 7738,
+      "sha256": "8eb26c67ff002f6d2f39ac44c0d497d711393d1ca9c6b7d130ab5ce391c6e535"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav1_ugv1/scene.jsonc",
+      "bytes": 1023,
+      "sha256": "39b40b4f5a970847fb8e295ec05d955150528fc683c4dd961776d90b5a34a80c"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav1_ugv1/study.json",
+      "bytes": 3258,
+      "sha256": "4b0207647aefd8aaa0c78f88cca9ef70005e6337e02845bfd740dd9f0e929e83"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav2_ugv2/observer.jsonc",
+      "bytes": 1867,
+      "sha256": "9463c3a7f3fec778c3cbe4294d57b66a424c5edeb3681f503c93a2295c258ca1"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav2_ugv2/robot_uav.jsonc",
+      "bytes": 8061,
+      "sha256": "4e009c8686fe18fefddc9f7497bec3ebecefca30dc25043033f7b6201498ba47"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav2_ugv2/robot_ugv.jsonc",
+      "bytes": 7738,
+      "sha256": "8eb26c67ff002f6d2f39ac44c0d497d711393d1ca9c6b7d130ab5ce391c6e535"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav2_ugv2/scene.jsonc",
+      "bytes": 1409,
+      "sha256": "3f4210e81839c47ec1761e1eef2425ce73096d924ce31897698f2199c4148748"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav2_ugv2/study.json",
+      "bytes": 3604,
+      "sha256": "a2ccf6d6f9ffa9a9d7d2d927e40040439a95d83da235e2cefe995bfd6ab4320a"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav3_ugv2/observer.jsonc",
+      "bytes": 1867,
+      "sha256": "9463c3a7f3fec778c3cbe4294d57b66a424c5edeb3681f503c93a2295c258ca1"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav3_ugv2/robot_uav.jsonc",
+      "bytes": 8061,
+      "sha256": "4e009c8686fe18fefddc9f7497bec3ebecefca30dc25043033f7b6201498ba47"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav3_ugv2/robot_ugv.jsonc",
+      "bytes": 7738,
+      "sha256": "8eb26c67ff002f6d2f39ac44c0d497d711393d1ca9c6b7d130ab5ce391c6e535"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav3_ugv2/scene.jsonc",
+      "bytes": 1603,
+      "sha256": "0ceb2eebb0a0f59dd48189be3b12e2e99f0d99998b758de460e67f72829cc398"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav3_ugv2/study.json",
+      "bytes": 3780,
+      "sha256": "52c40038e9b8efb587a280b5affb25d6b442dc0b695ac804e446b084e3fb0506"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav4_ugv4/observer.jsonc",
+      "bytes": 1867,
+      "sha256": "9463c3a7f3fec778c3cbe4294d57b66a424c5edeb3681f503c93a2295c258ca1"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav4_ugv4/robot_uav.jsonc",
+      "bytes": 8061,
+      "sha256": "4e009c8686fe18fefddc9f7497bec3ebecefca30dc25043033f7b6201498ba47"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav4_ugv4/robot_ugv.jsonc",
+      "bytes": 7738,
+      "sha256": "8eb26c67ff002f6d2f39ac44c0d497d711393d1ca9c6b7d130ab5ce391c6e535"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav4_ugv4/scene.jsonc",
+      "bytes": 2181,
+      "sha256": "6f537b8bde8cb08a04c3f08f781f6789897d0adc389e5b96e71ec9a79b4a4232"
+    },
+    {
+      "path": "recorded/landing/configs/scale_matrix/uav4_ugv4/study.json",
+      "bytes": 4296,
+      "sha256": "448ce9cf4f336c7d3c395f0243787bc2968980750dcd58c103a2b2f4246d46f3"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/protocol.json",
+      "bytes": 2081,
+      "sha256": "ffc08e1c783f6f08c51ab5048ea88ff9efb7ef628385b6fbde0936253821f001"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/append_result_card.py",
+      "bytes": 2829,
+      "sha256": "ca63459553cd4c9457ae095317773d6a8763e833d69bbd406b4c5ba8dbeed219"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/audit_delivery.py",
+      "bytes": 2676,
+      "sha256": "4fb06e3ba8e1f8a1cf69423e92718686aff1adf281119281f62997563fdb39cb"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/audit_sensor_inputs.py",
+      "bytes": 1603,
+      "sha256": "e80af186704d152d35f16fd4375e4b0f524f7f575c59e21675a3c878a73b9c8b"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/check_video.py",
+      "bytes": 7991,
+      "sha256": "ca23039c2edeb75c9f6c2a287ca8861790a862e48904efd74d9f000124764e1a"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/compose_water_landing.py",
+      "bytes": 17525,
+      "sha256": "76ae8768db1aaaa1908afac6ba957752d0ba5b6e1a55e90f0d075c14a7a7ad67"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/export_video.py",
+      "bytes": 1102,
+      "sha256": "adf34d9853b975f5e0ee978c8ea05deef82987ce0c64d19677c68568f2eb95c6"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/extract_posters.py",
+      "bytes": 725,
+      "sha256": "61c67e65ec7951aafcb6b0a1ae2fa0dc81e53e789d9280f4fb4c6c1b197cd03b"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/finish_and_preserve.ps1",
+      "bytes": 795,
+      "sha256": "565013e64cc6afc33435eb0ed8d8bc4fee4692ed326105caefc66c8e04afb2a6"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/landing_runtime_dynamics.py",
+      "bytes": 21180,
+      "sha256": "6fc254dcf2584eb9df440caa76616ee2fef5bd09c6902e6ee3f148b74695c6b0"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/materialize_sensor_frame.py",
+      "bytes": 674,
+      "sha256": "1e7c2dc725e79df894dcc718603b706a0fe9fa9b3bc9655c6aff75014295b004"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/probe_reference_heading.py",
+      "bytes": 3082,
+      "sha256": "6b251ed6e197751f8cebd3cf94738b3c20cd747c5a44032fec12a9111ad86245"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/produce_delivery.py",
+      "bytes": 1802,
+      "sha256": "83929995c7897b0cf196fa2b5c2dc0ae1747ac36d7fb0c7f0ad6cf7a75d88212"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/publish_water_page.py",
+      "bytes": 8326,
+      "sha256": "5b571adaa51abe9ad4980af258f96521cef7476f4b2ceaee4b7699cae516f62e"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/record_water_landing.py",
+      "bytes": 34105,
+      "sha256": "a796ddbe5346054958741a200c5e7ade0799e706d2eb6acefac1a2b16e87a701"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/seal_delivery.py",
+      "bytes": 1564,
+      "sha256": "46349c59c3149895aee4be83b65325f4cde27154094bf70bad19428400da7e02"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/start_simulator.ps1",
+      "bytes": 1400,
+      "sha256": "3014e8fbcba5ac87873ceef854417ce215113582f7ff4cf00702cf55f210d63a"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/verify_previous_delivery.py",
+      "bytes": 1017,
+      "sha256": "3760e740efa6e716cf2eada5d8421b0cd623f8ddf250085929dfc566461dc145"
+    },
+    {
+      "path": "recorded/landing/REFERENCE_HEADING_LANDING/tools/verify_runtime.py",
+      "bytes": 1382,
+      "sha256": "0361f29b32ff27644b8897efaeb2a3fab49c43978a8a4bb064ac095083008c3e"
+    },
+    {
+      "path": "recorded/landing/tests/vessel_dynamics_tests.cpp",
+      "bytes": 1418,
+      "sha256": "1ad51e2e09b1d99f3715641d9bdb0bb333a9f5a1b0ccd898f1fdb7c2c1ba857e"
+    },
+    {
+      "path": "recorded/landing/tools/analyze_boat_orientation.py",
+      "bytes": 1331,
+      "sha256": "820b03197311e436c70544be3e0c680e91ad104628d9cb569eea06790fa56376"
+    },
+    {
+      "path": "recorded/landing/tools/append_result_card.py",
+      "bytes": 2829,
+      "sha256": "ca63459553cd4c9457ae095317773d6a8763e833d69bbd406b4c5ba8dbeed219"
+    },
+    {
+      "path": "recorded/landing/tools/audit_delivery.py",
+      "bytes": 2641,
+      "sha256": "d89aca3baf05a041f365072026541fc3e122365903664dbbe9430feb8f5b9ff9"
+    },
+    {
+      "path": "recorded/landing/tools/check_video.py",
+      "bytes": 5614,
+      "sha256": "7fea0c579a509bb2d33db9cd9af4adef4645dd30af5847eb42a045272580127e"
+    },
+    {
+      "path": "recorded/landing/tools/compose_water_landing.py",
+      "bytes": 17525,
+      "sha256": "76ae8768db1aaaa1908afac6ba957752d0ba5b6e1a55e90f0d075c14a7a7ad67"
+    },
+    {
+      "path": "recorded/landing/tools/create_water_assets.py",
+      "bytes": 4947,
+      "sha256": "07ced9a603bf6981d4a654f5008f8510686fefc425bb7829bb21b1f62a636141"
+    },
+    {
+      "path": "recorded/landing/tools/export_video.py",
+      "bytes": 1102,
+      "sha256": "adf34d9853b975f5e0ee978c8ea05deef82987ce0c64d19677c68568f2eb95c6"
+    },
+    {
+      "path": "recorded/landing/tools/extract_posters.py",
+      "bytes": 720,
+      "sha256": "5be0f715afd70213cc0f176f6c5c999511527392363b3afc04d84611e3e9b2a5"
+    },
+    {
+      "path": "recorded/landing/tools/inspect_boat_orientation.py",
+      "bytes": 718,
+      "sha256": "ccfdf8f6e8f6b8d8703b8455ab282122bf56b4080dc980a23144c99f56835db2"
+    },
+    {
+      "path": "recorded/landing/tools/inspect_water.py",
+      "bytes": 1818,
+      "sha256": "ae899d2b0d66e5fd502cd8cdfa4358fb1b8c3b31f94c65ed28f9063ab26cc28a"
+    },
+    {
+      "path": "recorded/landing/tools/landing_runtime_dynamics.py",
+      "bytes": 20776,
+      "sha256": "a3c86b2139c0d28046b39328427cc7f782a928ad1d64f32d8c212c96b14588ed"
+    },
+    {
+      "path": "recorded/landing/tools/probe_water_runtime.py",
+      "bytes": 2687,
+      "sha256": "9140b5b0ac6b5dd21ecf441827a5f4e1e96fc31b00e45982625f98f9408d042e"
+    },
+    {
+      "path": "recorded/landing/tools/probe_water_visual_fixed.py",
+      "bytes": 3072,
+      "sha256": "b42001a3d94b45c70538214e1454534c145232b0405c653b6b403ac1dd3e90f3"
+    },
+    {
+      "path": "recorded/landing/tools/publish_water_page.py",
+      "bytes": 6916,
+      "sha256": "6d13ffe7cca5748ee17ceb5df5aec0a0e96bf3ab80a6b58a357392370f054094"
+    },
+    {
+      "path": "recorded/landing/tools/record_water_landing.py",
+      "bytes": 29871,
+      "sha256": "602fbd7972574986a843be3a35be0584902d8438a5c0bb31c218a41a128614f0"
+    },
+    {
+      "path": "recorded/landing/tools/refresh_build_receipt.py",
+      "bytes": 774,
+      "sha256": "38e7361759c539d97e408dcc1f42e056956184fdf71bce7ed3064e327a81dd5c"
+    },
+    {
+      "path": "recorded/landing/tools/repair_grid_axis.py",
+      "bytes": 1389,
+      "sha256": "15f4fd12aa6a984be9b81a472e1fd1a4728c3956f301cf53274fc48650a2fde0"
+    },
+    {
+      "path": "recorded/landing/tools/repair_water_materials.py",
+      "bytes": 4734,
+      "sha256": "61b33f4fd14e86b886d8ed8c887d132a5af186dc01378553e2a87c889b8f91cc"
+    },
+    {
+      "path": "recorded/landing/tools/seal_delivery.py",
+      "bytes": 1572,
+      "sha256": "7a95257ad32b7982fa25673107c37eb1705652350d88d29233cd44ff3e061cea"
+    },
+    {
+      "path": "recorded/landing/tools/start_simulator.ps1",
+      "bytes": 1400,
+      "sha256": "3014e8fbcba5ac87873ceef854417ce215113582f7ff4cf00702cf55f210d63a"
+    },
+    {
+      "path": "recorded/landing/tools/verify_runtime.py",
+      "bytes": 1382,
+      "sha256": "0361f29b32ff27644b8897efaeb2a3fab49c43978a8a4bb064ac095083008c3e"
+    },
+    {
+      "path": "requirements-offline-tested.txt",
+      "bytes": 291,
+      "sha256": "617e6aa8e523ce3b0e9e0b75d1241cc3183609a84194d851235dd5ef7840ee2b"
+    },
+    {
+      "path": "settings/local.example.json",
+      "bytes": 345,
+      "sha256": "2ea6b2f842655c6fa2a6eb136901d7c580182067012e64681a6fda5e668ff548"
+    },
+    {
+      "path": "SOURCE_ORIGINS.json",
+      "bytes": 60672,
+      "sha256": "f079b144078a974f8e6c614f2d03adfe5984b3c5923ff388802855e2c0f6c50f"
+    },
+    {
+      "path": "tests/test_release.py",
+      "bytes": 3413,
+      "sha256": "1b220305b86cbf68b88c478118e8de358c57a314134fb7578c64c243c3a36088"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1801,
+      "sha256": "14b8a42a8f2b6ee9200a2044803c426b052bb0fdc47112666f2713841d3f6310"
+    },
+    {
+      "path": "tools/create_landing_receipts.py",
+      "bytes": 3512,
+      "sha256": "2681a8d41ec13cf52a13451471a3f7857ea117693821afa25445b1fc2706d95e"
+    },
+    {
+      "path": "tools/materialize_backend.py",
+      "bytes": 5800,
+      "sha256": "0eaece532b8ac20ba0f69d4e8e68aa54a7756e1b026d6cfbf88ed6f8b0b766ce"
+    },
+    {
+      "path": "tools/run_offline_tests.py",
+      "bytes": 2305,
+      "sha256": "f5a362d946d370dc1236e0086ab52f7d7b4228a500bdc3c61e93181ce4f8aaea"
+    },
+    {
+      "path": "tools/seal_release.py",
+      "bytes": 3189,
+      "sha256": "0a6f2e8fbe73f9155ead8ad30a6a531ec3e53d589466a455a925bc75199b825b"
+    }
+  ]
+}

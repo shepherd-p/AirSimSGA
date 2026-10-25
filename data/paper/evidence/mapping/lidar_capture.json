@@ -1,0 +1,13 @@
+{
+  "received": 6862,
+  "enqueued": 6862,
+  "saved": 6862,
+  "Drone1_saved": 3445,
+  "Drone1_points": 13123005,
+  "invalid_or_robot_returns": 130066,
+  "Car1_saved": 3417,
+  "Car1_points": 9529843,
+  "errors": [],
+  "queue_drops": 0,
+  "transport_loss": "Not measurable: server packets have no sequential packet ID"
+}

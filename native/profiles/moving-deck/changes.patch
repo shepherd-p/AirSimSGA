@@ -1,0 +1,1718 @@
+diff --git a/client/python/projectairsim/src/projectairsim/client.py b/client/python/projectairsim/src/projectairsim/client.py
+--- a/client/python/projectairsim/src/projectairsim/client.py
++++ b/client/python/projectairsim/src/projectairsim/client.py
+@@ -7,10 +7,6 @@
+ 
+ import asyncio
+ import base64
+-import cryptography
+-import cryptography.hazmat.primitives.serialization
+-import cryptography.hazmat.primitives.asymmetric.padding
+-import cryptography.hazmat.primitives.hashes
+ import inspect
+ import json
+ import random
+@@ -414,21 +410,28 @@
+         Returns:
+             datatime when the token expires
+         """
++        try:
++            import cryptography.hazmat.primitives.asymmetric.padding as rsa_padding
++            import cryptography.hazmat.primitives.hashes as rsa_hashes
++            import cryptography.hazmat.primitives.serialization as rsa_serialization
++        except Exception as exc:
++            raise RuntimeError(
++                "Cryptography backend unavailable. "
++                "If your environment blocks Rust DLLs, use a policy exception or "
++                "a compatible cryptography build."
++            ) from exc
++
+         encryption_key_openssh = bytes(
+             self.__get_authorization_token_public_key(), "utf-8"
+         )
+-        rsa_key_public = (
+-            cryptography.hazmat.primitives.serialization.load_ssh_public_key(
+-                encryption_key_openssh
+-            )
+-        )
++        rsa_key_public = rsa_serialization.load_ssh_public_key(encryption_key_openssh)
+         ciphertext = rsa_key_public.encrypt(
+             token,
+-            cryptography.hazmat.primitives.asymmetric.padding.OAEP(
+-                mgf=cryptography.hazmat.primitives.asymmetric.padding.MGF1(
+-                    algorithm=cryptography.hazmat.primitives.hashes.SHA1()
++            rsa_padding.OAEP(
++                mgf=rsa_padding.MGF1(
++                    algorithm=rsa_hashes.SHA1()
+                 ),
+-                algorithm=cryptography.hazmat.primitives.hashes.SHA1(),
++                algorithm=rsa_hashes.SHA1(),
+                 label=None,
+             ),
+         )
+diff --git a/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc b/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc
+--- a/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc
++++ b/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc
+@@ -24,7 +24,8 @@
+                         "type": "string",
+                         "description": "Name of robot",
+                         "enum": [
+-                            "robot"
++                            "robot",
++                            "vessel"
+                         ]
+                     },
+                     "name": {
+diff --git a/client/python/projectairsim/src/projectairsim/utils.py b/client/python/projectairsim/src/projectairsim/utils.py
+--- a/client/python/projectairsim/src/projectairsim/utils.py
++++ b/client/python/projectairsim/src/projectairsim/utils.py
+@@ -351,12 +351,16 @@
+ 
+ def decode_bytes(data: bytes):
+     """Helper function for the general decode to decode bytes"""
++    data_decoded = data
+     try:
+         # First try unpacking as msgpack binary data
+         data_decoded = msgpack.unpackb(data, raw=False)
+-    except msgpack.FormatError:
++    except Exception:
+         # If not valid msgpack data, try unpacking as a binary string
+-        data_decoded = data.decode()
++        try:
++            data_decoded = data.decode()
++        except Exception:
++            data_decoded = data
+     finally:
+         return data_decoded
+ 
+@@ -485,6 +489,21 @@
+     total_path = os.path.join(sim_config_path, config_name)
+     filepaths = [total_path, [], []]
+ 
++    def _read_text_with_fallback_encodings(path: str) -> str:
++        # Windows default encoding (e.g. GBK) can break when JSONC files are saved as UTF-8.
++        # Prefer UTF-8 (with or without BOM) and fall back to GBK for legacy files.
++        encodings_to_try = ("utf-8-sig", "utf-8", "gbk")
++        with open(path, "rb") as fb:
++            raw = fb.read()
++        last_exc: Optional[UnicodeDecodeError] = None
++        for enc in encodings_to_try:
++            try:
++                return raw.decode(enc)
++            except UnicodeDecodeError as e:
++                last_exc = e
++        assert last_exc is not None
++        raise last_exc
++
+     robot_config_schema = pkg_resources.resource_string(
+         __name__, "schema/robot_config_schema.jsonc"
+     )
+@@ -492,8 +511,8 @@
+         __name__, "schema/scene_config_schema.jsonc"
+     )
+ 
+-    with open(total_path) as f:
+-        data = commentjson.load(f)  # read and write the JSON as a dict
++    scene_json_text = _read_text_with_fallback_encodings(total_path)
++    data = commentjson.loads(scene_json_text)  # read and write the JSON as a dict
+ 
+     if sim_instance_idx != -1:
+         # Append sim instance index to scene ID for distribution mapping
+@@ -503,14 +522,15 @@
+ 
+     if "actors" in data:  # read and write the robot-config param in each actor
+         for actor in data["actors"]:
+-            if actor["type"] == "robot":
++            if actor["type"] in ("robot", "vessel"):
+                 actor_path = actor["robot-config"]
+                 total_actor_path = os.path.join(sim_config_path, actor_path)
+                 filepaths[1].append(total_actor_path)
+-                with open(total_actor_path) as e:
+-                    temp = commentjson.load(e)
++                actor_json_text = _read_text_with_fallback_encodings(total_actor_path)
++                temp = commentjson.loads(actor_json_text)
++                if actor["type"] == "robot":
+                     validate_json(temp, robot_config_schema)
+-                    actor["robot-config"] = temp
++                actor["robot-config"] = temp
+ 
+     if "environment-actors" in data:
+         # read and write the env-actor-config param in each env actor
+@@ -519,11 +539,13 @@
+                 env_actor_path = env_actor["env-actor-config"]
+                 total_env_actor_path = os.path.join(sim_config_path, env_actor_path)
+                 filepaths[2].append(env_actor_path)
+-                with open(total_env_actor_path) as e:
+-                    temp = commentjson.load(e)
+-                    if temp.get("script") != None:
+-                        validate_trajectory_json(temp["script"])
+-                    env_actor["env-actor-config"] = temp
++                env_actor_json_text = _read_text_with_fallback_encodings(
++                    total_env_actor_path
++                )
++                temp = commentjson.loads(env_actor_json_text)
++                if temp.get("script") != None:
++                    validate_trajectory_json(temp["script"])
++                env_actor["env-actor-config"] = temp
+ 
+     if "tiles-dir" in data and data.get("tiles-dir-is-client-relative"):
+         # Convert client-relative path into an absolute path before sending to sim
+diff --git a/core_sim/include/core_sim/actor.hpp b/core_sim/include/core_sim/actor.hpp
+--- a/core_sim/include/core_sim/actor.hpp
++++ b/core_sim/include/core_sim/actor.hpp
+@@ -17,7 +17,7 @@
+ class ActorImpl;
+ class ConfigJson;
+ 
+-enum class ActorType { kRobot = 0, kEnvActor = 1 };
++enum class ActorType { kRobot = 0, kEnvActor = 1, kVessel = 2 };
+ 
+ class Actor {
+  public:
+diff --git a/core_sim/include/core_sim/actor/robot.hpp b/core_sim/include/core_sim/actor/robot.hpp
+--- a/core_sim/include/core_sim/actor/robot.hpp
++++ b/core_sim/include/core_sim/actor/robot.hpp
+@@ -101,6 +101,7 @@
+   const Kinematics& GetKinematics() const;
+   const Environment& GetEnvironment() const;
+   const CollisionInfo& GetCollisionInfo() const;
++  CollisionInfo GetCollisionInfoSnapshot() const;
+   const Vector3& GetExternalForce() const;
+ 
+   // Manually sets actuated rotations on the robot links (such as spinning
+diff --git a/core_sim/include/core_sim/actor/vessel_actor.hpp b/core_sim/include/core_sim/actor/vessel_actor.hpp
+new file mode 100644
+--- /dev/null
++++ b/core_sim/include/core_sim/actor/vessel_actor.hpp
+@@ -0,0 +1,189 @@
++#ifndef CORE_SIM_INCLUDE_CORE_SIM_ACTOR_VESSEL_ACTOR_HPP_
++#define CORE_SIM_INCLUDE_CORE_SIM_ACTOR_VESSEL_ACTOR_HPP_
++
++#include <memory>
++#include <vector>
++#include <unordered_map>
++#include <string>
++
++#include "core_sim/actor.hpp"
++#include "core_sim/config_json.hpp"
++#include "core_sim/transforms/transform.hpp"
++#include "core_sim/math_utils.hpp"
++
++namespace microsoft {
++namespace projectairsim {
++
++// 前向声明
++class Sensor;
++class ConfigJson;
++class Logger;
++class TopicManager;
++class ServiceManager;
++class StateManager;
++
++// 推进器配置结构
++struct ThrusterConfig {
++    std::string name;
++    Vector3 position;
++    Vector3 orientation;
++    float max_force;
++    std::string type;  // "fixed", "azimuth", "tunnel"
++    float azimuth_min = -180.0f;
++    float azimuth_max = 180.0f;
++    float current_force = 0.0f;
++    float current_azimuth = 0.0f;
++};
++
++// Fossen船舶物理参数
++struct FossenParameters {
++    float mass = 1000.0f;
++    Matrix3x3 inertia_matrix;
++    Vector3 center_of_mass;
++    Vector3 center_of_buoyancy;
++    
++    // 6x6矩阵用于3DOF扩展
++    struct HydrodynamicCoeffs {
++        float xu_dot = -25.0f;    // 附加质量
++        float yv_dot = -240.0f;
++        float nr_dot = -50.0f;
++        
++        float xu = -70.0f;        // 线性阻尼
++        float yv = -100.0f;
++        float nr = -50.0f;
++        
++        float xu_abs_u = -135.0f; // 二次阻尼
++        float yv_abs_v = -2000.0f;
++        float nr_abs_r = -50.0f;
++    } hydro_coeffs;
++};
++
++// 船舶状态
++struct VesselState {
++    Vector3 position;
++    Vector3 orientation;  // roll, pitch, yaw
++    Vector3 linear_velocity;
++    Vector3 angular_velocity;
++    std::vector<float> thruster_forces;
++    float wave_height = 0.0f;
++    Vector3 current_velocity;
++    Vector3 wind_velocity;
++};
++
++// 环境力
++struct EnvironmentalForces {
++    Vector3 wind_velocity;
++    Vector3 current_velocity;
++    float wave_height = 0.0f;
++    bool wave_interaction = true;
++    bool current_interaction = true;
++    bool wind_interaction = true;
++};
++
++// 传感器配置
++struct SensorConfig {
++    std::string name;
++    std::string type;
++    bool enabled = true;
++    Vector3 position;
++    Vector3 orientation;
++    json parameters = json::object();
++};
++
++// 环境配置
++struct EnvironmentConfig {
++    float wave_height = 0.5f;
++    Vector3 wind_velocity;
++    Vector3 current_velocity;
++    bool wave_interaction = true;
++    bool current_interaction = true;
++    bool wind_interaction = true;
++};
++
++// 船舶配置
++struct VesselConfig {
++    FossenParameters physics_params;
++    std::vector<ThrusterConfig> thrusters;
++    std::vector<SensorConfig> sensors;
++    EnvironmentConfig environment;
++};
++
++class VesselActor : public Actor {
++public:
++    VesselActor(const std::string& id, const Transform& origin,
++                const Logger& logger, const TopicManager& topic_manager,
++                const std::string& parent_topic_path,
++                const ServiceManager& service_manager,
++                const StateManager& state_manager);
++    virtual ~VesselActor();
++    
++    // 重写Actor基类方法
++    void Load(ConfigJson config_json) override;
++    void Update(float delta_time);
++    
++    // 船舶控制接口
++    bool SetThrusterForces(const std::vector<float>& forces);
++    bool SetThrusterAzimuths(const std::vector<float>& azimuths);
++    bool SetEnvironmentalForces(const Vector3& wind, const Vector3& current);
++    
++    // 状态查询接口
++    VesselState GetVesselState() const;
++    std::vector<float> GetThrusterForces() const;
++    EnvironmentalForces GetEnvironmentalForces() const;
++    
++    // 传感器接口
++    std::shared_ptr<Sensor> GetSensor(const std::string& sensor_name);
++    std::vector<std::string> GetSensorNames() const;
++    
++    // 控制模式
++    void EnableDynamicPositioning(bool enable);
++    void SetTargetPosition(const Vector3& position, float heading);
++    void SetTargetVelocity(const Vector3& velocity, float angular_velocity);
++
++private:
++    // 初始化方法
++    void InitializePhysicsEngine(const FossenParameters& params);
++    void InitializeThrusters(const std::vector<ThrusterConfig>& thruster_configs);
++    void InitializeSensors(const std::vector<SensorConfig>& sensor_configs);
++    void InitializeEnvironment(const EnvironmentConfig& env_config);
++    
++    // 更新方法
++    void UpdateEnvironmentalForces();
++    void UpdateSensors(float delta_time);
++    void UpdateVesselState();
++    void UpdatePhysics(float delta_time);
++    
++    // 配置解析
++    VesselConfig ParseVesselConfig(const ConfigJson& config);
++    FossenParameters ParseFossenParameters(const ConfigJson& config);
++    std::vector<ThrusterConfig> ParseThrusterConfigs(const ConfigJson& config);
++    std::vector<SensorConfig> ParseSensorConfigs(const ConfigJson& config);
++    EnvironmentConfig ParseEnvironmentConfig(const ConfigJson& config);
++    
++    // 辅助方法
++    void ValidateThrusterForces(std::vector<float>& forces);
++private:
++    // Minimal integration mode: no dedicated vessel physics engine yet.
++    std::vector<ThrusterConfig> thrusters_;
++    std::unordered_map<std::string, std::shared_ptr<Sensor>> sensors_;
++    
++    // 状态数据
++    VesselState current_state_;
++    EnvironmentalForces env_forces_;
++    
++    // 控制状态
++    bool dynamic_positioning_enabled_ = false;
++    Vector3 target_position_;
++    float target_heading_ = 0.0f;
++    Vector3 target_velocity_;
++    float target_angular_velocity_ = 0.0f;
++    
++    // 配置
++    VesselConfig config_;
++    bool is_initialized_ = false;
++};
++
++} // namespace projectairsim
++} // namespace microsoft
++
++#endif // CORE_SIM_INCLUDE_CORE_SIM_ACTOR_VESSEL_ACTOR_HPP_
+\ No newline at end of file
+diff --git a/core_sim/include/core_sim/physics_common_types.hpp b/core_sim/include/core_sim/physics_common_types.hpp
+--- a/core_sim/include/core_sim/physics_common_types.hpp
++++ b/core_sim/include/core_sim/physics_common_types.hpp
+@@ -212,6 +212,18 @@
+   TimeNano time_stamp = 0;
+   std::string object_name;
+   int segmentation_id = -1;
++
++  // MovingDeckLab contact evidence; SI units, world NED axes. Default values
++  // retain the static-body interpretation for existing producers.
++  std::string component_name;
++  Pose other_pose;
++  Vector3 other_linear_velocity = Vector3::Zero();
++  Vector3 other_angular_velocity = Vector3::Zero();
++  Vector3 contact_velocity = Vector3::Zero();
++  bool support_managed = false;
++  bool support_valid = false;
++  float support_gap = 0.0f;
++  float support_friction = 0.5f;
+ 
+   CollisionInfo() {}
+ 
+diff --git a/core_sim/src/CMakeLists.txt b/core_sim/src/CMakeLists.txt
+--- a/core_sim/src/CMakeLists.txt
++++ b/core_sim/src/CMakeLists.txt
+@@ -62,6 +62,7 @@
+     scene.cpp
+     actor.cpp
+     actor/robot.cpp
++    actor/vessel_actor.cpp
+     actor/env_actor.cpp
+     trajectory.cpp
+     link.cpp
+diff --git a/core_sim/src/actor/robot.cpp b/core_sim/src/actor/robot.cpp
+--- a/core_sim/src/actor/robot.cpp
++++ b/core_sim/src/actor/robot.cpp
+@@ -124,6 +124,10 @@
+   const GeoPoint GetGroundTruthGeoLocation();
+   const Environment& GetEnvironment() const;
+   const CollisionInfo& GetCollisionInfo() const;
++  CollisionInfo GetCollisionInfoSnapshot() {
++    std::lock_guard<std::mutex> lock(update_lock_);
++    return collision_info_;
++  }
+   const Vector3& GetExternalForce() const;
+ 
+   void SetActuatedRotations(const ActuatedRotations& actuated_rots,
+@@ -412,6 +416,10 @@
+ 
+ const CollisionInfo& Robot::GetCollisionInfo() const {
+   return static_cast<Robot::Impl*>(pimpl_.get())->GetCollisionInfo();
++}
++
++CollisionInfo Robot::GetCollisionInfoSnapshot() const {
++  return static_cast<Robot::Impl*>(pimpl_.get())->GetCollisionInfoSnapshot();
+ }
+ 
+ void Robot::SetActuatedTransforms(const ActuatedTransforms& actuated_transforms,
+@@ -1031,7 +1039,7 @@
+   collision_info_ = collision_info;
+ 
+   // Publish a collision info topic every time a collision is detected
+-  if (collision_info_.has_collided) {
++  if (collision_info_.has_collided || collision_info_.support_managed) {
+     CollisionInfoMessage collision_info_msg(collision_info_);
+     topic_manager_.PublishTopic(collision_info_topic_, collision_info_msg);
+   }
+diff --git a/core_sim/src/actor/vessel_actor.cpp b/core_sim/src/actor/vessel_actor.cpp
+new file mode 100644
+--- /dev/null
++++ b/core_sim/src/actor/vessel_actor.cpp
+@@ -0,0 +1,296 @@
++#include "core_sim/actor/vessel_actor.hpp"
++#include "actor_impl.hpp"
++#include "constant.hpp"
++
++#include <stdexcept>
++#include <algorithm>
++
++namespace microsoft {
++namespace projectairsim {
++
++VesselActor::VesselActor(const std::string& id, const Transform& origin,
++                         const Logger& logger, const TopicManager& topic_manager,
++                         const std::string& parent_topic_path,
++                         const ServiceManager& service_manager,
++                         const StateManager& state_manager)
++    : Actor(std::make_shared<ActorImpl>(ActorType::kVessel, id, origin,
++                                        Constant::Component::robot, logger,
++                                        topic_manager, parent_topic_path,
++                                        service_manager, state_manager)) {
++    
++    // 初始化默认状态
++    current_state_ = {};
++    env_forces_ = {};
++    
++    // Logging intentionally omitted in minimal integration path.
++}
++
++VesselActor::~VesselActor() {}
++
++void VesselActor::Load(ConfigJson config_json) {
++    try {
++        // 解析配置
++        config_ = ParseVesselConfig(config_json);
++        
++        // 初始化物理引擎
++        InitializePhysicsEngine(config_.physics_params);
++        
++        // 初始化推进器系统
++        InitializeThrusters(config_.thrusters);
++        
++        // 初始化传感器
++        InitializeSensors(config_.sensors);
++        
++        // 初始化环境交互
++        InitializeEnvironment(config_.environment);
++        
++        is_initialized_ = true;
++        
++    } catch (const std::exception& e) {
++        throw;
++    }
++}
++
++void VesselActor::Update(float delta_time) {
++    if (!IsLoaded() || !is_initialized_) return;
++    
++    try {
++        // 更新环境力
++        UpdateEnvironmentalForces();
++        
++        // 更新物理仿真
++        UpdatePhysics(delta_time);
++        
++        // 更新传感器
++        UpdateSensors(delta_time);
++        
++        // 更新船舶状态
++        UpdateVesselState();
++        
++    } catch (const std::exception& e) {
++      (void)e;
++    }
++}
++
++bool VesselActor::SetThrusterForces(const std::vector<float>& forces) {
++    auto validated_forces = forces;
++    ValidateThrusterForces(validated_forces);
++
++    // 更新推进器状态
++    for (size_t i = 0; i < std::min(validated_forces.size(), thrusters_.size()); ++i) {
++        thrusters_[i].current_force = validated_forces[i];
++    }
++    return true;
++}
++
++bool VesselActor::SetThrusterAzimuths(const std::vector<float>& azimuths) {
++    // 更新推进器方位角
++    for (size_t i = 0; i < std::min(azimuths.size(), thrusters_.size()); ++i) {
++        thrusters_[i].current_azimuth = std::clamp(
++            azimuths[i],
++            thrusters_[i].azimuth_min,
++            thrusters_[i].azimuth_max
++        );
++    }
++    return true;
++}
++
++bool VesselActor::SetEnvironmentalForces(const Vector3& wind, const Vector3& current) {
++    env_forces_.wind_velocity = wind;
++    env_forces_.current_velocity = current;
++    return true;
++}
++
++VesselState VesselActor::GetVesselState() const {
++    return current_state_;
++}
++
++std::vector<float> VesselActor::GetThrusterForces() const {
++    std::vector<float> forces;
++    for (const auto& thruster : thrusters_) {
++        forces.push_back(thruster.current_force);
++    }
++    return forces;
++}
++
++EnvironmentalForces VesselActor::GetEnvironmentalForces() const {
++    return env_forces_;
++}
++
++std::shared_ptr<Sensor> VesselActor::GetSensor(const std::string& sensor_name) {
++    auto it = sensors_.find(sensor_name);
++    if (it != sensors_.end()) {
++        return it->second;
++    }
++    return nullptr;
++}
++
++std::vector<std::string> VesselActor::GetSensorNames() const {
++    std::vector<std::string> names;
++    for (const auto& [name, sensor] : sensors_) {
++        names.push_back(name);
++    }
++    return names;
++}
++
++void VesselActor::EnableDynamicPositioning(bool enable) {
++    dynamic_positioning_enabled_ = enable;
++    
++    (void)enable;
++}
++
++void VesselActor::SetTargetPosition(const Vector3& position, float heading) {
++    target_position_ = position;
++    target_heading_ = heading;
++    
++    if (dynamic_positioning_enabled_) {
++        // 实现简单的位置控制逻辑
++        auto current_state = GetVesselState();
++        Vector3 position_error = target_position_ - current_state.position;
++        float heading_error = target_heading_ - current_state.orientation(2);
++        
++        // 简单的PD控制器
++        float kp_pos = 100.0f;
++        float kp_heading = 500.0f;
++        
++        std::vector<float> control_forces(thrusters_.size(), 0.0f);
++        
++        // 计算所需的控制力（简化实现）
++        if (thrusters_.size() >= 3) {
++            // 假设有弓推、左主推、右主推
++            control_forces[0] = kp_pos * position_error(1);  // 弓推控制横向
++            control_forces[1] = kp_pos * position_error(0) + kp_heading * heading_error;  // 左主推
++            control_forces[2] = kp_pos * position_error(0) - kp_heading * heading_error;  // 右主推
++        }
++        
++        SetThrusterForces(control_forces);
++    }
++}
++
++void VesselActor::SetTargetVelocity(const Vector3& velocity, float angular_velocity) {
++    target_velocity_ = velocity;
++    target_angular_velocity_ = angular_velocity;
++    
++    // 实现速度控制逻辑
++    auto current_state = GetVesselState();
++    Vector3 velocity_error = target_velocity_ - current_state.linear_velocity;
++    float angular_error = target_angular_velocity_ - current_state.angular_velocity(2);
++    
++    // 简单的速度控制器
++    float kv_linear = 200.0f;
++    float kv_angular = 300.0f;
++    
++    std::vector<float> control_forces(thrusters_.size(), 0.0f);
++    
++    if (thrusters_.size() >= 3) {
++        control_forces[0] = kv_linear * velocity_error(1);  // 弓推
++        control_forces[1] = kv_linear * velocity_error(0) + kv_angular * angular_error;
++        control_forces[2] = kv_linear * velocity_error(0) - kv_angular * angular_error;
++    }
++    
++    SetThrusterForces(control_forces);
++}
++
++// 私有方法实现
++
++void VesselActor::InitializePhysicsEngine(const FossenParameters& params) {
++    (void)params;
++}
++
++void VesselActor::InitializeThrusters(const std::vector<ThrusterConfig>& thruster_configs) {
++    thrusters_ = thruster_configs;
++}
++
++void VesselActor::InitializeSensors(const std::vector<SensorConfig>& sensor_configs) {
++    (void)sensor_configs;
++    // Minimal bridge stage: vessel dynamics first, sensor plumbing later.
++    sensors_.clear();
++}
++
++void VesselActor::InitializeEnvironment(const EnvironmentConfig& env_config) {
++    env_forces_.wave_height = env_config.wave_height;
++    env_forces_.wind_velocity = env_config.wind_velocity;
++    env_forces_.current_velocity = env_config.current_velocity;
++    env_forces_.wave_interaction = env_config.wave_interaction;
++    env_forces_.current_interaction = env_config.current_interaction;
++    env_forces_.wind_interaction = env_config.wind_interaction;
++    
++}
++
++void VesselActor::UpdateEnvironmentalForces() {
++    // Minimal mode keeps environment values in env_forces_ only.
++}
++
++void VesselActor::UpdateSensors(float delta_time) {
++    (void)delta_time;
++}
++
++void VesselActor::UpdateVesselState() {
++    // Minimal mode: state is advanced in UpdatePhysics().
++}
++
++void VesselActor::UpdatePhysics(float delta_time) {
++    if (thrusters_.empty() || delta_time <= 0.0f) {
++        return;
++    }
++
++    float surge_force = 0.0f;
++    for (size_t i = 0; i < thrusters_.size(); ++i) {
++        surge_force += thrusters_[i].current_force;
++    }
++
++    const float inv_mass = 1.0f / std::max(config_.physics_params.mass, 1.0f);
++    current_state_.linear_velocity(0) += surge_force * inv_mass * delta_time;
++
++    // Simple damping to keep motion bounded in minimal mode.
++    current_state_.linear_velocity(0) *= 0.98f;
++    current_state_.position(0) += current_state_.linear_velocity(0) * delta_time;
++}
++
++VesselConfig VesselActor::ParseVesselConfig(const ConfigJson& config) {
++    (void)config;
++    VesselConfig vessel_config;
++    // Minimal bridge stage: keep defaults and avoid depending on wrapper helper APIs.
++    return vessel_config;
++}
++
++FossenParameters VesselActor::ParseFossenParameters(const ConfigJson& config) {
++    (void)config;
++    FossenParameters params;
++    return params;
++}
++
++std::vector<ThrusterConfig> VesselActor::ParseThrusterConfigs(const ConfigJson& config) {
++    (void)config;
++    return {};
++}
++
++std::vector<SensorConfig> VesselActor::ParseSensorConfigs(const ConfigJson& config) {
++    (void)config;
++    return {};
++}
++
++EnvironmentConfig VesselActor::ParseEnvironmentConfig(const ConfigJson& config) {
++    (void)config;
++    EnvironmentConfig env_config;
++    return env_config;
++}
++
++void VesselActor::ValidateThrusterForces(std::vector<float>& forces) {
++    // 确保推进器数量匹配
++    if (forces.size() != thrusters_.size()) {
++        forces.resize(thrusters_.size(), 0.0f);
++    }
++    
++    // 限制推进器力在允许范围内
++    for (size_t i = 0; i < forces.size(); ++i) {
++        forces[i] = std::clamp(
++            forces[i],
++            -thrusters_[i].max_force,
++            thrusters_[i].max_force
++        );
++    }
++}
++
++} // namespace projectairsim
++} // namespace microsoft
+\ No newline at end of file
+diff --git a/core_sim/src/constant.hpp b/core_sim/src/constant.hpp
+--- a/core_sim/src/constant.hpp
++++ b/core_sim/src/constant.hpp
+@@ -86,6 +86,7 @@
+     static constexpr const char* real_time = "real-time";
+     static constexpr const char* type = "type";
+     static constexpr const char* robot = "robot";
++    static constexpr const char* vessel = "vessel";
+     static constexpr const char* env_actor = "env_actor";
+     static constexpr const char* origin = "origin";
+     static constexpr const char* translation = "xyz";
+diff --git a/core_sim/src/message/collision_info_message.cpp b/core_sim/src/message/collision_info_message.cpp
+--- a/core_sim/src/message/collision_info_message.cpp
++++ b/core_sim/src/message/collision_info_message.cpp
+@@ -32,7 +32,10 @@
+   void Deserialize(const std::string& buffer) override;
+ 
+   MSGPACK_DEFINE_MAP(time_stamp, object_name, segmentation_id, position,
+-                     impact_point, normal, penetration_depth);
++                     impact_point, normal, penetration_depth, has_collided,
++                     component_name, other_pose, other_linear_velocity,
++                     other_angular_velocity, contact_velocity, support_managed,
++                     support_valid, support_gap, support_friction);
+ 
+  private:
+   TimeNano time_stamp = 0;
+@@ -42,6 +45,12 @@
+   Vector3Msgpack impact_point;
+   Vector3Msgpack normal;
+   float penetration_depth = 0.0f;
++  bool has_collided = false;
++  std::string component_name;
++  PoseMsgpack other_pose;
++  Vector3Msgpack other_linear_velocity, other_angular_velocity, contact_velocity;
++  bool support_managed = false, support_valid = false;
++  float support_gap = 0.0f, support_friction = 0.5f;
+ };
+ 
+ // -----------------------------------------------------------------------------
+@@ -77,6 +86,16 @@
+   time_stamp = collision_info.time_stamp;
+   object_name = collision_info.object_name;
+   segmentation_id = collision_info.segmentation_id;
++  has_collided = collision_info.has_collided;
++  component_name = collision_info.component_name;
++  other_pose = PoseMsgpack(collision_info.other_pose);
++  other_linear_velocity = Vector3Msgpack(collision_info.other_linear_velocity);
++  other_angular_velocity = Vector3Msgpack(collision_info.other_angular_velocity);
++  contact_velocity = Vector3Msgpack(collision_info.contact_velocity);
++  support_managed = collision_info.support_managed;
++  support_valid = collision_info.support_valid;
++  support_gap = collision_info.support_gap;
++  support_friction = collision_info.support_friction;
+ }
+ 
+ std::string CollisionInfoMessage::Impl::Serialize() {
+diff --git a/core_sim/src/scene.cpp b/core_sim/src/scene.cpp
+--- a/core_sim/src/scene.cpp
++++ b/core_sim/src/scene.cpp
+@@ -9,12 +9,14 @@
+ #include <fstream>
+ #include <memory>
+ #include <unordered_map>
++#include <unordered_set>
+ 
+ #include "algorithms.hpp"
+ #include "component.hpp"
+ #include "constant.hpp"
+ #include "core_sim/actor/env_actor.hpp"
+ #include "core_sim/actor/robot.hpp"
++#include "core_sim/actor/vessel_actor.hpp"
+ #include "core_sim/clock.hpp"
+ #include "core_sim/error.hpp"
+ #include "core_sim/file_utils.hpp"
+@@ -179,12 +181,20 @@
+                              MethodHandler method_handler);
+ 
+   void RegisterServiceMethods();
++  void RegisterVesselServiceMethods();
++  void RegisterVesselServiceMethods(const std::string& vessel_id);
+ 
+   void UnregisterAllServiceMethods();
+ 
+   bool SceneTick();
+ 
+   void EnableViewportCamera(bool enable);
++
++  bool SetVesselThrusterForcesById(const std::string& vessel_id,
++                                   const std::vector<float>& forces);
++  bool SetVesselThrusterAzimuthsById(const std::string& vessel_id,
++                                     const std::vector<float>& azimuths);
++  void ApplyVesselThrustersToRobot(Robot& robot, TimeNano sim_dt_nanos);
+ 
+   // set enable_unreal_viewport_camera_callback_
+   void SetCallbackEnableUnrealViewportCamera(
+@@ -200,6 +210,10 @@
+   std::vector<std::reference_wrapper<Actor>> env_actors_ref_;
+   std::unordered_map<std::string, int> env_actor_index_by_id_;
+   std::unordered_map<std::string, int> actor_index_by_id_;
++  std::unordered_set<std::string> vessel_robot_ids_;
++  std::unordered_set<std::string> vessel_service_ids_;
++  std::unordered_set<std::string> vessel_pose_initialized_;
++  std::unordered_map<std::string, std::vector<float>> vessel_thruster_forces_;
+   std::function<void(const Vector3&)> wind_velocity_updated_callback_;
+   std::function<void(bool)> enable_unreal_viewport_camera_callback_;
+   std::function<void()> physics_start_callback_;
+@@ -382,6 +396,7 @@
+ 
+ void Scene::Start() {
+   pimpl_->RegisterServiceMethods();
++  pimpl_->RegisterVesselServiceMethods();
+   pimpl_->BeginUpdate();     // begin all robot updates (do this before starting
+                              // scene tick to make sure it finishes before the
+                              // scene tick starts processing robot updates on it
+@@ -609,6 +624,8 @@
+     if (actor->GetType() == ActorType::kRobot) {
+       auto& robot = static_cast<Robot&>(*actor);
+       robot.BeginUpdate();
++    } else if (actor->GetType() == ActorType::kVessel) {
++      // No-op for now. Vessel actor uses internal update loop.
+     }
+   }
+ 
+@@ -625,6 +642,8 @@
+     if (actor->GetType() == ActorType::kRobot) {
+       auto& robot = static_cast<Robot&>(*actor);
+       robot.EndUpdate();
++    } else if (actor->GetType() == ActorType::kVessel) {
++      // No-op for now. Vessel actor uses internal update loop.
+     }
+   }
+ 
+@@ -869,6 +888,103 @@
+   auto get_wind_vel_handler =
+       get_wind_vel.CreateMethodHandler(&Scene::Impl::GetWindVelocity, *this);
+   RegisterServiceMethod(get_wind_vel, get_wind_vel_handler);
++
++}
++
++void Scene::Impl::RegisterVesselServiceMethods(const std::string& vessel_id) {
++  // Actors are loaded after scene-level methods. Register each vessel here,
++  // once its ID is known, so clients can call it after World loads the scene.
++  if (!vessel_service_ids_.insert(vessel_id).second) return;
++
++  const auto base = topic_path_ + "/robots/" + vessel_id;
++  auto set_thruster_forces =
++      ServiceMethod(base + "/SetThrusterForces", {"forces"});
++  auto set_thruster_forces_handler = set_thruster_forces.CreateMethodHandler(
++      std::function<bool(std::vector<float>)>(
++          [this, vessel_id](std::vector<float> forces) {
++            return SetVesselThrusterForcesById(vessel_id, forces);
++          }));
++  service_manager_.RegisterMethod(set_thruster_forces,
++                                  set_thruster_forces_handler);
++
++  auto set_thruster_azimuths =
++      ServiceMethod(base + "/SetThrusterAzimuths", {"azimuths"});
++  auto set_thruster_azimuths_handler = set_thruster_azimuths.CreateMethodHandler(
++      std::function<bool(std::vector<float>)>(
++          [this, vessel_id](std::vector<float> azimuths) {
++            return SetVesselThrusterAzimuthsById(vessel_id, azimuths);
++          }));
++  service_manager_.RegisterMethod(set_thruster_azimuths,
++                                  set_thruster_azimuths_handler);
++}
++
++void Scene::Impl::RegisterVesselServiceMethods() {
++  // Vessel actors are loaded before Start(). Register their per-actor
++  // services after the scene-level service table has been initialized.
++  for (const auto& vessel_id : vessel_robot_ids_) {
++    RegisterVesselServiceMethods(vessel_id);
++  }
++}
++
++bool Scene::Impl::SetVesselThrusterForcesById(
++    const std::string& vessel_id, const std::vector<float>& forces) {
++  vessel_thruster_forces_[vessel_id] = forces;
++  // MovingDeckLab: force submission only. ApplyVesselThrustersToRobot is
++  // the single sim-time integrator for non-physics vessel configurations.
++
++  return true;
++}
++
++bool Scene::Impl::SetVesselThrusterAzimuthsById(
++    const std::string& vessel_id, const std::vector<float>& azimuths) {
++  (void)vessel_id;
++  (void)azimuths;
++  return true;
++}
++
++void Scene::Impl::ApplyVesselThrustersToRobot(Robot& robot, TimeNano sim_dt_nanos) {
++  constexpr float kVesselWaterSurfaceZ = 8.8f;
++  constexpr float kForceToSpeed = 0.002f;  // 600N -> ~1.2 m/s
++
++  Kinematics kin = robot.GetKinematics();
++  if (vessel_pose_initialized_.count(robot.GetID()) == 0) {
++    const auto& origin = robot.GetOrigin();
++    kin.pose.position = origin.translation_;
++    kin.pose.orientation = origin.rotation_;
++    kin.pose.position.z() = kVesselWaterSurfaceZ;
++    kin.twist = Twist::Zero();
++    kin.accels = Accelerations::Zero();
++    robot.UpdateKinematics(kin, sim_time_);
++    vessel_pose_initialized_.insert(robot.GetID());
++  }
++
++  const auto it = vessel_thruster_forces_.find(robot.GetID());
++  if (it == vessel_thruster_forces_.end()) {
++    return;
++  }
++
++  const auto& forces = it->second;
++  if (forces.empty()) {
++    return;
++  }
++
++  float surge_force = 0.0f;
++  for (float f : forces) {
++    surge_force += f;
++  }
++
++  const float dt = SimClock::Get()->NanosToSec(sim_dt_nanos);
++  if (dt <= 0.0f) {
++    return;
++  }
++
++  // Move along vessel heading in world frame.
++  Vector3 forward_world = kin.pose.orientation * Vector3(1.0f, 0.0f, 0.0f);
++  const float commanded_speed = surge_force * kForceToSpeed;
++  kin.twist.linear = forward_world * commanded_speed;
++  kin.pose.position += kin.twist.linear * dt;
++  kin.pose.position.z() = kVesselWaterSurfaceZ;
++  robot.UpdateKinematics(kin, sim_time_);
+ }
+ 
+ void Scene::Impl::UnregisterAllServiceMethods() {
+@@ -961,6 +1077,13 @@
+           // Kin/Env -> Sensor Values
+           // Pass sim_time_ for timestamps, sim_dt_nanos_ for filtering/noise
+           robot.UpdateSensors(sim_time_, sim_dt_nanos);
++
++          if (vessel_robot_ids_.count(robot.GetID()) > 0) {
++            ApplyVesselThrustersToRobot(robot, sim_dt_nanos);
++          }
++        } else if (actor->GetType() == ActorType::kVessel) {
++          auto& vessel = static_cast<VesselActor&>(*actor);
++          vessel.Update(SimClock::Get()->NanosToSec(sim_dt_nanos));
+         }
+       }
+ 
+@@ -982,13 +1105,18 @@
+             continue;
+           }
+ 
+-          // Sensor Values -> FC -> PWM
+-          // Don't pass time params, controllers generally manage their own time
+-          robot.UpdateControlInput();
+-
+-          // PWM/Environment -> Thrust -> Wrench
+-          // Pass sim_time_ for timestamps, sim_dt_nanos_ for filtering/noise
+-          robot.UpdateActuators(sim_time_, sim_dt_nanos);
++          if (vessel_robot_ids_.count(robot.GetID()) == 0) {
++            // Sensor Values -> FC -> PWM
++            // Don't pass time params, controllers generally manage their own time
++            robot.UpdateControlInput();
++
++            // PWM/Environment -> Thrust -> Wrench
++            // Pass sim_time_ for timestamps, sim_dt_nanos_ for filtering/noise
++            robot.UpdateActuators(sim_time_, sim_dt_nanos);
++          }
++        } else if (actor->GetType() == ActorType::kVessel) {
++          // Vessel controls are applied through vessel service methods and
++          // stepped in VesselActor::Update above.
+         }
+       }
+ 
+@@ -1387,6 +1515,34 @@
+     robot->RegisterChildTransformNodes(*impl_.GetTransformTree());
+     // impl_.GetTransformTree()->Dump();
+ 
++    // Scene actors use type "robot"; the concrete platform type lives in the
++    // referenced robot config. Track vessel robots here so Start() can expose
++    // their thruster services after all actors have loaded.
++    const auto robot_type =
++        JsonUtils::GetString(robot_config, "robot-type", "");
++    if (robot_type == Constant::Config::vessel) {
++      impl_.vessel_robot_ids_.insert(id);
++      impl_.vessel_thruster_forces_[id] = {};
++    }
++
++    return std::unique_ptr<Actor>(robot);
++  } else if (type == Constant::Config::vessel) {
++    auto robot =
++        new Robot(id, origin, impl_.logger_, impl_.topic_manager_,
++                  impl_.topic_path_ + "/robots", impl_.service_manager_,
++                  impl_.state_manager_, impl_.home_geo_point_);
++    robot->Load(robot_config);
++    robot->SetPhysicsConnectionSettings(physics_connection_json.dump());
++    robot->SetControlConnectionSettings(control_connection_json.dump());
++    robot->SetStartLanded(start_landed_flag);
++
++    impl_.GetTransformTree()->Register(*robot, TransformTree::kRefFrameGlobal);
++    impl_.GetTransformTree()->Register(robot->GetHomeRefFrame(),
++                                       TransformTree::kRefFrameGlobal);
++    robot->RegisterChildTransformNodes(*impl_.GetTransformTree());
++
++    impl_.vessel_robot_ids_.insert(id);
++    impl_.vessel_thruster_forces_[id] = {};
+     return std::unique_ptr<Actor>(robot);
+ 
+   } else {
+diff --git a/physics/include/support_contact.hpp b/physics/include/support_contact.hpp
+new file mode 100644
+--- /dev/null
++++ b/physics/include/support_contact.hpp
+@@ -0,0 +1,52 @@
++// MovingDeckLab: unilateral, friction-limited support for near-level landing.
++// This is a reduced-order flat landing-gear model on a kinematic support. It
++// does not attach either body or copy the support's position to the vehicle.
++#pragma once
++#include <algorithm>
++#include <cmath>
++#include "core_sim/physics_common_types.hpp"
++
++namespace microsoft { namespace projectairsim {
++struct SupportStep {
++  bool supported = false;
++  bool sliding = false;
++  Vector3 velocity = Vector3::Zero();
++  Vector3 position = Vector3::Zero();
++  float normal_delta_v = 0;
++};
++
++inline SupportStep SolveSupportContact(
++    const Vector3& position, const Vector3& velocity,
++    const Vector3& free_acceleration, const CollisionInfo& contact,
++    float dt, double now_sec, float friction) {
++  SupportStep out;
++  out.velocity = velocity + free_acceleration * dt;
++  out.position = position + out.velocity * dt;
++  const double age = now_sec - contact.time_stamp * 1e-9;
++  if (!(dt > 0) || !contact.support_valid || age < -0.001 || age > 0.2 ||
++      !contact.normal.allFinite() || contact.normal.z() > -0.95f ||
++      !contact.contact_velocity.allFinite()) return out;
++  const Vector3 n = contact.normal.normalized();
++  // Extrapolate only the measured contact plane during the render/physics lag.
++  // No tangential position correction is permitted.
++  const float gap = contact.support_gap +
++      (position - contact.position - contact.contact_velocity * float(std::max(0.0, age))).dot(n);
++  if (gap > 0.03f || gap < -0.08f) return out;
++  const float vn = (out.velocity - contact.contact_velocity).dot(n);
++  // No tensile contact force: upward thrust/separation immediately releases.
++  if (vn > 0.001f) return out;
++  out.normal_delta_v = std::max(0.0f, -vn);
++  out.velocity += n * out.normal_delta_v;
++  const Vector3 relative = out.velocity - contact.contact_velocity;
++  const Vector3 tangent = relative - n * relative.dot(n);
++  const float slip = tangent.norm();
++  const float limit = std::max(0.0f, std::min(friction, contact.support_friction)) * out.normal_delta_v;
++  out.sliding = slip > limit + 1e-5f;
++  if (slip > 1e-8f) out.velocity -= tangent * (std::min(slip, limit) / slip);
++  out.position = position + out.velocity * dt;
++  // Resolve penetration along the normal only. Positive gaps are not pulled in.
++  if (gap < 0) out.position -= n * gap;
++  out.supported = true;
++  return out;
++}
++}}  // namespace
+diff --git a/physics/src/fast_physics.cpp b/physics/src/fast_physics.cpp
+--- a/physics/src/fast_physics.cpp
++++ b/physics/src/fast_physics.cpp
+@@ -4,6 +4,7 @@
+ // MIT License. All rights reserved.
+ 
+ #include "fast_physics.hpp"
++#include "support_contact.hpp"
+ 
+ #include <iostream>
+ #include <memory>
+@@ -255,7 +256,7 @@
+ 
+ void FastPhysicsBody::ReadRobotData() {
+   kinematics_ = sim_robot_.GetKinematics();
+-  collision_info_ = sim_robot_.GetCollisionInfo();
++  collision_info_ = sim_robot_.GetCollisionInfoSnapshot();
+   ext_force_ = sim_robot_.GetExternalForce();
+   const auto& cur_env = sim_robot_.GetEnvironment();
+   const auto& cur_env_info = cur_env.env_info;
+@@ -270,6 +271,10 @@
+ }
+ 
+ bool FastPhysicsBody::IsStillGrounded() {
++  if (collision_info_.support_managed && !sim_robot_.HasWheels()) {
++    is_grounded_ = false;
++    return false;
++  }
+   // Handle special case of already grounded by sticking to the ground until
+   // we see wrench force greater than gravity
+   const float normalized_force = external_wrench_.force.squaredNorm();
+@@ -297,9 +302,10 @@
+       normal_body.z(), -1.0f, kGroundCollisionAxisTol);
+ 
+   // Check if velocity is primarily vertically downward (assumes NED)
+-  const float vel_x_abs = fabs(kinematics_.twist.linear.x());
+-  const float vel_y_abs = fabs(kinematics_.twist.linear.y());
+-  const float vel_z = kinematics_.twist.linear.z();
++  const Vector3 relative = kinematics_.twist.linear - collision_info_.contact_velocity;
++  const float vel_x_abs = fabs(relative.x());
++  const float vel_y_abs = fabs(relative.y());
++  const float vel_z = relative.z();
+ 
+   const bool is_moving_downward = (vel_z > vel_x_abs) && (vel_z > vel_y_abs);
+ 
+@@ -313,7 +319,7 @@
+ 
+ bool FastPhysicsBody::NeedsCollisionResponse(const Kinematics& next_kin) {
+   const bool is_moving_into_collision =
+-      (collision_info_.normal.dot(next_kin.twist.linear) < 0.0f);
++      (collision_info_.normal.dot(next_kin.twist.linear - collision_info_.contact_velocity) < 0.0f);
+ 
+   if (collision_info_.has_collided && is_moving_into_collision) {
+     return true;
+@@ -359,6 +365,41 @@
+ 
+     // Step 1 - Update physics body's data from robot's latest data
+     fp_body->ReadRobotData();
++
++    // The contact provider rechecks finite geometry every Unreal frame.
++    // Expired/invalid support goes through free dynamics, never world-locking.
++    if (fp_body->collision_info_.support_managed &&
++        !fp_body->sim_robot_.HasWheels()) {
++      next_kin = CalcNextKinematicsNoCollision(dt_sec, fp_body);
++      const auto& cur = fp_body->kinematics_;
++      const auto support = SolveSupportContact(
++          cur.pose.position, cur.twist.linear, next_kin.accels.linear,
++          fp_body->collision_info_, dt_sec,
++          SimClock::Get()->NowSimNanos() * 1e-9, fp_body->friction_);
++      fp_body->is_grounded_ = support.supported;
++      if (support.supported) {
++        next_kin.pose.position = support.position;
++        next_kin.twist.linear = support.velocity;
++        next_kin.accels.linear = (support.velocity - cur.twist.linear) / dt_sec;
++        // A finite landing-gear patch can resist yaw by friction, up to mu*N*r.
++        // It cannot copy the carrier attitude or exert a tensile reaction.
++        const Vector3 carrier_w = PhysicsUtils::TransformVectorToBodyFrame(
++            fp_body->collision_info_.other_angular_velocity, cur.pose.orientation);
++        const Vector3 dw = next_kin.twist.angular - carrier_w;
++        const float delta_limit = std::max(0.0f, std::min(fp_body->friction_,
++            fp_body->collision_info_.support_friction)) * support.normal_delta_v / 0.2f;
++        if (dw.norm() > 1e-7f)
++          next_kin.twist.angular -= dw * (std::min(dw.norm(), delta_limit) / dw.norm());
++        next_kin.accels.angular = (next_kin.twist.angular - cur.twist.angular) / dt_sec;
++        const float w = next_kin.twist.angular.norm();
++        next_kin.pose.orientation = cur.pose.orientation;
++        if (w > 1e-7f) next_kin.pose.orientation =
++            (cur.pose.orientation * Quaternion(AngleAxis(w * dt_sec,
++                next_kin.twist.angular / w))).normalized();
++      }
++      fp_body->WriteRobotData(next_kin);
++      return;
++    }
+ 
+     // Step 2 - Calculate kinematics without collisions
+     if (fp_body->IsStillGrounded()) {
+@@ -625,18 +666,18 @@
+ 
+   // Velocity at contact point
+   const Vector3 ave_vel_lin_body = PhysicsUtils::TransformVectorToBodyFrame(
+-      ave_vel_lin, cur_kin.pose.orientation);
++      ave_vel_lin - collision_info.contact_velocity, cur_kin.pose.orientation);
+ 
+   // Contact point vector
+-  const Vector3 r_contact =
+-      collision_info.impact_point - collision_info.position;
++  const Vector3 r_contact = PhysicsUtils::TransformVectorToBodyFrame(
++      collision_info.impact_point - collision_info.position, cur_kin.pose.orientation);
+ 
+   const Vector3 contact_vel_body =
+       ave_vel_lin_body + ave_vel_ang.cross(r_contact);
+ 
+   // GafferOnGames - Collision response with columb friction
+   // http://gafferongames.com/virtual-go/collision-response-and-coulomb-friction/
+-  // Assuming collision is with static fixed body,
++  // Kinematic obstacle: use relative contact velocity, with zero obstacle inverse mass.
+   // impulse magnitude = j = -(1 + R)V.N / (1/m + (I'(r X N) X r).N)
+   // Physics Part 3, Collision Response, Chris Hecker, eq 4(a)
+   // http://chrishecker.com/images/e/e7/Gdmphys3.pdf
+@@ -647,7 +688,7 @@
+                      .cross(r_contact)
+                      .dot(normal_body);
+ 
+-  const float restitution_impulse = -contact_vel_body.dot(normal_body) *
++  const float restitution_impulse = std::max(0.0f, -contact_vel_body.dot(normal_body)) *
+                                     (1.0f + restitution) /
+                                     restitution_impulse_denom;
+ 
+@@ -656,34 +697,33 @@
+   kin_with_collision.twist.linear =
+       ave_vel_lin + collision_info.normal * restitution_impulse * mass_inv;
+ 
+-  // TODO Shouldn't this formula should account for inertia?
+   kin_with_collision.twist.angular =
+-      ave_vel_ang + r_contact.cross(normal_body) * restitution_impulse;
++      ave_vel_ang + inertia_inv * r_contact.cross(normal_body) * restitution_impulse;
+ 
+   // Step 3 - Calculate friction impulse (tangent to contact)
+ 
+   const Vector3 contact_tang_body =
+       contact_vel_body - normal_body * normal_body.dot(contact_vel_body);
+ 
+-  const Vector3 contact_tang_unit_body = contact_tang_body.normalized();
++  const Vector3 contact_tang_unit_body = contact_tang_body.stableNormalized();
+ 
+   const float friction_mag_denom =
+       mass_inv + (inertia_inv * r_contact.cross(contact_tang_unit_body))
+                      .cross(r_contact)
+                      .dot(contact_tang_unit_body);
+ 
+-  const float friction_mag =
+-      -contact_tang_body.norm() * friction / friction_mag_denom;
++  const float friction_mag = -std::min(contact_tang_body.norm() / friction_mag_denom,
++                                      friction * restitution_impulse);
+ 
+   // Step 4 - Add friction impulse to next twist velocities
+ 
+   const Vector3 contact_tang_unit = PhysicsUtils::TransformVectorToWorldFrame(
+       contact_tang_unit_body, cur_kin.pose.orientation);
+ 
+-  kin_with_collision.twist.linear += contact_tang_unit * friction_mag;
++  kin_with_collision.twist.linear += contact_tang_unit * friction_mag * mass_inv;
+ 
+   kin_with_collision.twist.angular +=
+-      r_contact.cross(contact_tang_unit_body) * friction_mag * mass_inv;
++      inertia_inv * r_contact.cross(contact_tang_unit_body) * friction_mag;
+ 
+   // Step 5 - Zero out next accels during collision response to prevent
+   //          cancelling out impulse response
+diff --git a/physics/test/gtest_fast_physics.cpp b/physics/test/gtest_fast_physics.cpp
+--- a/physics/test/gtest_fast_physics.cpp
++++ b/physics/test/gtest_fast_physics.cpp
+@@ -740,7 +740,8 @@
+   EXPECT_FLOAT_EQ(kin.pose.position.y(), 0.);
+   EXPECT_LT(kin.pose.position.z(), -10.);  // should bounce up
+ 
+-  // Tangential collision, with velocity -> reflect friction to vel
++  // Tangential motion without normal load: Coulomb friction must be zero.
++  // The previous expectation applied friction even with zero normal impulse.
+   init_kin.pose.position = {0., 0., -9.0};
+   init_kin.pose.orientation =
+       projectairsim::TransformUtils::ToQuaternion(0., 0., 0.);
+@@ -761,17 +762,26 @@
+   EXPECT_EQ(kin.accels.linear, projectairsim::Vector3::Zero());
+   EXPECT_EQ(kin.accels.angular, projectairsim::Vector3::Zero());
+ 
+-  EXPECT_LT(kin.twist.linear.x(), 2.);  // friction causes slowdown
++  EXPECT_FLOAT_EQ(kin.twist.linear.x(), 2.);
+   EXPECT_FLOAT_EQ(kin.twist.linear.y(), 0.);
+   EXPECT_FLOAT_EQ(kin.twist.linear.z(), 0.);
+ 
+   EXPECT_FLOAT_EQ(kin.twist.angular.x(), 0.);
+-  EXPECT_LT(kin.twist.angular.y(), 0.);  // friction causes pitch
++  EXPECT_FLOAT_EQ(kin.twist.angular.y(), 0.);
+   EXPECT_FLOAT_EQ(kin.twist.angular.z(), 0.);
+ 
+   EXPECT_GT(kin.pose.position.x(), 0.);  // horizontal motion continues
+   EXPECT_FLOAT_EQ(kin.pose.position.y(), 0.);
+   EXPECT_FLOAT_EQ(kin.pose.position.z(), -10.);  // collision sets z pos
++
++  // Nonzero normal impact supplies friction. m=2, I=1, r=(0,0,1),
++  // e=.5 gives Jn=6, Jt=min(2/(.5+1),mu*Jn)=4/3.
++  init_kin.twist.linear = {2.,0.,2.};
++  body->SetKinematics(init_kin);
++  kin = model.CalcNextKinematicsWithCollision(1.0f, fp_body);
++  EXPECT_NEAR(kin.twist.linear.x(), 4.f/3.f, 1e-5);
++  EXPECT_NEAR(kin.twist.linear.z(), -1.f, 1e-5);
++  EXPECT_NEAR(kin.twist.angular.y(), -4.f/3.f, 1e-5);
+ }
+ 
+ TEST(FastPhysicsModel, StepPhysicsBody) {
+@@ -819,4 +829,37 @@
+   }
+ }
+ 
+-// TODO TEST(FastPhysicsModel, SetWrenchesOnPhysicsBody) {}
+\ No newline at end of file
++TEST(FastPhysicsModel, MovingSupportStepAndLoss) {
++  projectairsim::Simulator simulator;
++  simulator.LoadSceneWithJSON(physics_test_config);
++  auto& scene = simulator.GetScene();
++  auto actors = scene.GetActors();
++  auto& robot = dynamic_cast<projectairsim::Robot&>(actors.at(0).get());
++  auto body = std::make_shared<projectairsim::TestFastPhysicsBody>(robot);
++  body->SetExternalWrench(projectairsim::Wrench::Zero());
++  projectairsim::FastPhysicsModel model;
++  auto kin = robot.GetKinematics();
++  kin.twist.linear = {0.5f, 0, 0};
++  robot.UpdateKinematics(kin);
++  const auto start = kin.pose.position;
++  projectairsim::CollisionInfo c;
++  c.support_managed = c.support_valid = true;
++  c.normal = {0,0,-1};
++  c.contact_velocity = {0.5f,0,0};
++  c.support_friction = .5f;
++  for (int i=0; i<600; ++i) {
++    c.position = robot.GetKinematics().pose.position;
++    c.time_stamp = projectairsim::SimClock::Get()->NowSimNanos();
++    robot.UpdateCollisionInfo(c);
++    model.StepPhysicsBody(5000000, body);
++  }
++  auto carried = robot.GetKinematics();
++  EXPECT_NEAR(carried.pose.position.x()-start.x(), 1.5f, .001f);
++  EXPECT_NEAR(carried.pose.position.z(), start.z(), .001f);
++  // Remove support through the exact production collision snapshot path.
++  c.support_valid = false;
++  robot.UpdateCollisionInfo(c);
++  for (int i=0;i<20;++i) model.StepPhysicsBody(5000000,body);
++  EXPECT_GT(robot.GetKinematics().pose.position.z(), carried.pose.position.z()+.01f);
++  EXPECT_GT(robot.GetKinematics().twist.linear.x(), .4f);
++}
+diff --git a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.cpp b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.cpp
+--- a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.cpp
++++ b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.cpp
+@@ -151,6 +151,23 @@
+     NewCollisionInfo.segmentation_id =
+         OtherRootComp ? OtherRootComp->CustomDepthStencilValue : -1;
+ 
++    FillContactMotion(NewCollisionInfo, OtherComp);
++    if (HitComponent == RobotRootLink && !SimRobot.HasWheels() &&
++        SimRobot.GetPhysicsType() == projectairsim::PhysicsType::kFastPhysics &&
++        Hit.ImpactNormal.Z > 0.95) {
++      SupportComponent = OtherComp;
++      SupportRootHeightCm = FMath::Max(0.0f, float(Hit.Location.Z - Hit.ImpactPoint.Z));
++      bSupportTracking = true;
++      NewCollisionInfo.support_managed = true;
++      NewCollisionInfo.support_valid = true;
++      NewCollisionInfo.support_gap = -NewCollisionInfo.penetration_depth;
++      LastSupportInfo = NewCollisionInfo;
++      if (auto OtherRobot = Cast<AUnrealRobot>(OtherActor)) {
++        if (OtherRobot->SimRobot.GetPhysicsType() == projectairsim::PhysicsType::kNonPhysics)
++          AddTickPrerequisiteActor(OtherRobot);
++      }
++    }
++
+     SimRobot.UpdateCollisionInfo(NewCollisionInfo);
+ 
+     if (HitComponent == RobotRootLink) {
+@@ -165,6 +182,67 @@
+ const microsoft::projectairsim::Kinematics& AUnrealRobot::GetKinematics()
+     const {
+   return RobotKinematics;
++}
++
++void AUnrealRobot::FillContactMotion(projectairsim::CollisionInfo& Info,
++                                     UPrimitiveComponent* OtherComp) {
++  Info.component_name = TCHAR_TO_UTF8(*OtherComp->GetName());
++  if (auto Link = Cast<UUnrealRobotLink>(OtherComp))
++    Info.support_friction = Link->GetLinkFriction();
++  if (auto OtherRobot = Cast<AUnrealRobot>(OtherComp->GetOwner())) {
++    FScopeLock Lock(&OtherRobot->UpdateMutex);
++    const auto& Kin = OtherRobot->RobotKinematics;
++    Info.other_pose = Kin.pose;
++    Info.other_linear_velocity = Kin.twist.linear;
++    Info.other_angular_velocity = Kin.pose.orientation * Kin.twist.angular;
++    Info.contact_velocity = Info.other_linear_velocity +
++        Info.other_angular_velocity.cross(Info.impact_point - Kin.pose.position);
++  } else {
++    const FVector Loc = OtherComp->GetComponentLocation();
++    Info.other_pose.position = projectairsim::Vector3(Loc.X*.01,Loc.Y*.01,-Loc.Z*.01);
++    Info.other_pose.orientation = projectairsim::Quaternion::Identity();
++    FVector V = OtherComp->GetComponentVelocity();
++    FVector W = FVector::ZeroVector;
++    if (OtherComp->IsSimulatingPhysics()) {
++      V = OtherComp->GetPhysicsLinearVelocityAtPoint(
++          FVector(Info.impact_point.x()*100,Info.impact_point.y()*100,-Info.impact_point.z()*100));
++      W = OtherComp->GetPhysicsAngularVelocityInRadians();
++    }
++    Info.contact_velocity = projectairsim::Vector3(V.X*.01,V.Y*.01,-V.Z*.01);
++    Info.other_linear_velocity = Info.contact_velocity;
++    Info.other_angular_velocity = projectairsim::Vector3(-W.X,-W.Y,W.Z);
++  }
++}
++
++void AUnrealRobot::RefreshSupportContact() {
++  if (!bSupportTracking || !RobotRootLink) return;
++  auto Info = LastSupportInfo;
++  Info.time_stamp = projectairsim::SimClock::Get()->NowSimNanos();
++  Info.has_collided = false;
++  Info.support_valid = false;
++  const FVector Root = RobotRootLink->GetComponentLocation();
++  const FVector Foot = Root - FVector(0,0,SupportRootHeightCm);
++  auto Comp = SupportComponent.Get();
++  if (IsValid(Comp) && Comp->IsCollisionEnabled()) {
++    FHitResult Probe;
++    FCollisionQueryParams Params(SCENE_QUERY_STAT(MovingDeckSupport), false);
++    // A short, real geometry query under the body: no support across an edge,
++    // after deletion/disablement, or after taking off. No actor pose following.
++    if (Comp->LineTraceComponent(Probe, Foot+FVector(0,0,8),
++                                Foot-FVector(0,0,3), Params) &&
++        Probe.ImpactNormal.Z > .95) {
++      Info.normal = projectairsim::Vector3(Probe.ImpactNormal.X,Probe.ImpactNormal.Y,-Probe.ImpactNormal.Z);
++      Info.impact_point = projectairsim::Vector3(Probe.ImpactPoint.X*.01,Probe.ImpactPoint.Y*.01,-Probe.ImpactPoint.Z*.01);
++      Info.position = projectairsim::Vector3(Root.X*.01,Root.Y*.01,-Root.Z*.01);
++      Info.support_gap = float(FVector::DotProduct(Foot-Probe.ImpactPoint,Probe.ImpactNormal))*.01f;
++      Info.support_valid = true;
++      Info.has_collided = true;
++      Info.penetration_depth = FMath::Max(0.f,-Info.support_gap);
++      FillContactMotion(Info, Comp);
++    }
++  }
++  LastSupportInfo = Info;
++  SimRobot.UpdateCollisionInfo(Info);
+ }
+ 
+ // Cycles through each streaming capture of each streaming camera. Returns true
+@@ -660,6 +738,7 @@
+   }  // end conditions by physics type
+ 
+   ApplyActuatedTransforms();
++  RefreshSupportContact();
+ 
+   // For all physics types, set a flag and pose timestamp on the sensors to
+   // synchronize their updates with the robot's pose
+diff --git a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.h b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.h
+--- a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.h
++++ b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.h
+@@ -99,6 +99,14 @@
+ 
+   void MoveRobotToUnrealPose(bool bUseCollisionSweep);
+ 
++  void FillContactMotion(microsoft::projectairsim::CollisionInfo& Info,
++                         UPrimitiveComponent* OtherComp);
++  void RefreshSupportContact();
++  TWeakObjectPtr<UPrimitiveComponent> SupportComponent;
++  microsoft::projectairsim::CollisionInfo LastSupportInfo;
++  float SupportRootHeightCm = 0;
++  bool bSupportTracking = false;
++
+   void ApplyActuatedTransforms();
+ 
+   void SetExternalWrench(microsoft::projectairsim::Wrench InWrench);
+diff --git a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.cpp b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.cpp
+--- a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.cpp
++++ b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.cpp
+@@ -10,6 +10,10 @@
+ 
+ #include "Engine/StaticMesh.h"
+ #include "PhysicalMaterials/PhysicalMaterial.h"
++#include "Materials/MaterialInterface.h"
++#include "Materials/MaterialInstanceDynamic.h"
++#include "Materials/Material.h"
++#include "Engine/Texture2D.h"
+ #include "ProjectAirSim.h"
+ #include "UnrealLogger.h"
+ #include "core_sim/link/geometry/unreal_mesh.hpp"
+@@ -73,6 +77,12 @@
+ 
+   if (with_unreal_physics) {
+     InitializePhysics(Link.GetInertial(), Link.GetCollision());
++  } else {
++    SetCollisionProfileName(TEXT("BlockAllDynamic"));
++    SetCollisionEnabled(Link.GetCollision().IsCollisionEnabled()
++                            ? ECollisionEnabled::QueryOnly
++                            : ECollisionEnabled::NoCollision);
++    SetNotifyRigidBodyCollision(Link.GetCollision().IsCollisionEnabled());
+   }
+ 
+   link = Link;
+@@ -94,6 +104,80 @@
+   }
+ 
+   SetStaticMesh(static_mesh);
++
++  // CityPark2: The Vessel Boat mesh may lose its default material/texture
++  // references (e.g. due to missing/too-new dependent assets).
++  //
++  // In that case, the visual shows an untextured hull unless we assign
++  // something explicitly at runtime. In this project, the exported
++  // `Boat_diffuse.uasset` is a Texture2D, so we use the existing
++  // RuntimeMeshMaterial shader template and inject the texture into its
++  // "BaseColorTex" parameter.
++  const std::string meshName = Mesh->GetName();
++  if (meshName.find("/Game/Models/Vessel/Boat") == std::string::npos) {
++    return;
++  }
++
++  const int32 num_mats = GetNumMaterials();
++
++  auto load_texture2d = [&](const char* texture_asset_path) -> UTexture2D* {
++    // Convert "/Game/.../Asset" -> "/Game/.../Asset.Asset"
++    std::string path(texture_asset_path);
++    const auto slash = path.find_last_of('/');
++    if (slash == std::string::npos) return nullptr;
++    const std::string obj_path = path + "." + path.substr(slash + 1);
++    return static_cast<UTexture2D*>(
++        StaticLoadObject(UTexture2D::StaticClass(), nullptr,
++                         *FString(obj_path.c_str())));
++  };
++
++  auto load_runtime_material_template =
++      [&]() -> UMaterialInterface* {
++    // See WorldSimApi::getTextureSwapMaterial().
++    const std::string path = "/ProjectAirSim/Runtime/RuntimeMeshMaterial";
++    const auto slash = path.find_last_of('/');
++    if (slash == std::string::npos) return nullptr;
++    const std::string obj_path =
++        path + "." + path.substr(slash + 1);
++    return static_cast<UMaterialInterface*>(
++        StaticLoadObject(UMaterialInterface::StaticClass(), nullptr,
++                         *FString(obj_path.c_str())));
++  };
++
++  UTexture2D* diffuse_tex = load_texture2d("/Game/Models/Vessel/Boat_diffuse");
++  if (diffuse_tex == nullptr) {
++    UnrealLogger::Log(projectairsim::LogLevel::kWarning,
++                       TEXT("Boat fallback: cannot load Boat_diffuse texture for '%s'"),
++                       *meshPath);
++    return;
++  }
++
++  UMaterialInterface* runtime_mat = load_runtime_material_template();
++  if (runtime_mat == nullptr) {
++    UnrealLogger::Log(projectairsim::LogLevel::kWarning,
++                       TEXT("Boat fallback: cannot load RuntimeMeshMaterial template for '%s'"),
++                       *meshPath);
++    return;
++  }
++
++  UMaterialInstanceDynamic* dyn_mat =
++      UMaterialInstanceDynamic::Create(runtime_mat, this);
++
++  // Align parameter names with WorldSimApi::setMaterialProperties().
++  dyn_mat->SetTextureParameterValue("BaseColorTex", diffuse_tex);
++  dyn_mat->SetScalarParameterValue("BaseColorTexRatio", 1.0f);
++  dyn_mat->SetVectorParameterValue("EmissiveColor", FLinearColor(0, 0, 0, 0));
++  dyn_mat->SetScalarParameterValue("EmissiveTexRatio", 0.0f);
++  dyn_mat->SetScalarParameterValue("MetallicFactor", 0.0f);
++  dyn_mat->SetScalarParameterValue("MetallicTexRatio", 0.0f);
++  dyn_mat->SetScalarParameterValue("RoughnessFactor", 1.0f);
++  dyn_mat->SetScalarParameterValue("RoughnessTexRatio", 0.0f);
++  dyn_mat->SetScalarParameterValue("SpecularFactor", 0.5f);
++  dyn_mat->SetScalarParameterValue("SpecularTexRatio", 0.0f);
++
++  for (int32 i = 0; i < num_mats; ++i) {
++    SetMaterial(i, dyn_mat);
++  }
+ }
+ 
+ void UUnrealRobotLink::InitializePose(const projectairsim::Transform& Pose,
+diff --git a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.h b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.h
+--- a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.h
++++ b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.h
+@@ -58,6 +58,7 @@
+ 
+   bool IsGroundCollisionDetectionEnabled(void) const;
+   bool IsLinkCollisionEnabled() const;
++  float GetLinkFriction() const { return link.GetCollision().GetFriction(); }
+ 
+   void SetActuatedFTransform(const ActuatedFTransform& actuatedftransform);
+   void SetCollisionHitCallback(FnCollisionHitCallback CollisionHitCallback);
+diff --git a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Sensors/UnrealCamera.cpp b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Sensors/UnrealCamera.cpp
+--- a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Sensors/UnrealCamera.cpp
++++ b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Sensors/UnrealCamera.cpp
+@@ -728,7 +728,7 @@
+          ++ImageTypeInt) {
+       // Only capture the scene for the image type if someone wants it
+       bool bEnable = SimCamera.HasSubscribers(ImageTypeInt);
+-      // Get active(enabled) capture component to call CaptureSceneDeferred()
++      // Get the active capture component for this exposure.
+       USceneCaptureComponent2D* Capture = GetCaptureComponent(
+           static_cast<projectairsim::ImageType>(ImageTypeInt), true);
+ 
+@@ -739,18 +739,18 @@
+                                  projectairsim::ImageType>(ImageTypeInt),
+                              bEnable);
+ 
+-        // When the capture component is just activated, CaptureSceneDeferred()
+-        // doesn't seem to capture an image until the next tick so we'll
+-        // manually capture the scene now
+         if (bEnable) {
+           Capture = GetCaptureComponent(
+               static_cast<projectairsim::ImageType>(ImageTypeInt), false);
+-          Capture->CaptureScene();
+         }
+       }
+ 
+       if (bEnable) {
+-        Capture->CaptureSceneDeferred();
++        // Submit this exposure BEFORE enqueueing its readback below. Deferred
++        // capture runs at end-of-frame, so the earlier readback would otherwise
++        // label the previous texture with the current camera pose/time.
++        // Both bCaptureEveryFrame and bCaptureOnMovement are disabled.
++        Capture->CaptureScene();
+         bCaptureIsActive = true;
+       }
+     }
+diff --git a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/World/WorldSimApi.cpp b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/World/WorldSimApi.cpp
+--- a/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/World/WorldSimApi.cpp
++++ b/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/World/WorldSimApi.cpp
+@@ -12,6 +12,7 @@
+ #include "Renderers/ProcMeshActor.h"
+ #include "Runtime/Core/Public/Async/ParallelFor.h"
+ #include "WeatherLib.h"
++#include "Materials/MaterialInterface.h"
+ #include "assimp/postprocess.h"
+ #include "assimp/scene.h"
+ #include "core_sim/actor/env_actor.hpp"
+@@ -1036,8 +1037,10 @@
+         AActor* actor = UnrealHelpers::FindActor<AActor>(
+             unreal_world_, FString(object_name.c_str()));
+ 
+-        UMaterial* material = static_cast<UMaterial*>(
+-            StaticLoadObject(UMaterial::StaticClass(), unreal_world_,
++        // Allow applying both UMaterial assets and UMaterialInstance assets.
++        // (UMaterialInterface is the common base type UE expects in SetMaterial.)
++        UMaterialInterface* material = static_cast<UMaterialInterface*>(
++            StaticLoadObject(UMaterialInterface::StaticClass(), unreal_world_,
+                              *FString(material_unreal_path.c_str())));
+ 
+         if (!material) {
+diff --git a/vehicle_apis/multirotor_api/include/simple_flight/firmware/Firmware.hpp b/vehicle_apis/multirotor_api/include/simple_flight/firmware/Firmware.hpp
+--- a/vehicle_apis/multirotor_api/include/simple_flight/firmware/Firmware.hpp
++++ b/vehicle_apis/multirotor_api/include/simple_flight/firmware/Firmware.hpp
+@@ -85,6 +85,13 @@
+     // convert controller output in to motor outputs
+     mixer_.GetMotorOutput(output_controls, motor_outputs_);
+ 
++    // Disarming is an actuator interlock, not just a zero-throttle goal.
++    // A finishing API command or a failsafe goal must not power disarmed motors.
++    const auto state = offboard_api_.GetVehicleState();
++    if (state != VehicleStateType::kArmed && state != VehicleStateType::kActive) {
++      for (auto& output : motor_outputs_) output = 0.0f;
++    }
++
+     // finally write the motor outputs
+     for (uint16_t motor_index = 0; motor_index < params_->motor.motor_count;
+          ++motor_index)
+@@ -128,4 +135,4 @@
+ 
+ }  // namespace simple_flight
+ 
+-#endif  // MULTIROTOR_API_SIMPLE_FLIGHT_FIRMWARE_FIRMWARE_HPP_
+\ No newline at end of file
++#endif  // MULTIROTOR_API_SIMPLE_FLIGHT_FIRMWARE_FIRMWARE_HPP_
+diff --git a/vehicle_apis/multirotor_api/include/simple_flight/firmware/OffboardApi.hpp b/vehicle_apis/multirotor_api/include/simple_flight/firmware/OffboardApi.hpp
+--- a/vehicle_apis/multirotor_api/include/simple_flight/firmware/OffboardApi.hpp
++++ b/vehicle_apis/multirotor_api/include/simple_flight/firmware/OffboardApi.hpp
+@@ -54,6 +54,8 @@
+       UpdateGoalFromRc();
+     else {
+       if (takenoff_ &&
++          (vehicle_state_.GetState() == VehicleStateType::kArmed ||
++           vehicle_state_.GetState() == VehicleStateType::kActive) &&
+           (clock_->Millis() - goal_timestamp_ > params_->api_goal_timeout)) {
+         if (!is_api_timedout_) {
+           comm_link_->Log(
+@@ -162,6 +164,9 @@
+          vehicle_state_.GetState() == VehicleStateType::kArmed ||
+          vehicle_state_.GetState() == VehicleStateType::kBeingArmed)) {
+       vehicle_state_.SetState(VehicleStateType::kDisarmed);
++      takenoff_ = false;
++      is_api_timedout_ = false;
++      goal_timestamp_ = clock_->Millis();
+       goal_ = Axis4r(0, 0, 0, 0);
+       goal_mode_ = GoalMode::GetAllRateMode();
+ 
+@@ -254,4 +259,4 @@
+ 
+ }  // namespace simple_flight
+ 
+-#endif  // MULTIROTOR_API_SIMPLE_FLIGHT_FIRMWARE_OFFBOARDAPI_HPP_
+\ No newline at end of file
++#endif  // MULTIROTOR_API_SIMPLE_FLIGHT_FIRMWARE_OFFBOARDAPI_HPP_

@@ -1,0 +1,27 @@
+{
+  "task": "urban_scale",
+  "fleet_size_each_role": 1,
+  "scene": "generated/bellevue_scale_1.jsonc",
+  "mesh_path": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\bellevue_downtown_runtime_512.glb",
+  "ip": "127.0.0.1",
+  "port_topics": 8989,
+  "port_services": 8990,
+  "sdk_path": "F:\\EpicGamesEnv\\ProjectAirSim\\client\\python\\projectairsim\\src",
+  "sensor_max_age_sec": 1.5,
+  "sensor_pair_tolerance_sec": 0.06,
+  "tracking": {
+    "minimum_pixels": 25,
+    "segmentation_color_order": "bgr"
+  },
+  "duration_sim_sec": 45.0,
+  "control_hz": 3.0,
+  "rover_speed_mps": 1.1,
+  "drone_speed_mps": 2.8,
+  "measurement_definition": "All robots move; all UAVs use the same three-stream 640x360 0.3 s camera, all UGVs use the same three-stream 640x360 0.3 s camera. No lidar or overview observer.",
+  "fps_definition": "Received scene-camera messages per simulation second; this is sensor stream FPS, not Unreal render-thread FPS.",
+  "simulator_pid": 9952,
+  "host": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "logical_cpu_count": 32
+  }
+}

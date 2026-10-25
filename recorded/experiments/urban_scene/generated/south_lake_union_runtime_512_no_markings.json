@@ -1,0 +1,29 @@
+{
+  "source": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\south_lake_union_runtime_512.glb",
+  "source_sha256": "9a5e5dbf1348b3b26676fa3ead26562c693bd9dcd004739950ce0ebda7ba46bb",
+  "output": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\south_lake_union_runtime_512_no_markings.glb",
+  "output_sha256": "1c8767857ca1cee989d76d2b0afb86395c8674835db561372708662ed3131743",
+  "change": "Removed only five named road marking primitives; binary vertex data and all other primitives retained",
+  "removed": [
+    {
+      "material": "road_marking_crossing",
+      "triangles": 66
+    },
+    {
+      "material": "road_arrow_right",
+      "triangles": 240
+    },
+    {
+      "material": "road_arrow_through_right",
+      "triangles": 52
+    },
+    {
+      "material": "road_marking_dash",
+      "triangles": 1394
+    },
+    {
+      "material": "road_arrow_through",
+      "triangles": 100
+    }
+  ]
+}

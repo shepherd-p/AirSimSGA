@@ -1,0 +1,61 @@
+{
+  "status": "completed",
+  "recorded_utc": "2026-09-28T17:24:24.534616+00:00",
+  "error": null,
+  "fleet_size_each_role": 1,
+  "sim_duration_sec": 45.06,
+  "wall_duration_sec": 111.1880000000001,
+  "real_time_factor": 0.4052595603842138,
+  "process_cpu_percent_one_core_100": {
+    "simulator": 573.3813451091839,
+    "client": 100.99729737021971
+  },
+  "peak_rss_bytes": {
+    "simulator": 2629726208,
+    "client": 147513344
+  },
+  "stream_hz_per_robot": {
+    "Car1": {
+      "scene_camera": 3.262316910785619,
+      "depth_camera": 3.262316910785619,
+      "segmentation_camera": 3.262316910785619,
+      "pose": 200.0
+    },
+    "Drone1": {
+      "scene_camera": 3.262316910785619,
+      "depth_camera": 3.262316910785619,
+      "segmentation_camera": 3.262316910785619,
+      "pose": 200.0
+    }
+  },
+  "distances_m": {
+    "Car1": 33.0887916906569,
+    "Drone1": 33.3773469313386
+  },
+  "collision_events": [],
+  "captures": [
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\urban_scale\\20260929_012212_495574_1uav_1ugv\\start_uav_view.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\urban_scale\\20260929_012212_495574_1uav_1ugv\\start_uav_view.npz",
+      "time_ns": 5185000000,
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "payload_sha256": "dba1cf1bdc748d88a493aced427961ff42f4b976258b58eec26840ab49e9000c"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\urban_scale\\20260929_012212_495574_1uav_1ugv\\end_uav_view.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\urban_scale\\20260929_012212_495574_1uav_1ugv\\end_uav_view.npz",
+      "time_ns": 50400000000,
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "payload_sha256": "ce0d00130dcbd2b1d6712bc5dbb5fd743cded2b0bad6bd44dc75bfb1d454f121"
+    }
+  ],
+  "cleanup_errors": []
+}

@@ -1,0 +1,157 @@
+{
+  "profile": "recorded-landing",
+  "base_commit": "d60706e17f182557b89f042676b2f6af4fd5ab0d",
+  "files": [
+    {
+      "path": "client/python/projectairsim/src/projectairsim/client.py",
+      "upstream_sha256": "9c28f3db5b0b97b3c37c6a7149cdc4fe8a44fa22d1c99a3766156c282de4551d",
+      "extension_sha256": "a6b9da8fa6096266d43857f2205cff76dabdab9adb855262d4683b028a0a22cc",
+      "kind": "modified"
+    },
+    {
+      "path": "client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc",
+      "upstream_sha256": "dc34c6151743de9fcd2fc355de14a4696b58af747ca59889b47736a97be365ad",
+      "extension_sha256": "a7d9a3a07f652a00d914b5dbcdcf7ea409b4f8c5ab4c1f174a012eb8598a3797",
+      "kind": "modified"
+    },
+    {
+      "path": "client/python/projectairsim/src/projectairsim/utils.py",
+      "upstream_sha256": "6c45463f69d808ed2f8a3b7a071acbc0e87cbe1f4606c39b05f304cd3e691ba9",
+      "extension_sha256": "4c5b802fc172b1a2947cf65447b415fd013bc54a2aaa254291042efef92e2a2a",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/include/core_sim/actor.hpp",
+      "upstream_sha256": "dd7d264199d0ea2c599892c8cc2e18e6f9cccd727df648a8506a68d2ca2e560a",
+      "extension_sha256": "fa1d2bc01fd6a0f86f4b3414c1cfa357fb81269cb6765e078c7d186eaa4230e0",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/include/core_sim/actor/robot.hpp",
+      "upstream_sha256": "1f3a2c4f118e410344723d41c7bfb579e829d3b8e7cea5ca27527138ab544d1d",
+      "extension_sha256": "11f8fffde6753a6dd190ff5a1db521db6072002a59d8ecefa8f02e7164c8d265",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/include/core_sim/actor/vessel_actor.hpp",
+      "upstream_sha256": null,
+      "extension_sha256": "cf995c0b625fbc3b85372da07ca32589fa8087cc7530bfd36cab8edbff8fe85f",
+      "kind": "added"
+    },
+    {
+      "path": "core_sim/include/core_sim/physics_common_types.hpp",
+      "upstream_sha256": "d337d5e653b96e5915e18c5e8bc5f87234e5d843a9afc61a65e76b35ea466459",
+      "extension_sha256": "9c3ad57af904c591cf14b397dc4a828f6abf18a90573fc45edd5949fb8b1ecfb",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/include/core_sim/vessel_planar_dynamics.hpp",
+      "upstream_sha256": null,
+      "kind": "added",
+      "extension_sha256": "a6ae78d88e211c39e7bc6b4a528619268107a76e01b9403232f9f660d7b68775"
+    },
+    {
+      "path": "core_sim/src/CMakeLists.txt",
+      "upstream_sha256": "e3445cd06422d06e5812588accdea8f3419b4f30dab4c25aaa622f867e7907cf",
+      "extension_sha256": "71a50827d19ab8d561079c1262f28006fc1fee0a23d0160a7076b17f4e937f0e",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/src/actor/robot.cpp",
+      "upstream_sha256": "97932bd6cdd566e1abb91f13291fb4e706c43b8613493090854c00027bd9d822",
+      "extension_sha256": "a9df90ac0a27da4eaf4a7e5152fd0b7540d2a748e08f0b7ea1e077a98be85862",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/src/actor/vessel_actor.cpp",
+      "upstream_sha256": null,
+      "extension_sha256": "fb3e97fe785ffccb15f0d6176f1acd85a971a55c2866e0ccf099910ebadd3683",
+      "kind": "added"
+    },
+    {
+      "path": "core_sim/src/constant.hpp",
+      "upstream_sha256": "90181cacecfb1aa41271da6f2fa13c085ec6c55a0f95b9c629e58b2db1617f5e",
+      "extension_sha256": "4472098d9254a192124c4f79bab8b9011bfc47688057ef4a339092d215d35ce5",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/src/message/collision_info_message.cpp",
+      "upstream_sha256": "41ac0ad1ac7db7ee66bd3c93b709feea045aafb5a7812e969ad3cf805398ec99",
+      "extension_sha256": "b515e858dc5cb90f57ca7c98160441c9a71b3d572969b104a1c002956b3f505c",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/src/scene.cpp",
+      "upstream_sha256": "3487a77f2c1762a34854317b4cb6bdb66ba42e41d3f97a2dd25e5d517971f660",
+      "extension_sha256": "ca0010493492962931ddbe51b7e9d00d70409b31ade7a8dd782cecdae6db750f",
+      "kind": "modified"
+    },
+    {
+      "path": "physics/include/support_contact.hpp",
+      "upstream_sha256": null,
+      "extension_sha256": "012fbe79729eafc2a7efd545cd460a89857054ab740cfa8042f9ddfeb26ab4d8",
+      "kind": "added"
+    },
+    {
+      "path": "physics/src/fast_physics.cpp",
+      "upstream_sha256": "4d4a514ae51332f4de7983db56e65c1a8ce7f75653a21252ae130d0ae9ef2b9b",
+      "extension_sha256": "83be4b38532777ed23ea59bf8a1c51dc66dbeeaa2a7134954a2e986d898b6938",
+      "kind": "modified"
+    },
+    {
+      "path": "physics/test/gtest_fast_physics.cpp",
+      "upstream_sha256": "7dc63e286b108827b2e53a8f6e78692ba82796ac5261678ddd8cec8ecff3c4f2",
+      "extension_sha256": "7437c72dee90175fcba2c75c4f44e9c008b83f510550cfd3221a843c17e0180a",
+      "kind": "modified"
+    },
+    {
+      "path": "unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.cpp",
+      "upstream_sha256": "ffbd780345557c05745e102ad333bf2652bce4b0e01056a0556eb0952cd57803",
+      "extension_sha256": "c43027c9a76b8ed3665001aede9008900cb1b09420e6740a73fe32bc6b97aca1",
+      "kind": "modified"
+    },
+    {
+      "path": "unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.h",
+      "upstream_sha256": "353ec9b9f73cc73a205a2152b5b20ebcd5407acef64013322b0552d3a9add0e4",
+      "extension_sha256": "81417500f3c8e2e89ad7132fa6b54bdf796c237fa7b2d01fbc3394f68139de9a",
+      "kind": "modified"
+    },
+    {
+      "path": "unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.cpp",
+      "upstream_sha256": "53b18e1fb998922dc0b77fd04de8d7e5b3b3e37900047bef83b296208dfbd361",
+      "extension_sha256": "166c88e276d46eb0723a491b897a6db72e11fe408dd99b06977f3d9bffb80ef9",
+      "kind": "modified"
+    },
+    {
+      "path": "unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.h",
+      "upstream_sha256": "d1599718cb47e068dd49bf7b85dc0149337bafdda97de54da181cacf7d482c80",
+      "extension_sha256": "d9ccb0ec5c57ca6d481d469cc46b9f19d7e515fc7af28a03f38c6705c27533a5",
+      "kind": "modified"
+    },
+    {
+      "path": "unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Sensors/UnrealCamera.cpp",
+      "upstream_sha256": "27356ba6fc629384c7d7217da935f9125d4c9630a8c574cd48b02d8d030837ce",
+      "extension_sha256": "210ffd6b2e0c13ac0f5805c54f1a7b48e40065a4cfe982d0ee6dc97a5c1db39b",
+      "kind": "modified"
+    },
+    {
+      "path": "unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/World/WorldSimApi.cpp",
+      "upstream_sha256": "594606c4497c9a44727423a5b77f8845abb53fe7f637309e4fd296c57edb831d",
+      "extension_sha256": "594606c4497c9a44727423a5b77f8845abb53fe7f637309e4fd296c57edb831d",
+      "kind": "modified"
+    },
+    {
+      "path": "vehicle_apis/multirotor_api/include/simple_flight/firmware/Firmware.hpp",
+      "upstream_sha256": "13d4efcca7aa12ed03cf9c1261bfcd1863f7386f8b3ba6f3708909c17fe0c911",
+      "extension_sha256": "624132ee82d4f7abb6f8f7db2b372bf6b5f28c80caa7c64c272f2a1c191a4750",
+      "kind": "modified"
+    },
+    {
+      "path": "vehicle_apis/multirotor_api/include/simple_flight/firmware/OffboardApi.hpp",
+      "upstream_sha256": "ca3d24277e1d114e3b8d3ac5b2c5c9a0893f9af99bdc8b7e35eb9c024278e156",
+      "extension_sha256": "2b6de33bbe54dad9a18ec085e9510ae1c188f7ebebce67e02b0ab21753ab6a0c",
+      "kind": "modified"
+    }
+  ],
+  "description": "Recorded planar-dynamics landing source with final contact/rendering changes"
+}

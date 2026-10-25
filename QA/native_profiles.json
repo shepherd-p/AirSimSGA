@@ -1,0 +1,24 @@
+{
+  "profiles": [
+    {
+      "profile": "main",
+      "modified_or_added_files": 9,
+      "patch_check": true,
+      "patch_applied_and_all_overlay_hashes_matched": true
+    },
+    {
+      "profile": "moving-deck",
+      "modified_or_added_files": 24,
+      "patch_check": true,
+      "patch_applied_and_all_overlay_hashes_matched": true
+    }
+  ],
+  "full_source_assembly": "moving-deck successfully assembled into new temporary tree",
+  "documentation_case_collisions": [
+    {
+      "omitted": "docs/images/datacollection/rbac.png",
+      "retained": "docs/images/datacollection/RBAC.png"
+    }
+  ],
+  "scope": "Source/patch validation; no UE/plugin compilation"
+}

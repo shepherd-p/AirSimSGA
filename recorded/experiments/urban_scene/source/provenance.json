@@ -1,0 +1,20 @@
+{
+  "source_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-122.341,47.621,-122.333,47.627",
+  "source_data_license": "OpenStreetMap contributors, ODbL 1.0",
+  "converter": "OSM2World 0.4.0, MIT",
+  "bbox_west_south_east_north": [
+    -122.341,
+    47.621,
+    -122.333,
+    47.627
+  ],
+  "clip_rule": "Keep nodes inside bbox and ways with every referenced node inside; omit incomplete relations",
+  "source_sha256": "ce27092c9b847a1dbf4a20884f52e9c99029ec85a6ad1280b91e76287e834d80",
+  "clipped_sha256": "373188cfcc1527602290ab76eb90971fc74ace0f44c1274e6cf93e394b98bd7d",
+  "counts": {
+    "nodes": 4007,
+    "ways": 825,
+    "buildings": 79,
+    "motor_roads": 147
+  }
+}

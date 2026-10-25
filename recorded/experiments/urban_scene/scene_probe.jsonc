@@ -1,0 +1,21 @@
+{
+  "id": "AGUrbanProbe",
+  "clock": {
+    "type": "steppable",
+    "step-ns": 5000000,
+    "real-time-update-rate": 5000000,
+    "pause-on-start": false
+  },
+  "home-geo-point": {
+    "latitude": 47.624,
+    "longitude": -122.337,
+    "altitude": 0.0
+  },
+  "scene-type": "UnrealNative",
+  "actors": [{
+    "name": "Observer",
+    "type": "robot",
+    "robot-config": "observer_probe.jsonc",
+    "origin": {"xyz": "0 0 0", "rpy-deg": "0 0 0"}
+  }]
+}

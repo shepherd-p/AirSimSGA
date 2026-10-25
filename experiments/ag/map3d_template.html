@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空地协同 · 三维地图</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b1420;color:#e5edf5;font:14px 'Segoe UI','Microsoft YaHei',sans-serif;overflow:hidden}
+canvas{display:block;width:100vw;height:100vh;touch-action:none}header{position:absolute;top:24px;left:28px;pointer-events:none}
+h1{font-size:24px;margin:0 0 8px}header p{color:#a3b6cb;margin:0;font-size:13px}
+aside{position:absolute;right:24px;top:24px;width:280px;max-height:calc(100vh - 48px);overflow-y:auto;padding:20px;background:#152333ed;border:1px solid #31465b;border-radius:14px}
+label{display:block;color:#b9c9d9;margin:16px 0 8px}select,button{font:inherit;background:#22364b;color:#e5edf5;border:1px solid #49637e;border-radius:7px;padding:8px;cursor:pointer}
+select{width:100%}button{margin:5px 4px 0 0}input[type=range]{width:100%;accent-color:#65d4d2}input[type=checkbox]{accent-color:#65d4d2}
+#stats{font-size:13px;line-height:1.9;color:#adc0d3;margin:16px 0 0}footer{position:absolute;left:28px;bottom:24px;color:#b9c9d9;line-height:1.9;pointer-events:none;max-width:calc(100vw - 350px)}
+#legend{height:8px;background:linear-gradient(90deg,#287bcc,#41b8b5,#91d998,#f5ce63,#ed8056);border-radius:5px;margin-top:16px}
+#range{display:flex;justify-content:space-between;color:#b9c9d9;font-size:12px;margin-top:6px}
+#error{display:none;position:absolute;inset:40% 20%;padding:24px;background:#562a31;border-radius:12px}
+.axis{position:absolute;font-weight:600;font-size:12px;pointer-events:none}
+</style>
+<canvas id="view"></canvas>
+<header><h1>空地协同 · 三维地图</h1><p id="subtitle"></p></header>
+<aside><label style="margin-top:0" for="layer">地图图层</label><select id="layer"></select>
+<label for="colorMode">颜色</label><select id="colorMode"><option value="height">高度着色</option><option value="rgb">传感器原色（若有）</option></select>
+<label for="size">点大小 <span id="sizevalue">2.5</span></label><input id="size" type="range" min="1" max="7" step=".5" value="2.5">
+<label><input id="grid" type="checkbox" checked> 显示比例网格与坐标轴</label>
+<label><input id="spin" type="checkbox"> 自动旋转</label>
+<div id="trackPanel" hidden><label><input id="tracks" type="checkbox" checked> 实测轨迹 · 红 UAV / 黄 UGV</label><label for="timeline">轨迹回放 <span id="timevalue"></span></label><input id="timeline" type="range" min="0" max="100" value="100" step=".1"><button id="play">播放轨迹</button><p style="font-size:12px;color:#a3b6cb">圆点为当前位置；十字为起点，方框为终点。地图显示完整离线融合结果。</p></div>
+<button id="reset">三维复位</button><button id="top">俯视</button><button id="side">侧视</button>
+<div id="stats"></div><div id="legend"></div><div id="range"></div></aside>
+<footer>左键拖动：旋转　右键 / Shift 拖动：平移　滚轮：缩放<br>XYZ 等比例 · 米 · 实测三维数据<br><span id="description">点云包含建筑、地面与植被；未生成表面网格。</span></footer>
+<div id="error"></div><span class="axis" id="north" style="color:#fc907d">北 N</span><span class="axis" id="east" style="color:#88dea3">东 E</span><span class="axis" id="up" style="color:#83c5ff">上 U</span>
+<script>
+'use strict';
+const DATA=/*__MAP_DATA__*/;
+const $=id=>document.getElementById(id), canvas=$('view');
+function fail(message){$('error').textContent=message;$('error').style.display='block'}
+const gl=canvas.getContext('webgl',{antialias:true,preserveDrawingBuffer:true});
+if(!gl){fail('无法启用 WebGL。请用开启硬件加速的 Edge 或 Chrome 打开此文件。');throw Error('WebGL unavailable')}
+function shader(type,source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s}
+const program=gl.createProgram();
+gl.attachShader(program,shader(gl.VERTEX_SHADER,`attribute vec3 position;attribute vec3 rgb;attribute vec3 normal; uniform mat4 mvp; uniform float size; varying float height;varying vec3 vertexRGB;varying vec3 vertexNormal;void main(){height=position.z;vertexRGB=rgb;vertexNormal=normal;gl_Position=mvp*vec4(position,1.);gl_PointSize=size;}`));
+gl.attachShader(program,shader(gl.FRAGMENT_SHADER,`precision mediump float;varying float height;varying vec3 vertexRGB;varying vec3 vertexNormal;uniform vec2 limits;uniform vec3 tint;uniform int primitive;uniform bool useRGB;void main(){if(primitive>0){if(primitive==1&&distance(gl_PointCoord,vec2(.5))>.5)discard;float t=clamp((height-limits.x)/max(limits.y-limits.x,.001),0.,1.);vec3 a=vec3(.16,.48,.80),b=vec3(.26,.72,.71),c=vec3(.57,.85,.60),d=vec3(.96,.81,.39),e=vec3(.93,.50,.34);vec3 color=useRGB?vertexRGB:t<.25?mix(a,b,t*4.):t<.5?mix(b,c,(t-.25)*4.):t<.75?mix(c,d,(t-.5)*4.):mix(d,e,(t-.75)*4.);if(primitive==2){float light=.65+.35*abs(dot(normalize(vertexNormal),normalize(vec3(.4,.3,1.))));color*=light;}gl_FragColor=vec4(color,1.);}else gl_FragColor=vec4(tint,1.);}`));
+gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));gl.useProgram(program);
+const loc={};for(const n of ['mvp','size','limits','tint','primitive','useRGB'])loc[n]=gl.getUniformLocation(program,n);
+const pos=gl.getAttribLocation(program,'position');gl.enableVertexAttribArray(pos);
+const rgbLoc=gl.getAttribLocation(program,'rgb'),normalLoc=gl.getAttribLocation(program,'normal');
+const buffer=gl.createBuffer(),lineBuffer=gl.createBuffer(),colorBuffer=gl.createBuffer(),normalBuffer=gl.createBuffer(),indexBuffer=gl.createBuffer();
+const uintIndices=gl.getExtension('OES_element_index_uint');
+function decode(value,Type=Float32Array){const bytes=Uint8Array.from(atob(value),c=>c.charCodeAt(0));return new Type(bytes.buffer)}
+const add=(a,b)=>a.map((v,i)=>v+b[i]),sub=(a,b)=>a.map((v,i)=>v-b[i]),scale=(a,s)=>a.map(v=>v*s);
+const dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0),cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+const norm=a=>scale(a,1/Math.max(Math.hypot(...a),1e-9));
+function mul(a,b){let c=new Array(16).fill(0);for(let j=0;j<4;j++)for(let i=0;i<4;i++)for(let k=0;k<4;k++)c[j*4+i]+=a[k*4+i]*b[j*4+k];return c}
+function look(eye,target){const z=norm(sub(eye,target)),x=norm(cross([0,0,1],z)),y=cross(z,x);return [x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-dot(x,eye),-dot(y,eye),-dot(z,eye),1]}
+function projection(aspect,near,far){let f=1/Math.tan(Math.PI/8);return [f/aspect,0,0,0,0,f,0,0,0,0,(far+near)/(near-far),-1,0,0,2*far*near/(near-far),0]}
+let selected=0,points,colors,normals,indices,low,high,center,target,radius,distance,azimuth=-2.1,elevation=.55,dirty=true,gridStep=10,axes=[];
+let playing=false,lastFrame=0,playbackPosition=100;
+const tracks=DATA.trajectories||[],startTime=tracks.length?Math.min(...tracks.map(t=>t.times[0])):0,endTime=tracks.length?Math.max(...tracks.map(t=>t.times[t.times.length-1])):0;
+if(tracks.length){$('trackPanel').hidden=false;$('tracks').onchange=()=>dirty=true;$('timeline').oninput=()=>{playing=false;$('play').textContent='播放轨迹';dirty=true};$('play').onclick=()=>{if(+$('timeline').value>=100)$('timeline').value=0;playbackPosition=Number($('timeline').value);playing=!playing;$('play').textContent=playing?'暂停轨迹':'播放轨迹';dirty=true}}
+function drawTracks(){if(!$('tracks').checked)return;const until=startTime+(endTime-startTime)*Number($('timeline').value)/100;$('timevalue').textContent=(until-startTime).toFixed(1)+' s';gl.disable(gl.DEPTH_TEST);for(const t of tracks){const v=[];let last=-1;for(let i=0;i<t.times.length&&t.times[i]<=until;i++){if(i)v.push(t.positions[i-1],t.positions[i]);last=i}if(last<0)continue;lines(v,t.color);const p=t.positions[0],r=.7;lines([[p[0]-r,p[1],p[2]],[p[0]+r,p[1],p[2]],[p[0],p[1]-r,p[2]],[p[0],p[1]+r,p[2]]],t.color);if(last===t.times.length-1){const q=t.positions[last],a=[q[0]-r,q[1]-r,q[2]],b=[q[0]+r,q[1]-r,q[2]],c=[q[0]+r,q[1]+r,q[2]],d=[q[0]-r,q[1]+r,q[2]];lines([a,b,b,c,c,d,d,a],t.color)}gl.bindBuffer(gl.ARRAY_BUFFER,lineBuffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(t.positions[last]),gl.DYNAMIC_DRAW);gl.vertexAttribPointer(pos,3,gl.FLOAT,false,0,0);gl.uniform1f(loc.size,11);gl.uniform1i(loc.primitive,1);gl.uniform1i(loc.useRGB,1);gl.vertexAttrib3fv(rgbLoc,t.color);gl.drawArrays(gl.POINTS,0,1)}gl.enable(gl.DEPTH_TEST)}
+function reset(){target=center.slice();distance=radius*3.2;azimuth=-2.1;elevation=.55;dirty=true}
+function load(index){selected=index;const layer=DATA.layers[index];points=layer.positions_b64?decode(layer.positions_b64):new Float32Array(layer.points);colors=layer.colors_b64?decode(layer.colors_b64):null;normals=layer.normals_b64?decode(layer.normals_b64):null;indices=layer.triangles_b64?decode(layer.triangles_b64,Uint32Array):null;if(indices&&!uintIndices){fail('此浏览器不支持大型网格索引，请切换到稠密点云图层或使用新版 Edge。');indices=null}
+low=[Infinity,Infinity,Infinity];high=[-Infinity,-Infinity,-Infinity];for(let i=0;i<points.length;i++) {let a=i%3;low[a]=Math.min(low[a],points[i]);high[a]=Math.max(high[a],points[i])}center=scale(add(low,high),.5);radius=Math.max(1,Math.hypot(...sub(high,low))/2);reset();
+gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,points,gl.STATIC_DRAW);
+if(colors){gl.bindBuffer(gl.ARRAY_BUFFER,colorBuffer);gl.bufferData(gl.ARRAY_BUFFER,colors,gl.STATIC_DRAW)}if(normals){gl.bindBuffer(gl.ARRAY_BUFFER,normalBuffer);gl.bufferData(gl.ARRAY_BUFFER,normals,gl.STATIC_DRAW)}if(indices){gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,indexBuffer);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,indices,gl.STATIC_DRAW)}
+gridStep=Math.pow(10,Math.floor(Math.log10(radius/5)));if(radius/gridStep>20)gridStep*=5;
+axes=[[low[0],low[1],low[2]],[low[0]+gridStep*3,low[1],low[2]],[low[0],low[1]+gridStep*3,low[2]],[low[0],low[1],low[2]+gridStep*3]];
+$('stats').innerHTML=(indices?'预览顶点：':'点数：')+DATA.layers[index].count.toLocaleString()+(indices?'<br>预览三角面：'+layer.faces.toLocaleString()+'<br>完整三角面：'+layer.full_faces.toLocaleString()+(layer.full_vertices?'<br>完整顶点：'+layer.full_vertices.toLocaleString():''):'')+'<br>北向跨度：'+(high[0]-low[0]).toFixed(1)+' m<br>东向跨度：'+(high[1]-low[1]).toFixed(1)+' m<br>高度跨度：'+(high[2]-low[2]).toFixed(1)+' m<br>网格间距：'+gridStep+' m';
+$('range').innerHTML='<span>'+low[2].toFixed(1)+' m</span><span>'+high[2].toFixed(1)+' m</span>'}
+DATA.layers.forEach((l,i)=>{const o=document.createElement('option');o.value=i;o.textContent=l.name;$('layer').append(o)});
+$('subtitle').textContent='实测数据 '+DATA.run+' · '+DATA.status+' · 高度 = −NED Z（非海拔）';
+if(DATA.description)$('description').textContent=DATA.description;if(DATA.defaultColor)$('colorMode').value=DATA.defaultColor;
+$('colorMode').onchange=()=>dirty=true;
+$('layer').onchange=()=>load(Number($('layer').value));$('reset').onclick=reset;
+$('top').onclick=()=>{reset();elevation=Math.PI/2-.001;azimuth=-Math.PI/2};$('side').onclick=()=>{reset();elevation=.025};
+$('size').oninput=()=>{$('sizevalue').textContent=$('size').value;dirty=true};$('grid').onchange=()=>dirty=true;
+function lines(vertices,color,matrix){gl.disableVertexAttribArray(rgbLoc);gl.disableVertexAttribArray(normalLoc);gl.bindBuffer(gl.ARRAY_BUFFER,lineBuffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(vertices.flat()),gl.DYNAMIC_DRAW);gl.vertexAttribPointer(pos,3,gl.FLOAT,false,0,0);gl.uniform1i(loc.primitive,0);gl.uniform3fv(loc.tint,color);gl.drawArrays(gl.LINES,0,vertices.length)}
+function label(id,p,m){const v=[...p,1],q=[0,0,0,0];for(let i=0;i<4;i++)for(let j=0;j<4;j++)q[i]+=m[j*4+i]*v[j];const el=$(id);el.style.display=$('grid').checked&&q[3]>0?'block':'none';el.style.left=((q[0]/q[3]+1)*canvas.clientWidth/2+4)+'px';el.style.top=((1-q[1]/q[3])*canvas.clientHeight/2-16)+'px'}
+function draw(){const frame=performance.now();if(playing){playbackPosition=Math.min(100,playbackPosition+(frame-lastFrame)*.004);$('timeline').value=playbackPosition;dirty=true;if(playbackPosition>=100){playing=false;$('play').textContent='播放轨迹'}}lastFrame=frame;let dpr=Math.min(devicePixelRatio||1,2),w=Math.round(innerWidth*dpr),h=Math.round(innerHeight*dpr);if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;dirty=true}
+if($('spin').checked){azimuth+=.003;dirty=true}if(dirty){dirty=false;const heightLegend=!(colors&&$('colorMode').value==='rgb');$('legend').style.display=heightLegend?'block':'none';$('range').style.display=heightLegend?'flex':'none';gl.viewport(0,0,w,h);gl.clearColor(.043,.078,.125,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);
+const eye=add(target,scale([Math.cos(elevation)*Math.cos(azimuth),Math.cos(elevation)*Math.sin(azimuth),Math.sin(elevation)],distance));
+const matrix=mul(projection(w/h,.05,Math.max(2000,distance+radius*5)),look(eye,target));gl.uniformMatrix4fv(loc.mvp,false,new Float32Array(matrix));gl.uniform2f(loc.limits,low[2],high[2]);gl.uniform1f(loc.size,Number($('size').value)*dpr);
+if($('grid').checked){let vertices=[];for(let x=Math.ceil(low[0]/gridStep)*gridStep;x<=high[0];x+=gridStep)vertices.push([x,low[1],low[2]],[x,high[1],low[2]]);for(let y=Math.ceil(low[1]/gridStep)*gridStep;y<=high[1];y+=gridStep)vertices.push([low[0],y,low[2]],[high[0],y,low[2]]);lines(vertices,[.15,.23,.30]);[[1,[.99,.45,.35]],[2,[.4,.85,.55]],[3,[.35,.65,1]]].forEach(([i,c])=>lines([axes[0],axes[i]],c))}
+gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.vertexAttribPointer(pos,3,gl.FLOAT,false,0,0);gl.uniform1i(loc.primitive,indices?2:1);gl.uniform1i(loc.useRGB,!!colors&&$('colorMode').value==='rgb');
+if(colors){gl.enableVertexAttribArray(rgbLoc);gl.bindBuffer(gl.ARRAY_BUFFER,colorBuffer);gl.vertexAttribPointer(rgbLoc,3,gl.FLOAT,false,0,0)}else{gl.disableVertexAttribArray(rgbLoc);gl.vertexAttrib3f(rgbLoc,.5,.7,.8)}
+if(normals){gl.enableVertexAttribArray(normalLoc);gl.bindBuffer(gl.ARRAY_BUFFER,normalBuffer);gl.vertexAttribPointer(normalLoc,3,gl.FLOAT,false,0,0)}else{gl.disableVertexAttribArray(normalLoc);gl.vertexAttrib3f(normalLoc,0,0,1)}
+if(indices){gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,indexBuffer);gl.drawElements(gl.TRIANGLES,indices.length,gl.UNSIGNED_INT,0)}else gl.drawArrays(gl.POINTS,0,points.length/3);drawTracks();label('north',axes[1],matrix);label('east',axes[2],matrix);label('up',axes[3],matrix)}requestAnimationFrame(draw)}
+let drag=null;canvas.oncontextmenu=e=>e.preventDefault();canvas.onpointerdown=e=>{canvas.setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY,pan:e.button===2||e.shiftKey}};
+canvas.onpointermove=e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.x=e.clientX;drag.y=e.clientY;if(drag.pan){const f=distance/canvas.clientHeight*.8,right=[-Math.sin(azimuth),Math.cos(azimuth),0],up=[-Math.sin(elevation)*Math.cos(azimuth),-Math.sin(elevation)*Math.sin(azimuth),Math.cos(elevation)];target=add(target,add(scale(right,-dx*f),scale(up,dy*f)))}else{azimuth-=dx*.006;elevation=Math.max(-1.5,Math.min(1.56,elevation+dy*.006))}dirty=true};
+canvas.onpointerup=canvas.onpointercancel=()=>drag=null;canvas.onwheel=e=>{e.preventDefault();distance=Math.max(.5,Math.min(radius*40,distance*Math.exp(e.deltaY*.001)));dirty=true};
+load(0);draw();
+</script></html>

@@ -1,0 +1,1102 @@
+[
+  {
+    "junction": 90034,
+    "approach": 83815,
+    "exits": [
+      83825,
+      83824
+    ],
+    "junction_xy_m": [
+      -1074.4490625,
+      -996.596640625
+    ],
+    "angle_deg": 66.4,
+    "exit_separation_m": 28.8,
+    "approach_length_m": 342.4,
+    "exit_lengths_m": [
+      33.2,
+      25.1
+    ],
+    "surface_checks": [
+      {
+        "sample": "approach_80m_before_fork",
+        "xy_m": [
+          -1017.8224699835555,
+          -1053.1070734668792
+        ],
+        "lane_z_up_m": 0.6855736858848958,
+        "surface_z_up_m": 0.6651611328125,
+        "difference_m": 0.020412553072395756
+      },
+      {
+        "sample": "approach_60m_before_fork",
+        "xy_m": [
+          -1031.9791181126666,
+          -1038.9794652564094
+        ],
+        "lane_z_up_m": 0.6861844491365722,
+        "surface_z_up_m": 0.67510986328125,
+        "difference_m": 0.011074585855322172
+      },
+      {
+        "sample": "approach_40m_before_fork",
+        "xy_m": [
+          -1046.135766241778,
+          -1024.8518570459396
+        ],
+        "lane_z_up_m": 0.6867952123882486,
+        "surface_z_up_m": 0.67352294921875,
+        "difference_m": 0.013272263169498588
+      },
+      {
+        "sample": "approach_20m_before_fork",
+        "xy_m": [
+          -1060.292414370889,
+          -1010.7242488354698
+        ],
+        "lane_z_up_m": 0.6874059756399251,
+        "surface_z_up_m": 0.6829833984375,
+        "difference_m": 0.004422577202425115
+      },
+      {
+        "sample": "approach_0m_before_fork",
+        "xy_m": [
+          -1074.4490625,
+          -996.596640625
+        ],
+        "lane_z_up_m": 0.6880167388916015,
+        "surface_z_up_m": 0.68798828125,
+        "difference_m": 2.8457641601531414e-05
+      },
+      {
+        "sample": "left_exit_10m",
+        "xy_m": [
+          -1078.1170877028414,
+          -987.5652402262438
+        ],
+        "lane_z_up_m": 0.6845630637514288,
+        "surface_z_up_m": 0.694091796875,
+        "difference_m": 0.009528733123571165
+      },
+      {
+        "sample": "left_exit_20m",
+        "xy_m": [
+          -1075.4429234967645,
+          -978.265451207757
+        ],
+        "lane_z_up_m": 0.6405076627480129,
+        "surface_z_up_m": 0.62945556640625,
+        "difference_m": 0.011052096341762851
+      },
+      {
+        "sample": "right_exit_10m",
+        "xy_m": [
+          -1081.5273444476081,
+          -989.5328726020176
+        ],
+        "lane_z_up_m": 0.6902410571262263,
+        "surface_z_up_m": 0.6734619140625,
+        "difference_m": 0.0167791430637263
+      },
+      {
+        "sample": "right_exit_20m",
+        "xy_m": [
+          -1088.6057045202162,
+          -982.4691045790353
+        ],
+        "lane_z_up_m": 0.6924647650092887,
+        "surface_z_up_m": 0.6851806640625,
+        "difference_m": 0.007284100946788663
+      }
+    ],
+    "ground_match_count": 9,
+    "ground_check_count": 9,
+    "all_on_ground": true
+  },
+  {
+    "junction": 90044,
+    "approach": 83831,
+    "exits": [
+      83841,
+      83839
+    ],
+    "junction_xy_m": [
+      -1276.017109375,
+      -795.443125
+    ],
+    "angle_deg": 60.7,
+    "exit_separation_m": 32.1,
+    "approach_length_m": 291.9,
+    "exit_lengths_m": [
+      36.0,
+      33.1
+    ],
+    "surface_checks": [
+      {
+        "sample": "approach_80m_before_fork",
+        "xy_m": [
+          -1219.3903710458803,
+          -851.9534117291028
+        ],
+        "lane_z_up_m": 0.6991629257258859,
+        "surface_z_up_m": 0.69952392578125,
+        "difference_m": 0.0003610000553641024
+      },
+      {
+        "sample": "approach_60m_before_fork",
+        "xy_m": [
+          -1233.5470556281603,
+          -837.8258400468271
+        ],
+        "lane_z_up_m": 0.6997832279247855,
+        "surface_z_up_m": 9.5,
+        "difference_m": 8.800216772075215
+      },
+      {
+        "sample": "approach_40m_before_fork",
+        "xy_m": [
+          -1247.7037402104402,
+          -823.6982683645514
+        ],
+        "lane_z_up_m": 0.7004035301236852,
+        "surface_z_up_m": 0.6961669921875,
+        "difference_m": 0.00423653793618517
+      },
+      {
+        "sample": "approach_20m_before_fork",
+        "xy_m": [
+          -1261.86042479272,
+          -809.5706966822758
+        ],
+        "lane_z_up_m": 0.7010238323225847,
+        "surface_z_up_m": 0.69769287109375,
+        "difference_m": 0.0033309612288346946
+      },
+      {
+        "sample": "approach_0m_before_fork",
+        "xy_m": [
+          -1276.017109375,
+          -795.443125
+        ],
+        "lane_z_up_m": 0.7016441345214843,
+        "surface_z_up_m": 0.7022705078125,
+        "difference_m": 0.0006263732910156694
+      },
+      {
+        "sample": "left_exit_10m",
+        "xy_m": [
+          -1280.318698647149,
+          -786.618139535541
+        ],
+        "lane_z_up_m": 0.6975480326684633,
+        "surface_z_up_m": 0.708984375,
+        "difference_m": 0.011436342331536675
+      },
+      {
+        "sample": "left_exit_20m",
+        "xy_m": [
+          -1279.1753406791013,
+          -776.9548383310309
+        ],
+        "lane_z_up_m": 0.666554556329825,
+        "surface_z_up_m": 0.64337158203125,
+        "difference_m": 0.023182974298574965
+      },
+      {
+        "sample": "right_exit_10m",
+        "xy_m": [
+          -1283.095384099897,
+          -788.3793497393937
+        ],
+        "lane_z_up_m": 0.7012078380424752,
+        "surface_z_up_m": 0.68292236328125,
+        "difference_m": 0.018285474761225218
+      },
+      {
+        "sample": "right_exit_20m",
+        "xy_m": [
+          -1290.1737369497941,
+          -781.3155744787873
+        ],
+        "lane_z_up_m": 0.7007709312119035,
+        "surface_z_up_m": 0.68536376953125,
+        "difference_m": 0.01540716168065348
+      }
+    ],
+    "ground_match_count": 8,
+    "ground_check_count": 9,
+    "all_on_ground": false
+  },
+  {
+    "junction": 90044,
+    "approach": 83831,
+    "exits": [
+      83840,
+      83839
+    ],
+    "junction_xy_m": [
+      -1276.017109375,
+      -795.443125
+    ],
+    "angle_deg": 56.1,
+    "exit_separation_m": 31.1,
+    "approach_length_m": 291.9,
+    "exit_lengths_m": [
+      38.8,
+      33.1
+    ],
+    "surface_checks": [
+      {
+        "sample": "approach_80m_before_fork",
+        "xy_m": [
+          -1219.3903710458803,
+          -851.9534117291028
+        ],
+        "lane_z_up_m": 0.6991629257258859,
+        "surface_z_up_m": 0.69952392578125,
+        "difference_m": 0.0003610000553641024
+      },
+      {
+        "sample": "approach_60m_before_fork",
+        "xy_m": [
+          -1233.5470556281603,
+          -837.8258400468271
+        ],
+        "lane_z_up_m": 0.6997832279247855,
+        "surface_z_up_m": 9.5,
+        "difference_m": 8.800216772075215
+      },
+      {
+        "sample": "approach_40m_before_fork",
+        "xy_m": [
+          -1247.7037402104402,
+          -823.6982683645514
+        ],
+        "lane_z_up_m": 0.7004035301236852,
+        "surface_z_up_m": 0.6961669921875,
+        "difference_m": 0.00423653793618517
+      },
+      {
+        "sample": "approach_20m_before_fork",
+        "xy_m": [
+          -1261.86042479272,
+          -809.5706966822758
+        ],
+        "lane_z_up_m": 0.7010238323225847,
+        "surface_z_up_m": 0.69769287109375,
+        "difference_m": 0.0033309612288346946
+      },
+      {
+        "sample": "approach_0m_before_fork",
+        "xy_m": [
+          -1276.017109375,
+          -795.443125
+        ],
+        "lane_z_up_m": 0.7016441345214843,
+        "surface_z_up_m": 0.7022705078125,
+        "difference_m": 0.0006263732910156694
+      },
+      {
+        "sample": "left_exit_10m",
+        "xy_m": [
+          -1280.9522685846227,
+          -786.8245435956592
+        ],
+        "lane_z_up_m": 0.7028226209879657,
+        "surface_z_up_m": 0.70770263671875,
+        "difference_m": 0.004880015730784337
+      },
+      {
+        "sample": "left_exit_20m",
+        "xy_m": [
+          -1281.125276987909,
+          -776.9534359064102
+        ],
+        "lane_z_up_m": 0.6531994138240756,
+        "surface_z_up_m": 0.65472412109375,
+        "difference_m": 0.0015247072696743524
+      },
+      {
+        "sample": "right_exit_10m",
+        "xy_m": [
+          -1283.095384099897,
+          -788.3793497393937
+        ],
+        "lane_z_up_m": 0.7012078380424752,
+        "surface_z_up_m": 0.68292236328125,
+        "difference_m": 0.018285474761225218
+      },
+      {
+        "sample": "right_exit_20m",
+        "xy_m": [
+          -1290.1737369497941,
+          -781.3155744787873
+        ],
+        "lane_z_up_m": 0.7007709312119035,
+        "surface_z_up_m": 0.68536376953125,
+        "difference_m": 0.01540716168065348
+      }
+    ],
+    "ground_match_count": 8,
+    "ground_check_count": 9,
+    "all_on_ground": false
+  },
+  {
+    "junction": 90017,
+    "approach": 83802,
+    "exits": [
+      83777,
+      83776
+    ],
+    "junction_xy_m": [
+      -750.39453125,
+      -1184.30765625
+    ],
+    "angle_deg": 61.9,
+    "exit_separation_m": 22.8,
+    "approach_length_m": 225.8,
+    "exit_lengths_m": [
+      27.6,
+      19.0
+    ],
+    "surface_checks": [
+      {
+        "sample": "approach_60m_before_fork",
+        "xy_m": [
+          -810.3945297586147,
+          -1184.294278423893
+        ],
+        "lane_z_up_m": 0.6998400561040203,
+        "surface_z_up_m": 0.693359375,
+        "difference_m": 0.006480681104020336
+      },
+      {
+        "sample": "approach_40m_before_fork",
+        "xy_m": [
+          -790.3945302557431,
+          -1184.298737699262
+        ],
+        "lane_z_up_m": 0.699805607267589,
+        "surface_z_up_m": 0.662353515625,
+        "difference_m": 0.037452091642589
+      },
+      {
+        "sample": "approach_20m_before_fork",
+        "xy_m": [
+          -770.3945307528716,
+          -1184.303196974631
+        ],
+        "lane_z_up_m": 0.6997711584311578,
+        "surface_z_up_m": 0.67254638671875,
+        "difference_m": 0.02722477171240778
+      },
+      {
+        "sample": "approach_0m_before_fork",
+        "xy_m": [
+          -750.39453125,
+          -1184.30765625
+        ],
+        "lane_z_up_m": 0.6997367095947266,
+        "surface_z_up_m": 0.700439453125,
+        "difference_m": 0.0007027435302734419
+      },
+      {
+        "sample": "left_exit_10m",
+        "xy_m": [
+          -741.8047303875554,
+          -1188.7842615976556
+        ],
+        "lane_z_up_m": 0.6966098386573546,
+        "surface_z_up_m": 0.705078125,
+        "difference_m": 0.008468286342645404
+      },
+      {
+        "sample": "left_exit_20m",
+        "xy_m": [
+          -738.895234375,
+          -1198.2056124751032
+        ],
+        "lane_z_up_m": 0.6165995051800931,
+        "surface_z_up_m": 0.6070556640625,
+        "difference_m": 0.0095438411175931
+      },
+      {
+        "sample": "right_exit_10m",
+        "xy_m": [
+          -740.3945314697902,
+          -1184.3097528670007
+        ],
+        "lane_z_up_m": 0.6996857635359447,
+        "surface_z_up_m": 0.70257568359375,
+        "difference_m": 0.0028899200578053064
+      }
+    ],
+    "ground_match_count": 7,
+    "ground_check_count": 7,
+    "all_on_ground": false
+  },
+  {
+    "junction": 90037,
+    "approach": 83819,
+    "exits": [
+      83799,
+      83796
+    ],
+    "junction_xy_m": [
+      -942.3446875,
+      -1108.651328125
+    ],
+    "angle_deg": 56.8,
+    "exit_separation_m": 123.2,
+    "approach_length_m": 197.7,
+    "exit_lengths_m": [
+      156.0,
+      25.7
+    ],
+    "surface_checks": [
+      {
+        "sample": "approach_80m_before_fork",
+        "xy_m": [
+          -998.9712800164446,
+          -1052.1408952831207
+        ],
+        "lane_z_up_m": 0.579707554372247,
+        "surface_z_up_m": 0.58160400390625,
+        "difference_m": 0.0018964495340030307
+      },
+      {
+        "sample": "approach_60m_before_fork",
+        "xy_m": [
+          -984.8146318873333,
+          -1066.2685034935905
+        ],
+        "lane_z_up_m": 0.579087697410655,
+        "surface_z_up_m": 0.594482421875,
+        "difference_m": 0.015394724464344978
+      },
+      {
+        "sample": "approach_40m_before_fork",
+        "xy_m": [
+          -970.6579837582223,
+          -1080.3961117040603
+        ],
+        "lane_z_up_m": 0.578467840449063,
+        "surface_z_up_m": 0.58050537109375,
+        "difference_m": 0.0020375306446870356
+      },
+      {
+        "sample": "approach_20m_before_fork",
+        "xy_m": [
+          -956.501335629111,
+          -1094.5237199145301
+        ],
+        "lane_z_up_m": 0.577847983487471,
+        "surface_z_up_m": 0.5760498046875,
+        "difference_m": 0.0017981787999710175
+      },
+      {
+        "sample": "approach_0m_before_fork",
+        "xy_m": [
+          -942.3446875,
+          -1108.651328125
+        ],
+        "lane_z_up_m": 0.577228126525879,
+        "surface_z_up_m": 0.57757568359375,
+        "difference_m": 0.00034755706787104046
+      },
+      {
+        "sample": "left_exit_10m",
+        "xy_m": [
+          -935.2662856100807,
+          -1115.715132530487
+        ],
+        "lane_z_up_m": 0.5776095972227152,
+        "surface_z_up_m": 0.57745361328125,
+        "difference_m": 0.00015598394146520977
+      },
+      {
+        "sample": "left_exit_20m",
+        "xy_m": [
+          -928.1879618451613,
+          -1122.7789369359741
+        ],
+        "lane_z_up_m": 0.5779913730953327,
+        "surface_z_up_m": 0.58447265625,
+        "difference_m": 0.006481283154667339
+      },
+      {
+        "sample": "right_exit_10m",
+        "xy_m": [
+          -933.7827898373313,
+          -1112.3510587976184
+        ],
+        "lane_z_up_m": 0.5750027872664959,
+        "surface_z_up_m": 0.57464599609375,
+        "difference_m": 0.0003567911727458961
+      },
+      {
+        "sample": "right_exit_20m",
+        "xy_m": [
+          -928.6390697900953,
+          -1105.245665888398
+        ],
+        "lane_z_up_m": 0.5829133842316453,
+        "surface_z_up_m": 0.5831298828125,
+        "difference_m": 0.00021649858085470708
+      }
+    ],
+    "ground_match_count": 9,
+    "ground_check_count": 9,
+    "all_on_ground": true
+  },
+  {
+    "junction": 90037,
+    "approach": 83819,
+    "exits": [
+      83799,
+      83797
+    ],
+    "junction_xy_m": [
+      -942.3446875,
+      -1108.651328125
+    ],
+    "angle_deg": 54.9,
+    "exit_separation_m": 120.9,
+    "approach_length_m": 197.7,
+    "exit_lengths_m": [
+      156.0,
+      27.1
+    ],
+    "surface_checks": [
+      {
+        "sample": "approach_80m_before_fork",
+        "xy_m": [
+          -998.9712800164446,
+          -1052.1408952831207
+        ],
+        "lane_z_up_m": 0.579707554372247,
+        "surface_z_up_m": 0.58160400390625,
+        "difference_m": 0.0018964495340030307
+      },
+      {
+        "sample": "approach_60m_before_fork",
+        "xy_m": [
+          -984.8146318873333,
+          -1066.2685034935905
+        ],
+        "lane_z_up_m": 0.579087697410655,
+        "surface_z_up_m": 0.594482421875,
+        "difference_m": 0.015394724464344978
+      },
+      {
+        "sample": "approach_40m_before_fork",
+        "xy_m": [
+          -970.6579837582223,
+          -1080.3961117040603
+        ],
+        "lane_z_up_m": 0.578467840449063,
+        "surface_z_up_m": 0.58050537109375,
+        "difference_m": 0.0020375306446870356
+      },
+      {
+        "sample": "approach_20m_before_fork",
+        "xy_m": [
+          -956.501335629111,
+          -1094.5237199145301
+        ],
+        "lane_z_up_m": 0.577847983487471,
+        "surface_z_up_m": 0.5760498046875,
+        "difference_m": 0.0017981787999710175
+      },
+      {
+        "sample": "approach_0m_before_fork",
+        "xy_m": [
+          -942.3446875,
+          -1108.651328125
+        ],
+        "lane_z_up_m": 0.577228126525879,
+        "surface_z_up_m": 0.57757568359375,
+        "difference_m": 0.00034755706787104046
+      },
+      {
+        "sample": "left_exit_10m",
+        "xy_m": [
+          -935.2662856100807,
+          -1115.715132530487
+        ],
+        "lane_z_up_m": 0.5776095972227152,
+        "surface_z_up_m": 0.57745361328125,
+        "difference_m": 0.00015598394146520977
+      },
+      {
+        "sample": "left_exit_20m",
+        "xy_m": [
+          -928.1879618451613,
+          -1122.7789369359741
+        ],
+        "lane_z_up_m": 0.5779913730953327,
+        "surface_z_up_m": 0.58447265625,
+        "difference_m": 0.006481283154667339
+      },
+      {
+        "sample": "right_exit_10m",
+        "xy_m": [
+          -933.2329017094548,
+          -1111.535439978589
+        ],
+        "lane_z_up_m": 0.5747889063028692,
+        "surface_z_up_m": 0.57489013671875,
+        "difference_m": 0.00010123041588083748
+      },
+      {
+        "sample": "right_exit_20m",
+        "xy_m": [
+          -926.3969268072423,
+          -1105.0231606994737
+        ],
+        "lane_z_up_m": 0.6092173702780425,
+        "surface_z_up_m": 0.6141357421875,
+        "difference_m": 0.004918371909457542
+      }
+    ],
+    "ground_match_count": 9,
+    "ground_check_count": 9,
+    "all_on_ground": true
+  },
+  {
+    "junction": 90037,
+    "approach": 83819,
+    "exits": [
+      83798,
+      83796
+    ],
+    "junction_xy_m": [
+      -942.3446875,
+      -1108.651328125
+    ],
+    "angle_deg": 55.6,
+    "exit_separation_m": 120.0,
+    "approach_length_m": 197.7,
+    "exit_lengths_m": [
+      153.6,
+      25.7
+    ],
+    "surface_checks": [
+      {
+        "sample": "approach_80m_before_fork",
+        "xy_m": [
+          -998.9712800164446,
+          -1052.1408952831207
+        ],
+        "lane_z_up_m": 0.579707554372247,
+        "surface_z_up_m": 0.58160400390625,
+        "difference_m": 0.0018964495340030307
+      },
+      {
+        "sample": "approach_60m_before_fork",
+        "xy_m": [
+          -984.8146318873333,
+          -1066.2685034935905
+        ],
+        "lane_z_up_m": 0.579087697410655,
+        "surface_z_up_m": 0.594482421875,
+        "difference_m": 0.015394724464344978
+      },
+      {
+        "sample": "approach_40m_before_fork",
+        "xy_m": [
+          -970.6579837582223,
+          -1080.3961117040603
+        ],
+        "lane_z_up_m": 0.578467840449063,
+        "surface_z_up_m": 0.58050537109375,
+        "difference_m": 0.0020375306446870356
+      },
+      {
+        "sample": "approach_20m_before_fork",
+        "xy_m": [
+          -956.501335629111,
+          -1094.5237199145301
+        ],
+        "lane_z_up_m": 0.577847983487471,
+        "surface_z_up_m": 0.5760498046875,
+        "difference_m": 0.0017981787999710175
+      },
+      {
+        "sample": "approach_0m_before_fork",
+        "xy_m": [
+          -942.3446875,
+          -1108.651328125
+        ],
+        "lane_z_up_m": 0.577228126525879,
+        "surface_z_up_m": 0.57757568359375,
+        "difference_m": 0.00034755706787104046
+      },
+      {
+        "sample": "left_exit_10m",
+        "xy_m": [
+          -935.2662847124487,
+          -1115.7151316310099
+        ],
+        "lane_z_up_m": 0.5776189734881885,
+        "surface_z_up_m": 0.57745361328125,
+        "difference_m": 0.00016536020693846964
+      },
+      {
+        "sample": "left_exit_20m",
+        "xy_m": [
+          -928.1879600498975,
+          -1122.7789351370197
+        ],
+        "lane_z_up_m": 0.5780101256262793,
+        "surface_z_up_m": 0.58447265625,
+        "difference_m": 0.006462530623720708
+      },
+      {
+        "sample": "right_exit_10m",
+        "xy_m": [
+          -933.7827898373313,
+          -1112.3510587976184
+        ],
+        "lane_z_up_m": 0.5750027872664959,
+        "surface_z_up_m": 0.57464599609375,
+        "difference_m": 0.0003567911727458961
+      },
+      {
+        "sample": "right_exit_20m",
+        "xy_m": [
+          -928.6390697900953,
+          -1105.245665888398
+        ],
+        "lane_z_up_m": 0.5829133842316453,
+        "surface_z_up_m": 0.5831298828125,
+        "difference_m": 0.00021649858085470708
+      }
+    ],
+    "ground_match_count": 9,
+    "ground_check_count": 9,
+    "all_on_ground": true
+  },
+  {
+    "junction": 90037,
+    "approach": 83819,
+    "exits": [
+      83798,
+      83797
+    ],
+    "junction_xy_m": [
+      -942.3446875,
+      -1108.651328125
+    ],
+    "angle_deg": 53.7,
+    "exit_separation_m": 117.6,
+    "approach_length_m": 197.7,
+    "exit_lengths_m": [
+      153.6,
+      27.1
+    ],
+    "surface_checks": [
+      {
+        "sample": "approach_80m_before_fork",
+        "xy_m": [
+          -998.9712800164446,
+          -1052.1408952831207
+        ],
+        "lane_z_up_m": 0.579707554372247,
+        "surface_z_up_m": 0.58160400390625,
+        "difference_m": 0.0018964495340030307
+      },
+      {
+        "sample": "approach_60m_before_fork",
+        "xy_m": [
+          -984.8146318873333,
+          -1066.2685034935905
+        ],
+        "lane_z_up_m": 0.579087697410655,
+        "surface_z_up_m": 0.594482421875,
+        "difference_m": 0.015394724464344978
+      },
+      {
+        "sample": "approach_40m_before_fork",
+        "xy_m": [
+          -970.6579837582223,
+          -1080.3961117040603
+        ],
+        "lane_z_up_m": 0.578467840449063,
+        "surface_z_up_m": 0.58050537109375,
+        "difference_m": 0.0020375306446870356
+      },
+      {
+        "sample": "approach_20m_before_fork",
+        "xy_m": [
+          -956.501335629111,
+          -1094.5237199145301
+        ],
+        "lane_z_up_m": 0.577847983487471,
+        "surface_z_up_m": 0.5760498046875,
+        "difference_m": 0.0017981787999710175
+      },
+      {
+        "sample": "approach_0m_before_fork",
+        "xy_m": [
+          -942.3446875,
+          -1108.651328125
+        ],
+        "lane_z_up_m": 0.577228126525879,
+        "surface_z_up_m": 0.57757568359375,
+        "difference_m": 0.00034755706787104046
+      },
+      {
+        "sample": "left_exit_10m",
+        "xy_m": [
+          -935.2662847124487,
+          -1115.7151316310099
+        ],
+        "lane_z_up_m": 0.5776189734881885,
+        "surface_z_up_m": 0.57745361328125,
+        "difference_m": 0.00016536020693846964
+      },
+      {
+        "sample": "left_exit_20m",
+        "xy_m": [
+          -928.1879600498975,
+          -1122.7789351370197
+        ],
+        "lane_z_up_m": 0.5780101256262793,
+        "surface_z_up_m": 0.58447265625,
+        "difference_m": 0.006462530623720708
+      },
+      {
+        "sample": "right_exit_10m",
+        "xy_m": [
+          -933.2329017094548,
+          -1111.535439978589
+        ],
+        "lane_z_up_m": 0.5747889063028692,
+        "surface_z_up_m": 0.57489013671875,
+        "difference_m": 0.00010123041588083748
+      },
+      {
+        "sample": "right_exit_20m",
+        "xy_m": [
+          -926.3969268072423,
+          -1105.0231606994737
+        ],
+        "lane_z_up_m": 0.6092173702780425,
+        "surface_z_up_m": 0.6141357421875,
+        "difference_m": 0.004918371909457542
+      }
+    ],
+    "ground_match_count": 9,
+    "ground_check_count": 9,
+    "all_on_ground": true
+  },
+  {
+    "junction": 90053,
+    "approach": 83852,
+    "exits": [
+      83845,
+      83843
+    ],
+    "junction_xy_m": [
+      -1264.234921875,
+      -773.5421875
+    ],
+    "angle_deg": 66.5,
+    "exit_separation_m": 37.6,
+    "approach_length_m": 170.0,
+    "exit_lengths_m": [
+      44.7,
+      18.2
+    ],
+    "surface_checks": [
+      {
+        "sample": "approach_80m_before_fork",
+        "xy_m": [
+          -1192.9543970569075,
+          -737.2229531790881
+        ],
+        "lane_z_up_m": 0.6016236018626684,
+        "surface_z_up_m": 0.5819091796875,
+        "difference_m": 0.01971442217516839
+      },
+      {
+        "sample": "approach_60m_before_fork",
+        "xy_m": [
+          -1210.7745282614308,
+          -746.302761759316
+        ],
+        "lane_z_up_m": 0.600979530773222,
+        "surface_z_up_m": 0.58502197265625,
+        "difference_m": 0.01595755811697197
+      },
+      {
+        "sample": "approach_40m_before_fork",
+        "xy_m": [
+          -1228.5946594659538,
+          -755.382570339544
+        ],
+        "lane_z_up_m": 0.6003354596837757,
+        "surface_z_up_m": 0.59808349609375,
+        "difference_m": 0.002251963590025663
+      },
+      {
+        "sample": "approach_20m_before_fork",
+        "xy_m": [
+          -1246.414790670477,
+          -764.4623789197719
+        ],
+        "lane_z_up_m": 0.5996913885943292,
+        "surface_z_up_m": 0.60260009765625,
+        "difference_m": 0.0029087090619207556
+      },
+      {
+        "sample": "approach_0m_before_fork",
+        "xy_m": [
+          -1264.234921875,
+          -773.5421875
+        ],
+        "lane_z_up_m": 0.5990473175048828,
+        "surface_z_up_m": 0.604736328125,
+        "difference_m": 0.005689010620117174
+      },
+      {
+        "sample": "left_exit_10m",
+        "xy_m": [
+          -1273.1449122145868,
+          -778.082086172479
+        ],
+        "lane_z_up_m": 0.6443055580501933,
+        "surface_z_up_m": 0.59112548828125,
+        "difference_m": 0.053180069768943294
+      },
+      {
+        "sample": "left_exit_20m",
+        "xy_m": [
+          -1282.180126610564,
+          -782.3199096549185
+        ],
+        "lane_z_up_m": 0.6856295148577252,
+        "surface_z_up_m": 0.69329833984375,
+        "difference_m": 0.007668824986024836
+      },
+      {
+        "sample": "right_exit_10m",
+        "xy_m": [
+          -1270.991518383329,
+          -780.6027504753325
+        ],
+        "lane_z_up_m": 0.5885349697955405,
+        "surface_z_up_m": 0.5950927734375,
+        "difference_m": 0.006557803641959459
+      }
+    ],
+    "ground_match_count": 8,
+    "ground_check_count": 8,
+    "all_on_ground": false
+  },
+  {
+    "junction": 90053,
+    "approach": 83852,
+    "exits": [
+      83846,
+      83843
+    ],
+    "junction_xy_m": [
+      -1264.234921875,
+      -773.5421875
+    ],
+    "angle_deg": 70.3,
+    "exit_separation_m": 35.9,
+    "approach_length_m": 170.0,
+    "exit_lengths_m": [
+      41.5,
+      18.2
+    ],
+    "surface_checks": [
+      {
+        "sample": "approach_80m_before_fork",
+        "xy_m": [
+          -1192.9543970569075,
+          -737.2229531790881
+        ],
+        "lane_z_up_m": 0.6016236018626684,
+        "surface_z_up_m": 0.5819091796875,
+        "difference_m": 0.01971442217516839
+      },
+      {
+        "sample": "approach_60m_before_fork",
+        "xy_m": [
+          -1210.7745282614308,
+          -746.302761759316
+        ],
+        "lane_z_up_m": 0.600979530773222,
+        "surface_z_up_m": 0.58502197265625,
+        "difference_m": 0.01595755811697197
+      },
+      {
+        "sample": "approach_40m_before_fork",
+        "xy_m": [
+          -1228.5946594659538,
+          -755.382570339544
+        ],
+        "lane_z_up_m": 0.6003354596837757,
+        "surface_z_up_m": 0.59808349609375,
+        "difference_m": 0.002251963590025663
+      },
+      {
+        "sample": "approach_20m_before_fork",
+        "xy_m": [
+          -1246.414790670477,
+          -764.4623789197719
+        ],
+        "lane_z_up_m": 0.5996913885943292,
+        "surface_z_up_m": 0.60260009765625,
+        "difference_m": 0.0029087090619207556
+      },
+      {
+        "sample": "approach_0m_before_fork",
+        "xy_m": [
+          -1264.234921875,
+          -773.5421875
+        ],
+        "lane_z_up_m": 0.5990473175048828,
+        "surface_z_up_m": 0.604736328125,
+        "difference_m": 0.005689010620117174
+      },
+      {
+        "sample": "left_exit_10m",
+        "xy_m": [
+          -1273.1449199985045,
+          -778.082070895621
+        ],
+        "lane_z_up_m": 0.6027574428006605,
+        "surface_z_up_m": 0.59112548828125,
+        "difference_m": 0.011631954519410459
+      },
+      {
+        "sample": "left_exit_20m",
+        "xy_m": [
+          -1282.5271928859836,
+          -781.418722705348
+        ],
+        "lane_z_up_m": 0.694484148529496,
+        "surface_z_up_m": 0.6885986328125,
+        "difference_m": 0.005885515716996026
+      },
+      {
+        "sample": "right_exit_10m",
+        "xy_m": [
+          -1270.991518383329,
+          -780.6027504753325
+        ],
+        "lane_z_up_m": 0.5885349697955405,
+        "surface_z_up_m": 0.5950927734375,
+        "difference_m": 0.006557803641959459
+      }
+    ],
+    "ground_match_count": 8,
+    "ground_check_count": 8,
+    "all_on_ground": false
+  }
+]

@@ -1,0 +1,914 @@
+[
+  {
+    "junction": 90034,
+    "approach": 83815,
+    "exits": [
+      83825,
+      83824
+    ],
+    "junction_xy_m": [
+      -1074.4490625,
+      -996.596640625
+    ],
+    "angle_deg": 66.4,
+    "exit_separation_m": 28.8,
+    "approach_length_m": 342.4,
+    "exit_lengths_m": [
+      33.2,
+      25.1
+    ]
+  },
+  {
+    "junction": 90044,
+    "approach": 83831,
+    "exits": [
+      83841,
+      83839
+    ],
+    "junction_xy_m": [
+      -1276.017109375,
+      -795.443125
+    ],
+    "angle_deg": 60.7,
+    "exit_separation_m": 32.1,
+    "approach_length_m": 291.9,
+    "exit_lengths_m": [
+      36.0,
+      33.1
+    ]
+  },
+  {
+    "junction": 90044,
+    "approach": 83831,
+    "exits": [
+      83840,
+      83839
+    ],
+    "junction_xy_m": [
+      -1276.017109375,
+      -795.443125
+    ],
+    "angle_deg": 56.1,
+    "exit_separation_m": 31.1,
+    "approach_length_m": 291.9,
+    "exit_lengths_m": [
+      38.8,
+      33.1
+    ]
+  },
+  {
+    "junction": 90017,
+    "approach": 83802,
+    "exits": [
+      83777,
+      83776
+    ],
+    "junction_xy_m": [
+      -750.39453125,
+      -1184.30765625
+    ],
+    "angle_deg": 61.9,
+    "exit_separation_m": 22.8,
+    "approach_length_m": 225.8,
+    "exit_lengths_m": [
+      27.6,
+      19.0
+    ]
+  },
+  {
+    "junction": 90037,
+    "approach": 83819,
+    "exits": [
+      83799,
+      83796
+    ],
+    "junction_xy_m": [
+      -942.3446875,
+      -1108.651328125
+    ],
+    "angle_deg": 56.8,
+    "exit_separation_m": 123.2,
+    "approach_length_m": 197.7,
+    "exit_lengths_m": [
+      156.0,
+      25.7
+    ]
+  },
+  {
+    "junction": 90037,
+    "approach": 83819,
+    "exits": [
+      83799,
+      83797
+    ],
+    "junction_xy_m": [
+      -942.3446875,
+      -1108.651328125
+    ],
+    "angle_deg": 54.9,
+    "exit_separation_m": 120.9,
+    "approach_length_m": 197.7,
+    "exit_lengths_m": [
+      156.0,
+      27.1
+    ]
+  },
+  {
+    "junction": 90037,
+    "approach": 83819,
+    "exits": [
+      83798,
+      83796
+    ],
+    "junction_xy_m": [
+      -942.3446875,
+      -1108.651328125
+    ],
+    "angle_deg": 55.6,
+    "exit_separation_m": 120.0,
+    "approach_length_m": 197.7,
+    "exit_lengths_m": [
+      153.6,
+      25.7
+    ]
+  },
+  {
+    "junction": 90037,
+    "approach": 83819,
+    "exits": [
+      83798,
+      83797
+    ],
+    "junction_xy_m": [
+      -942.3446875,
+      -1108.651328125
+    ],
+    "angle_deg": 53.7,
+    "exit_separation_m": 117.6,
+    "approach_length_m": 197.7,
+    "exit_lengths_m": [
+      153.6,
+      27.1
+    ]
+  },
+  {
+    "junction": 90053,
+    "approach": 83852,
+    "exits": [
+      83845,
+      83843
+    ],
+    "junction_xy_m": [
+      -1264.234921875,
+      -773.5421875
+    ],
+    "angle_deg": 66.5,
+    "exit_separation_m": 37.6,
+    "approach_length_m": 170.0,
+    "exit_lengths_m": [
+      44.7,
+      18.2
+    ]
+  },
+  {
+    "junction": 90053,
+    "approach": 83852,
+    "exits": [
+      83846,
+      83843
+    ],
+    "junction_xy_m": [
+      -1264.234921875,
+      -773.5421875
+    ],
+    "angle_deg": 70.3,
+    "exit_separation_m": 35.9,
+    "approach_length_m": 170.0,
+    "exit_lengths_m": [
+      41.5,
+      18.2
+    ]
+  },
+  {
+    "junction": 90053,
+    "approach": 83852,
+    "exits": [
+      83845,
+      83844
+    ],
+    "junction_xy_m": [
+      -1264.234921875,
+      -773.5421875
+    ],
+    "angle_deg": 61.0,
+    "exit_separation_m": 35.9,
+    "approach_length_m": 170.0,
+    "exit_lengths_m": [
+      44.7,
+      23.4
+    ]
+  },
+  {
+    "junction": 90053,
+    "approach": 83852,
+    "exits": [
+      83846,
+      83844
+    ],
+    "junction_xy_m": [
+      -1264.234921875,
+      -773.5421875
+    ],
+    "angle_deg": 64.8,
+    "exit_separation_m": 34.5,
+    "approach_length_m": 170.0,
+    "exit_lengths_m": [
+      41.5,
+      23.4
+    ]
+  },
+  {
+    "junction": 84482,
+    "approach": 68855,
+    "exits": [
+      70562,
+      70561
+    ],
+    "junction_xy_m": [
+      -335.32234375,
+      -1190.396796875
+    ],
+    "angle_deg": 37.3,
+    "exit_separation_m": 26.7,
+    "approach_length_m": 165.6,
+    "exit_lengths_m": [
+      45.5,
+      40.1
+    ]
+  },
+  {
+    "junction": 90076,
+    "approach": 83881,
+    "exits": [
+      70525,
+      70523
+    ],
+    "junction_xy_m": [
+      -487.48765625,
+      -1184.36421875
+    ],
+    "angle_deg": 43.2,
+    "exit_separation_m": 24.6,
+    "approach_length_m": 133.6,
+    "exit_lengths_m": [
+      36.1,
+      34.6
+    ]
+  },
+  {
+    "junction": 90076,
+    "approach": 83881,
+    "exits": [
+      70524,
+      70523
+    ],
+    "junction_xy_m": [
+      -487.48765625,
+      -1184.36421875
+    ],
+    "angle_deg": 38.6,
+    "exit_separation_m": 22.9,
+    "approach_length_m": 133.6,
+    "exit_lengths_m": [
+      40.1,
+      34.6
+    ]
+  },
+  {
+    "junction": 85277,
+    "approach": 70553,
+    "exits": [
+      70538,
+      70537
+    ],
+    "junction_xy_m": [
+      -452.9022265625,
+      -1190.3715625
+    ],
+    "angle_deg": 41.8,
+    "exit_separation_m": 25.9,
+    "approach_length_m": 117.8,
+    "exit_lengths_m": [
+      40.3,
+      34.6
+    ]
+  },
+  {
+    "junction": 85276,
+    "approach": 70514,
+    "exits": [
+      70550,
+      70549
+    ],
+    "junction_xy_m": [
+      -375.468046875,
+      -1184.38828125
+    ],
+    "angle_deg": 35.3,
+    "exit_separation_m": 24.4,
+    "approach_length_m": 112.6,
+    "exit_lengths_m": [
+      46.7,
+      40.1
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70543,
+      70539
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 79.2,
+    "exit_separation_m": 45.8,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      49.2,
+      37.6
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70544,
+      70539
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 80.9,
+    "exit_separation_m": 44.0,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      43.9,
+      37.6
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70543,
+      70540
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 73.4,
+    "exit_separation_m": 44.0,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      49.2,
+      39.4
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70545,
+      70539
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 82.9,
+    "exit_separation_m": 42.5,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      38.6,
+      37.6
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70544,
+      70540
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 75.1,
+    "exit_separation_m": 42.5,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      43.9,
+      39.4
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70543,
+      70541
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 68.3,
+    "exit_separation_m": 42.5,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      49.2,
+      41.1
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70545,
+      70540
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 77.2,
+    "exit_separation_m": 41.4,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      38.6,
+      39.4
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70544,
+      70541
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 69.9,
+    "exit_separation_m": 41.4,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      43.9,
+      41.1
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70545,
+      70541
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 72.0,
+    "exit_separation_m": 40.6,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      38.6,
+      41.1
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70545,
+      70542
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 45.3,
+    "exit_separation_m": 37.1,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      38.6,
+      52.4
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70544,
+      70542
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 43.2,
+    "exit_separation_m": 35.4,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      43.9,
+      52.4
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70543,
+      70542
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 41.5,
+    "exit_separation_m": 34.2,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      49.2,
+      52.4
+    ]
+  },
+  {
+    "junction": 85281,
+    "approach": 81065,
+    "exits": [
+      70542,
+      70539
+    ],
+    "junction_xy_m": [
+      -366.275390625,
+      -1161.974140625
+    ],
+    "angle_deg": 37.6,
+    "exit_separation_m": 32.1,
+    "approach_length_m": 96.0,
+    "exit_lengths_m": [
+      52.4,
+      37.6
+    ]
+  },
+  {
+    "junction": 89680,
+    "approach": 82975,
+    "exits": [
+      83834,
+      83832
+    ],
+    "junction_xy_m": [
+      -1289.5334375,
+      -762.1759375
+    ],
+    "angle_deg": 43.0,
+    "exit_separation_m": 23.0,
+    "approach_length_m": 93.0,
+    "exit_lengths_m": [
+      33.1,
+      22.8
+    ]
+  },
+  {
+    "junction": 90082,
+    "approach": 69666,
+    "exits": [
+      83889,
+      83887
+    ],
+    "junction_xy_m": [
+      -671.03125,
+      -1161.784375
+    ],
+    "angle_deg": 71.6,
+    "exit_separation_m": 40.8,
+    "approach_length_m": 85.3,
+    "exit_lengths_m": [
+      49.0,
+      32.6
+    ]
+  },
+  {
+    "junction": 90082,
+    "approach": 69666,
+    "exits": [
+      83890,
+      83887
+    ],
+    "junction_xy_m": [
+      -671.03125,
+      -1161.784375
+    ],
+    "angle_deg": 73.9,
+    "exit_separation_m": 39.2,
+    "approach_length_m": 85.3,
+    "exit_lengths_m": [
+      44.0,
+      32.6
+    ]
+  },
+  {
+    "junction": 90082,
+    "approach": 69666,
+    "exits": [
+      83889,
+      83888
+    ],
+    "junction_xy_m": [
+      -671.03125,
+      -1161.784375
+    ],
+    "angle_deg": 66.0,
+    "exit_separation_m": 39.2,
+    "approach_length_m": 85.3,
+    "exit_lengths_m": [
+      49.0,
+      34.6
+    ]
+  },
+  {
+    "junction": 90082,
+    "approach": 69666,
+    "exits": [
+      83891,
+      83887
+    ],
+    "junction_xy_m": [
+      -671.03125,
+      -1161.784375
+    ],
+    "angle_deg": 76.7,
+    "exit_separation_m": 38.0,
+    "approach_length_m": 85.3,
+    "exit_lengths_m": [
+      38.8,
+      32.6
+    ]
+  },
+  {
+    "junction": 90082,
+    "approach": 69666,
+    "exits": [
+      83890,
+      83888
+    ],
+    "junction_xy_m": [
+      -671.03125,
+      -1161.784375
+    ],
+    "angle_deg": 68.3,
+    "exit_separation_m": 38.0,
+    "approach_length_m": 85.3,
+    "exit_lengths_m": [
+      44.0,
+      34.6
+    ]
+  },
+  {
+    "junction": 90082,
+    "approach": 69666,
+    "exits": [
+      83891,
+      83888
+    ],
+    "junction_xy_m": [
+      -671.03125,
+      -1161.784375
+    ],
+    "angle_deg": 71.2,
+    "exit_separation_m": 37.1,
+    "approach_length_m": 85.3,
+    "exit_lengths_m": [
+      38.8,
+      34.6
+    ]
+  },
+  {
+    "junction": 90022,
+    "approach": 83781,
+    "exits": [
+      83894,
+      83893
+    ],
+    "junction_xy_m": [
+      -684.8434375,
+      -1176.32125
+    ],
+    "angle_deg": 51.2,
+    "exit_separation_m": 29.3,
+    "approach_length_m": 82.2,
+    "exit_lengths_m": [
+      36.6,
+      20.1
+    ]
+  },
+  {
+    "junction": 90049,
+    "approach": 74326,
+    "exits": [
+      83829,
+      83827
+    ],
+    "junction_xy_m": [
+      -1062.666875,
+      -974.695703125
+    ],
+    "angle_deg": 56.7,
+    "exit_separation_m": 30.9,
+    "approach_length_m": 80.5,
+    "exit_lengths_m": [
+      38.8,
+      18.2
+    ]
+  },
+  {
+    "junction": 90049,
+    "approach": 74326,
+    "exits": [
+      83830,
+      83827
+    ],
+    "junction_xy_m": [
+      -1062.666875,
+      -974.695703125
+    ],
+    "angle_deg": 60.1,
+    "exit_separation_m": 28.7,
+    "approach_length_m": 80.5,
+    "exit_lengths_m": [
+      35.5,
+      18.2
+    ]
+  },
+  {
+    "junction": 90049,
+    "approach": 74326,
+    "exits": [
+      83829,
+      83828
+    ],
+    "junction_xy_m": [
+      -1062.666875,
+      -974.695703125
+    ],
+    "angle_deg": 51.2,
+    "exit_separation_m": 28.7,
+    "approach_length_m": 80.5,
+    "exit_lengths_m": [
+      38.8,
+      23.4
+    ]
+  },
+  {
+    "junction": 90049,
+    "approach": 74326,
+    "exits": [
+      83831,
+      83827
+    ],
+    "junction_xy_m": [
+      -1062.666875,
+      -974.695703125
+    ],
+    "angle_deg": 64.2,
+    "exit_separation_m": 27.0,
+    "approach_length_m": 80.5,
+    "exit_lengths_m": [
+      32.2,
+      18.2
+    ]
+  },
+  {
+    "junction": 90049,
+    "approach": 74326,
+    "exits": [
+      83830,
+      83828
+    ],
+    "junction_xy_m": [
+      -1062.666875,
+      -974.695703125
+    ],
+    "angle_deg": 54.6,
+    "exit_separation_m": 27.0,
+    "approach_length_m": 80.5,
+    "exit_lengths_m": [
+      35.5,
+      23.4
+    ]
+  },
+  {
+    "junction": 90049,
+    "approach": 74326,
+    "exits": [
+      83831,
+      83828
+    ],
+    "junction_xy_m": [
+      -1062.666875,
+      -974.695703125
+    ],
+    "angle_deg": 58.8,
+    "exit_separation_m": 25.8,
+    "approach_length_m": 80.5,
+    "exit_lengths_m": [
+      32.2,
+      23.4
+    ]
+  },
+  {
+    "junction": 85950,
+    "approach": 72324,
+    "exits": [
+      72338,
+      72337
+    ],
+    "junction_xy_m": [
+      -1211.14984375,
+      -667.4834375
+    ],
+    "angle_deg": 61.6,
+    "exit_separation_m": 22.8,
+    "approach_length_m": 73.5,
+    "exit_lengths_m": [
+      27.7,
+      19.1
+    ]
+  },
+  {
+    "junction": 90069,
+    "approach": 83896,
+    "exits": [
+      83875,
+      83874
+    ],
+    "junction_xy_m": [
+      -612.51484375,
+      -1184.337265625
+    ],
+    "angle_deg": 61.9,
+    "exit_separation_m": 22.8,
+    "approach_length_m": 72.3,
+    "exit_lengths_m": [
+      27.6,
+      19.0
+    ]
+  },
+  {
+    "junction": 90054,
+    "approach": 83870,
+    "exits": [
+      72317,
+      72316
+    ],
+    "junction_xy_m": [
+      -1155.878046875,
+      -657.34203125
+    ],
+    "angle_deg": 59.4,
+    "exit_separation_m": 30.5,
+    "approach_length_m": 63.0,
+    "exit_lengths_m": [
+      40.6,
+      19.7
+    ]
+  },
+  {
+    "junction": 90054,
+    "approach": 83870,
+    "exits": [
+      72318,
+      72316
+    ],
+    "junction_xy_m": [
+      -1155.878046875,
+      -657.34203125
+    ],
+    "angle_deg": 63.3,
+    "exit_separation_m": 28.9,
+    "approach_length_m": 63.0,
+    "exit_lengths_m": [
+      36.6,
+      19.7
+    ]
+  }
+]

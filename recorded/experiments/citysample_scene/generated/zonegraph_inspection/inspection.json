@@ -1,0 +1,53 @@
+{
+  "map": "Big_City_LVL",
+  "zonegraph_sha256": "a4896e6051a09dcb4e16c241ae67b7523a7ff242d6503cad24cec1cc87b60069",
+  "coordinate_system": "Unreal centimeters in source; plotted as Unreal x/y meters",
+  "selected_tags": "Vehicle bit 1; exclude Freeway bit 5 and Closed Lane bit 20",
+  "vehicle_city_lane_count": 22390,
+  "directed_connection_count": 32204,
+  "tag_masks": {
+    "33106": 3973,
+    "262482": 2016,
+    "131410": 5690,
+    "65874": 4543,
+    "33090": 1706,
+    "131394": 1982,
+    "262466": 652,
+    "65858": 1828
+  },
+  "largest_weak_component_lane_counts": [
+    22384,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "largest_strong_component_lane_counts": [
+    19615,
+    170,
+    170,
+    170,
+    170,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "bounds_m": {
+    "x": [
+      -2269.63984375,
+      1891.55
+    ],
+    "y": [
+      -3958.6065625,
+      1031.3953125
+    ],
+    "z": [
+      0.5662115478515625,
+      0.73
+    ]
+  }
+}

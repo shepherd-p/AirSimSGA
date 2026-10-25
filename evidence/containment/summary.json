@@ -1,0 +1,130 @@
+{
+  "status": "completed",
+  "recorded_utc": "2026-10-02T15:54:57.522973+00:00",
+  "error": null,
+  "seed": 0,
+  "target_exit": "Right",
+  "collision_events": [],
+  "distances_m": {
+    "Target": 88.78682782395843,
+    "GateLeft": 7.73735511215075,
+    "GateRight": 7.511592817448267,
+    "Drone1": 103.75045616246932,
+    "Drone2": 19.786252375043002
+  },
+  "aerial_seen_frames": {
+    "Drone1": 157,
+    "Drone2": 55
+  },
+  "tracking_samples": 166,
+  "ugv_target_seen_frames": 0,
+  "paired_target_views": [],
+  "both_aerial_visible_fraction": 0.3313253012048193,
+  "tracking_rmse_m": 2.9029549540745534,
+  "first_visual_time_sec": 9.93,
+  "first_blocker_time_sec": 104.93,
+  "target_blocked": true,
+  "captures": [
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\scene_start.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\scene_start.npz",
+      "time_ns": 2390000000,
+      "shape": [
+        720,
+        1280,
+        3
+      ],
+      "payload_sha256": "3c38c90e08a060ded22ec8b9ea7b3aef68ec892706207e08a469779af1c34ea3"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\street_start.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\street_start.npz",
+      "time_ns": 2630000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "1f145427b1f08927737219d992f7415bd4d59ad138e2fda9fd9c7ad93f10261e"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\Drone1_first_target.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\Drone1_first_target.npz",
+      "time_ns": 9845000000,
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "payload_sha256": "12e45d28c7b051a8373a5244d88b52e899a9e1817141da0f57c848ec7ccb9bde"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\Drone2_first_target.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\Drone2_first_target.npz",
+      "time_ns": 74230000000,
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "payload_sha256": "0d08bdd0469ecadf0c1f5c34357c166e40951511398427826ac3acc102f8e13c"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\blocker_seen.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\blocker_seen.npz",
+      "time_ns": 104960000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "4c2353505aabfb393f4701523940e3332d1d14dbfa984f41fc68a2dcd365dd01"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\scene_capture.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\scene_capture.npz",
+      "time_ns": 108290000000,
+      "shape": [
+        720,
+        1280,
+        3
+      ],
+      "payload_sha256": "1dde13124a83725ee6c1b4645cbac675cae5d202a0178579498b8626d03fb853"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\target_capture.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\target_capture.npz",
+      "time_ns": 108670000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "46861a22580676641e0e3688645ed8ecabef793f5bec5dd4f538c97f343abcd4"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\Drone1_capture.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\Drone1_capture.npz",
+      "time_ns": 108705000000,
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "payload_sha256": "2fd3aea6ad11e2a8df521094ecc52b3a2155d5464ae790ec55726930e86788d1"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\Drone2_capture.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\Drone2_capture.npz",
+      "time_ns": 108705000000,
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "payload_sha256": "7c8ee179385cbd1d00ff6037e137f652a12e53533fadd2fe8340710cf6090b87"
+    }
+  ],
+  "wall_duration_sec": 452.0149999999994,
+  "cleanup_errors": []
+}

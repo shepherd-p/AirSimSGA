@@ -1,0 +1,12 @@
+{
+  "id": "AGCitySampleScout",
+  "clock": {"type": "steppable", "step-ns": 5000000,
+            "real-time-update-rate": 5000000, "pause-on-start": false},
+  "home-geo-point": {"latitude": 0, "longitude": 0, "altitude": 0},
+  "scene-type": "UnrealNative",
+  "actors": [{
+    "type": "robot", "name": "Observer",
+    "origin": {"xyz": "0 0 0", "rpy-deg": "0 0 0"},
+    "robot-config": "../urban_scene/observer_probe.jsonc"
+  }]
+}

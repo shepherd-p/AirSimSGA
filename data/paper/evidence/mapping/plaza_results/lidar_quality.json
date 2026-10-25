@@ -1,0 +1,19 @@
+{
+  "voxel_m": 0.1,
+  "sensors": {
+    "Drone1": {
+      "scans": 3445,
+      "raw_returns": 13123005,
+      "voxel_centroids": 4549781,
+      "retained_points": 4452406
+    },
+    "Car1": {
+      "scans": 3417,
+      "raw_returns": 9529843,
+      "voxel_centroids": 1092022,
+      "retained_points": 1072484
+    }
+  },
+  "pose_source": "Per-packet simulator sensor pose; shared NED frame, no fictitious point timestamps or trajectory correction",
+  "filter": "10 cm weighted centroid, invalid/self/moving robot rejection, statistical outliers; no synthetic fill"
+}

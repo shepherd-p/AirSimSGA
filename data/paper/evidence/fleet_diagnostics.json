@@ -1,0 +1,261 @@
+{
+  "definition": "Offline reanalysis of six existing recorded runs; no new simulation executions.",
+  "runs": [
+    {
+      "record_id": "20260929_012212_495574_1uav_1ugv",
+      "fleet_size_each_role": 1,
+      "sim_duration_sec": 45.06,
+      "wall_duration_sec": 111.1880000000001,
+      "real_time_factor": 0.4052595603842138,
+      "simulator_cpu_core_equivalents": 5.733813451091839,
+      "client_cpu_core_equivalents": 1.0099729737021972,
+      "simulator_peak_rss_GiB": 2.4491233825683594,
+      "client_peak_rss_GiB": 0.13738250732421875,
+      "scene_camera_hz_per_actor_range": [
+        3.262316910785619,
+        3.262316910785619
+      ],
+      "pose_hz_range": [
+        200.0,
+        200.0
+      ],
+      "resource_samples": 300,
+      "recorded_host": {
+        "platform": "Windows-10-10.0.26200-SP0",
+        "logical_cpu_count": 32
+      }
+    },
+    {
+      "record_id": "20260929_012446_347613_2uav_2ugv",
+      "fleet_size_each_role": 2,
+      "sim_duration_sec": 45.074999999999996,
+      "wall_duration_sec": 45.2650000000001,
+      "real_time_factor": 0.9958024964100275,
+      "simulator_cpu_core_equivalents": 5.936567988512082,
+      "client_cpu_core_equivalents": 1.047995139732683,
+      "simulator_peak_rss_GiB": 2.452423095703125,
+      "client_peak_rss_GiB": 0.21030044555664062,
+      "scene_camera_hz_per_actor_range": [
+        3.2612312811980035,
+        3.2612312811980035
+      ],
+      "pose_hz_range": [
+        200.00000000000003,
+        200.00000000000003
+      ],
+      "resource_samples": 132,
+      "recorded_host": {
+        "platform": "Windows-10-10.0.26200-SP0",
+        "logical_cpu_count": 32
+      }
+    },
+    {
+      "record_id": "20260929_012618_432574_3uav_3ugv",
+      "fleet_size_each_role": 3,
+      "sim_duration_sec": 45.14,
+      "wall_duration_sec": 45.343000000000075,
+      "real_time_factor": 0.9955230134750662,
+      "simulator_cpu_core_equivalents": 6.241316189930078,
+      "client_cpu_core_equivalents": 1.0813411110866047,
+      "simulator_peak_rss_GiB": 2.5076522827148438,
+      "client_peak_rss_GiB": 0.28475189208984375,
+      "scene_camera_hz_per_actor_range": [
+        3.234381922906513,
+        3.278688524590164
+      ],
+      "pose_hz_range": [
+        199.97784669915816,
+        200.0
+      ],
+      "resource_samples": 133,
+      "recorded_host": {
+        "platform": "Windows-10-10.0.26200-SP0",
+        "logical_cpu_count": 32
+      }
+    },
+    {
+      "record_id": "20260929_012748_397268_1uav_1ugv",
+      "fleet_size_each_role": 1,
+      "sim_duration_sec": 45.05,
+      "wall_duration_sec": 89.625,
+      "real_time_factor": 0.502649930264993,
+      "simulator_cpu_core_equivalents": 5.734483960948396,
+      "client_cpu_core_equivalents": 1.0198744769874477,
+      "simulator_peak_rss_GiB": 2.504077911376953,
+      "client_peak_rss_GiB": 0.13709640502929688,
+      "scene_camera_hz_per_actor_range": [
+        3.2630410654827973,
+        3.2630410654827973
+      ],
+      "pose_hz_range": [
+        200.0,
+        200.0
+      ],
+      "resource_samples": 245,
+      "recorded_host": {
+        "platform": "Windows-10-10.0.26200-SP0",
+        "logical_cpu_count": 32
+      }
+    },
+    {
+      "record_id": "20260929_013029_166926_2uav_2ugv",
+      "fleet_size_each_role": 2,
+      "sim_duration_sec": 45.05,
+      "wall_duration_sec": 140.09400000000005,
+      "real_time_factor": 0.32156980313218253,
+      "simulator_cpu_core_equivalents": 6.84261549388267,
+      "client_cpu_core_equivalents": 1.0252045055462757,
+      "simulator_peak_rss_GiB": 2.5656509399414062,
+      "client_peak_rss_GiB": 0.21109390258789062,
+      "scene_camera_hz_per_actor_range": [
+        3.2852386237513875,
+        3.2852386237513875
+      ],
+      "pose_hz_range": [
+        199.97780244173143,
+        200.0
+      ],
+      "resource_samples": 359,
+      "recorded_host": {
+        "platform": "Windows-10-10.0.26200-SP0",
+        "logical_cpu_count": 32
+      }
+    },
+    {
+      "record_id": "20260929_013345_775193_3uav_3ugv",
+      "fleet_size_each_role": 3,
+      "sim_duration_sec": 45.075,
+      "wall_duration_sec": 140.25,
+      "real_time_factor": 0.3213903743315508,
+      "simulator_cpu_core_equivalents": 7.873997326203215,
+      "client_cpu_core_equivalents": 1.0391042780748663,
+      "simulator_peak_rss_GiB": 2.629608154296875,
+      "client_peak_rss_GiB": 0.283843994140625,
+      "scene_camera_hz_per_actor_range": [
+        3.283416528008874,
+        3.283416528008874
+      ],
+      "pose_hz_range": [
+        200.0,
+        200.0
+      ],
+      "resource_samples": 356,
+      "recorded_host": {
+        "platform": "Windows-10-10.0.26200-SP0",
+        "logical_cpu_count": 32
+      }
+    }
+  ],
+  "groups": [
+    {
+      "fleet_size_each_role": 1,
+      "runs": 2,
+      "sim_duration_sec": [
+        45.05,
+        45.06
+      ],
+      "wall_duration_sec": [
+        89.625,
+        111.1880000000001
+      ],
+      "real_time_factor": [
+        0.4052595603842138,
+        0.502649930264993
+      ],
+      "simulator_cpu_core_equivalents": [
+        5.733813451091839,
+        5.734483960948396
+      ],
+      "simulator_peak_rss_GiB": [
+        2.4491233825683594,
+        2.504077911376953
+      ],
+      "scene_camera_hz_per_actor_range": [
+        3.262316910785619,
+        3.2630410654827973
+      ]
+    },
+    {
+      "fleet_size_each_role": 2,
+      "runs": 2,
+      "sim_duration_sec": [
+        45.05,
+        45.074999999999996
+      ],
+      "wall_duration_sec": [
+        45.2650000000001,
+        140.09400000000005
+      ],
+      "real_time_factor": [
+        0.32156980313218253,
+        0.9958024964100275
+      ],
+      "simulator_cpu_core_equivalents": [
+        5.936567988512082,
+        6.84261549388267
+      ],
+      "simulator_peak_rss_GiB": [
+        2.452423095703125,
+        2.5656509399414062
+      ],
+      "scene_camera_hz_per_actor_range": [
+        3.2612312811980035,
+        3.2852386237513875
+      ]
+    },
+    {
+      "fleet_size_each_role": 3,
+      "runs": 2,
+      "sim_duration_sec": [
+        45.075,
+        45.14
+      ],
+      "wall_duration_sec": [
+        45.343000000000075,
+        140.25
+      ],
+      "real_time_factor": [
+        0.3213903743315508,
+        0.9955230134750662
+      ],
+      "simulator_cpu_core_equivalents": [
+        6.241316189930078,
+        7.873997326203215
+      ],
+      "simulator_peak_rss_GiB": [
+        2.5076522827148438,
+        2.629608154296875
+      ],
+      "scene_camera_hz_per_actor_range": [
+        3.234381922906513,
+        3.283416528008874
+      ]
+    }
+  ],
+  "source_sha256": {
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012212_495574_1uav_1ugv\\summary.json": "28ffb673fd6302e72e13d7505bcc1fe435e172748135a430d5bcd8b637d95acb",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012212_495574_1uav_1ugv\\config.json": "60c52a175cb3759d549212fcab7aee7e67e7e676df5cc8db7d35f82a4c57bad6",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012212_495574_1uav_1ugv\\resources.csv": "9ad9043667aa2c244ea1c0cb722ded5d9f791412aeb4e0c12ac5088ec6b0555a",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012212_495574_1uav_1ugv\\provenance.json": "8a3d4571a016ad3f7ca8cf5d6396a92acbd2dc71a3bfc36a912c202d11fea803",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012446_347613_2uav_2ugv\\summary.json": "33456e076bffb535dcec5af203bf8fd9fff3186dbf403d1be7775251c28ec4b4",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012446_347613_2uav_2ugv\\config.json": "48fbbc13c3546648adbe892be81eed145067132bbd977755fa99ec11755983e9",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012446_347613_2uav_2ugv\\resources.csv": "46bb24d653b34faa15dfd334e66fa279b46c118ef42bccc0dfb8fdd652835689",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012446_347613_2uav_2ugv\\provenance.json": "3c380ace13ff8d2f6233c8d24eda5dbb608b70df7a4ad6480fb0d8b7f1f78efa",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012618_432574_3uav_3ugv\\summary.json": "c20c20306cdbe009d143804a448785f345de347943895f7843bb7af071dd9c69",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012618_432574_3uav_3ugv\\config.json": "a191a6434c916fe93ae8cac2a48536a10d1b7a8d363958e627e55c93b04ddcef",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012618_432574_3uav_3ugv\\resources.csv": "563438cc2461753e022ec19bd265ce258f1519414bca95f2566a6e3fda3f775e",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012618_432574_3uav_3ugv\\provenance.json": "388b230fd46157f5373c248ed7007b6f2ba7cbe603d80c1a3ad973c681be46e6",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012748_397268_1uav_1ugv\\summary.json": "486e44eb0fa6a643df6e36cfb482380605f9f57737723b4006bca8eb47b27d23",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012748_397268_1uav_1ugv\\config.json": "60c52a175cb3759d549212fcab7aee7e67e7e676df5cc8db7d35f82a4c57bad6",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012748_397268_1uav_1ugv\\resources.csv": "7696f9f2b38fd0d1a9e70dd8cd1938d07e0b902562be5ca8e3b34440e9e0e3e2",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_012748_397268_1uav_1ugv\\provenance.json": "8a3d4571a016ad3f7ca8cf5d6396a92acbd2dc71a3bfc36a912c202d11fea803",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_013029_166926_2uav_2ugv\\summary.json": "79ed99e3f21a228934a0c04993c2d6a7f01fa2d5ad9b55dbdf6a3052923592f7",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_013029_166926_2uav_2ugv\\config.json": "48fbbc13c3546648adbe892be81eed145067132bbd977755fa99ec11755983e9",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_013029_166926_2uav_2ugv\\resources.csv": "23045e858590e19244802e382eb850928b6fdc0353337e1114bea464c2d92561",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_013029_166926_2uav_2ugv\\provenance.json": "3c380ace13ff8d2f6233c8d24eda5dbb608b70df7a4ad6480fb0d8b7f1f78efa",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_013345_775193_3uav_3ugv\\summary.json": "8e0ec05a733209b75509a5653a7d460481ccdc3c23b0e05ce51376d33147750e",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_013345_775193_3uav_3ugv\\config.json": "a191a6434c916fe93ae8cac2a48536a10d1b7a8d363958e627e55c93b04ddcef",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_013345_775193_3uav_3ugv\\resources.csv": "923a19ed203c266510aafdf2b9d20a9842a87dad1dd7bcfc7801e8f23916a829",
+    "F:\\EpicGamesEnv\\AirSimSGA_CURRENT\\github\\AirSimSGA\\data\\paper\\evidence\\fleet\\20260929_013345_775193_3uav_3ugv\\provenance.json": "388b230fd46157f5373c248ed7007b6f2ba7cbe603d80c1a3ad973c681be46e6"
+  }
+}

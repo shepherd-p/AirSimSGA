@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airsimsga"
+version = "0.1.0"
+description = "Sea-ground-air collaboration experiments and native simulation extensions"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["numpy>=1.26,<3", "opencv-python>=4.7,<6", "matplotlib>=3.7,<4", "Pillow>=9,<13", "psutil>=5.9,<8", "networkx>=3,<4"]
+
+[project.optional-dependencies]
+landing = ["pupil-apriltags>=1.0.4,<2"]
+reconstruction = ["open3d>=0.18,<0.20"]
+
+[project.scripts]
+airsimsga = "airsimsga.cli:main"
+
+[tool.setuptools]
+packages = ["airsimsga"]

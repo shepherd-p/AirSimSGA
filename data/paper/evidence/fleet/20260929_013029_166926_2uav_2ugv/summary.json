@@ -1,0 +1,75 @@
+{
+  "status": "completed",
+  "recorded_utc": "2026-09-28T17:33:09.956440+00:00",
+  "error": null,
+  "fleet_size_each_role": 2,
+  "sim_duration_sec": 45.05,
+  "wall_duration_sec": 140.09400000000005,
+  "real_time_factor": 0.32156980313218253,
+  "process_cpu_percent_one_core_100": {
+    "simulator": 684.261549388267,
+    "client": 102.52045055462757
+  },
+  "peak_rss_bytes": {
+    "simulator": 2754846720,
+    "client": 226660352
+  },
+  "stream_hz_per_robot": {
+    "Car1": {
+      "scene_camera": 3.2852386237513875,
+      "depth_camera": 3.2852386237513875,
+      "segmentation_camera": 3.2852386237513875,
+      "pose": 200.0
+    },
+    "Car2": {
+      "scene_camera": 3.2852386237513875,
+      "depth_camera": 3.2852386237513875,
+      "segmentation_camera": 3.2852386237513875,
+      "pose": 200.0
+    },
+    "Drone1": {
+      "scene_camera": 3.2852386237513875,
+      "depth_camera": 3.2852386237513875,
+      "segmentation_camera": 3.2852386237513875,
+      "pose": 200.0
+    },
+    "Drone2": {
+      "scene_camera": 3.2852386237513875,
+      "depth_camera": 3.2852386237513875,
+      "segmentation_camera": 3.2852386237513875,
+      "pose": 199.97780244173143
+    }
+  },
+  "distances_m": {
+    "Car1": 33.275693283008664,
+    "Car2": 23.109626090898416,
+    "Drone1": 35.02125062710099,
+    "Drone2": 46.50685026639068
+  },
+  "collision_events": [],
+  "captures": [
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\urban_scale\\20260929_013029_166926_2uav_2ugv\\start_uav_view.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\urban_scale\\20260929_013029_166926_2uav_2ugv\\start_uav_view.npz",
+      "time_ns": 4880000000,
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "payload_sha256": "5091ec21f14a5d6938cc7abfa02147d838876cb79e61d8b6e23949109ef8706b"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\urban_scale\\20260929_013029_166926_2uav_2ugv\\end_uav_view.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\urban_scale\\20260929_013029_166926_2uav_2ugv\\end_uav_view.npz",
+      "time_ns": 50020000000,
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "payload_sha256": "d7e943ebdd5d7b63aae058b53e6ec3976b1f1b72c876df7ad4cb8ce90a8c5774"
+    }
+  ],
+  "cleanup_errors": []
+}

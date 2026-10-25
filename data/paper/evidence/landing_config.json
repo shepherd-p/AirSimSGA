@@ -1,0 +1,106 @@
+{
+  "task": "moving_deck_landing",
+  "sdk_path": "F:\\EpicGamesEnv\\ProjectAirSim\\client\\python\\projectairsim\\src",
+  "ip": "127.0.0.1",
+  "port_topics": 9189,
+  "port_services": 9190,
+  "scene": "F:\\EpicGamesEnv\\LandingWaterLab\\REFERENCE_HEADING_LANDING\\results\\landing_take_01\\scene_landing_video.jsonc",
+  "sim_config_path": "F:\\EpicGamesEnv\\LandingWaterLab\\configs\\landing",
+  "uav": "Drone1",
+  "usv": "Vessel1",
+  "camera": "DownCamera",
+  "dt_sec": 0.1,
+  "timeout_sec": 110.0,
+  "wall_timeout_sec": 1800.0,
+  "tag_family": "tag36h11",
+  "tag_ids": [
+    1
+  ],
+  "tag_size_m": 0.4,
+  "camera_fov_deg": 120.0,
+  "tag_offset_hull_m": [
+    3.0,
+    0.0,
+    -2.77
+  ],
+  "tag_geometry_status": "Boat mesh is rendered as fixed child yaw180, not as the overwritten root visual; marker/support offsets +3m align with its aft landing platform",
+  "calibration_file": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\landing\\20260928_062726_457859\\trial_001_v0.00_predictive\\derived\\tag_calibration.json",
+  "speeds_mps": [
+    0.0,
+    0.5
+  ],
+  "repeats": 1,
+  "controller": "predictive",
+  "approach_altitude_m": 4.5,
+  "max_speed_mps": 3.0,
+  "kp": 0.8,
+  "feedforward": 1.0,
+  "prediction_sec": 0.15,
+  "velocity_alpha": 0.25,
+  "descend_rate_mps": 0.3,
+  "flare_rate_mps": 0.1,
+  "flare_height_m": 1.4,
+  "descent_error_m": 0.22,
+  "descent_relative_speed_mps": 0.3,
+  "image_max_age_sec": 0.25,
+  "lost_target_abort_sec": 4.0,
+  "tag_min_margin": 20.0,
+  "tag_max_hamming": 0,
+  "contact_horizontal_radius_m": 0.55,
+  "contact_height_range_m": [
+    -0.05,
+    0.65
+  ],
+  "contact_relative_speed_mps": 0.2,
+  "hold_sec": 3.0,
+  "collision_max_age_sec": 0.3,
+  "min_moving_speed_mps": 0.15,
+  "max_sample_gap_sec": 0.4,
+  "usv_segmentation_id": 242,
+  "uav_segmentation_id": 240,
+  "vessel_force_per_mps": 250.0,
+  "vessel_speed_kp": 80.0,
+  "vessel_max_force": 450.0,
+  "observer_interval_sec": 0.5,
+  "trial_bounds_ned": {
+    "x": [
+      15.0,
+      45.0
+    ],
+    "y": [
+      -35.0,
+      45.0
+    ],
+    "z": [
+      -15.0,
+      11.0
+    ]
+  },
+  "provenance": {
+    "navigation": "Simulator ego pose and vessel truth for coarse approach only",
+    "visual_control": "AprilTag camera measurement + simulator camera/ego pose; no target truth after acquisition",
+    "vessel_model": "Planar surge/sway/yaw mass, added inertia, Coriolis and linear/quadratic damping, RK4 at 5ms; constant near-level hull anchor; not six-DOF wave/buoyancy validation",
+    "contact": "Finite geometry queries and unilateral Coulomb support, reduced-order near-level landing gear; strict original success gate",
+    "reference_programs": [
+      "F:\\EpicGamesEnv\\AirSimSGA_ExperimentKit\\sga_experiments\\projectairsim_real.py",
+      "F:\\EpicGamesEnv\\CityPark2\\PythonClient\\citypark2_uav1_vessel3_moving_landing_predictive.py"
+    ],
+    "physics_source": "F:\\EpicGamesEnv\\LandingWaterLab\\source",
+    "image_preprocessing": "Grayscale CLAHE clipLimit=2, grid=8x8 before actual AprilTag decoding; original RGB bytes/PNG retained; tag ID, hamming and margin thresholds unchanged",
+    "motor_off": "Disarm actuator interlock in independent SimpleFlight build; physical rotor speed and thrust topics must independently confirm shutdown for entire 3 s dwell",
+    "bow_alignment": "Reference image hull posture is preserved by body yaw-90 and fixed hull_visual child yaw180. Root visual yaw is overwritten by UE on motion and cannot apply this correction. Positive surge moves world -Y, away from shore; visual mesh bow -X maps to body +X, and marker/support remain at body +3m where their reference image placement is preserved. Direction is checked against consecutive fixed-camera RGB.",
+    "water_visuals": "Simulation-clock small ripples and speed-driven foam; visual waves do not apply physical wave forces",
+    "vessel_control": "Positive body-forward thrust; resistance feedforward from configured drag and speed feedback",
+    "video_protocol": "Live rerun, fixed world observer, 1/8 wall-clock schedule, original 5 ms physical step, 40 Hz requested RGB/observer sampling, no interpolated motion"
+  },
+  "physics_build_receipt": "F:\\EpicGamesEnv\\LandingWaterLab\\build_receipt.json",
+  "require_continuous_support": true,
+  "tag_preprocessing": "clahe",
+  "require_rotor_verification": true,
+  "expected_rotor_count": 4,
+  "rotor_max_age_sec": 0.3,
+  "stopped_rotor_max_speed_radps": 1.0,
+  "stopped_rotor_total_thrust_n": 0.01,
+  "desired_speed_mps": 0.5,
+  "record_depth": false
+}

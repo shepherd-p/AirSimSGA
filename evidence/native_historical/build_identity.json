@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-09-28T10:12:23.351119+00:00",
+  "original_receipt_sha256": "166a4a1f115f69f425f3ba2cae42bb795ef2f07238b71772b18ae5ca6bf33c06",
+  "binaries": {
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Binaries/Win64/UnrealEditor-ProjectAirSim-Win64-DebugGame.dll": "3c14bdadbf737886737413e160f81898516c9910639f161a491266a8df90b03b",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/assimp/Debug/assimp-mt.lib": "44a5e21ffb712ded122ef984375375d88dd6dcb432611da8310f82b827b9dd3b",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/assimp/Debug/assimp-mtd.lib": "36a3aa19dbc8ee0d3e52621b33aadff02d4f115c660dc48d15ce440b63e2ef20",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/assimp/Debug/assimp-vc143-mtd.lib": "4f570ba82ae9fac08e3925f3a9578ed799e9c1e93fdf80bfca4c81d3d6931a20",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/assimp/Debug/zlibstatic.lib": "325faf5739bbf84241d578b73b1ce248cc38d8ed26fb9c0ab32e74b551dddc9e",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/assimp/Debug/zlibstaticd.lib": "b408c06d52bfb1e138ea60002cf8748b42cafb3071f1b56737886920ce967457",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/core_sim/Debug/core_sim.lib": "f79e150966c372509238d383a9ccd98d8e3eac4311f44ecdc9a900c45c8f63ca",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/lvmon/Debug/lvmon.lib": "b389bad4575b41f64025ff2b26c2cee0eae73c58d4eb8e06d6a519bfbf614a7e",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/mavlinkcom/Debug/mavlinkcom.lib": "d454795baada48ca276f0bab9e6d677b42b5014c4823a1eeebffd93cc7efaa0b",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/multirotor_api/Debug/multirotor_api.lib": "a08521007d2a8e0e3f34f5fc64a774f5d5188d9f07e6f6a339d7e29175ef4378",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/nng/Debug/nng.lib": "4b5607096da419e9458ecb1507d941da8ceb8436c1fe9822fe48d93f5766b5b0",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/physics/Debug/physics.lib": "b85eda741bba48a3d001685b513a0833fd035257c6c3d591938d7704d6e5f05f",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/rendering_scene/Debug/rendering_scene.lib": "b61ef26f4f4aab3c762a3e957853a129104aa47c695443a1724205083f232f96",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/rover_api/Debug/rover_api.lib": "76dc179e5b7b39f991443726493f64bd9c3cc3c7722f1cca2fb0ddea501a91fe",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/SimLibs/simserver/Debug/simserver.lib": "3d9e6e4d9b0af5139063a8c1d6ef7d187b74b77b1c2924109f5a107fa629d38b",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Binaries/Win64/onnxruntime.dll": "853d9dbb6ed2b929257091936648a89ce018ab1c698b3804aececa63fb4e2732",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Binaries/Win64/onnxruntime_providers_cuda.dll": "f3e8ffb289f03110b141299d8d5b65c70b9201b91229e226d50e4ef7925381b5",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Binaries/Win64/onnxruntime_providers_shared.dll": "4fcebd1613271c21ba2192a6b2fec977949c0bf2cb99b5952eace10a938d76d4",
+    "external-workspace/MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Binaries/Win64/onnxruntime_providers_tensorrt.dll": "d0441c425745fe34a215dd852ecb51f761e584beb4adce42a61d4c170f8717a0"
+  },
+  "source_file_count": 683,
+  "scope": "Historical landing build; not a receipt for a new reviewer build"
+}

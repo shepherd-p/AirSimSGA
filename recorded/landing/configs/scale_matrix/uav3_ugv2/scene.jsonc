@@ -1,0 +1,76 @@
+{
+  "id": "AGScale3UAV2UGV",
+  "clock": {
+    "type": "steppable",
+    "step-ns": 5000000,
+    "real-time-update-rate": 5000000,
+    "pause-on-start": false
+  },
+  "home-geo-point": {
+    "latitude": 47.641468,
+    "longitude": -122.140165,
+    "altitude": 122.0
+  },
+  "segmentation": {
+    "initialize-ids": true,
+    "ignore-existing": false,
+    "use-owner-name": true
+  },
+  "scene-type": "UnrealNative",
+  "actors": [
+    {
+      "name": "Car1",
+      "type": "robot",
+      "robot-config": "robot_ugv.jsonc",
+      "origin": {
+        "xyz": "40.5 127 -4",
+        "rpy-deg": "0 0 90"
+      }
+    },
+    {
+      "name": "Car2",
+      "type": "robot",
+      "robot-config": "robot_ugv.jsonc",
+      "origin": {
+        "xyz": "40.5 140 -4",
+        "rpy-deg": "0 0 90"
+      }
+    },
+    {
+      "name": "Drone1",
+      "type": "robot",
+      "robot-config": "robot_uav.jsonc",
+      "origin": {
+        "xyz": "40.5 133 -4",
+        "rpy-deg": "0 0 90"
+      }
+    },
+    {
+      "name": "Drone2",
+      "type": "robot",
+      "robot-config": "robot_uav.jsonc",
+      "origin": {
+        "xyz": "40.5 146 -4",
+        "rpy-deg": "0 0 90"
+      }
+    },
+    {
+      "name": "Drone3",
+      "type": "robot",
+      "robot-config": "robot_uav.jsonc",
+      "origin": {
+        "xyz": "40.5 159 -4",
+        "rpy-deg": "0 0 90"
+      }
+    },
+    {
+      "name": "Observer",
+      "type": "robot",
+      "robot-config": "observer.jsonc",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy-deg": "0 0 0"
+      }
+    }
+  ]
+}

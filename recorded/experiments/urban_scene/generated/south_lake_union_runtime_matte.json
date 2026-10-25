@@ -1,0 +1,156 @@
+{
+  "source_sha256": "9a5e5dbf1348b3b26676fa3ead26562c693bd9dcd004739950ce0ebda7ba46bb",
+  "output_sha256": "f830782e8a8cf9878a294fcd1c421a5c54bceaf4d6a366ba42d1929d3ad32e53",
+  "changes": [
+    {
+      "material": "Concrete034",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": true
+    },
+    {
+      "material": "road_marking_crossing",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "road_arrow_right",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "road_arrow_through_right",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "road_marking_dash",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "Asphalt010",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "PAVING_STONE",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "TextureAtlas 1e0519a",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "Metal002",
+      "metallic_factor": 0.15,
+      "roughness_factor": 0.65,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "road_arrow_through",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "WOOD",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "TextureAtlas 65e5d4fc",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "GLASS_WALL",
+      "metallic_factor": 0.15,
+      "roughness_factor": 0.65,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "RoofingTiles010",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": true
+    },
+    {
+      "material": "Plaster002",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": true
+    },
+    {
+      "material": "Windows",
+      "metallic_factor": 0.15,
+      "roughness_factor": 0.65,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "TextureAtlas 7711ba19",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "Bricks029",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "TERRAIN_DEFAULT",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": true
+    },
+    {
+      "material": "WoodSiding008",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "SCRUB",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    },
+    {
+      "material": "GRAVEL",
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.85,
+      "normal_texture_removed": false
+    }
+  ]
+}

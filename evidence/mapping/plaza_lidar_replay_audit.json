@@ -1,0 +1,24 @@
+{
+  "audit_time_utc": "2026-09-27T18:33:03.740104+00:00",
+  "status": "passed",
+  "platforms": {
+    "Drone1": {
+      "scans": 3445,
+      "raw_returns": 13123005,
+      "voxel_centroids": 4549781,
+      "replayed_retained_points": 4452406,
+      "maximum_coordinate_difference_m": 0.0,
+      "maximum_first_observation_time_difference_sec": 0.0
+    },
+    "Car1": {
+      "scans": 3417,
+      "raw_returns": 9529843,
+      "voxel_centroids": 1092022,
+      "replayed_retained_points": 1072484,
+      "maximum_coordinate_difference_m": 0.0,
+      "maximum_first_observation_time_difference_sec": 0.0
+    }
+  },
+  "method": "All archived scans -> 10 cm weighted centroids -> statistical outlier filter -> compare every saved fused point and timestamp",
+  "input_files_modified": false
+}

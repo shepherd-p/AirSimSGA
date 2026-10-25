@@ -1,0 +1,12 @@
+{
+  "id": "AGCitySampleDriveProbe",
+  "clock": {"type": "steppable", "step-ns": 5000000,
+            "real-time-update-rate": 5000000, "pause-on-start": true},
+  "home-geo-point": {"latitude": 0, "longitude": 0, "altitude": 0},
+  "scene-type": "UnrealNative",
+  "actors": [{
+    "type": "robot", "name": "Car1",
+    "origin": {"xyz": "-607.8 -892.6 -2.0", "rpy-deg": "0 0 27.0"},
+    "robot-config": "../configs/robot_ugv_navigation_study.jsonc"
+  }]
+}

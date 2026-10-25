@@ -1,0 +1,9 @@
+{
+  "sdk_path": "../../backend-main/client/python/projectairsim/src",
+  "citysample_project": "../../CitySample",
+  "reconstruction_python": null,
+  "landing_build_receipt": "../../landing-local-receipts/build_receipt.json",
+  "landing_backend": "../../backend-landing",
+  "output_root": "../../AirSimSGA_runs",
+  "host": "127.0.0.1"
+}

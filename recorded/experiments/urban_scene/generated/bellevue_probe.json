@@ -1,0 +1,132 @@
+{
+  "source_glb": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\bellevue_downtown_runtime_512.glb",
+  "source_glb_sha256": "c6767da96c9cf0651a5f46c1c01f56685e2c6fd7d6f86060716a5913b17b4b0e",
+  "scene": {
+    "id": "AGUrbanProbe",
+    "clock": {
+      "type": "steppable",
+      "step-ns": 5000000,
+      "real-time-update-rate": 5000000,
+      "pause-on-start": false
+    },
+    "home-geo-point": {
+      "latitude": 47.624,
+      "longitude": -122.337,
+      "altitude": 0.0
+    },
+    "scene-type": "UnrealNative",
+    "actors": [
+      {
+        "name": "Observer",
+        "type": "robot",
+        "robot-config": {
+          "physics-type": "non-physics",
+          "links": [
+            {
+              "name": "Frame",
+              "collision": {
+                "enabled": false
+              }
+            }
+          ],
+          "sensors": [
+            {
+              "id": "Overview",
+              "type": "camera",
+              "enabled": true,
+              "parent-link": "Frame",
+              "capture-interval": 0.5,
+              "origin": {
+                "xyz": "0 -180 -170",
+                "rpy-deg": "0 -43.36 90"
+              },
+              "capture-settings": [
+                {
+                  "image-type": 0,
+                  "width": 1280,
+                  "height": 720,
+                  "fov-degrees": 80,
+                  "capture-enabled": true,
+                  "streaming-enabled": true,
+                  "pixels-as-float": false,
+                  "compress": false
+                }
+              ]
+            }
+          ]
+        },
+        "origin": {
+          "xyz": "0 0 0",
+          "rpy-deg": "0 0 0"
+        }
+      }
+    ]
+  },
+  "mesh_actor": "AGUrbanMesh",
+  "camera_topic": "/Sim/AGUrbanProbe/robots/Observer/sensors/Overview/scene_camera",
+  "captures": [
+    {
+      "view": "oblique",
+      "camera_position_ned": [
+        0,
+        -180,
+        -170
+      ],
+      "target_ned": [
+        0,
+        0,
+        0
+      ],
+      "camera_time_ns": 4450000000,
+      "image": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\bellevue_probe_oblique.png",
+      "image_shape": [
+        720,
+        1280,
+        3
+      ],
+      "pixel_stddev": 62.46174688750543
+    },
+    {
+      "view": "top",
+      "camera_position_ned": [
+        0,
+        0,
+        -260
+      ],
+      "target_ned": [
+        0,
+        0,
+        0
+      ],
+      "camera_time_ns": 8010000000,
+      "image": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\bellevue_probe_top.png",
+      "image_shape": [
+        720,
+        1280,
+        3
+      ],
+      "pixel_stddev": 60.9980436225306
+    },
+    {
+      "view": "street",
+      "camera_position_ned": [
+        0,
+        -60,
+        -18
+      ],
+      "target_ned": [
+        0,
+        0,
+        0
+      ],
+      "camera_time_ns": 11050000000,
+      "image": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\bellevue_probe_street.png",
+      "image_shape": [
+        720,
+        1280,
+        3
+      ],
+      "pixel_stddev": 62.355235523023445
+    }
+  ]
+}

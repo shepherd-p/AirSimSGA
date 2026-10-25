@@ -1,0 +1,960 @@
+{
+  "schema": 1,
+  "source_root_hint": "local workspace; paths relative to workspace",
+  "copied_files": {
+    "experiments/ag/backend.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/backend.py",
+      "source_sha256": "5f916ff4f30e9e77d9eb978d1f5b557893b2cec91cbfeac7d1df7252028b98d9",
+      "release_sha256": "5f916ff4f30e9e77d9eb978d1f5b557893b2cec91cbfeac7d1df7252028b98d9",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/cli.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/cli.py",
+      "source_sha256": "aba48653d1ae9ceaa8edf678a9dcba7c9501ce867b682c6b3d6204a0f8b3cd19",
+      "release_sha256": "29c2e73c19d76445b9cbf57b87810607182637a82b5d6ba116956b73e5af406c",
+      "release_bytes_equal_original": false
+    },
+    "experiments/ag/contact.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/contact.py",
+      "source_sha256": "197b447847430c5b8ebc7e2b1139ca58f18c4723778cb1aab79cfac24375e65c",
+      "release_sha256": "197b447847430c5b8ebc7e2b1139ca58f18c4723778cb1aab79cfac24375e65c",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/cooperative_study.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/cooperative_study.py",
+      "source_sha256": "7268d4962591653fb8f3701bf4b9ed65766e9d809c616be43d7d244d7c1538c5",
+      "release_sha256": "7268d4962591653fb8f3701bf4b9ed65766e9d809c616be43d7d244d7c1538c5",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/dense_capture.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/dense_capture.py",
+      "source_sha256": "cab913f236c7405aa6e967cbe2b35c86254e59615b88d6b9bea953d6f013cb4f",
+      "release_sha256": "cab913f236c7405aa6e967cbe2b35c86254e59615b88d6b9bea953d6f013cb4f",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/experiments.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/experiments.py",
+      "source_sha256": "2cb4ff04145b26526cd7b5b04d2e6d5abb041c709e9807452a667bc6221e1959",
+      "release_sha256": "2cb4ff04145b26526cd7b5b04d2e6d5abb041c709e9807452a667bc6221e1959",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/figure_plot.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/figure_plot.py",
+      "source_sha256": "0c4161088ff851eec97940c5b9e94fab84be76b943daf23fe40833e7b29af5c9",
+      "release_sha256": "39f7b71aa133d9ea473b38dedf4487566307adc68e39792f08dbac38d89c5800",
+      "release_bytes_equal_original": false
+    },
+    "experiments/ag/figure_render.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/figure_render.py",
+      "source_sha256": "f385e3f8fec48b0a1740edd13a0c018d88f9146467fa9a9dde47198be4041963",
+      "release_sha256": "f385e3f8fec48b0a1740edd13a0c018d88f9146467fa9a9dde47198be4041963",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/landing_core.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/landing_core.py",
+      "source_sha256": "0e1476362c7b0b6d43fe7fa14fccf496424534e58c14c35d5a2cb031ed9a30d8",
+      "release_sha256": "0e1476362c7b0b6d43fe7fa14fccf496424534e58c14c35d5a2cb031ed9a30d8",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/landing_evidence.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/landing_evidence.py",
+      "source_sha256": "89fe82f2f2f043de032137a237e7367a8d5e2750f7f42169cd35b0c02911b7be",
+      "release_sha256": "89fe82f2f2f043de032137a237e7367a8d5e2750f7f42169cd35b0c02911b7be",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/landing_figures.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/landing_figures.py",
+      "source_sha256": "66fd1f943e1ae3a656730c92c098b2e77d10b59d1d7d58cf8ed19538361e3207",
+      "release_sha256": "70e2586df1d6b05b1d9479c7950187b42a32178544ccff688b066ffb1b3b2518",
+      "release_bytes_equal_original": false
+    },
+    "experiments/ag/landing_runtime.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/landing_runtime.py",
+      "source_sha256": "4faf9cccfc4ee4e06c31faa5439ee93768c7d534bde62a675c749e43cfaa0775",
+      "release_sha256": "4faf9cccfc4ee4e06c31faa5439ee93768c7d534bde62a675c749e43cfaa0775",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/landing_vision.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/landing_vision.py",
+      "source_sha256": "434d5f66b72917c69033c298bbd4fd513477b3546bae0baa0a6cffe234099de7",
+      "release_sha256": "434d5f66b72917c69033c298bbd4fd513477b3546bae0baa0a6cffe234099de7",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/map3d.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/map3d.py",
+      "source_sha256": "ca7ab2819cccb30aeee6508ce9ce1468b4afe8e86dca176f0676fad44694c1df",
+      "release_sha256": "ca7ab2819cccb30aeee6508ce9ce1468b4afe8e86dca176f0676fad44694c1df",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/map3d_template.html": {
+      "source": "ProjectAirSim_AG_Experiments/ag/map3d_template.html",
+      "source_sha256": "18230535756dd9fd051a954e8af32d64798b88144872667d6a8e8a836aa51b97",
+      "release_sha256": "18230535756dd9fd051a954e8af32d64798b88144872667d6a8e8a836aa51b97",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/math3d.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/math3d.py",
+      "source_sha256": "499e1306db53642546d966e3bf8d76e6db41e8905e858cfbbb073efcc2b257c3",
+      "release_sha256": "499e1306db53642546d966e3bf8d76e6db41e8905e858cfbbb073efcc2b257c3",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/planning.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/planning.py",
+      "source_sha256": "dcd932fa2390aa167e8e46f3ea4e892344556a63a1af66cdb030d17573971239",
+      "release_sha256": "dcd932fa2390aa167e8e46f3ea4e892344556a63a1af66cdb030d17573971239",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/plaza.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/plaza.py",
+      "source_sha256": "0bb1f5a31e91473d723ab4c5d908c4a98494bfe06fb8bad0ff8aecee20bb598b",
+      "release_sha256": "0bb1f5a31e91473d723ab4c5d908c4a98494bfe06fb8bad0ff8aecee20bb598b",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/plaza_reconstruction.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/plaza_reconstruction.py",
+      "source_sha256": "54779d5540de906f2bf1b4412d58ade713c4a93f526e7bc60816d3b3b5db945b",
+      "release_sha256": "54779d5540de906f2bf1b4412d58ade713c4a93f526e7bc60816d3b3b5db945b",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/reconstruction.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/reconstruction.py",
+      "source_sha256": "a5d74e02cbc7696604f6c81607f7446b70e68c7170cb24e27a8146121a29b268",
+      "release_sha256": "a5d74e02cbc7696604f6c81607f7446b70e68c7170cb24e27a8146121a29b268",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/scan_capture.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/scan_capture.py",
+      "source_sha256": "5c7a8fb36fe5fc6271817639edce857844e4d32e511bbacd3f84aa0ec31f4e72",
+      "release_sha256": "5c7a8fb36fe5fc6271817639edce857844e4d32e511bbacd3f84aa0ec31f4e72",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/scene_figure.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/scene_figure.py",
+      "source_sha256": "68d0ef48405a180c3e4c089df0789b80f28165a108b3b8df232bff2c7dad4c88",
+      "release_sha256": "f2074aba5c2fb15a8cba292fba47fa1e3728692d22dec98d217b058e7072324b",
+      "release_bytes_equal_original": false
+    },
+    "experiments/ag/storage.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/storage.py",
+      "source_sha256": "a70ca936b532f1e14b6030373d6f227fe5c531f9eeed8d145154c8de47081f70",
+      "release_sha256": "a799a64193eb920bda1cd50346d80405262d0fdca89b33006968fab2c0f52aa7",
+      "release_bytes_equal_original": false
+    },
+    "experiments/ag/study_audit.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/study_audit.py",
+      "source_sha256": "36fcbed3187c8f3829ad0f4d4eac1a88aa5c637d32892f3323535f113d907a67",
+      "release_sha256": "36fcbed3187c8f3829ad0f4d4eac1a88aa5c637d32892f3323535f113d907a67",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/study_figures.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/study_figures.py",
+      "source_sha256": "abc606c9bc66f7e268d273b4b87585e57c05dce73bf24abfa6df9833dd8e603c",
+      "release_sha256": "870c3e6ceb61e393f08a84e3698e7e0ee5fb21dd3d6ce9d8e388011689ed139d",
+      "release_bytes_equal_original": false
+    },
+    "experiments/ag/study_planning.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/study_planning.py",
+      "source_sha256": "12f14abc2854372a900422a1c432110d7457b2948a77ca73ca34d073243e8a78",
+      "release_sha256": "12f14abc2854372a900422a1c432110d7457b2948a77ca73ca34d073243e8a78",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/study_recording.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/study_recording.py",
+      "source_sha256": "2a4da246c19b90e4ca4f96a699c2946138f00221eb9bf602546f632432dc60bc",
+      "release_sha256": "2a4da246c19b90e4ca4f96a699c2946138f00221eb9bf602546f632432dc60bc",
+      "release_bytes_equal_original": true
+    },
+    "experiments/ag/__init__.py": {
+      "source": "ProjectAirSim_AG_Experiments/ag/__init__.py",
+      "source_sha256": "acd39db8fc52a5d5394b5d94d736ffa4651bb1368e96c6b5783c7d8b56041f37",
+      "release_sha256": "acd39db8fc52a5d5394b5d94d736ffa4651bb1368e96c6b5783c7d8b56041f37",
+      "release_bytes_equal_original": true
+    },
+    "experiments/run_mapping_plaza.py": {
+      "source": "ProjectAirSim_AG_Experiments/run_mapping_plaza.py",
+      "source_sha256": "13158568a35d1d994b0fbd5e64928c10e0f30f7310a47b80ab1a715342292c05",
+      "release_sha256": "44a8722bb3e74c83ee121e3af594069095d77d1dad014eee1f39a6ba77f2f49d",
+      "release_bytes_equal_original": false
+    },
+    "experiments/run_landing_study.py": {
+      "source": "ProjectAirSim_AG_Experiments/run_landing_study.py",
+      "source_sha256": "260d42ec1073cfb1fc798b0e00c68f134070ee6e733a29438d59c78729f5b8ea",
+      "release_sha256": "b664087dd6b5d8eefd30f8f9a67e993498b756136ff083c02d6b57a75427b151",
+      "release_bytes_equal_original": false
+    },
+    "experiments/reconstruct_plaza.py": {
+      "source": "ProjectAirSim_AG_Experiments/reconstruct_plaza.py",
+      "source_sha256": "d05e00bb16e570d1838be15df6fbfe4232c32ebf74beab7dd49e70d6fb0b38d7",
+      "release_sha256": "d05e00bb16e570d1838be15df6fbfe4232c32ebf74beab7dd49e70d6fb0b38d7",
+      "release_bytes_equal_original": true
+    },
+    "experiments/render_plaza.py": {
+      "source": "ProjectAirSim_AG_Experiments/render_plaza.py",
+      "source_sha256": "a96dd02e1411985604836e18d9b27b7c145a0ad27f78cd99ac6e3e2ab6e94ed4",
+      "release_sha256": "a96dd02e1411985604836e18d9b27b7c145a0ad27f78cd99ac6e3e2ab6e94ed4",
+      "release_bytes_equal_original": true
+    },
+    "experiments/render_structural_cloud.py": {
+      "source": "ProjectAirSim_AG_Experiments/render_structural_cloud.py",
+      "source_sha256": "d32f8758db60cde9ecd07bd5d2947ba5cec424a6fdc0c7e79945fc8b0c29fd6f",
+      "release_sha256": "d32f8758db60cde9ecd07bd5d2947ba5cec424a6fdc0c7e79945fc8b0c29fd6f",
+      "release_bytes_equal_original": true
+    },
+    "experiments/plot_plaza.py": {
+      "source": "ProjectAirSim_AG_Experiments/plot_plaza.py",
+      "source_sha256": "4f976e781ad31844b96d2aa12992be491ad2c594dfb1e581ceb111c5ebae3f37",
+      "release_sha256": "4f976e781ad31844b96d2aa12992be491ad2c594dfb1e581ceb111c5ebae3f37",
+      "release_bytes_equal_original": true
+    },
+    "experiments/refine_plaza_surface.py": {
+      "source": "ProjectAirSim_AG_Experiments/refine_plaza_surface.py",
+      "source_sha256": "bccfd08d054f652537d2ef0fb8edfa123a656a43c1be8b0a4ebc2e8e5b09e311",
+      "release_sha256": "bccfd08d054f652537d2ef0fb8edfa123a656a43c1be8b0a4ebc2e8e5b09e311",
+      "release_bytes_equal_original": true
+    },
+    "experiments/export_pointcloud_structure.py": {
+      "source": "ProjectAirSim_AG_Experiments/export_pointcloud_structure.py",
+      "source_sha256": "3072317e9e38d0edbb7fc5f3cedf0d34cb62e9729cc9fb45213d9db16748ff45",
+      "release_sha256": "3072317e9e38d0edbb7fc5f3cedf0d34cb62e9729cc9fb45213d9db16748ff45",
+      "release_bytes_equal_original": true
+    },
+    "experiments/export_plaza_figures.py": {
+      "source": "ProjectAirSim_AG_Experiments/export_plaza_figures.py",
+      "source_sha256": "176ba1d338cc2fc981dc9a8225f8165b47db9ec814c337f514c9c2f263fcccbd",
+      "release_sha256": "176ba1d338cc2fc981dc9a8225f8165b47db9ec814c337f514c9c2f263fcccbd",
+      "release_bytes_equal_original": true
+    },
+    "experiments/export_landing_study.py": {
+      "source": "ProjectAirSim_AG_Experiments/export_landing_study.py",
+      "source_sha256": "10c2d566db1e97502a8cf12e99296ab4125cd9f0a4e8dba0df9beb4639f89214",
+      "release_sha256": "10c2d566db1e97502a8cf12e99296ab4125cd9f0a4e8dba0df9beb4639f89214",
+      "release_bytes_equal_original": true
+    },
+    "experiments/audit_landing_study.py": {
+      "source": "ProjectAirSim_AG_Experiments/audit_landing_study.py",
+      "source_sha256": "fa7ec2d30efc0b66ee8e2ef83f6fece032d8790e9cc444fdd011e388cd17dffe",
+      "release_sha256": "fa7ec2d30efc0b66ee8e2ef83f6fece032d8790e9cc444fdd011e388cd17dffe",
+      "release_bytes_equal_original": true
+    },
+    "experiments/audit_plaza_evidence.py": {
+      "source": "ProjectAirSim_AG_Experiments/audit_plaza_evidence.py",
+      "source_sha256": "fc53717f0376228980f29766f8d167293cbfb15107df467acbce0c28624a014a",
+      "release_sha256": "fc53717f0376228980f29766f8d167293cbfb15107df467acbce0c28624a014a",
+      "release_bytes_equal_original": true
+    },
+    "experiments/archive_plaza_evidence.py": {
+      "source": "ProjectAirSim_AG_Experiments/archive_plaza_evidence.py",
+      "source_sha256": "f44600c4edd9f16c108ad83385736a1c8b30fafb48feafbb1f725b7af38e2085",
+      "release_sha256": "29b9999c1fd54cbc5c0f22f43742e7e4ada0908ca8f29bfd753d0fd8a9283a5b",
+      "release_bytes_equal_original": false
+    },
+    "experiments/archive_landing_study.py": {
+      "source": "ProjectAirSim_AG_Experiments/archive_landing_study.py",
+      "source_sha256": "d93c5f2c5a4a23200d46270cf8199d81a5077c14b9af148f008a8c96a78575c6",
+      "release_sha256": "d93c5f2c5a4a23200d46270cf8199d81a5077c14b9af148f008a8c96a78575c6",
+      "release_bytes_equal_original": true
+    },
+    "experiments/calibrate_landing_tag.py": {
+      "source": "ProjectAirSim_AG_Experiments/calibrate_landing_tag.py",
+      "source_sha256": "6554de237f76f9529ac06b094768baf24f003dddcce0dd632d13e03c9abeb322",
+      "release_sha256": "6554de237f76f9529ac06b094768baf24f003dddcce0dd632d13e03c9abeb322",
+      "release_bytes_equal_original": true
+    },
+    "experiments/view_plaza_map.py": {
+      "source": "ProjectAirSim_AG_Experiments/view_plaza_map.py",
+      "source_sha256": "813e68a77dee51cd2792bc5dc45f8845ba93130bdea3122772aed1aa085b062f",
+      "release_sha256": "813e68a77dee51cd2792bc5dc45f8845ba93130bdea3122772aed1aa085b062f",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/run_aerial_route_navigation.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/run_aerial_route_navigation.py",
+      "source_sha256": "531cf9880ac7a30585e4b94833d2e17d0a821da5c85904ce150f456e51bcf1b2",
+      "release_sha256": "6373b4e1c16920c68041c8224db25c3d83f64c827a91e058877091c4ffe0e2d5",
+      "release_bytes_equal_original": false
+    },
+    "experiments/citysample_scene/run_pursuit.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/run_pursuit.py",
+      "source_sha256": "38fb46772f17c95fc48801c726480e22b38888f6faa64c1392032429524b8859",
+      "release_sha256": "8501483f169749896b68b92fa2ed4b0ce26a6b8bdc1285412038cb6a60f995df",
+      "release_bytes_equal_original": false
+    },
+    "experiments/citysample_scene/citysample_runtime.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/citysample_runtime.py",
+      "source_sha256": "54d3387a3ea424dc61f173ab2917c2c2de51bf883defd28289f17e333ac00dea",
+      "release_sha256": "54d3387a3ea424dc61f173ab2917c2c2de51bf883defd28289f17e333ac00dea",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/district_routes.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/district_routes.py",
+      "source_sha256": "f3a7cc2a27badc6d89541f574db3508739e67d0c7909a2ee0b4b77834bc4b7b5",
+      "release_sha256": "f3a7cc2a27badc6d89541f574db3508739e67d0c7909a2ee0b4b77834bc4b7b5",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/prepare_aerial_route_navigation.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/prepare_aerial_route_navigation.py",
+      "source_sha256": "3b75f55a555ec82c077344f2743151993dec3185d4b16d325d13561b34cb6a27",
+      "release_sha256": "ccf509d29e5952a72011f3d48ed1a0444342bed773be9a195d17df24a1fbf164",
+      "release_bytes_equal_original": false
+    },
+    "experiments/citysample_scene/prepare_pursuit.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/prepare_pursuit.py",
+      "source_sha256": "afffcb303e6174e272858ae6771c4b310f3213cf8155e7e5c38e052b9632c07c",
+      "release_sha256": "afffcb303e6174e272858ae6771c4b310f3213cf8155e7e5c38e052b9632c07c",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/inspect_zonegraph.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/inspect_zonegraph.py",
+      "source_sha256": "7bd06b42581e7ec236fcdf82582fa6f23b6b6894bdf5ed2193647b33e7d7878f",
+      "release_sha256": "5bbbb84c79c94ce8090d4501a5151cc101e2bfa7c7a5cedb394c1fcae9e1dbeb",
+      "release_bytes_equal_original": false
+    },
+    "experiments/citysample_scene/plan_routes.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/plan_routes.py",
+      "source_sha256": "e7d6c86013aa44d64bf538c656b3dd88ccedd4a14ad93f6f7228c55699798f97",
+      "release_sha256": "e7d6c86013aa44d64bf538c656b3dd88ccedd4a14ad93f6f7228c55699798f97",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/annotate_aerial_route_navigation.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/annotate_aerial_route_navigation.py",
+      "source_sha256": "ecd5ebc8e39ac0633980db026237bbf5e27857f41448f341216f30f53de88bce",
+      "release_sha256": "ecd5ebc8e39ac0633980db026237bbf5e27857f41448f341216f30f53de88bce",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/audit_aerial_route_navigation.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/audit_aerial_route_navigation.py",
+      "source_sha256": "6d5e2a518ab4499a7b357502d12a599b6567d3deea3afa1379ad834e00d30498",
+      "release_sha256": "6d5e2a518ab4499a7b357502d12a599b6567d3deea3afa1379ad834e00d30498",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/check_depth_projection.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/check_depth_projection.py",
+      "source_sha256": "cf818ecdb77e91e5e23143cf91646863cca63467e2eb12faf25991c9cac60cbd",
+      "release_sha256": "6bf6b6f548bee4bccabda92ea844dfbd39fc832f41c1dc31794cc7e2de976be1",
+      "release_bytes_equal_original": false
+    },
+    "experiments/citysample_scene/validate_pursuit_roads.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/validate_pursuit_roads.py",
+      "source_sha256": "f6742d45bcc896c5d900cdb2a606c86df753d77de8da6c61d041ee0d76d4aa98",
+      "release_sha256": "dc0073c12caf3f78b7d56bc0bcf6c2c68a7749e052c94fef2473bdafcd50aabb",
+      "release_bytes_equal_original": false
+    },
+    "experiments/urban_scene/urban_runtime.py": {
+      "source": "ProjectAirSim_AG_Experiments/urban_scene/urban_runtime.py",
+      "source_sha256": "c5f4a255c471036dc02ecdad001f9e06d28d227153ead3a8c3878ca0be6c7f23",
+      "release_sha256": "848ff9c5c96562ba7ac0975554f1e0f167c38551b7eb851c08c00284018c2da0",
+      "release_bytes_equal_original": false
+    },
+    "experiments/urban_scene/probe_urban_scene.py": {
+      "source": "ProjectAirSim_AG_Experiments/urban_scene/probe_urban_scene.py",
+      "source_sha256": "8d2fbb36c10f9534c024aef708e625ff6b74047720f3ee31f25b608490ae71cb",
+      "release_sha256": "08c1051213b4c2745ca038df5f4e44a0bb45006a08c258d74f5bddef3e1bf395",
+      "release_bytes_equal_original": false
+    },
+    "experiments/urban_scene/robots/pursuit_interceptor.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/urban_scene/robots/pursuit_interceptor.jsonc",
+      "source_sha256": "dcc1e38a90aa2a26158435ec7bf42cf572e4b6b4782e183461b81bdf86d0331c",
+      "release_sha256": "dcc1e38a90aa2a26158435ec7bf42cf572e4b6b4782e183461b81bdf86d0331c",
+      "release_bytes_equal_original": true
+    },
+    "experiments/urban_scene/robots/pursuit_target.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/urban_scene/robots/pursuit_target.jsonc",
+      "source_sha256": "cc620eef29ddc9158352a271621def70b008ef8ab2142cc4e67bb4802d9e0044",
+      "release_sha256": "cc620eef29ddc9158352a271621def70b008ef8ab2142cc4e67bb4802d9e0044",
+      "release_bytes_equal_original": true
+    },
+    "experiments/urban_scene/robots/pursuit_uav.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/urban_scene/robots/pursuit_uav.jsonc",
+      "source_sha256": "2f180c121696c9b13d66f050b09a59e6f5ecd2a282b5d0f2f1c307807ba18eb9",
+      "release_sha256": "2f180c121696c9b13d66f050b09a59e6f5ecd2a282b5d0f2f1c307807ba18eb9",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_observer_formation_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_observer_formation_study.jsonc",
+      "source_sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833",
+      "release_sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_observer_navigation_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_observer_navigation_study.jsonc",
+      "source_sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833",
+      "release_sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_observer_tracking_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_observer_tracking_study.jsonc",
+      "source_sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833",
+      "release_sha256": "bcf823722aae41edd21dd7bc6aa3258f33e2532076e7e324c9044e0a53ac6833",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_overview_camera.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_overview_camera.jsonc",
+      "source_sha256": "dfcd7960539e1aac30fc1f15bdaf21db07e57027774b1c7daf2ef4b51111dae6",
+      "release_sha256": "dfcd7960539e1aac30fc1f15bdaf21db07e57027774b1c7daf2ef4b51111dae6",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_region_survey.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_region_survey.jsonc",
+      "source_sha256": "a9424b62c0d58975c7873c6dd6fdd890b32772e28836158911272fb93effe977",
+      "release_sha256": "a9424b62c0d58975c7873c6dd6fdd890b32772e28836158911272fb93effe977",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_target_tracking_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_target_tracking_study.jsonc",
+      "source_sha256": "21a9bc99840c0111c557df136fb017765d4966efb23db73c5ad3a982cb1d7201",
+      "release_sha256": "21a9bc99840c0111c557df136fb017765d4966efb23db73c5ad3a982cb1d7201",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_uav.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_uav.jsonc",
+      "source_sha256": "d3af0d186817add657187654d31a609deace3a1ea5232a3f4fcb959de7907563",
+      "release_sha256": "d3af0d186817add657187654d31a609deace3a1ea5232a3f4fcb959de7907563",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_uav_dense.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_uav_dense.jsonc",
+      "source_sha256": "17337515ad23a27b8e38529cc3643e871700fa4869e0623068af8e911c519a96",
+      "release_sha256": "17337515ad23a27b8e38529cc3643e871700fa4869e0623068af8e911c519a96",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_uav_formation_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_uav_formation_study.jsonc",
+      "source_sha256": "4e009c8686fe18fefddc9f7497bec3ebecefca30dc25043033f7b6201498ba47",
+      "release_sha256": "4e009c8686fe18fefddc9f7497bec3ebecefca30dc25043033f7b6201498ba47",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_uav_navigation_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_uav_navigation_study.jsonc",
+      "source_sha256": "8a4257e313d09d8da9b9828332c78c356b5bd47db706288e53ff483c043e1aa5",
+      "release_sha256": "8a4257e313d09d8da9b9828332c78c356b5bd47db706288e53ff483c043e1aa5",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_uav_plaza.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_uav_plaza.jsonc",
+      "source_sha256": "fc793c8eea78f8fb1898e604ccf993d2ac82dbe0c08188b5dc2ee4cec19afd5b",
+      "release_sha256": "fc793c8eea78f8fb1898e604ccf993d2ac82dbe0c08188b5dc2ee4cec19afd5b",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_uav_tracking_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_uav_tracking_study.jsonc",
+      "source_sha256": "1af8b033b496e83820d73f158f78b297f3810395d037c16ec25561dabb911dc6",
+      "release_sha256": "1af8b033b496e83820d73f158f78b297f3810395d037c16ec25561dabb911dc6",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_ugv.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_ugv.jsonc",
+      "source_sha256": "770daedb2236ea30576d3e6bcfb68b381ceabe2c1bc581e97fc99adc5dae4094",
+      "release_sha256": "770daedb2236ea30576d3e6bcfb68b381ceabe2c1bc581e97fc99adc5dae4094",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_ugv_dense.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_ugv_dense.jsonc",
+      "source_sha256": "f584cde500ec0fba27c5240e580c18174a5c700304fef53aa12519fc54e9681e",
+      "release_sha256": "f584cde500ec0fba27c5240e580c18174a5c700304fef53aa12519fc54e9681e",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_ugv_formation_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_ugv_formation_study.jsonc",
+      "source_sha256": "8eb26c67ff002f6d2f39ac44c0d497d711393d1ca9c6b7d130ab5ce391c6e535",
+      "release_sha256": "8eb26c67ff002f6d2f39ac44c0d497d711393d1ca9c6b7d130ab5ce391c6e535",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_ugv_navigation_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_ugv_navigation_study.jsonc",
+      "source_sha256": "59c51c0820073157efe572432bd7ee57241f0034ff941f08efd2a580424414f3",
+      "release_sha256": "59c51c0820073157efe572432bd7ee57241f0034ff941f08efd2a580424414f3",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_ugv_plaza.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_ugv_plaza.jsonc",
+      "source_sha256": "bf1288101b5fcde08a4ae13403bf3aa9fd9eff5b1adc3d706b6dd9e916ba9654",
+      "release_sha256": "bf1288101b5fcde08a4ae13403bf3aa9fd9eff5b1adc3d706b6dd9e916ba9654",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/robot_ugv_tracking_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/robot_ugv_tracking_study.jsonc",
+      "source_sha256": "f123a6c0724deac896b4a58567bd525b958b5a55013152b9f77e158a548dcc5f",
+      "release_sha256": "f123a6c0724deac896b4a58567bd525b958b5a55013152b9f77e158a548dcc5f",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_formation.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_formation.jsonc",
+      "source_sha256": "527cfd6bf9f85795ae61e5be3385c0684261ade40c9390044b7493a011f22124",
+      "release_sha256": "527cfd6bf9f85795ae61e5be3385c0684261ade40c9390044b7493a011f22124",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_formation_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_formation_study.jsonc",
+      "source_sha256": "55aab7436358251b35ccca75627d353af6dc6d3ef5b2b5345ba310d7b6b0e6c4",
+      "release_sha256": "55aab7436358251b35ccca75627d353af6dc6d3ef5b2b5345ba310d7b6b0e6c4",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_mapping.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_mapping.jsonc",
+      "source_sha256": "387d9afbc380ad8021171e27d21e7c0294807e912c4e076a8ed6316da641de88",
+      "release_sha256": "387d9afbc380ad8021171e27d21e7c0294807e912c4e076a8ed6316da641de88",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_mapping_dense.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_mapping_dense.jsonc",
+      "source_sha256": "7d7c366f1c403631fc8979c1b9fac3baf7418911c33416e533d30b4d3a218251",
+      "release_sha256": "7d7c366f1c403631fc8979c1b9fac3baf7418911c33416e533d30b4d3a218251",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_mapping_plaza.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_mapping_plaza.jsonc",
+      "source_sha256": "d53e0bd71cfd0bb43bed31e73718499fe4e34a182e089b4a3cc88375e852fb7f",
+      "release_sha256": "d53e0bd71cfd0bb43bed31e73718499fe4e34a182e089b4a3cc88375e852fb7f",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_navigation.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_navigation.jsonc",
+      "source_sha256": "9ec932735bf8d222f7c4c62ec9685d7501539cfa9b12dd20ae4670452f642c75",
+      "release_sha256": "9ec932735bf8d222f7c4c62ec9685d7501539cfa9b12dd20ae4670452f642c75",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_navigation_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_navigation_study.jsonc",
+      "source_sha256": "6d42185a1cd1ae84800812cecda5e13f5d2b70607823132c3f1123485e8c11f3",
+      "release_sha256": "6d42185a1cd1ae84800812cecda5e13f5d2b70607823132c3f1123485e8c11f3",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_plaza_overview.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_plaza_overview.jsonc",
+      "source_sha256": "ee00a2d6b6b0cf78dec80a76e651c7e4b89ebf782de241a6c6f1e026a29ec3c8",
+      "release_sha256": "ee00a2d6b6b0cf78dec80a76e651c7e4b89ebf782de241a6c6f1e026a29ec3c8",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_region_survey.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_region_survey.jsonc",
+      "source_sha256": "c1c5307b9ea78f154584bed4e15d0c772fdce546419ca21e76a394672eb24be5",
+      "release_sha256": "c1c5307b9ea78f154584bed4e15d0c772fdce546419ca21e76a394672eb24be5",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_tracking.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_tracking.jsonc",
+      "source_sha256": "b8b21b5c8a23e93306f42971d7e063a2e60c99551afda9f011e2500d947c7a2e",
+      "release_sha256": "b8b21b5c8a23e93306f42971d7e063a2e60c99551afda9f011e2500d947c7a2e",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/scene_tracking_study.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/configs/scene_tracking_study.jsonc",
+      "source_sha256": "a9498de52a64c634749490df2fb49448c13838c7a710d93741a77df88b5eb59c",
+      "release_sha256": "a9498de52a64c634749490df2fb49448c13838c7a710d93741a77df88b5eb59c",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/landing/robot_observer.jsonc": {
+      "source": "MovingDeckLab/configs/landing/robot_observer.jsonc",
+      "source_sha256": "3a8d4cdb8e33626a8cccceae9632c92f6250d9b0ce9a1689178333acf66ca849",
+      "release_sha256": "3a8d4cdb8e33626a8cccceae9632c92f6250d9b0ce9a1689178333acf66ca849",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/landing/robot_uav.jsonc": {
+      "source": "MovingDeckLab/configs/landing/robot_uav.jsonc",
+      "source_sha256": "8e309453a211a474ee81381cb01a6037059523a5b18783b9d0d592368912f6be",
+      "release_sha256": "8e309453a211a474ee81381cb01a6037059523a5b18783b9d0d592368912f6be",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/landing/robot_usv.jsonc": {
+      "source": "MovingDeckLab/configs/landing/robot_usv.jsonc",
+      "source_sha256": "44f0af5cba1fb3907fde7320c889f662881a1972e4948b42d97fd38373ba72e6",
+      "release_sha256": "44f0af5cba1fb3907fde7320c889f662881a1972e4948b42d97fd38373ba72e6",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/landing/scene_landing.jsonc": {
+      "source": "MovingDeckLab/configs/landing/scene_landing.jsonc",
+      "source_sha256": "ab11803dbc72393d54c45b15554a1e9a21d5b5eda89d46e90e52558b13b269ff",
+      "release_sha256": "ab11803dbc72393d54c45b15554a1e9a21d5b5eda89d46e90e52558b13b269ff",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/mapping_plaza.json": {
+      "source": "ProjectAirSim_AG_Experiments/configs/mapping_plaza.json",
+      "source_sha256": "d892f9176d65c8e316bce4fe4731274f9d814b91bab859832f52ca4d57556a72",
+      "release_sha256": "eb619992684cf6fed1764cb1c5c0c1c1810cebb0abe01a028e9c21f67516ecda",
+      "release_bytes_equal_original": false
+    },
+    "experiments/configs/landing/study.json": {
+      "source": "MovingDeckLab/configs/landing/study.json",
+      "source_sha256": "955eea5adfdabceb01fec0ba8d3cf7a20c6f3d875373cdf89d3c283eddef2ccd",
+      "release_sha256": "b75431bc61e15e09397fed7a5cf01e41866b2596dea28d8525aa61170f2be711",
+      "release_bytes_equal_original": false
+    },
+    "experiments/citysample_scene/generated/aerial_route_scenario.json": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/generated/aerial_route_scenario.json",
+      "source_sha256": "26a8b8579eacc9cc72ad7b354ebd02fe8bfb0b259cbb1466e684487360c4e2d4",
+      "release_sha256": "26a8b8579eacc9cc72ad7b354ebd02fe8bfb0b259cbb1466e684487360c4e2d4",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/generated/scene_navigation_aerial_route.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/generated/scene_navigation_aerial_route.jsonc",
+      "source_sha256": "62f2f85f0dbaa077bc4df60db24731e3b5888bb4561b7863a0d57bcade8267ec",
+      "release_sha256": "62f2f85f0dbaa077bc4df60db24731e3b5888bb4561b7863a0d57bcade8267ec",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/generated/robot_ugv_aerial_route.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/generated/robot_ugv_aerial_route.jsonc",
+      "source_sha256": "e6108df674635616884b0ae01c2cd965cbcc164200471915292b8d13bda35bcf",
+      "release_sha256": "e6108df674635616884b0ae01c2cd965cbcc164200471915292b8d13bda35bcf",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/generated/pursuit_scenario.json": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/generated/pursuit_scenario.json",
+      "source_sha256": "49308fbaa84b85fbc4e3a79d13e5984f3d8f11363880b474c7b12f7fac004f6a",
+      "release_sha256": "49308fbaa84b85fbc4e3a79d13e5984f3d8f11363880b474c7b12f7fac004f6a",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/generated/scene_pursuit.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/generated/scene_pursuit.jsonc",
+      "source_sha256": "cc16fa25dc8a366f02f4f9887ec1ffa03f0e3e25727eb7dd9056de069e337a01",
+      "release_sha256": "cc16fa25dc8a366f02f4f9887ec1ffa03f0e3e25727eb7dd9056de069e337a01",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/generated/scene_pursuit_views.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/generated/scene_pursuit_views.jsonc",
+      "source_sha256": "3178a3eb49b49673c7157b63c3056bd71eb4f3af0bdd59af541b5d5b237ed1d0",
+      "release_sha256": "3178a3eb49b49673c7157b63c3056bd71eb4f3af0bdd59af541b5d5b237ed1d0",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/generated/pursuit_tracker_ugv.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/generated/pursuit_tracker_ugv.jsonc",
+      "source_sha256": "f131536259fdf839100844dda4560f05e74abd3df982aa17e04c5a91117894b1",
+      "release_sha256": "f131536259fdf839100844dda4560f05e74abd3df982aa17e04c5a91117894b1",
+      "release_bytes_equal_original": true
+    },
+    "experiments/tests/test_algorithms.py": {
+      "source": "ProjectAirSim_AG_Experiments/tests/test_algorithms.py",
+      "source_sha256": "96211a70964e2fcff0a3bbe0a049b7fbc35b2a91323ca40b31e316bc5e08575d",
+      "release_sha256": "96211a70964e2fcff0a3bbe0a049b7fbc35b2a91323ca40b31e316bc5e08575d",
+      "release_bytes_equal_original": true
+    },
+    "experiments/tests/test_cooperative_studies.py": {
+      "source": "ProjectAirSim_AG_Experiments/tests/test_cooperative_studies.py",
+      "source_sha256": "a6769d20023ac89761b33fc61408fd3a3fd69244d71ef038cc09d00e2ae555e5",
+      "release_sha256": "a6769d20023ac89761b33fc61408fd3a3fd69244d71ef038cc09d00e2ae555e5",
+      "release_bytes_equal_original": true
+    },
+    "experiments/tests/test_evidence_archive.py": {
+      "source": "ProjectAirSim_AG_Experiments/tests/test_evidence_archive.py",
+      "source_sha256": "d96cd3e4599ae06c963fa52fbf0c41a4de3c02f9beebc3794e72526be88ddad6",
+      "release_sha256": "d96cd3e4599ae06c963fa52fbf0c41a4de3c02f9beebc3794e72526be88ddad6",
+      "release_bytes_equal_original": true
+    },
+    "experiments/tests/test_figure_render.py": {
+      "source": "ProjectAirSim_AG_Experiments/tests/test_figure_render.py",
+      "source_sha256": "502d954120fae14695b1e890142ce14d49b12c41c1b1aec80b038fe843f21726",
+      "release_sha256": "502d954120fae14695b1e890142ce14d49b12c41c1b1aec80b038fe843f21726",
+      "release_bytes_equal_original": true
+    },
+    "experiments/tests/test_landing_core.py": {
+      "source": "ProjectAirSim_AG_Experiments/tests/test_landing_core.py",
+      "source_sha256": "071734c9dcd8f457f99a8ce4be77202ee09019b060eb6ea328f73f4e35b9b835",
+      "release_sha256": "071734c9dcd8f457f99a8ce4be77202ee09019b060eb6ea328f73f4e35b9b835",
+      "release_bytes_equal_original": true
+    },
+    "experiments/tests/test_plaza_reconstruction.py": {
+      "source": "ProjectAirSim_AG_Experiments/tests/test_plaza_reconstruction.py",
+      "source_sha256": "8c1d35f832bc20818dc96b91005427ee2f0b7865398035f2f3638a19033778db",
+      "release_sha256": "8c1d35f832bc20818dc96b91005427ee2f0b7865398035f2f3638a19033778db",
+      "release_bytes_equal_original": true
+    },
+    "experiments/tests/test_reconstruction.py": {
+      "source": "ProjectAirSim_AG_Experiments/tests/test_reconstruction.py",
+      "source_sha256": "19e52b981ca68375cb96acd20a5f62fe7403c5d2a63b8ac154734c0ff6ef5577",
+      "release_sha256": "19e52b981ca68375cb96acd20a5f62fe7403c5d2a63b8ac154734c0ff6ef5577",
+      "release_bytes_equal_original": true
+    },
+    "experiments/tests/test_scan_capture.py": {
+      "source": "ProjectAirSim_AG_Experiments/tests/test_scan_capture.py",
+      "source_sha256": "b9ad3853e4bd0b546fc02970e691274ada7e11d0028d74ebd6a8b3fa245ff015",
+      "release_sha256": "b9ad3853e4bd0b546fc02970e691274ada7e11d0028d74ebd6a8b3fa245ff015",
+      "release_bytes_equal_original": true
+    },
+    "experiments/tests/test_scene_figure.py": {
+      "source": "ProjectAirSim_AG_Experiments/tests/test_scene_figure.py",
+      "source_sha256": "f714fe968f0a707312e8495cff7d9aa178d5a02bf4ae8bc5d656668eb4dfc749",
+      "release_sha256": "f714fe968f0a707312e8495cff7d9aa178d5a02bf4ae8bc5d656668eb4dfc749",
+      "release_bytes_equal_original": true
+    },
+    "experiments/tests/test_structural_cloud.py": {
+      "source": "ProjectAirSim_AG_Experiments/tests/test_structural_cloud.py",
+      "source_sha256": "88b9fd474cd440581ccbf7f8e683a86df8c40af47e994ed2f6e0ae8ee2034fb5",
+      "release_sha256": "88b9fd474cd440581ccbf7f8e683a86df8c40af47e994ed2f6e0ae8ee2034fb5",
+      "release_bytes_equal_original": true
+    },
+    "experiments/configs/landing/tag_calibration.reference.json": {
+      "source": "ProjectAirSim_AG_Experiments/archives/moving_deck_verified_20260928_v2/suite/trial_001_v0.50_predictive/source_snapshot/outputs/landing/20260928_062726_457859/trial_001_v0.00_predictive/derived/tag_calibration.json",
+      "source_sha256": "29ccbb69223b4faf160236f3247b4f726c0292dc10e316442066615c271d5df1",
+      "release_sha256": "ca7754855eedf6a517108f6c8ca4a15b3a79cab5be3faeb38ea1c4709b2dac77",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/main/overlay/client/python/projectairsim/src/projectairsim/client.py": {
+      "source": "ProjectAirSim/client/python/projectairsim/src/projectairsim/client.py",
+      "source_sha256": "a6b9da8fa6096266d43857f2205cff76dabdab9adb855262d4683b028a0a22cc",
+      "release_sha256": "a6b9da8fa6096266d43857f2205cff76dabdab9adb855262d4683b028a0a22cc",
+      "release_bytes_equal_original": true
+    },
+    "native/profiles/main/overlay/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc": {
+      "source": "ProjectAirSim/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc",
+      "source_sha256": "29a9c5fb4ada1f983d8b073922a9892cb2caf2331ac854b744013bd40c29e498",
+      "release_sha256": "a7d9a3a07f652a00d914b5dbcdcf7ea409b4f8c5ab4c1f174a012eb8598a3797",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/main/overlay/client/python/projectairsim/src/projectairsim/utils.py": {
+      "source": "ProjectAirSim/client/python/projectairsim/src/projectairsim/utils.py",
+      "source_sha256": "4c5b802fc172b1a2947cf65447b415fd013bc54a2aaa254291042efef92e2a2a",
+      "release_sha256": "4c5b802fc172b1a2947cf65447b415fd013bc54a2aaa254291042efef92e2a2a",
+      "release_bytes_equal_original": true
+    },
+    "native/profiles/main/overlay/core_sim/include/core_sim/actor.hpp": {
+      "source": "ProjectAirSim/core_sim/include/core_sim/actor.hpp",
+      "source_sha256": "4dec25f8f5833de18384e3eb0f53d442e04789953cfe2efd87dc02f204d2312e",
+      "release_sha256": "fa1d2bc01fd6a0f86f4b3414c1cfa357fb81269cb6765e078c7d186eaa4230e0",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/main/overlay/core_sim/include/core_sim/actor/vessel_actor.hpp": {
+      "source": "ProjectAirSim/core_sim/include/core_sim/actor/vessel_actor.hpp",
+      "source_sha256": "764ce292796cbf2f7c5a434673be9442e3f887d946f3697401b04b6d7771b53f",
+      "release_sha256": "cf995c0b625fbc3b85372da07ca32589fa8087cc7530bfd36cab8edbff8fe85f",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/main/overlay/core_sim/src/CMakeLists.txt": {
+      "source": "ProjectAirSim/core_sim/src/CMakeLists.txt",
+      "source_sha256": "a3975b4241fce48008f77e7cf9c03bc49737ac8b42c89fb9f65ead7d8b19349d",
+      "release_sha256": "71a50827d19ab8d561079c1262f28006fc1fee0a23d0160a7076b17f4e937f0e",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/main/overlay/core_sim/src/actor/vessel_actor.cpp": {
+      "source": "ProjectAirSim/core_sim/src/actor/vessel_actor.cpp",
+      "source_sha256": "5c8fcc1f2ca36545f0aeb816e996c4a21d6c167b675a2fa11b36882d8bc1c176",
+      "release_sha256": "fb3e97fe785ffccb15f0d6176f1acd85a971a55c2866e0ccf099910ebadd3683",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/main/overlay/core_sim/src/constant.hpp": {
+      "source": "ProjectAirSim/core_sim/src/constant.hpp",
+      "source_sha256": "e6c1c63db6300e9f80d1e12ccb91f02964b9f3afee7726d298c83b465939584c",
+      "release_sha256": "4472098d9254a192124c4f79bab8b9011bfc47688057ef4a339092d215d35ce5",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/main/overlay/core_sim/src/scene.cpp": {
+      "source": "ProjectAirSim/core_sim/src/scene.cpp",
+      "source_sha256": "bb5db3c8d0242bc263d8a9400ee7e5554c7a63a8eee93614d1c28f459c757cde",
+      "release_sha256": "bb5db3c8d0242bc263d8a9400ee7e5554c7a63a8eee93614d1c28f459c757cde",
+      "release_bytes_equal_original": true
+    },
+    "native/profiles/moving-deck/overlay/client/python/projectairsim/src/projectairsim/client.py": {
+      "source": "MovingDeckLab/source/client/python/projectairsim/src/projectairsim/client.py",
+      "source_sha256": "a6b9da8fa6096266d43857f2205cff76dabdab9adb855262d4683b028a0a22cc",
+      "release_sha256": "a6b9da8fa6096266d43857f2205cff76dabdab9adb855262d4683b028a0a22cc",
+      "release_bytes_equal_original": true
+    },
+    "native/profiles/moving-deck/overlay/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc": {
+      "source": "MovingDeckLab/source/client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc",
+      "source_sha256": "29a9c5fb4ada1f983d8b073922a9892cb2caf2331ac854b744013bd40c29e498",
+      "release_sha256": "a7d9a3a07f652a00d914b5dbcdcf7ea409b4f8c5ab4c1f174a012eb8598a3797",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/client/python/projectairsim/src/projectairsim/utils.py": {
+      "source": "MovingDeckLab/source/client/python/projectairsim/src/projectairsim/utils.py",
+      "source_sha256": "4c5b802fc172b1a2947cf65447b415fd013bc54a2aaa254291042efef92e2a2a",
+      "release_sha256": "4c5b802fc172b1a2947cf65447b415fd013bc54a2aaa254291042efef92e2a2a",
+      "release_bytes_equal_original": true
+    },
+    "native/profiles/moving-deck/overlay/core_sim/include/core_sim/actor.hpp": {
+      "source": "MovingDeckLab/source/core_sim/include/core_sim/actor.hpp",
+      "source_sha256": "4dec25f8f5833de18384e3eb0f53d442e04789953cfe2efd87dc02f204d2312e",
+      "release_sha256": "fa1d2bc01fd6a0f86f4b3414c1cfa357fb81269cb6765e078c7d186eaa4230e0",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/core_sim/include/core_sim/actor/robot.hpp": {
+      "source": "MovingDeckLab/source/core_sim/include/core_sim/actor/robot.hpp",
+      "source_sha256": "4cae1bbbab6c036d7815b228b16313ca89b2533581b2b8dd2e6a959dae625e15",
+      "release_sha256": "11f8fffde6753a6dd190ff5a1db521db6072002a59d8ecefa8f02e7164c8d265",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/core_sim/include/core_sim/actor/vessel_actor.hpp": {
+      "source": "MovingDeckLab/source/core_sim/include/core_sim/actor/vessel_actor.hpp",
+      "source_sha256": "764ce292796cbf2f7c5a434673be9442e3f887d946f3697401b04b6d7771b53f",
+      "release_sha256": "cf995c0b625fbc3b85372da07ca32589fa8087cc7530bfd36cab8edbff8fe85f",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/core_sim/include/core_sim/physics_common_types.hpp": {
+      "source": "MovingDeckLab/source/core_sim/include/core_sim/physics_common_types.hpp",
+      "source_sha256": "0c67bd74853db880b82c9ca44075fe7f520fb8453bb9c8665e8d1e89647ae065",
+      "release_sha256": "9c3ad57af904c591cf14b397dc4a828f6abf18a90573fc45edd5949fb8b1ecfb",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/core_sim/src/CMakeLists.txt": {
+      "source": "MovingDeckLab/source/core_sim/src/CMakeLists.txt",
+      "source_sha256": "a3975b4241fce48008f77e7cf9c03bc49737ac8b42c89fb9f65ead7d8b19349d",
+      "release_sha256": "71a50827d19ab8d561079c1262f28006fc1fee0a23d0160a7076b17f4e937f0e",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/core_sim/src/actor/robot.cpp": {
+      "source": "MovingDeckLab/source/core_sim/src/actor/robot.cpp",
+      "source_sha256": "9786483181ec678652624badc4414501b9c4a6191da98fd4129c376f930ff3cb",
+      "release_sha256": "a9df90ac0a27da4eaf4a7e5152fd0b7540d2a748e08f0b7ea1e077a98be85862",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/core_sim/src/actor/vessel_actor.cpp": {
+      "source": "MovingDeckLab/source/core_sim/src/actor/vessel_actor.cpp",
+      "source_sha256": "5c8fcc1f2ca36545f0aeb816e996c4a21d6c167b675a2fa11b36882d8bc1c176",
+      "release_sha256": "fb3e97fe785ffccb15f0d6176f1acd85a971a55c2866e0ccf099910ebadd3683",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/core_sim/src/constant.hpp": {
+      "source": "MovingDeckLab/source/core_sim/src/constant.hpp",
+      "source_sha256": "e6c1c63db6300e9f80d1e12ccb91f02964b9f3afee7726d298c83b465939584c",
+      "release_sha256": "4472098d9254a192124c4f79bab8b9011bfc47688057ef4a339092d215d35ce5",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/core_sim/src/message/collision_info_message.cpp": {
+      "source": "MovingDeckLab/source/core_sim/src/message/collision_info_message.cpp",
+      "source_sha256": "3004044289fc92a278c92d7169eb194b4f0789d15d41189c48d65151961946d4",
+      "release_sha256": "b515e858dc5cb90f57ca7c98160441c9a71b3d572969b104a1c002956b3f505c",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/core_sim/src/scene.cpp": {
+      "source": "MovingDeckLab/source/core_sim/src/scene.cpp",
+      "source_sha256": "07da8ac578d25843577ba0649883a30719156167304ada5e36f8cabaf659d560",
+      "release_sha256": "0adfe2f2b49f50e42538f6c0ba760ebb02fa56ac24392d7ed0caeeecd1e14677",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/physics/include/support_contact.hpp": {
+      "source": "MovingDeckLab/source/physics/include/support_contact.hpp",
+      "source_sha256": "012fbe79729eafc2a7efd545cd460a89857054ab740cfa8042f9ddfeb26ab4d8",
+      "release_sha256": "012fbe79729eafc2a7efd545cd460a89857054ab740cfa8042f9ddfeb26ab4d8",
+      "release_bytes_equal_original": true
+    },
+    "native/profiles/moving-deck/overlay/physics/src/fast_physics.cpp": {
+      "source": "MovingDeckLab/source/physics/src/fast_physics.cpp",
+      "source_sha256": "c23b63cdc465839dc2dc3fa6dd458f0a1f2b2457e4bce8ebce88d1efb651d9c1",
+      "release_sha256": "83be4b38532777ed23ea59bf8a1c51dc66dbeeaa2a7134954a2e986d898b6938",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/physics/test/gtest_fast_physics.cpp": {
+      "source": "MovingDeckLab/source/physics/test/gtest_fast_physics.cpp",
+      "source_sha256": "ed67330ccfab1997f288988236335b9bbf8ff4ce5554fa2e46ebf9597393dd47",
+      "release_sha256": "7437c72dee90175fcba2c75c4f44e9c008b83f510550cfd3221a843c17e0180a",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.cpp": {
+      "source": "MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.cpp",
+      "source_sha256": "0818ef89f28529a1078ac765aabd21657c967d555491c207c9d4055180b9d017",
+      "release_sha256": "c43027c9a76b8ed3665001aede9008900cb1b09420e6740a73fe32bc6b97aca1",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.h": {
+      "source": "MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobot.h",
+      "source_sha256": "f707bb83809387ce24ad141abd0147651020fead16aecb8a047772b6c5d23361",
+      "release_sha256": "81417500f3c8e2e89ad7132fa6b54bdf796c237fa7b2d01fbc3394f68139de9a",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.cpp": {
+      "source": "MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.cpp",
+      "source_sha256": "7efb98cacf82a0322a071abdf83c3317242d5fa86f742f43ad8758502728b28e",
+      "release_sha256": "af3a941c1b37d03d5f4f06c3be97da135cbca61d22abe6eb4483ac4960bb50ec",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.h": {
+      "source": "MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Robot/UnrealRobotLink.h",
+      "source_sha256": "d3dda9f13c9ed78b067c717cdf1386bb662204f4f887a45203ce86e22c26331a",
+      "release_sha256": "d9ccb0ec5c57ca6d481d469cc46b9f19d7e515fc7af28a03f38c6705c27533a5",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Sensors/UnrealCamera.cpp": {
+      "source": "MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/Sensors/UnrealCamera.cpp",
+      "source_sha256": "6986295bfbb2fac4665866c72631041ffb2bf66b3f56e40d2942ac27c05e11ab",
+      "release_sha256": "210ffd6b2e0c13ac0f5805c54f1a7b48e40065a4cfe982d0ee6dc97a5c1db39b",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/unreal/Blocks/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/World/WorldSimApi.cpp": {
+      "source": "MovingDeckLab/CityPark2/Plugins/ProjectAirSim/Source/ProjectAirSim/Private/World/WorldSimApi.cpp",
+      "source_sha256": "76e35188ceb4661797505ada5400a28fc868c30718f37c7cb91792fa359ee100",
+      "release_sha256": "76e35188ceb4661797505ada5400a28fc868c30718f37c7cb91792fa359ee100",
+      "release_bytes_equal_original": true
+    },
+    "native/profiles/moving-deck/overlay/vehicle_apis/multirotor_api/include/simple_flight/firmware/Firmware.hpp": {
+      "source": "MovingDeckLab/source/vehicle_apis/multirotor_api/include/simple_flight/firmware/Firmware.hpp",
+      "source_sha256": "83eb866ff1c4faeceedb22c8b4d50fccfb775ec3397cbb05dfe1bf9fdf8facf9",
+      "release_sha256": "624132ee82d4f7abb6f8f7db2b372bf6b5f28c80caa7c64c272f2a1c191a4750",
+      "release_bytes_equal_original": false
+    },
+    "native/profiles/moving-deck/overlay/vehicle_apis/multirotor_api/include/simple_flight/firmware/OffboardApi.hpp": {
+      "source": "MovingDeckLab/source/vehicle_apis/multirotor_api/include/simple_flight/firmware/OffboardApi.hpp",
+      "source_sha256": "e14bb7efa01f36855a7f49401642f5e2f0fddc240e625fa516107c3ce561ec3a",
+      "release_sha256": "2b6de33bbe54dad9a18ec085e9510ae1c188f7ebebce67e02b0ab21753ab6a0c",
+      "release_bytes_equal_original": false
+    },
+    "research_drafts/physics/src/vessel_physics.cpp": {
+      "source": "ProjectAirSim/physics/src/vessel_physics.cpp",
+      "source_sha256": "9097a378891cf02b4b9b65c6885e360b325cbdf950c2b3abcecb2bb51526bc4f",
+      "release_sha256": "9097a378891cf02b4b9b65c6885e360b325cbdf950c2b3abcecb2bb51526bc4f",
+      "release_bytes_equal_original": true
+    },
+    "research_drafts/physics/include/physics/vessel_physics.hpp": {
+      "source": "ProjectAirSim/physics/include/physics/vessel_physics.hpp",
+      "source_sha256": "6c612060558fe95af4200aca475cc79bede08979561d76621ae642be17623974",
+      "release_sha256": "6c612060558fe95af4200aca475cc79bede08979561d76621ae642be17623974",
+      "release_bytes_equal_original": true
+    },
+    "research_drafts/core_sim/include/core_sim/sensors/maritime_radar.hpp": {
+      "source": "ProjectAirSim/core_sim/include/core_sim/sensors/maritime_radar.hpp",
+      "source_sha256": "885429b23d72f03556e4263c4bb84a2f2ff2ff990b88544b2eb16d832bc00217",
+      "release_sha256": "885429b23d72f03556e4263c4bb84a2f2ff2ff990b88544b2eb16d832bc00217",
+      "release_bytes_equal_original": true
+    },
+    "research_drafts/vehicle_apis/vessel_api/include/vessel_api_service.hpp": {
+      "source": "ProjectAirSim/vehicle_apis/vessel_api/include/vessel_api_service.hpp",
+      "source_sha256": "affd306d48275311d25d924446581b038d75ad67759fcb3b6ba683d985818a68",
+      "release_sha256": "affd306d48275311d25d924446581b038d75ad67759fcb3b6ba683d985818a68",
+      "release_bytes_equal_original": true
+    },
+    "native/tests/firmware_disarm_tests.cpp": {
+      "source": "MovingDeckLab/tests/firmware_disarm_tests.cpp",
+      "source_sha256": "775a7f196c782f7013358aab6c58955fb97a36b4ba8e49eefea4f9c262e04337",
+      "release_sha256": "775a7f196c782f7013358aab6c58955fb97a36b4ba8e49eefea4f9c262e04337",
+      "release_bytes_equal_original": true
+    },
+    "native/tests/support_contact_tests.cpp": {
+      "source": "MovingDeckLab/tests/support_contact_tests.cpp",
+      "source_sha256": "b1c37a4c2cf825d2e28a7c258f007fab584b7775879e82f3bad8a92926438cad",
+      "release_sha256": "b1c37a4c2cf825d2e28a7c258f007fab584b7775879e82f3bad8a92926438cad",
+      "release_bytes_equal_original": true
+    },
+    "native/citysample/AGZoneGraphExport.cpp": {
+      "source": "CitySample/Source/CitySample/Util/AGZoneGraphExport.cpp",
+      "source_sha256": "662a79b8d807c236ffb614155200a0a3112cf50129aa4ea7edc1592ab3091199",
+      "release_sha256": "662a79b8d807c236ffb614155200a0a3112cf50129aa4ea7edc1592ab3091199",
+      "release_bytes_equal_original": true
+    },
+    "licenses/ProjectAirSim.LICENSE": {
+      "source": "ProjectAirSim/LICENSE",
+      "source_sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b",
+      "release_sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b",
+      "release_bytes_equal_original": true
+    },
+    "licenses/ProjectAirSim.NOTICE.txt": {
+      "source": "ProjectAirSim/NOTICE.txt",
+      "source_sha256": "52d180a6eb3a9d85776057cfdf61a1321a7c7b2e8274a6c4ae254dd2c73d98e7",
+      "release_sha256": "52d180a6eb3a9d85776057cfdf61a1321a7c7b2e8274a6c4ae254dd2c73d98e7",
+      "release_bytes_equal_original": true
+    },
+    "experiments/citysample_scene/annotate_district_navigation.py": {
+      "source": "ProjectAirSim_AG_Experiments/citysample_scene/annotate_district_navigation.py",
+      "source_sha256": "9ea42a54517342b4514d5b13fdce0424a38aff66eef6ee70e7db5fef0a596592",
+      "release_sha256": "997d62e2cc7dfbf98e6d9dbbd131b8c686ad2496943c44675ad51e788acf01f5",
+      "release_bytes_equal_original": false
+    },
+    "experiments/prepare_plaza_configs.py": {
+      "source": "ProjectAirSim_AG_Experiments/prepare_plaza_configs.py",
+      "source_sha256": "31496bf5726354d3299dc819c293d9e162098a0dd03b1c87806822f8a7e132d7",
+      "release_sha256": "31496bf5726354d3299dc819c293d9e162098a0dd03b1c87806822f8a7e132d7",
+      "release_bytes_equal_original": true
+    },
+    "experiments/urban_scene/observer_probe.jsonc": {
+      "source": "ProjectAirSim_AG_Experiments/urban_scene/observer_probe.jsonc",
+      "source_sha256": "185ca37cdb9a169f6bbca890578e5bb6a10cdccfc530bd6fe3d9610ba901e1f0",
+      "release_sha256": "185ca37cdb9a169f6bbca890578e5bb6a10cdccfc530bd6fe3d9610ba901e1f0",
+      "release_bytes_equal_original": true
+    }
+  }
+}

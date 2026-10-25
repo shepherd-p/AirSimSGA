@@ -1,0 +1,687 @@
+{
+  "id": "AirSimSGAReferenceHeadingLandingRun",
+  "actors": [
+    {
+      "type": "robot",
+      "name": "Drone1",
+      "origin": {
+        "xyz": "33.0 40.0 -2.0",
+        "rpy-deg": "0 0 0"
+      },
+      "robot-config": {
+        "physics-type": "fast-physics",
+        "links": [
+          {
+            "name": "Frame",
+            "inertial": {
+              "mass": 1.0,
+              "inertia": {
+                "type": "geometry",
+                "geometry": {
+                  "box": {
+                    "size": "0.180 0.110 0.040"
+                  }
+                }
+              },
+              "aerodynamics": {
+                "drag-coefficient": 0.325,
+                "type": "geometry",
+                "geometry": {
+                  "box": {
+                    "size": "0.180 0.110 0.040"
+                  }
+                }
+              }
+            },
+            "collision": {
+              "restitution": 0.1,
+              "friction": 0.5
+            },
+            "visual": {
+              "geometry": {
+                "type": "unreal_mesh",
+                "name": "/Drone/Quadrotor1"
+              }
+            }
+          },
+          {
+            "name": "Prop_FL",
+            "inertial": {
+              "origin": {
+                "xyz": "0.253 -0.253 -0.01",
+                "rpy-deg": "0 0 0"
+              },
+              "mass": 0.055,
+              "inertia": {
+                "type": "point-mass"
+              }
+            },
+            "visual": {
+              "origin": {
+                "xyz": "0.253 -0.253 -0.01",
+                "rpy-deg": "0 0 0"
+              },
+              "geometry": {
+                "type": "unreal_mesh",
+                "name": "/Drone/PropellerRed"
+              }
+            }
+          },
+          {
+            "name": "Prop_FR",
+            "inertial": {
+              "origin": {
+                "xyz": "0.253 0.253 -0.01",
+                "rpy-deg": "0 0 0"
+              },
+              "mass": 0.055,
+              "inertia": {
+                "type": "point-mass"
+              }
+            },
+            "visual": {
+              "origin": {
+                "xyz": "0.253 0.253 -0.01",
+                "rpy-deg": "0 0 0"
+              },
+              "geometry": {
+                "type": "unreal_mesh",
+                "name": "/Drone/PropellerRed"
+              }
+            }
+          },
+          {
+            "name": "Prop_RL",
+            "inertial": {
+              "origin": {
+                "xyz": "-0.253 -0.253 -0.01",
+                "rpy-deg": "0 0 0"
+              },
+              "mass": 0.055,
+              "inertia": {
+                "type": "point-mass"
+              }
+            },
+            "visual": {
+              "origin": {
+                "xyz": "-0.253 -0.253 -0.01",
+                "rpy-deg": "0 0 0"
+              },
+              "geometry": {
+                "type": "unreal_mesh",
+                "name": "/Drone/PropellerWhite"
+              }
+            }
+          },
+          {
+            "name": "Prop_RR",
+            "inertial": {
+              "origin": {
+                "xyz": "-0.253 0.253 -0.01",
+                "rpy-deg": "0 0 0"
+              },
+              "mass": 0.055,
+              "inertia": {
+                "type": "point-mass"
+              }
+            },
+            "visual": {
+              "origin": {
+                "xyz": "-0.253 0.253 -0.01",
+                "rpy-deg": "0 0 0"
+              },
+              "geometry": {
+                "type": "unreal_mesh",
+                "name": "/Drone/PropellerWhite"
+              }
+            }
+          }
+        ],
+        "joints": [
+          {
+            "id": "Frame_Prop_FL",
+            "type": "fixed",
+            "parent-link": "Frame",
+            "child-link": "Prop_FL",
+            "axis": "0 0 1"
+          },
+          {
+            "id": "Frame_Prop_FR",
+            "type": "fixed",
+            "parent-link": "Frame",
+            "child-link": "Prop_FR",
+            "axis": "0 0 1"
+          },
+          {
+            "id": "Frame_Prop_RL",
+            "type": "fixed",
+            "parent-link": "Frame",
+            "child-link": "Prop_RL",
+            "axis": "0 0 1"
+          },
+          {
+            "id": "Frame_Prop_RR",
+            "type": "fixed",
+            "parent-link": "Frame",
+            "child-link": "Prop_RR",
+            "axis": "0 0 1"
+          }
+        ],
+        "controller": {
+          "id": "Simple_Flight_Controller",
+          "airframe-setup": "quadrotor-x",
+          "type": "simple-flight-api",
+          "simple-flight-api-settings": {
+            "actuator-order": [
+              {
+                "id": "Prop_FR_actuator"
+              },
+              {
+                "id": "Prop_RL_actuator"
+              },
+              {
+                "id": "Prop_FL_actuator"
+              },
+              {
+                "id": "Prop_RR_actuator"
+              }
+            ]
+          }
+        },
+        "actuators": [
+          {
+            "name": "Prop_FL_actuator",
+            "type": "rotor",
+            "enabled": true,
+            "parent-link": "Frame",
+            "child-link": "Prop_FL",
+            "origin": {
+              "xyz": "0.253 -0.253 -0.01",
+              "rpy-deg": "0 0 0"
+            },
+            "rotor-settings": {
+              "turning-direction": "clock-wise",
+              "normal-vector": "0.0 0.0 -1.0",
+              "coeff-of-thrust": 0.109919,
+              "coeff-of-torque": 0.040164,
+              "max-rpm": 6396.667,
+              "propeller-diameter": 0.2286,
+              "smoothing-tc": 0.005
+            }
+          },
+          {
+            "name": "Prop_FR_actuator",
+            "type": "rotor",
+            "enabled": true,
+            "parent-link": "Frame",
+            "child-link": "Prop_FR",
+            "origin": {
+              "xyz": "0.253 0.253 -0.01",
+              "rpy-deg": "0 0 0"
+            },
+            "rotor-settings": {
+              "turning-direction": "counter-clock-wise",
+              "normal-vector": "0.0 0.0 -1.0",
+              "coeff-of-thrust": 0.109919,
+              "coeff-of-torque": 0.040164,
+              "max-rpm": 6396.667,
+              "propeller-diameter": 0.2286,
+              "smoothing-tc": 0.005
+            }
+          },
+          {
+            "name": "Prop_RL_actuator",
+            "type": "rotor",
+            "enabled": true,
+            "parent-link": "Frame",
+            "child-link": "Prop_RL",
+            "origin": {
+              "xyz": "-0.253 -0.253 -0.01",
+              "rpy-deg": "0 0 0"
+            },
+            "rotor-settings": {
+              "turning-direction": "counter-clock-wise",
+              "normal-vector": "0.0 0.0 -1.0",
+              "coeff-of-thrust": 0.109919,
+              "coeff-of-torque": 0.040164,
+              "max-rpm": 6396.667,
+              "propeller-diameter": 0.2286,
+              "smoothing-tc": 0.005
+            }
+          },
+          {
+            "name": "Prop_RR_actuator",
+            "type": "rotor",
+            "enabled": true,
+            "parent-link": "Frame",
+            "child-link": "Prop_RR",
+            "origin": {
+              "xyz": "-0.253 0.253 -0.01",
+              "rpy-deg": "0 0 0"
+            },
+            "rotor-settings": {
+              "turning-direction": "clock-wise",
+              "normal-vector": "0.0 0.0 -1.0",
+              "coeff-of-thrust": 0.109919,
+              "coeff-of-torque": 0.040164,
+              "max-rpm": 6396.667,
+              "propeller-diameter": 0.2286,
+              "smoothing-tc": 0.005
+            }
+          }
+        ],
+        "sensors": [
+          {
+            "id": "DownCamera",
+            "type": "camera",
+            "enabled": true,
+            "parent-link": "Frame",
+            "capture-interval": 0.025,
+            "capture-settings": [
+              {
+                "image-type": 0,
+                "width": 1920,
+                "height": 1440,
+                "fov-degrees": 120,
+                "capture-enabled": true,
+                "streaming-enabled": true,
+                "pixels-as-float": false,
+                "compress": false
+              }
+            ],
+            "origin": {
+              "xyz": "0.0 0.0 0.0",
+              "rpy-deg": "0 -90 0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "robot",
+      "name": "Vessel1",
+      "origin": {
+        "xyz": "29.0 20.0 8.8",
+        "rpy-deg": "0 0 -90"
+      },
+      "robot-config": {
+        "physics-type": "non-physics",
+        "links": [
+          {
+            "name": "hull",
+            "inertial": {
+              "mass": 750.0,
+              "inertia": {
+                "type": "matrix",
+                "geometry": {
+                  "box": {
+                    "size": "5.0 2.0 1.0"
+                  }
+                }
+              }
+            },
+            "collision": {
+              "restitution": 0.0,
+              "friction": 0.5,
+              "enabled": false
+            }
+          },
+          {
+            "name": "landing_tag",
+            "visual": {
+              "origin": {
+                "xyz": "3.0 -0.0 -2.77",
+                "rpy-deg": "0 0 0"
+              },
+              "geometry": {
+                "type": "unreal_mesh",
+                "name": "/Game/Models/Vessel/Apriltag/Game/CityPark/Maps/_GENERATED/Stephen/SM_Apriltag_1_Plane",
+                "scale": "0.45 0.5319 0.3"
+              }
+            },
+            "inertial": {
+              "mass": 0.01,
+              "inertia": {
+                "type": "point-mass"
+              }
+            },
+            "collision": {
+              "enabled": false
+            }
+          },
+          {
+            "name": "landing_support",
+            "inertial": {
+              "mass": 0.1,
+              "inertia": {
+                "type": "point-mass"
+              }
+            },
+            "collision": {
+              "enabled": true,
+              "restitution": 0.02,
+              "friction": 0.85
+            },
+            "visual": {
+              "origin": {
+                "xyz": "3.0 -0.0 -2.75",
+                "rpy-deg": "0 0 0"
+              },
+              "geometry": {
+                "type": "unreal_mesh",
+                "scale": "2.2 1.6 1.0",
+                "name": "/Game/Models/Vessel/Apriltag/Game/CityPark/Maps/_GENERATED/Stephen/SM_Landing_Tag"
+              }
+            }
+          },
+          {
+            "name": "hull_visual",
+            "visual": {
+              "origin": {
+                "xyz": "0 0 0",
+                "rpy-deg": "0 0 180"
+              },
+              "geometry": {
+                "type": "unreal_mesh",
+                "name": "/Game/Models/Vessel/Boat"
+              }
+            },
+            "inertial": {
+              "mass": 0.01,
+              "inertia": {
+                "type": "point-mass"
+              }
+            },
+            "collision": {
+              "enabled": false
+            }
+          }
+        ],
+        "joints": [
+          {
+            "id": "hull_landing_tag",
+            "type": "fixed",
+            "parent-link": "hull",
+            "child-link": "landing_tag",
+            "axis": "0 0 1"
+          },
+          {
+            "id": "hull_support",
+            "type": "fixed",
+            "parent-link": "hull",
+            "child-link": "landing_support",
+            "axis": "0 0 1"
+          },
+          {
+            "id": "hull_visual_fixed",
+            "type": "fixed",
+            "parent-link": "hull",
+            "child-link": "hull_visual",
+            "axis": "0 0 1"
+          }
+        ],
+        "sensors": [],
+        "robot-type": "vessel",
+        "environment": {
+          "water_level": 8.8,
+          "wave_interaction": false,
+          "current_interaction": false,
+          "wind_interaction": false
+        },
+        "vessel": {
+          "physics": {
+            "engine": "vessel_physics",
+            "mass": 750.0,
+            "inertia": {
+              "xx": 100.0,
+              "yy": 500.0,
+              "zz": 400.0
+            },
+            "center_of_mass": [
+              0.0,
+              0.0,
+              -0.2
+            ],
+            "center_of_buoyancy": [
+              0.0,
+              0.0,
+              -0.1
+            ],
+            "hydrodynamics": {
+              "model": "fossen_3dof",
+              "added_mass": {
+                "xu_dot": -25.0,
+                "yv_dot": -240.0,
+                "nr_dot": -50.0
+              },
+              "linear_damping": {
+                "xu": -70.0,
+                "yv": -100.0,
+                "nr": -50.0
+              },
+              "quadratic_damping": {
+                "xu_abs_u": -135.0,
+                "yv_abs_v": -2000.0,
+                "nr_abs_r": -50.0
+              }
+            }
+          },
+          "actuators": {
+            "thrusters": [
+              {
+                "name": "bow_thruster",
+                "type": "tunnel",
+                "max_force": 200.0,
+                "position": [
+                  2.0,
+                  0.0,
+                  -0.5
+                ],
+                "orientation": [
+                  0.0,
+                  0.0,
+                  90.0
+                ]
+              },
+              {
+                "name": "main_thruster_port",
+                "type": "azimuth",
+                "max_force": 500.0,
+                "position": [
+                  -2.0,
+                  -0.5,
+                  -0.5
+                ],
+                "orientation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "azimuth_range": [
+                  -45.0,
+                  45.0
+                ]
+              },
+              {
+                "name": "main_thruster_starboard",
+                "type": "azimuth",
+                "max_force": 500.0,
+                "position": [
+                  -2.0,
+                  0.5,
+                  -0.5
+                ],
+                "orientation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "azimuth_range": [
+                  -45.0,
+                  45.0
+                ]
+              }
+            ]
+          },
+          "sensors": [
+            {
+              "name": "imu",
+              "type": "imu",
+              "enabled": true,
+              "position": [
+                0.0,
+                0.0,
+                0.5
+              ],
+              "orientation": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "gps",
+              "type": "gps",
+              "enabled": true,
+              "position": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "orientation": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "noise": {
+                "position": 0.1,
+                "velocity": 0.05
+              }
+            },
+            {
+              "name": "maritime_radar",
+              "type": "maritime_radar",
+              "enabled": true,
+              "position": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "orientation": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "parameters": {
+                "range_max": 5000.0,
+                "range_min": 10.0,
+                "azimuth_fov": 360.0,
+                "range_resolution": 1.0,
+                "azimuth_resolution": 1.0,
+                "update_rate": 10.0,
+                "psf_enabled": true
+              }
+            },
+            {
+              "name": "front_camera",
+              "type": "camera",
+              "enabled": true,
+              "position": [
+                1.5,
+                0.0,
+                1.0
+              ],
+              "orientation": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "parameters": {
+                "width": 1920,
+                "height": 1080,
+                "fov": 90.0
+              }
+            }
+          ],
+          "environment": {
+            "water_level": 8.8,
+            "wave_interaction": true,
+            "current_interaction": true,
+            "wind_interaction": true
+          }
+        }
+      }
+    },
+    {
+      "name": "Observer",
+      "type": "robot",
+      "robot-config": {
+        "physics-type": "non-physics",
+        "links": [
+          {
+            "name": "Frame",
+            "collision": {
+              "enabled": false
+            }
+          }
+        ],
+        "sensors": [
+          {
+            "id": "Overview",
+            "type": "camera",
+            "enabled": true,
+            "parent-link": "Frame",
+            "origin": {
+              "xyz": "0 0 0",
+              "rpy-deg": "0 0 0"
+            },
+            "capture-interval": 0.025,
+            "capture-settings": [
+              {
+                "image-type": 0,
+                "width": 1280,
+                "height": 720,
+                "fov-degrees": 65,
+                "capture-enabled": true,
+                "streaming-enabled": true,
+                "pixels-as-float": false,
+                "compress": false
+              },
+              {
+                "image-type": 3,
+                "width": 1280,
+                "height": 720,
+                "fov-degrees": 65,
+                "capture-enabled": true,
+                "streaming-enabled": true,
+                "pixels-as-float": false,
+                "compress": false
+              }
+            ]
+          }
+        ]
+      },
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy-deg": "0 0 0"
+      }
+    }
+  ],
+  "clock": {
+    "type": "steppable",
+    "step-ns": 5000000,
+    "real-time-update-rate": 40000000,
+    "pause-on-start": true
+  },
+  "home-geo-point": {
+    "latitude": 47.641468,
+    "longitude": -122.140165,
+    "altitude": 122.0
+  },
+  "segmentation": {
+    "initialize-ids": true,
+    "ignore-existing": false,
+    "use-owner-name": true
+  },
+  "scene-type": "UnrealNative"
+}

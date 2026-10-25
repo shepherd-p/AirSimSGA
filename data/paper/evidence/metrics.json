@@ -1,0 +1,109 @@
+{
+  "navigation": {
+    "source": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground",
+    "summary_scalars": {
+      "status": "completed",
+      "recorded_utc": "2026-10-02T14:33:18.914606+00:00",
+      "error": null,
+      "car_distance_m": 478.47334777094466,
+      "max_cross_track_m": 2.601691971482413,
+      "max_observed_step_speed_mps": 2.962153796969408,
+      "wall_duration_sec": 642.7029999999977
+    },
+    "distance_summary": null,
+    "plan_length_m": 483.86895435119146,
+    "cross_track_m": {
+      "n": 503,
+      "rmse": 0.7928639518781063,
+      "max": 2.601691971482413,
+      "final": 0.017204287055363573
+    },
+    "csv_ugv_distance_m": 476.6168461277995,
+    "collision_events": []
+  },
+  "tracking": {
+    "source": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0",
+    "target_distance_m": 88.78682782395843,
+    "samples": 166,
+    "valid_estimates": 159,
+    "estimate_error_xy_m": {
+      "n": 159,
+      "rmse": 2.9029549540745534,
+      "max": 14.861735455759113,
+      "final": 0.05329778408694691
+    },
+    "final_exit_errors_m": [
+      2.262689733100011,
+      2.2090412419650196
+    ],
+    "collision_events": [],
+    "events": [
+      {
+        "kind": "aerial_target_lock",
+        "sim_time_sec": 9.93,
+        "observer_count": 1
+      },
+      {
+        "kind": "target_and_gates_released",
+        "sim_time_sec": 10.56,
+        "trigger": "two independent UAV target observations"
+      },
+      {
+        "kind": "target_brakes_for_observed_blocker",
+        "sim_time_sec": 104.93,
+        "blocker": "GateRight",
+        "observed_position_ned": [
+          -927.9758247983817,
+          -1108.864185052601,
+          -1.2160153007212466
+        ],
+        "pixels": 14844
+      },
+      {
+        "kind": "contained",
+        "sim_time_sec": 108.13,
+        "target_exit": "Right",
+        "target_ned": [
+          -934.47021484375,
+          -1112.1727294921875,
+          -0.5825917720794678
+        ],
+        "both_gates_occupied": true,
+        "both_uavs_see_target": true
+      }
+    ],
+    "time_origin_sim_sec": 5.735
+  },
+  "landing": {
+    "source": "F:\\EpicGamesEnv\\LandingWaterLab\\REFERENCE_HEADING_LANDING\\results\\landing_take_01\\experiment",
+    "samples": 399,
+    "trial_start_sim_sec": 2.7,
+    "contact_sim_sec": 39.4,
+    "contact_elapsed_sec": 36.699999999999996,
+    "contact_error_m": 0.07521829771395529,
+    "completion_sim_sec": 42.5,
+    "completion_elapsed_sec": 39.8,
+    "final_error_m": 0.07523644726893562,
+    "supported_dwell_sec": 3.0,
+    "rotor_max_speed_radps": 0.0,
+    "rotor_thrust_n": 0.0,
+    "vessel_distance_m": 18.750460028684756
+  },
+  "source_sha256": {
+    "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\summary.json": "94aab2dead6d981dfe32c05609f03452198159d2dbbb4e92c7d3585b27402602",
+    "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\trajectories_controls.csv": "2f58d0a358b62cd9cf55c999f643d087a1d399c02639fd4964a95d90c0df878c",
+    "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\scenario.json": "8bf8d557fdbd8ef90240714d21c3676c9eb639a76aaeddca59ff2606fc670c28",
+    "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\committed_plan.json": "0334d0d53fcc96fe625a5adbcf61a34f948dd9db094855d3a70ab828e81340bb",
+    "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\summary.json": "41fbad335d25d0b2361588fd533db0688bfa4fe44e611ddfec2926d7305867af",
+    "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\tracking.csv": "861021b32789d9da0f45968dbe32710cb0d1ad0013dd00ec722dda0c6e79dfd7",
+    "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\trajectories_controls.csv": "0ec62d9fff7845898e2e3648f6f2185e1b52fb2d89aef7fe836b217de02321be",
+    "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\scenario.json": "a8e7034fe26b3a280014d57cb78480023392e1bd4c28ccc0395fb864e83ae6d8",
+    "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\config.json": "ddcce413bf5fb647a98ce870db583335fe0b200c45563a42845dfdd9063b9754",
+    "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_pursuit\\20261002_234725_440573_seed0\\events.jsonl": "c7ad6876ea5562502a54f1f31f4634e509afbb3fb78ee29f94f07651a1fcb384",
+    "F:\\EpicGamesEnv\\LandingWaterLab\\REFERENCE_HEADING_LANDING\\results\\landing_take_01\\experiment\\trajectory.csv": "a7dac8636bea8801baa86999af7609a7b2e0729cc7ab451df1b3ba4efe28dd4f",
+    "F:\\EpicGamesEnv\\LandingWaterLab\\REFERENCE_HEADING_LANDING\\results\\landing_take_01\\experiment\\config.json": "e98090eeb0b2b92b347aa7be29f7142d3fd50eb6728de255f8bf470156c8ab38",
+    "F:\\EpicGamesEnv\\LandingWaterLab\\REFERENCE_HEADING_LANDING\\results\\landing_take_01\\experiment\\events.csv": "c615efd4b38faf6c617fd796ff184727aae51cc22831cf3de7de5dabe1afc562",
+    "F:\\EpicGamesEnv\\LandingWaterLab\\REFERENCE_HEADING_LANDING\\results\\landing_take_01\\experiment\\resolved_scene.json": "e8aa1c82f287bcd6a72c035fe03af72b50412cc4fa0428df4724168cf38c0553",
+    "F:\\EpicGamesEnv\\LandingWaterLab\\REFERENCE_HEADING_LANDING\\results\\landing_take_01\\experiment\\receipt.json": "232ccbb72b895ab375ad472a51db04fb166b12e600e16421a533b215bea2543d"
+  }
+}

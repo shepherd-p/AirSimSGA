@@ -1,0 +1,56 @@
+{
+  "navigation": {
+    "plan_length_m": 483.8689543511914,
+    "controller_distance_m": 478.47334777094466,
+    "saved_polyline_length_m": 476.6168461277995,
+    "cross_track_m": {
+      "n": 503,
+      "rmse": 0.7928639518781063,
+      "max": 2.601691971482413,
+      "final": 0.017204287055363573
+    },
+    "collision_events": []
+  },
+  "tracking": {
+    "samples": 166,
+    "valid_estimates": 159,
+    "estimate_availability": 0.9578313253012049,
+    "estimate_error_xy_m": {
+      "n": 159,
+      "rmse": 2.902954954074553,
+      "max": 14.861735455759113,
+      "final": 0.053297784086946916
+    },
+    "target_distance_m": 88.78682782395843,
+    "final_exit_errors_m": [
+      2.262689733100011,
+      2.2090412419650196
+    ]
+  },
+  "landing": {
+    "samples": 399,
+    "contact_elapsed_sec": 36.699999999999996,
+    "contact_error_m": 0.07521829771395529,
+    "completion_elapsed_sec": 39.8,
+    "final_error_m": 0.07523644726893562,
+    "supported_dwell_sec": 3.0,
+    "vessel_distance_m": 18.750460028684756
+  },
+  "mapping": {
+    "trajectory_lengths_m": {
+      "Drone1": 217.09314954622346,
+      "Car1": 71.75787369822362
+    },
+    "integration_frames": 242,
+    "recorded_surface_evaluation": {
+      "heldout_frames": 28,
+      "heldout_used_frames": 28,
+      "heldout_rejected_frames": 0,
+      "rays": 81246,
+      "surface_hit_fraction": 0.9932058193634148,
+      "absolute_range_error_median_m": 0.02813100814819336,
+      "absolute_range_error_p90_m": 0.10671565681695938,
+      "range_rmse_m": 0.9737078547477722
+    }
+  }
+}

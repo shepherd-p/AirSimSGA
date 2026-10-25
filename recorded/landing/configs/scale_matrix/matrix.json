@@ -1,0 +1,9 @@
+{
+  "configs": [
+    "F:\\EpicGamesEnv\\MovingDeckLab\\configs\\scale_matrix\\uav1_ugv1\\study.json",
+    "F:\\EpicGamesEnv\\MovingDeckLab\\configs\\scale_matrix\\uav2_ugv2\\study.json",
+    "F:\\EpicGamesEnv\\MovingDeckLab\\configs\\scale_matrix\\uav3_ugv2\\study.json",
+    "F:\\EpicGamesEnv\\MovingDeckLab\\configs\\scale_matrix\\uav4_ugv4\\study.json"
+  ],
+  "status": "prepared_not_run"
+}

@@ -1,0 +1,231 @@
+{
+  "schema": 1,
+  "origin": "Selected current paper/video recordings; source values copied without editing.",
+  "raw_sensor_payloads_included": false,
+  "records": [
+    {
+      "path": "evidence/mapping/manifest.json",
+      "source": "ProjectAirSim_AG_Experiments/archives/plaza_evidence_20260928_v1/data/mapping/20260928_000727_997657/manifest.json",
+      "source_bytes": 1212,
+      "source_sha256": "2c767d324c2444bbad0712703df37aa8b2d44dc499ce4c60c0930a343b53ca1e",
+      "release_sha256": "fbb6f3015b9a1fb1de3e9ec3c92cf88f82e8677869cbf82ce1de86fe555bd026",
+      "transformation": "JSON formatting/path redaction only; numerical values unchanged"
+    },
+    {
+      "path": "evidence/mapping/loop_completion.json",
+      "source": "ProjectAirSim_AG_Experiments/archives/plaza_evidence_20260928_v1/data/mapping/20260928_000727_997657/loop_completion.json",
+      "source_bytes": 134,
+      "source_sha256": "0bd05f3cd020009ac161b0b6c0a4acb9e0491c96d051d70bcf72fb7ad66f3d2e",
+      "release_sha256": "a903a80a73bc9c4c1828a5d5afdc5b09bb7fd37294818393d2da1ae432602c9c",
+      "transformation": "JSON formatting/path redaction only; numerical values unchanged"
+    },
+    {
+      "path": "evidence/mapping/reference_routes.json",
+      "source": "ProjectAirSim_AG_Experiments/archives/plaza_evidence_20260928_v1/data/mapping/20260928_000727_997657/reference_routes.json",
+      "source_bytes": 4187,
+      "source_sha256": "f75560d4423c510afede0a61fb4b71b4b22a8340974fb9ffb05d03bb70eb0923",
+      "release_sha256": "979229f937483627292d1d5bcd50a53ba673d9f28e29f3817b06997ed2a8e248",
+      "transformation": "JSON formatting/path redaction only; numerical values unchanged"
+    },
+    {
+      "path": "evidence/mapping/trajectories.csv",
+      "source": "ProjectAirSim_AG_Experiments/archives/plaza_evidence_20260928_v1/data/mapping/20260928_000727_997657/trajectories.csv",
+      "source_bytes": 164130,
+      "source_sha256": "9a3424e751a472d03fcb8500b015acbd17805ea3758e89271a4f8cfe82e597fd",
+      "release_sha256": "9a3424e751a472d03fcb8500b015acbd17805ea3758e89271a4f8cfe82e597fd",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/mapping/controls.csv",
+      "source": "ProjectAirSim_AG_Experiments/archives/plaza_evidence_20260928_v1/data/mapping/20260928_000727_997657/controls.csv",
+      "source_bytes": 47772,
+      "source_sha256": "4eeffd6f7526c2888a67d76ba70e1627b16ed4683b4c7b36a5f18db43bd64bb8",
+      "release_sha256": "4eeffd6f7526c2888a67d76ba70e1627b16ed4683b4c7b36a5f18db43bd64bb8",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/mapping/source_sha256.json",
+      "source": "ProjectAirSim_AG_Experiments/archives/plaza_evidence_20260928_v1/data/mapping/20260928_000727_997657/source_sha256.json",
+      "source_bytes": 2862,
+      "source_sha256": "79b11604526c92bd17bb1f052baf1d40e00d93c116fc420d5cc799ccddbc2993",
+      "release_sha256": "f97328c2d257ce943474803ce5e286d97242db8ec5530f1483ea4242fe0bf662",
+      "transformation": "JSON formatting/path redaction only; numerical values unchanged"
+    },
+    {
+      "path": "evidence/mapping/plaza_records_audit.json",
+      "source": "ProjectAirSim_AG_Experiments/archives/plaza_evidence_20260928_v1/verification/plaza_records_audit.json",
+      "source_bytes": 2981,
+      "source_sha256": "bbf423bbaaf76fe5e54f8ad077108bde837ce9ce68f66dda44f4b18f11a355c5",
+      "release_sha256": "908ac88b44ef8ae038b5f9f7c29d3c74e775ddc59609c9edc380db4401f209b6",
+      "transformation": "JSON formatting/path redaction only; numerical values unchanged"
+    },
+    {
+      "path": "evidence/mapping/plaza_lidar_replay_audit.json",
+      "source": "ProjectAirSim_AG_Experiments/archives/plaza_evidence_20260928_v1/verification/plaza_lidar_replay_audit.json",
+      "source_bytes": 809,
+      "source_sha256": "8a1407416424225a405b641f0f25cea1c57de4bd9940d898ac7db746e73f1ce6",
+      "release_sha256": "4dcd6698a941b9b6644b2fe7d0b0a88b2bf77851bb62c144ce931602279822f4",
+      "transformation": "JSON formatting/path redaction only; numerical values unchanged"
+    },
+    {
+      "path": "evidence/native_historical/physics_tests.json",
+      "source": "MovingDeckLab/physics_tests.json",
+      "source_bytes": 3995,
+      "source_sha256": "b3f8646c456937f4d3c4e61cb31f23fb97bc8d92a2ed6f4baaa63daf97f950c1",
+      "release_sha256": "d6c72e1c7a86b09dd9af0ca3eddf5396893f22f3d6a8db1f2f6872b47171916c",
+      "transformation": "JSON formatting/path redaction only; numerical values unchanged"
+    },
+    {
+      "path": "evidence/native_historical/firmware_tests.json",
+      "source": "MovingDeckLab/firmware_tests.json",
+      "source_bytes": 795,
+      "source_sha256": "18306b2535836d90e54af9f9dd1d313a67a6f3d173bd1d8ea78ee59713ee14d9",
+      "release_sha256": "7f805c18535186f085bb5bb4bd73d1d6a2e5f9dd942f2f6d6d6ea63006554517",
+      "transformation": "JSON formatting/path redaction only; numerical values unchanged"
+    },
+    {
+      "path": "evidence/native_historical/regression_tests.json",
+      "source": "MovingDeckLab/regression_tests.json",
+      "source_bytes": 10530,
+      "source_sha256": "1a2cbffd87a0814983d062a65f1968d4e887a8ab16b43c8313a4b003ee35217b",
+      "release_sha256": "7bbee9b6291cb7233bbf8a27a2db8d31840904a110cfabd9dabdd5109bd068f9",
+      "transformation": "JSON formatting/path redaction only; numerical values unchanged"
+    },
+    {
+      "path": "evidence/navigation/summary.json",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_aerial_route_navigation/20261002_222236_038213_air_ground/summary.json",
+      "source_bytes": 17254,
+      "source_sha256": "94aab2dead6d981dfe32c05609f03452198159d2dbbb4e92c7d3585b27402602",
+      "release_sha256": "94aab2dead6d981dfe32c05609f03452198159d2dbbb4e92c7d3585b27402602",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/navigation/config.json",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_aerial_route_navigation/20261002_222236_038213_air_ground/config.json",
+      "source_bytes": 1272,
+      "source_sha256": "393d3bbad0e0ac0a6744280d7707c892cd60cd8688010707ebfc288feafa3d77",
+      "release_sha256": "393d3bbad0e0ac0a6744280d7707c892cd60cd8688010707ebfc288feafa3d77",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/navigation/scenario.json",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_aerial_route_navigation/20261002_222236_038213_air_ground/scenario.json",
+      "source_bytes": 1761,
+      "source_sha256": "8bf8d557fdbd8ef90240714d21c3676c9eb639a76aaeddca59ff2606fc670c28",
+      "release_sha256": "8bf8d557fdbd8ef90240714d21c3676c9eb639a76aaeddca59ff2606fc670c28",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/navigation/committed_plan.json",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_aerial_route_navigation/20261002_222236_038213_air_ground/committed_plan.json",
+      "source_bytes": 5169,
+      "source_sha256": "0334d0d53fcc96fe625a5adbcf61a34f948dd9db094855d3a70ab828e81340bb",
+      "release_sha256": "0334d0d53fcc96fe625a5adbcf61a34f948dd9db094855d3a70ab828e81340bb",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/navigation/trajectories_controls.csv",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_aerial_route_navigation/20261002_222236_038213_air_ground/trajectories_controls.csv",
+      "source_bytes": 273639,
+      "source_sha256": "2f58d0a358b62cd9cf55c999f643d087a1d399c02639fd4964a95d90c0df878c",
+      "release_sha256": "2f58d0a358b62cd9cf55c999f643d087a1d399c02639fd4964a95d90c0df878c",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/navigation/events.jsonl",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_aerial_route_navigation/20261002_222236_038213_air_ground/events.jsonl",
+      "source_bytes": 6978,
+      "source_sha256": "974e82bc99a191b579378523ceec2d3655013cc5bdd33058b8462d2bddb1a08e",
+      "release_sha256": "974e82bc99a191b579378523ceec2d3655013cc5bdd33058b8462d2bddb1a08e",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/containment/summary.json",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_pursuit/20261002_234725_440573_seed0/summary.json",
+      "source_bytes": 5280,
+      "source_sha256": "41fbad335d25d0b2361588fd533db0688bfa4fe44e611ddfec2926d7305867af",
+      "release_sha256": "41fbad335d25d0b2361588fd533db0688bfa4fe44e611ddfec2926d7305867af",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/containment/config.json",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_pursuit/20261002_234725_440573_seed0/config.json",
+      "source_bytes": 1461,
+      "source_sha256": "ddcce413bf5fb647a98ce870db583335fe0b200c45563a42845dfdd9063b9754",
+      "release_sha256": "ddcce413bf5fb647a98ce870db583335fe0b200c45563a42845dfdd9063b9754",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/containment/scenario.json",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_pursuit/20261002_234725_440573_seed0/scenario.json",
+      "source_bytes": 2607,
+      "source_sha256": "a8e7034fe26b3a280014d57cb78480023392e1bd4c28ccc0395fb864e83ae6d8",
+      "release_sha256": "a8e7034fe26b3a280014d57cb78480023392e1bd4c28ccc0395fb864e83ae6d8",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/containment/tracking.csv",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_pursuit/20261002_234725_440573_seed0/tracking.csv",
+      "source_bytes": 19595,
+      "source_sha256": "861021b32789d9da0f45968dbe32710cb0d1ad0013dd00ec722dda0c6e79dfd7",
+      "release_sha256": "861021b32789d9da0f45968dbe32710cb0d1ad0013dd00ec722dda0c6e79dfd7",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/containment/trajectories_controls.csv",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_pursuit/20261002_234725_440573_seed0/trajectories_controls.csv",
+      "source_bytes": 175741,
+      "source_sha256": "0ec62d9fff7845898e2e3648f6f2185e1b52fb2d89aef7fe836b217de02321be",
+      "release_sha256": "0ec62d9fff7845898e2e3648f6f2185e1b52fb2d89aef7fe836b217de02321be",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/containment/events.jsonl",
+      "source": "ProjectAirSim_AG_Experiments/outputs/citysample_pursuit/20261002_234725_440573_seed0/events.jsonl",
+      "source_bytes": 598,
+      "source_sha256": "c7ad6876ea5562502a54f1f31f4634e509afbb3fb78ee29f94f07651a1fcb384",
+      "release_sha256": "c7ad6876ea5562502a54f1f31f4634e509afbb3fb78ee29f94f07651a1fcb384",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/landing/config.json",
+      "source": "LandingWaterLab/REFERENCE_HEADING_LANDING/results/landing_take_01/experiment/config.json",
+      "source_bytes": 4630,
+      "source_sha256": "e98090eeb0b2b92b347aa7be29f7142d3fd50eb6728de255f8bf470156c8ab38",
+      "release_sha256": "e98090eeb0b2b92b347aa7be29f7142d3fd50eb6728de255f8bf470156c8ab38",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/landing/trajectory.csv",
+      "source": "LandingWaterLab/REFERENCE_HEADING_LANDING/results/landing_take_01/experiment/trajectory.csv",
+      "source_bytes": 289342,
+      "source_sha256": "a7dac8636bea8801baa86999af7609a7b2e0729cc7ab451df1b3ba4efe28dd4f",
+      "release_sha256": "a7dac8636bea8801baa86999af7609a7b2e0729cc7ab451df1b3ba4efe28dd4f",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/landing/events.csv",
+      "source": "LandingWaterLab/REFERENCE_HEADING_LANDING/results/landing_take_01/experiment/events.csv",
+      "source_bytes": 110,
+      "source_sha256": "c615efd4b38faf6c617fd796ff184727aae51cc22831cf3de7de5dabe1afc562",
+      "release_sha256": "c615efd4b38faf6c617fd796ff184727aae51cc22831cf3de7de5dabe1afc562",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/landing/receipt.json",
+      "source": "LandingWaterLab/REFERENCE_HEADING_LANDING/results/landing_take_01/experiment/receipt.json",
+      "source_bytes": 227,
+      "source_sha256": "232ccbb72b895ab375ad472a51db04fb166b12e600e16421a533b215bea2543d",
+      "release_sha256": "232ccbb72b895ab375ad472a51db04fb166b12e600e16421a533b215bea2543d",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/landing/resolved_scene.json",
+      "source": "LandingWaterLab/REFERENCE_HEADING_LANDING/results/landing_take_01/experiment/resolved_scene.json",
+      "source_bytes": 18991,
+      "source_sha256": "e8aa1c82f287bcd6a72c035fe03af72b50412cc4fa0428df4724168cf38c0553",
+      "release_sha256": "e8aa1c82f287bcd6a72c035fe03af72b50412cc4fa0428df4724168cf38c0553",
+      "transformation": "byte-exact copy"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "task": "formation",
+  "sdk_path": "F:\\EpicGamesEnv\\ProjectAirSim\\client\\python\\projectairsim\\src",
+  "scene": "scene_formation.jsonc",
+  "ip": "127.0.0.1",
+  "port_topics": 8989,
+  "port_services": 8990,
+  "duration_sec": 90,
+  "control_hz": 5,
+  "sensor_max_age_sec": 0.6,
+  "sensor_pair_tolerance_sec": 0.12,
+  "uav_altitude_agl_m": 12,
+  "uav_speed_mps": 2.0,
+  "ugv_speed_mps": 1.0,
+  "ground_z_ned": 4.48,
+  "rover_surface_offset_m": 0.0,
+  "stop_on_collision": true,
+  "waypoint_tolerance_m": 1.5,
+  "minimum_separation_m": 3.0,
+  "process_hint": "CityPark1",
+  "cleanup": "hover",
+  "routes": {
+    "Drone1": [
+      [
+        20,
+        58,
+        -7.52
+      ],
+      [
+        28,
+        58,
+        -7.52
+      ],
+      [
+        28,
+        62,
+        -7.52
+      ],
+      [
+        20,
+        62,
+        -7.52
+      ]
+    ],
+    "Car1": [
+      [
+        23,
+        60,
+        4.48
+      ],
+      [
+        25,
+        60,
+        4.48
+      ]
+    ]
+  },
+  "navigation": {
+    "scan_sec": 20,
+    "map_source": "uav_lidar",
+    "goal_ned": [
+      25,
+      60,
+      4.48
+    ],
+    "resolution_m": 0.75,
+    "height_bin_m": 0.35,
+    "max_step_m": 0.25,
+    "max_slope": 0.3,
+    "clearance_m": 1.6,
+    "vehicle_radius_m": 1.1,
+    "stop_distance_m": 4.0
+  },
+  "tracking": {
+    "target_id": 42,
+    "follow_distance_m": 6.0,
+    "uav_offset_ned": [
+      0,
+      0,
+      -12
+    ],
+    "prediction_horizon_sec": 2.0,
+    "target_route": [
+      [
+        18,
+        65,
+        4.48
+      ]
+    ],
+    "minimum_pixels": 8,
+    "segmentation_color_order": "bgr",
+    "canopy": {
+      "enabled": true,
+      "center_ned": [
+        18,
+        62,
+        -1.5
+      ],
+      "scale": [
+        7,
+        2.5,
+        0.5
+      ]
+    }
+  },
+  "formation": {
+    "square_side_m": 6.0,
+    "circle_radius_m": 5.0,
+    "circle_center_ned": [
+      18,
+      57,
+      4.48
+    ],
+    "laps": 1
+  },
+  "scenario_status": "Upper plaza terrain chosen from live LiDAR; fast-physics rover has planar grounded motion"
+}

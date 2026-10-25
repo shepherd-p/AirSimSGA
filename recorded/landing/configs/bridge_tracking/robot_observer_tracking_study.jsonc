@@ -1,0 +1,79 @@
+{
+  "physics-type": "non-physics",
+  "links": [
+    {
+      "name": "Frame",
+      "collision": {
+        "enabled": false
+      }
+    }
+  ],
+  "sensors": [
+    {
+      "id": "Overview",
+      "type": "camera",
+      "enabled": true,
+      "parent-link": "Frame",
+      "capture-interval": 1.5,
+      "origin": {
+        "xyz": "-65 88 -32",
+        "rpy-deg": "0 -42.42499117474081 36.25383773744479"
+      },
+      "capture-settings": [
+        {
+          "image-type": 0,
+          "width": 1280,
+          "height": 720,
+          "fov-degrees": 80,
+          "capture-enabled": true,
+          "streaming-enabled": true,
+          "pixels-as-float": false,
+          "compress": false
+        },
+        {
+          "image-type": 3,
+          "width": 1280,
+          "height": 720,
+          "fov-degrees": 80,
+          "capture-enabled": true,
+          "streaming-enabled": true,
+          "pixels-as-float": false,
+          "compress": false
+        }
+      ]
+    },
+    {
+      "id": "Top",
+      "type": "camera",
+      "enabled": true,
+      "parent-link": "Frame",
+      "capture-interval": 1.5,
+      "origin": {
+        "xyz": "-35 110 -48",
+        "rpy-deg": "0 -90.0 0.0"
+      },
+      "capture-settings": [
+        {
+          "image-type": 0,
+          "width": 1280,
+          "height": 720,
+          "fov-degrees": 80,
+          "capture-enabled": true,
+          "streaming-enabled": true,
+          "pixels-as-float": false,
+          "compress": false
+        },
+        {
+          "image-type": 3,
+          "width": 1280,
+          "height": 720,
+          "fov-degrees": 80,
+          "capture-enabled": true,
+          "streaming-enabled": true,
+          "pixels-as-float": false,
+          "compress": false
+        }
+      ]
+    }
+  ]
+}

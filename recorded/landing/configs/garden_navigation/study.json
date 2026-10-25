@@ -1,0 +1,172 @@
+{
+  "task": "navigation",
+  "sdk_path": "F:\\EpicGamesEnv\\ProjectAirSim\\client\\python\\projectairsim\\src",
+  "scene": "scene_navigation_study.jsonc",
+  "ip": "127.0.0.1",
+  "port_topics": 9089,
+  "port_services": 9090,
+  "duration_sec": 240,
+  "control_hz": 5,
+  "sensor_max_age_sec": 1.5,
+  "sensor_pair_tolerance_sec": 0.03,
+  "uav_altitude_agl_m": 18,
+  "uav_speed_mps": 3.0,
+  "ugv_speed_mps": 1.0,
+  "ground_z_ned": -0.688,
+  "rover_surface_offset_m": 0.0,
+  "stop_on_collision": true,
+  "waypoint_tolerance_m": 1.0,
+  "minimum_separation_m": 3.0,
+  "process_hint": "MovingDeckLab",
+  "cleanup": "hover",
+  "routes": {
+    "Drone1": [
+      [
+        42,
+        142,
+        -23
+      ],
+      [
+        20,
+        125,
+        -20
+      ],
+      [
+        20,
+        178,
+        -20
+      ],
+      [
+        32,
+        178,
+        -20
+      ],
+      [
+        43,
+        178,
+        -20
+      ],
+      [
+        43,
+        125,
+        -20
+      ],
+      [
+        32,
+        125,
+        -20
+      ],
+      [
+        32,
+        153,
+        -24
+      ]
+    ],
+    "Car1": []
+  },
+  "navigation": {
+    "scan_sec": 30,
+    "map_source": "uav_lidar",
+    "goal_ned": [
+      24,
+      171,
+      -0.688
+    ],
+    "resolution_m": 0.5,
+    "height_bin_m": 0.35,
+    "max_step_m": 0.25,
+    "max_slope": 0.3,
+    "clearance_m": 1.6,
+    "vehicle_radius_m": 1.55,
+    "stop_distance_m": 2.8,
+    "roi_xy": [
+      [
+        17,
+        121
+      ],
+      [
+        47,
+        183
+      ]
+    ],
+    "floor_tolerance_m": 0.2,
+    "obstacle_height_range_m": [
+      0.4,
+      2.8
+    ],
+    "minimum_cell_points": 3
+  },
+  "tracking": {
+    "target_id": 42,
+    "follow_distance_m": 6.0,
+    "uav_offset_ned": [
+      0,
+      0,
+      -12
+    ],
+    "prediction_horizon_sec": 2.0,
+    "target_route": [
+      [
+        18,
+        65,
+        4.48
+      ]
+    ],
+    "minimum_pixels": 8,
+    "segmentation_color_order": "bgr",
+    "canopy": {
+      "enabled": true,
+      "center_ned": [
+        18,
+        62,
+        -1.5
+      ],
+      "scale": [
+        7,
+        2.5,
+        0.5
+      ]
+    }
+  },
+  "formation": {
+    "square_side_m": 6.0,
+    "circle_radius_m": 5.0,
+    "circle_center_ned": [
+      18,
+      57,
+      4.48
+    ],
+    "laps": 1
+  },
+  "scenario_status": "Candidate east-garden paths and planters, distinct from accepted lakeside mapping plaza; live clearance/goal validation pending",
+  "full_lidar_capture": true,
+  "study": {
+    "version": 1,
+    "frame_interval_sec": 0.5,
+    "overview_interval_sec": 1.0,
+    "minimum_motion_m": 30.0,
+    "segmentation_ids": {
+      "Drone1": 240,
+      "Car1": 241
+    },
+    "pose_prior": "simulator ego localization",
+    "camera_capture": "Selected synchronized original RGB/depth/segmentation payloads",
+    "rendering_mode": "Existing UE instance, actual mode recorded separately; cameras active"
+  },
+  "sim_config_path": "F:\\EpicGamesEnv\\MovingDeckLab\\configs\\garden_navigation",
+  "controlled_actor_count": 2,
+  "region": {
+    "id": "east_garden_navigation",
+    "north": [
+      17,
+      47
+    ],
+    "east": [
+      121,
+      183
+    ],
+    "survey": "outputs/region_survey/20260928_064720/east_garden_rgb.png",
+    "survey_use": "Placement and flat-floor hypothesis only; not an input to the online UAV LiDAR planner",
+    "selection_reason": "South-west road survey has about 2 m elevation variation over 50 m; existing planar rover cannot represent it faithfully. East garden offers a separately located paved terrace with actual planters."
+  }
+}

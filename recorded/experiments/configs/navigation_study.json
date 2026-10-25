@@ -1,0 +1,146 @@
+{
+  "task": "navigation",
+  "sdk_path": "F:\\EpicGamesEnv\\ProjectAirSim\\client\\python\\projectairsim\\src",
+  "scene": "scene_navigation_study.jsonc",
+  "ip": "127.0.0.1",
+  "port_topics": 8989,
+  "port_services": 8990,
+  "duration_sec": 210,
+  "control_hz": 5,
+  "sensor_max_age_sec": 1.5,
+  "sensor_pair_tolerance_sec": 0.03,
+  "uav_altitude_agl_m": 12,
+  "uav_speed_mps": 2.5,
+  "ugv_speed_mps": 1.0,
+  "ground_z_ned": 4.48,
+  "rover_surface_offset_m": 0.0,
+  "stop_on_collision": true,
+  "waypoint_tolerance_m": 1.0,
+  "minimum_separation_m": 3.0,
+  "process_hint": "CityPark1",
+  "cleanup": "hover",
+  "routes": {
+    "Drone1": [
+      [
+        20,
+        58,
+        -24
+      ],
+      [
+        25,
+        52,
+        -24
+      ],
+      [
+        44,
+        52,
+        -24
+      ],
+      [
+        44,
+        64,
+        -24
+      ],
+      [
+        25,
+        64,
+        -24
+      ],
+      [
+        33,
+        57,
+        -26
+      ]
+    ],
+    "Car1": []
+  },
+  "navigation": {
+    "scan_sec": 30,
+    "map_source": "uav_lidar",
+    "goal_ned": [
+      47,
+      57,
+      4.48
+    ],
+    "resolution_m": 0.5,
+    "height_bin_m": 0.35,
+    "max_step_m": 0.25,
+    "max_slope": 0.3,
+    "clearance_m": 1.6,
+    "vehicle_radius_m": 1.55,
+    "stop_distance_m": 2.8,
+    "roi_xy": [
+      [
+        10,
+        46
+      ],
+      [
+        54,
+        69
+      ]
+    ],
+    "floor_tolerance_m": 0.2,
+    "obstacle_height_range_m": [
+      0.4,
+      2.8
+    ],
+    "minimum_cell_points": 3
+  },
+  "tracking": {
+    "target_id": 42,
+    "follow_distance_m": 6.0,
+    "uav_offset_ned": [
+      0,
+      0,
+      -12
+    ],
+    "prediction_horizon_sec": 2.0,
+    "target_route": [
+      [
+        18,
+        65,
+        4.48
+      ]
+    ],
+    "minimum_pixels": 8,
+    "segmentation_color_order": "bgr",
+    "canopy": {
+      "enabled": true,
+      "center_ned": [
+        18,
+        62,
+        -1.5
+      ],
+      "scale": [
+        7,
+        2.5,
+        0.5
+      ]
+    }
+  },
+  "formation": {
+    "square_side_m": 6.0,
+    "circle_radius_m": 5.0,
+    "circle_center_ned": [
+      18,
+      57,
+      4.48
+    ],
+    "laps": 1
+  },
+  "scenario_status": "Upper plaza terrain chosen from live LiDAR; fast-physics rover has planar grounded motion",
+  "full_lidar_capture": true,
+  "study": {
+    "version": 1,
+    "frame_interval_sec": 0.5,
+    "overview_interval_sec": 1.0,
+    "minimum_motion_m": 20.0,
+    "segmentation_ids": {
+      "Drone1": 240,
+      "Car1": 241
+    },
+    "pose_prior": "simulator ego localization",
+    "camera_capture": "Selected synchronized original RGB/depth/segmentation payloads",
+    "rendering_mode": "Existing UE instance, actual mode recorded separately; cameras active"
+  }
+}

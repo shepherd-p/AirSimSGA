@@ -1,0 +1,152 @@
+{
+  "task": "tracking",
+  "sdk_path": "F:\\EpicGamesEnv\\ProjectAirSim\\client\\python\\projectairsim\\src",
+  "scene": "scene_tracking_study.jsonc",
+  "ip": "127.0.0.1",
+  "port_topics": 9089,
+  "port_services": 9090,
+  "duration_sec": 160,
+  "control_hz": 5,
+  "sensor_max_age_sec": 1.5,
+  "sensor_pair_tolerance_sec": 0.03,
+  "uav_altitude_agl_m": 14,
+  "uav_speed_mps": 2.5,
+  "ugv_speed_mps": 1.0,
+  "ground_z_ned": 4.48,
+  "rover_surface_offset_m": 0.0,
+  "stop_on_collision": true,
+  "waypoint_tolerance_m": 1.0,
+  "minimum_separation_m": 3.0,
+  "process_hint": "MovingDeckLab",
+  "cleanup": "hover",
+  "routes": {
+    "Drone1": [
+      [
+        -35,
+        90,
+        -13
+      ],
+      [
+        -35,
+        112,
+        -13
+      ]
+    ],
+    "Car1": [
+      [
+        -35,
+        90,
+        4.48
+      ]
+    ]
+  },
+  "navigation": {
+    "scan_sec": 20,
+    "map_source": "uav_lidar",
+    "goal_ned": [
+      25,
+      60,
+      4.48
+    ],
+    "resolution_m": 0.75,
+    "height_bin_m": 0.35,
+    "max_step_m": 0.25,
+    "max_slope": 0.3,
+    "clearance_m": 1.6,
+    "vehicle_radius_m": 1.1,
+    "stop_distance_m": 4.0
+  },
+  "tracking": {
+    "target_id": 42,
+    "follow_distance_m": 6.0,
+    "uav_offset_ned": [
+      0,
+      0,
+      -14
+    ],
+    "prediction_horizon_sec": 2.0,
+    "target_route": [
+      [
+        -35,
+        100,
+        4.48
+      ],
+      [
+        -35,
+        105,
+        4.48
+      ],
+      [
+        -35,
+        110,
+        4.48
+      ],
+      [
+        -35,
+        119,
+        4.48
+      ],
+      [
+        -35,
+        128,
+        4.48
+      ],
+      [
+        -35,
+        137,
+        4.48
+      ]
+    ],
+    "minimum_pixels": 15,
+    "segmentation_color_order": "bgr",
+    "target_speed_mps": 0.7,
+    "occlusion_region": {
+      "center_ned": [
+        -35,
+        110,
+        2
+      ],
+      "scale": [
+        10,
+        15,
+        12
+      ],
+      "source": "CityPark native road bridge; evaluation window only"
+    }
+  },
+  "formation": {
+    "square_side_m": 6.0,
+    "circle_radius_m": 5.0,
+    "circle_center_ned": [
+      18,
+      57,
+      4.48
+    ],
+    "laps": 1
+  },
+  "scenario_status": "Bridge-road candidate; natural occlusion and traversability require live validation",
+  "full_lidar_capture": true,
+  "study": {
+    "version": 1,
+    "frame_interval_sec": 0.4,
+    "overview_interval_sec": 1.0,
+    "minimum_motion_m": 25,
+    "segmentation_ids": {
+      "Drone1": 240,
+      "Car1": 241,
+      "Target": 42
+    },
+    "pose_prior": "simulator ego localization",
+    "camera_capture": "Selected synchronized original RGB/depth/segmentation payloads",
+    "rendering_mode": "Existing UE instance, actual mode recorded separately; cameras active",
+    "minimum_ground_only_frames": 3
+  },
+  "sim_config_path": "F:\\EpicGamesEnv\\MovingDeckLab\\configs\\bridge_tracking",
+  "controlled_actor_count": 3,
+  "region": {
+    "id": "native_bridge_tracking",
+    "survey": "outputs/region_survey/20260928_064720/tracking_bridge_rgb.png",
+    "survey_use": "Scenario placement only; not a tracking observation",
+    "natural_occluder": "CityPark road bridge; no spawned canopy"
+  }
+}

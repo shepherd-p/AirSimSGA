@@ -1,0 +1,77 @@
+{
+  "map": "Big_City_LVL",
+  "road_source": "City Sample native vehicle ZoneGraph",
+  "zonegraph_sha256": "a4896e6051a09dcb4e16c241ae67b7523a7ff242d6503cad24cec1cc87b60069",
+  "start_lane": 79595,
+  "goal_lane": 84251,
+  "start_ned": [
+    -677.1853125,
+    -384.847890625,
+    -0.5857728195190429
+  ],
+  "start_offset_on_lane_m": 0.0,
+  "goal_ned": [
+    -680.644921875,
+    -173.13806640625,
+    -0.6043255233764648
+  ],
+  "candidate_lane_ids": [
+    79595,
+    88198,
+    83018,
+    89692,
+    68441,
+    84312,
+    72453,
+    84251
+  ],
+  "candidate_length_m": 483.8686849910917,
+  "expected_driven_length_m": 483.8686849910917,
+  "survey_junctions": [
+    {
+      "index": 1,
+      "lane_id": 88198,
+      "center_ned": [
+        -525.509921875,
+        -309.010087890625,
+        -0.5858471298217773
+      ]
+    },
+    {
+      "index": 2,
+      "lane_id": 68441,
+      "center_ned": [
+        -561.97904296875,
+        -190.556337890625,
+        -0.5896600532531738
+      ]
+    },
+    {
+      "index": 3,
+      "lane_id": 72453,
+      "center_ned": [
+        -599.302921875,
+        -124.20076757812501,
+        -0.5856052856445312
+      ]
+    }
+  ],
+  "survey_altitude_ned_m": -120.0,
+  "observer_position_ned": [
+    -600.0,
+    -230.0,
+    -420.0
+  ],
+  "observer_target_ned": [
+    -600.0,
+    -230.0,
+    0.0
+  ],
+  "planning_method": "Directed shortest path on the native road graph; UAV junction views are archived before the route is committed to UGV control",
+  "ugv_contact_proxy_origin_ned_m": [
+    0,
+    0,
+    -0.45
+  ],
+  "ugv_physics_scope": "Simple-drive wheel kinematics with centered collision-isolation links; wheel-ground contact feedback is not asserted"
+}

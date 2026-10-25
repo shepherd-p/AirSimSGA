@@ -1,0 +1,46 @@
+{
+  "physics-type": "non-physics",
+  "links": [
+    {
+      "name": "Frame",
+      "collision": {
+        "enabled": false
+      }
+    }
+  ],
+  "sensors": [
+    {
+      "id": "Overview",
+      "type": "camera",
+      "enabled": true,
+      "parent-link": "Frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy-deg": "0 0 0"
+      },
+      "capture-interval": 0.5,
+      "capture-settings": [
+        {
+          "image-type": 0,
+          "width": 1920,
+          "height": 1080,
+          "fov-degrees": 75,
+          "capture-enabled": true,
+          "streaming-enabled": true,
+          "pixels-as-float": false,
+          "compress": false
+        },
+        {
+          "image-type": 3,
+          "width": 1920,
+          "height": 1080,
+          "fov-degrees": 75,
+          "capture-enabled": true,
+          "streaming-enabled": true,
+          "pixels-as-float": false,
+          "compress": false
+        }
+      ]
+    }
+  ]
+}

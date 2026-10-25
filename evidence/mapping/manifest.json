@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "backend": "projectairsim",
+  "data_source": "live sensor topics and services",
+  "task": "mapping",
+  "ground_truth_usage": "ego localization, mapping capture pose, evaluation; target truth excluded from tracking control",
+  "perception": "LiDAR and camera measurement streams",
+  "start_utc": "2026-09-27T16:07:28.031658Z",
+  "end_utc": "2026-09-27T16:10:03.072212Z",
+  "error": null,
+  "cleanup_errors": [],
+  "collision_count": 0,
+  "path_lengths_m": {
+    "Drone1": 217.09314954622363,
+    "Car1": 71.75787369822368
+  },
+  "horizontal_path_lengths_m": {
+    "Drone1": 189.59241169503252,
+    "Car1": 71.73031006794089
+  },
+  "route_indices": {
+    "Drone1": 31,
+    "Car1": 30
+  },
+  "rgbd_frame_counts": {
+    "Drone1": 150,
+    "Car1": 132
+  },
+  "sensor_message_counts": {
+    "Drone1/pose": 29818,
+    "Drone1/collision": 1,
+    "Drone1/lidar": 3487,
+    "Car1/pose": 29814,
+    "Car1/collision": 24657,
+    "Car1/lidar": 3457,
+    "Drone1/scene_camera": 706,
+    "Drone1/depth_camera": 706,
+    "Drone1/segmentation_camera": 706,
+    "Car1/scene_camera": 705,
+    "Car1/depth_camera": 705,
+    "Car1/segmentation_camera": 704
+  }
+}

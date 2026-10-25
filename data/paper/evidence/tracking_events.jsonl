@@ -1,0 +1,4 @@
+{"kind": "aerial_target_lock", "sim_time_sec": 9.93, "observer_count": 1}
+{"kind": "target_and_gates_released", "sim_time_sec": 10.56, "trigger": "two independent UAV target observations"}
+{"kind": "target_brakes_for_observed_blocker", "sim_time_sec": 104.93, "blocker": "GateRight", "observed_position_ned": [-927.9758247983817, -1108.864185052601, -1.2160153007212466], "pixels": 14844}
+{"kind": "contained", "sim_time_sec": 108.13, "target_exit": "Right", "target_ned": [-934.47021484375, -1112.1727294921875, -0.5825917720794678], "both_gates_occupied": true, "both_uavs_see_target": true}

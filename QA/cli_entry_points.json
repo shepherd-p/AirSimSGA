@@ -1,0 +1,22 @@
+[
+  {
+    "task": "mapping",
+    "help_exit_code": 0,
+    "simulator_started": false
+  },
+  {
+    "task": "navigation",
+    "help_exit_code": 0,
+    "simulator_started": false
+  },
+  {
+    "task": "containment",
+    "help_exit_code": 0,
+    "simulator_started": false
+  },
+  {
+    "task": "landing",
+    "help_exit_code": 0,
+    "simulator_started": false
+  }
+]

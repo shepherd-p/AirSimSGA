@@ -1,0 +1,70 @@
+{
+  "assets_included": false,
+  "required_unreal_mesh_identifiers": {
+    "/Drone/PropellerRed": [
+      "experiments/configs/landing/robot_uav.jsonc",
+      "experiments/configs/robot_uav.jsonc",
+      "experiments/configs/robot_uav_dense.jsonc",
+      "experiments/configs/robot_uav_formation_study.jsonc",
+      "experiments/configs/robot_uav_navigation_study.jsonc",
+      "experiments/configs/robot_uav_plaza.jsonc",
+      "experiments/configs/robot_uav_tracking_study.jsonc",
+      "experiments/urban_scene/robots/pursuit_uav.jsonc"
+    ],
+    "/Drone/PropellerWhite": [
+      "experiments/configs/landing/robot_uav.jsonc",
+      "experiments/configs/robot_uav.jsonc",
+      "experiments/configs/robot_uav_dense.jsonc",
+      "experiments/configs/robot_uav_formation_study.jsonc",
+      "experiments/configs/robot_uav_navigation_study.jsonc",
+      "experiments/configs/robot_uav_plaza.jsonc",
+      "experiments/configs/robot_uav_tracking_study.jsonc",
+      "experiments/urban_scene/robots/pursuit_uav.jsonc"
+    ],
+    "/Drone/Quadrotor1": [
+      "experiments/configs/landing/robot_uav.jsonc",
+      "experiments/configs/robot_uav.jsonc",
+      "experiments/configs/robot_uav_dense.jsonc",
+      "experiments/configs/robot_uav_formation_study.jsonc",
+      "experiments/configs/robot_uav_navigation_study.jsonc",
+      "experiments/configs/robot_uav_plaza.jsonc",
+      "experiments/configs/robot_uav_tracking_study.jsonc",
+      "experiments/urban_scene/robots/pursuit_uav.jsonc"
+    ],
+    "/Game/Models/Vessel/Apriltag/Game/CityPark/Maps/_GENERATED/Stephen/SM_Apriltag_1_Plane": [
+      "experiments/configs/landing/robot_usv.jsonc"
+    ],
+    "/Game/Models/Vessel/Apriltag/Game/CityPark/Maps/_GENERATED/Stephen/SM_Landing_Tag": [
+      "experiments/configs/landing/robot_usv.jsonc"
+    ],
+    "/Game/Models/Vessel/Boat": [
+      "experiments/configs/landing/robot_usv.jsonc"
+    ],
+    "/Rover/OffroadCar/SM_Offroad_Body": [
+      "experiments/citysample_scene/generated/pursuit_tracker_ugv.jsonc",
+      "experiments/citysample_scene/generated/robot_ugv_aerial_route.jsonc",
+      "experiments/configs/robot_target_tracking_study.jsonc",
+      "experiments/configs/robot_ugv.jsonc",
+      "experiments/configs/robot_ugv_dense.jsonc",
+      "experiments/configs/robot_ugv_formation_study.jsonc",
+      "experiments/configs/robot_ugv_navigation_study.jsonc",
+      "experiments/configs/robot_ugv_plaza.jsonc",
+      "experiments/configs/robot_ugv_tracking_study.jsonc",
+      "experiments/urban_scene/robots/pursuit_interceptor.jsonc",
+      "experiments/urban_scene/robots/pursuit_target.jsonc"
+    ],
+    "/Rover/OffroadCar/SM_Offroad_Tire": [
+      "experiments/citysample_scene/generated/pursuit_tracker_ugv.jsonc",
+      "experiments/citysample_scene/generated/robot_ugv_aerial_route.jsonc",
+      "experiments/configs/robot_target_tracking_study.jsonc",
+      "experiments/configs/robot_ugv.jsonc",
+      "experiments/configs/robot_ugv_dense.jsonc",
+      "experiments/configs/robot_ugv_formation_study.jsonc",
+      "experiments/configs/robot_ugv_navigation_study.jsonc",
+      "experiments/configs/robot_ugv_plaza.jsonc",
+      "experiments/configs/robot_ugv_tracking_study.jsonc",
+      "experiments/urban_scene/robots/pursuit_interceptor.jsonc",
+      "experiments/urban_scene/robots/pursuit_target.jsonc"
+    ]
+  }
+}

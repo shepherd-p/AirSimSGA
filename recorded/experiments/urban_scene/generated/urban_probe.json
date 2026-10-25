@@ -1,0 +1,72 @@
+{
+  "source_glb": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\south_lake_union_runtime.glb",
+  "source_glb_sha256": "a85d8a68da1d7f9ae00751d61f372cfac66d4d3034ae925b82c4ebac3002e9a1",
+  "scene": "AGUrbanProbe (reused)",
+  "mesh_actor": "AGUrbanMesh",
+  "camera_topic": "/Sim/AGUrbanProbe/robots/Observer/sensors/Overview/scene_camera",
+  "captures": [
+    {
+      "view": "oblique",
+      "camera_position_ned": [
+        0,
+        -180,
+        -170
+      ],
+      "target_ned": [
+        0,
+        0,
+        0
+      ],
+      "camera_time_ns": 141995000000,
+      "image": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\urban_probe_oblique.png",
+      "image_shape": [
+        720,
+        1280,
+        3
+      ],
+      "pixel_stddev": 73.88350979378406
+    },
+    {
+      "view": "top",
+      "camera_position_ned": [
+        0,
+        0,
+        -260
+      ],
+      "target_ned": [
+        0,
+        0,
+        0
+      ],
+      "camera_time_ns": 145050000000,
+      "image": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\urban_probe_top.png",
+      "image_shape": [
+        720,
+        1280,
+        3
+      ],
+      "pixel_stddev": 70.61029205696377
+    },
+    {
+      "view": "street",
+      "camera_position_ned": [
+        0,
+        -60,
+        -18
+      ],
+      "target_ned": [
+        0,
+        0,
+        0
+      ],
+      "camera_time_ns": 148640000000,
+      "image": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\urban_scene\\generated\\urban_probe_street.png",
+      "image_shape": [
+        720,
+        1280,
+        3
+      ],
+      "pixel_stddev": 79.75347341390246
+    }
+  ]
+}

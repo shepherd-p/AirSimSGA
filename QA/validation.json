@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-10-03T11:20:27.003218+00:00",
+  "status": "passed",
+  "python_files_parsed": 86,
+  "offline_tests": {
+    "created_utc": "2026-10-03T11:08:26.560292+00:00",
+    "python": "3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]",
+    "tests_run": 62,
+    "failures": [],
+    "errors": [],
+    "skipped": [],
+    "passed": true,
+    "extra_dependency_environment_used": true,
+    "packages": {
+      "numpy": "2.2.6",
+      "opencv-python": "5.0.0.93",
+      "matplotlib": "3.10.9",
+      "Pillow": "12.3.0",
+      "psutil": "7.2.2",
+      "open3d": "0.19.0",
+      "pupil-apriltags": "1.0.4.post11"
+    },
+    "scope": "offline algorithm/contact/evidence/geometry/portability regressions; no simulator connected"
+  },
+  "native_profiles": {
+    "profiles": [
+      {
+        "profile": "main",
+        "modified_or_added_files": 9,
+        "patch_check": true,
+        "patch_applied_and_all_overlay_hashes_matched": true
+      },
+      {
+        "profile": "moving-deck",
+        "modified_or_added_files": 24,
+        "patch_check": true,
+        "patch_applied_and_all_overlay_hashes_matched": true
+      }
+    ],
+    "full_source_assembly": "moving-deck successfully assembled into new temporary tree",
+    "documentation_case_collisions": [
+      {
+        "omitted": "docs/images/datacollection/rbac.png",
+        "retained": "docs/images/datacollection/RBAC.png"
+      }
+    ],
+    "scope": "Source/patch validation; no UE/plugin compilation"
+  },
+  "original_source_files_unchanged": 159,
+  "evidence_files_source_and_release_hashes_verified": 33,
+  "csv_byte_equality_and_json_numeric_values_verified": true,
+  "four_cli_help_commands_passed": true,
+  "unreal_mesh_identifiers_inventoried": 8,
+  "not_executed": [
+    "UE/plugin compilation",
+    "portable CMake full clean build",
+    "four new live simulator experiments",
+    "new C++ regression execution"
+  ],
+  "scope": "Local source release / offline validation only; historical native/runtime tests are separately labelled"
+}

@@ -1,0 +1,122 @@
+{
+  "tests": 10,
+  "failures": 0,
+  "disabled": 0,
+  "errors": 0,
+  "timestamp": "2026-09-28T07:40:44Z",
+  "time": "0s",
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "Support",
+      "tests": 10,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-09-28T07:40:44Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "StaticGroundRemainsAtRest",
+          "file": "external-workspace/MovingDeckLab/tests/support_contact_tests.cpp",
+          "line": 16,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-09-28T07:40:44Z",
+          "time": "0s",
+          "classname": "Support"
+        },
+        {
+          "name": "ConstantMovingDeckCarriesWithoutPoseBinding",
+          "file": "external-workspace/MovingDeckLab/tests/support_contact_tests.cpp",
+          "line": 21,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-09-28T07:40:44Z",
+          "time": "0s",
+          "classname": "Support"
+        },
+        {
+          "name": "SuddenDeckAccelerationCausesLimitedSlip",
+          "file": "external-workspace/MovingDeckLab/tests/support_contact_tests.cpp",
+          "line": 27,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-09-28T07:40:44Z",
+          "time": "0s",
+          "classname": "Support"
+        },
+        {
+          "name": "ZeroFrictionDoesNotAttach",
+          "file": "external-workspace/MovingDeckLab/tests/support_contact_tests.cpp",
+          "line": 32,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-09-28T07:40:44Z",
+          "time": "0s",
+          "classname": "Support"
+        },
+        {
+          "name": "MissingSupportFallsAndRetainsMomentum",
+          "file": "external-workspace/MovingDeckLab/tests/support_contact_tests.cpp",
+          "line": 36,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-09-28T07:40:44Z",
+          "time": "0s",
+          "classname": "Support"
+        },
+        {
+          "name": "StaleContactCannotHoldVehicle",
+          "file": "external-workspace/MovingDeckLab/tests/support_contact_tests.cpp",
+          "line": 42,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-09-28T07:40:44Z",
+          "time": "0s",
+          "classname": "Support"
+        },
+        {
+          "name": "TakeoffReleasesUnilaterally",
+          "file": "external-workspace/MovingDeckLab/tests/support_contact_tests.cpp",
+          "line": 45,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-09-28T07:40:44Z",
+          "time": "0s",
+          "classname": "Support"
+        },
+        {
+          "name": "MovingAwayCannotBePulledBack",
+          "file": "external-workspace/MovingDeckLab/tests/support_contact_tests.cpp",
+          "line": 49,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-09-28T07:40:44Z",
+          "time": "0s",
+          "classname": "Support"
+        },
+        {
+          "name": "RotationContributesContactPointVelocity",
+          "file": "external-workspace/MovingDeckLab/tests/support_contact_tests.cpp",
+          "line": 53,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-09-28T07:40:44Z",
+          "time": "0s",
+          "classname": "Support"
+        },
+        {
+          "name": "PenetrationCorrectionNeverCopiesHorizontalPose",
+          "file": "external-workspace/MovingDeckLab/tests/support_contact_tests.cpp",
+          "line": 60,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-09-28T07:40:44Z",
+          "time": "0s",
+          "classname": "Support"
+        }
+      ]
+    }
+  ]
+}

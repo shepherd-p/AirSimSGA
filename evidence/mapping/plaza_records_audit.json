@@ -1,0 +1,101 @@
+{
+  "audit_time_utc": "2026-09-27T18:32:35.210944+00:00",
+  "status": "passed",
+  "mapping_run": "20260928_000727_997657",
+  "scene_session": "20260928_014618",
+  "historical_source_snapshots": [
+    {
+      "path": ".",
+      "verified_source_files": 31
+    },
+    {
+      "path": "plaza_results",
+      "verified_source_files": 33
+    }
+  ],
+  "lidar": {
+    "verified_packets": 6862,
+    "platform_packets": {
+      "Drone1": 3445,
+      "Car1": 3417
+    },
+    "verified_valid_returns": 22652848,
+    "platform_returns": {
+      "Drone1": 13123005,
+      "Car1": 9529843
+    },
+    "per_packet_transform_max_abs_difference_m": 0.0,
+    "sim_time_bounds_ns": {
+      "Drone1": [
+        2735000000,
+        150080000000
+      ],
+      "Car1": [
+        2740000000,
+        150085000000
+      ]
+    },
+    "local_queue_drops": 0,
+    "transport_loss": "Not measurable: server packets have no sequential packet ID"
+  },
+  "rgbd": {
+    "verified_frame_groups": 282,
+    "platform_frame_groups": {
+      "Drone1": 150,
+      "Car1": 132
+    },
+    "maximum_rgb_range_time_difference_ms": 0.0,
+    "integration_frames": 242,
+    "rejected_integration_frames": 12,
+    "heldout_frames": 28,
+    "note": "Saved range pixels already masked; RGB-D is selected keyframes, not all camera messages"
+  },
+  "trajectory": {
+    "Drone1": {
+      "rows": 690,
+      "sim_time_span_seconds": [
+        2.79,
+        149.975
+      ],
+      "distance_3d_m": 217.09314954622346,
+      "distance_horizontal_m": 189.59241169503255
+    },
+    "Car1": {
+      "rows": 690,
+      "sim_time_span_seconds": [
+        2.79,
+        149.975
+      ],
+      "distance_3d_m": 71.75787369822362,
+      "distance_horizontal_m": 71.73031006794082
+    }
+  },
+  "csv_rows": {
+    "actuators": 1356,
+    "collisions": 678,
+    "controls": 1356,
+    "images": 272,
+    "performance": 29,
+    "rgbd_frames": 282,
+    "scans": 6862,
+    "sensor_counts": 348,
+    "trajectories": 1380
+  },
+  "verified_jpeg_snapshots": 272,
+  "verified_structure_display_points": 2139524,
+  "original_scene_frame_byte_identical": true,
+  "not_performed": [
+    "Re-running flight",
+    "Reintegrating the TSDF mesh",
+    "Independent third-party capture attestation"
+  ],
+  "limitations": [
+    "Simulated sensors and simulator pose prior; not physical sensing or autonomous SLAM.",
+    "LiDAR files omit invalid/no-return and robot returns. Discarded returns cannot be recovered.",
+    "RGB-D depth is range-filtered, robot-masked, and discontinuity-masked before saving.",
+    "Trajectory is logged at the experiment loop, not every simulator pose callback.",
+    "AVI files are 1 fps sampled camera summaries, not continuous original capture.",
+    "Holdout depths come from this simulation run; camera pose correction still uses LiDAR from that run.",
+    "Scene overview was photographed in a separate illustrative session."
+  ]
+}

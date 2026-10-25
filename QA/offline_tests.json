@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-10-03T11:08:26.560292+00:00",
+  "python": "3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]",
+  "tests_run": 62,
+  "failures": [],
+  "errors": [],
+  "skipped": [],
+  "passed": true,
+  "extra_dependency_environment_used": true,
+  "packages": {
+    "numpy": "2.2.6",
+    "opencv-python": "5.0.0.93",
+    "matplotlib": "3.10.9",
+    "Pillow": "12.3.0",
+    "psutil": "7.2.2",
+    "open3d": "0.19.0",
+    "pupil-apriltags": "1.0.4.post11"
+  },
+  "scope": "offline algorithm/contact/evidence/geometry/portability regressions; no simulator connected"
+}

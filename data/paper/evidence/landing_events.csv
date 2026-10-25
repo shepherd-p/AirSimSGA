@@ -1,0 +1,2 @@
+sim_time_sec,event,detail
+39.4,motor_cut_after_deck_contact,"{""accepted"": true, ""object"": ""Vessel1""}"

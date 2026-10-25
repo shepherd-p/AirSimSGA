@@ -1,0 +1,23 @@
+{
+  "purpose": "Live rerun of UAV landing on a forward-moving USV with corrected water rendering and dynamic thrust response",
+  "simulation_step_sec": 0.005,
+  "wall_clock_schedule_sec": 0.04,
+  "requested_camera_interval_sec": 0.025,
+  "encoded_video_fps": 30,
+  "video_playback_speed_sim_time": 1,
+  "frame_interpolation": false,
+  "source_exposure_policy": "Unique increasing camera timestamps; hold previous exposure when needed for constant 30 fps encoding; retain frame-to-exposure index",
+  "vessel_model": "Planar surge, sway and yaw; rigid-body mass, added inertia, Coriolis terms, linear and quadratic damping; RK4 integration",
+  "vessel_control": "Positive body-forward thrust with speed feedback and drag feedforward; target 0.5 m/s",
+  "vertical_support": "Fixed near-level hull vertical anchor; moving deck contact and stopped-motor dwell checked by original success gate",
+  "water_presentation": "Separate small-ripple opaque lake surface; simulation-time displacement and normals; speed-driven visual foam; planar reflection disabled for this presentation",
+  "physical_wave_forces": false,
+  "limitations": "This run does not validate six-DOF wave-induced vessel motion, physical propeller flow, wave-buoyancy coupling or photorealistic fluid simulation",
+  "protected_inputs": "Original source, map, water master material, binaries, videos and archived data are retained; isolation hashes recorded",
+  "ports": {
+    "topics": 9189,
+    "services": 9190
+  },
+  "bow_alignment": "Body yaw-90; geometry-free hull root; fixed hull_visual child yaw180 survives root pose updates. Hull reference posture is preserved, positive surge drives world -Y away from shore, marker/support at +3m retain platform placement. Direction checked in continuous fixed-camera RGB.",
+  "evidence_storage": "All controller-consumed original encoded payloads and exposure metadata retained in lossless NPZ; all detection JSON retained; PNG previews saved once per simulation second and at phase transitions. Missing PNG previews can be reconstructed from NPZ without approximation."
+}

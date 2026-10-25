@@ -1,0 +1,58 @@
+{
+  "id": "AGBridgeTrackingCandidate",
+  "clock": {
+    "type": "steppable",
+    "step-ns": 5000000,
+    "real-time-update-rate": 5000000,
+    "pause-on-start": false
+  },
+  "home-geo-point": {
+    "latitude": 47.641468,
+    "longitude": -122.140165,
+    "altitude": 122.0
+  },
+  "segmentation": {
+    "initialize-ids": true,
+    "ignore-existing": false,
+    "use-owner-name": true
+  },
+  "scene-type": "UnrealNative",
+  "actors": [
+    {
+      "type": "robot",
+      "name": "Drone1",
+      "origin": {
+        "xyz": "-35 90 -20",
+        "rpy-deg": "0 0 0"
+      },
+      "robot-config": "robot_uav_tracking_study.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Car1",
+      "origin": {
+        "xyz": "-35 90 2.8",
+        "rpy-deg": "0 0 90"
+      },
+      "robot-config": "robot_ugv_tracking_study.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Target",
+      "origin": {
+        "xyz": "-35 98 2.8",
+        "rpy-deg": "0 0 90"
+      },
+      "robot-config": "robot_target_tracking_study.jsonc"
+    },
+    {
+      "name": "Observer",
+      "type": "robot",
+      "robot-config": "robot_observer_tracking_study.jsonc",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy-deg": "0 0 0"
+      }
+    }
+  ]
+}

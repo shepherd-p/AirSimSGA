@@ -1,0 +1,16 @@
+{
+  "source_sha256": {
+    "bellevue_scale_1.jsonc": "97d6287ab685437451736a9bd864251554fceeda29a1245a608325ddf315c46f",
+    "run_scale.py": "b1970533fa322dbcb3f42c6e7adc8c685d4151c7b077b16536c78e130cbeee3a",
+    "urban_runtime.py": "c5f4a255c471036dc02ecdad001f9e06d28d227153ead3a8c3878ca0be6c7f23",
+    "pursuit_uav.jsonc": "2f180c121696c9b13d66f050b09a59e6f5ecd2a282b5d0f2f1c307807ba18eb9",
+    "pursuit_target.jsonc": "cc620eef29ddc9158352a271621def70b008ef8ab2142cc4e67bb4802d9e0044",
+    "backend.py": "e820a2d860fa28ee9b0cfdce3c2f31d9a088c6ddbdf4656d859b3d5c556975d6",
+    "planning.py": "dcd932fa2390aa167e8e46f3ea4e892344556a63a1af66cdb030d17573971239",
+    "contact.py": "197b447847430c5b8ebc7e2b1139ca58f18c4723778cb1aab79cfac24375e65c",
+    "math3d.py": "0fd37442f7f0a727a8982e71fd5443d43162472836138b152b6af3a13637bec8",
+    "storage.py": "a70ca936b532f1e14b6030373d6f227fe5c531f9eeed8d145154c8de47081f70"
+  },
+  "mesh_sha256": "c6767da96c9cf0651a5f46c1c01f56685e2c6fd7d6f86060716a5913b17b4b0e",
+  "mesh_source": "OpenStreetMap contributors, ODbL 1.0; OSM2World 0.4.0"
+}

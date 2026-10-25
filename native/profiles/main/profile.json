@@ -1,0 +1,60 @@
+{
+  "profile": "main",
+  "base_commit": "d60706e17f182557b89f042676b2f6af4fd5ab0d",
+  "files": [
+    {
+      "path": "client/python/projectairsim/src/projectairsim/client.py",
+      "upstream_sha256": "9c28f3db5b0b97b3c37c6a7149cdc4fe8a44fa22d1c99a3766156c282de4551d",
+      "extension_sha256": "a6b9da8fa6096266d43857f2205cff76dabdab9adb855262d4683b028a0a22cc",
+      "kind": "modified"
+    },
+    {
+      "path": "client/python/projectairsim/src/projectairsim/schema/scene_config_schema.jsonc",
+      "upstream_sha256": "dc34c6151743de9fcd2fc355de14a4696b58af747ca59889b47736a97be365ad",
+      "extension_sha256": "a7d9a3a07f652a00d914b5dbcdcf7ea409b4f8c5ab4c1f174a012eb8598a3797",
+      "kind": "modified"
+    },
+    {
+      "path": "client/python/projectairsim/src/projectairsim/utils.py",
+      "upstream_sha256": "6c45463f69d808ed2f8a3b7a071acbc0e87cbe1f4606c39b05f304cd3e691ba9",
+      "extension_sha256": "4c5b802fc172b1a2947cf65447b415fd013bc54a2aaa254291042efef92e2a2a",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/include/core_sim/actor.hpp",
+      "upstream_sha256": "dd7d264199d0ea2c599892c8cc2e18e6f9cccd727df648a8506a68d2ca2e560a",
+      "extension_sha256": "fa1d2bc01fd6a0f86f4b3414c1cfa357fb81269cb6765e078c7d186eaa4230e0",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/include/core_sim/actor/vessel_actor.hpp",
+      "upstream_sha256": null,
+      "extension_sha256": "cf995c0b625fbc3b85372da07ca32589fa8087cc7530bfd36cab8edbff8fe85f",
+      "kind": "added"
+    },
+    {
+      "path": "core_sim/src/CMakeLists.txt",
+      "upstream_sha256": "e3445cd06422d06e5812588accdea8f3419b4f30dab4c25aaa622f867e7907cf",
+      "extension_sha256": "71a50827d19ab8d561079c1262f28006fc1fee0a23d0160a7076b17f4e937f0e",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/src/actor/vessel_actor.cpp",
+      "upstream_sha256": null,
+      "extension_sha256": "fb3e97fe785ffccb15f0d6176f1acd85a971a55c2866e0ccf099910ebadd3683",
+      "kind": "added"
+    },
+    {
+      "path": "core_sim/src/constant.hpp",
+      "upstream_sha256": "90181cacecfb1aa41271da6f2fa13c085ec6c55a0f95b9c629e58b2db1617f5e",
+      "extension_sha256": "4472098d9254a192124c4f79bab8b9011bfc47688057ef4a339092d215d35ce5",
+      "kind": "modified"
+    },
+    {
+      "path": "core_sim/src/scene.cpp",
+      "upstream_sha256": "3487a77f2c1762a34854317b4cb6bdb66ba42e41d3f97a2dd25e5d517971f660",
+      "extension_sha256": "bb5db3c8d0242bc263d8a9400ee7e5554c7a63a8eee93614d1c28f459c757cde",
+      "kind": "modified"
+    }
+  ]
+}

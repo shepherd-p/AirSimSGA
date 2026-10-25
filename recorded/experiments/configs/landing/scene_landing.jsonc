@@ -1,0 +1,49 @@
+{
+  "id": "AGMovingDeckEvidence",
+  "actors": [
+    {
+      "type": "robot",
+      "name": "Drone1",
+      "origin": {
+        "xyz": "33.0 40.0 -2.0",
+        "rpy-deg": "0 0 0"
+      },
+      "robot-config": "robot_uav.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Vessel1",
+      "origin": {
+        "xyz": "29.0 20.0 8.8",
+        "rpy-deg": "0 0 90"
+      },
+      "robot-config": "robot_usv.jsonc"
+    },
+    {
+      "name": "Observer",
+      "type": "robot",
+      "robot-config": "robot_observer.jsonc",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy-deg": "0 0 0"
+      }
+    }
+  ],
+  "clock": {
+    "type": "steppable",
+    "step-ns": 5000000,
+    "real-time-update-rate": 5000000,
+    "pause-on-start": true
+  },
+  "home-geo-point": {
+    "latitude": 47.641468,
+    "longitude": -122.140165,
+    "altitude": 122.0
+  },
+  "segmentation": {
+    "initialize-ids": true,
+    "ignore-existing": false,
+    "use-owner-name": true
+  },
+  "scene-type": "UnrealNative"
+}

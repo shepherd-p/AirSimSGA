@@ -1,0 +1,29 @@
+{
+  "task": "citysample_aerial_route_navigation",
+  "mode": "air_ground",
+  "scene": "generated/scene_navigation_aerial_route.jsonc",
+  "ip": "127.0.0.1",
+  "port_topics": 8989,
+  "port_services": 8990,
+  "sdk_path": "F:\\EpicGamesEnv\\ProjectAirSim\\client\\python\\projectairsim\\src",
+  "sensor_max_age_sec": 2.0,
+  "sensor_pair_tolerance_sec": 0.06,
+  "control_hz": 3.0,
+  "drone_speed_mps": 8.0,
+  "car_straight_speed_mps": 2.0,
+  "car_turn_speed_mps": 0.8,
+  "goal_tolerance_m": 4.0,
+  "max_cross_track_m": 10.0,
+  "survey_altitude_ned_m": -120.0,
+  "depth_survey_altitude_ned_m": -50.0,
+  "max_sim_seconds": 700,
+  "ambient_traffic": "disabled by -ControlledTraffic startup option",
+  "route_policy": "UGV waits while the UAV surveys three junctions; the planner records aerial visibility and uses the ground-level directed ZoneGraph route beneath any overhead occlusion",
+  "perception_scope": "High-altitude RGB and near-altitude depth classify junction visibility; the route is computed on City Sample's native road graph",
+  "ugv_contact_proxy_origin_ned_m": [
+    0,
+    0,
+    -0.45
+  ],
+  "ugv_physics_scope": "Simple-drive wheel kinematics with centered collision-isolation links; wheel-ground contact feedback is not asserted"
+}

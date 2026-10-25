@@ -1,0 +1,10 @@
+{
+  "id": "AGUrbanMarkingProbe",
+  "clock": {"type": "steppable", "step-ns": 5000000, "real-time-update-rate": 5000000, "pause-on-start": true},
+  "home-geo-point": {"latitude": 47.624, "longitude": -122.337, "altitude": 0.0},
+  "scene-type": "UnrealNative",
+  "actors": [
+    {"type": "robot", "name": "Car1", "origin": {"xyz": "-30 89.30 -2.0", "rpy-deg": "0 0 0"}, "robot-config": "../configs/robot_ugv_navigation_study.jsonc"},
+    {"type": "robot", "name": "Observer", "origin": {"xyz": "0 0 0", "rpy-deg": "0 0 0"}, "robot-config": "observer_probe.jsonc"}
+  ]
+}

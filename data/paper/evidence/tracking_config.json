@@ -1,0 +1,36 @@
+{
+  "task": "citysample_pursuit",
+  "seed": 0,
+  "scene": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\EXPERIMENT_VIDEOS_20261002\\03_citysample_tracking_take7\\scene_tracking_video.jsonc",
+  "ip": "127.0.0.1",
+  "port_topics": 8989,
+  "port_services": 8990,
+  "sdk_path": "F:\\EpicGamesEnv\\ProjectAirSim\\client\\python\\projectairsim\\src",
+  "sensor_max_age_sec": 2.0,
+  "sensor_pair_tolerance_sec": 0.06,
+  "tracking": {
+    "minimum_pixels": 25,
+    "segmentation_color_order": "bgr"
+  },
+  "control_hz": 3.0,
+  "target_speed_mps": 1.4,
+  "gate_speed_mps": 1.1,
+  "drone_speed_mps": 4.0,
+  "max_sim_seconds": 180,
+  "ambient_traffic": "disabled by -ControlledTraffic startup option",
+  "capture": {
+    "blocker_stop_range_m": 18.0,
+    "gate_observation_tolerance_m": 5.0,
+    "max_lateral_offset_m": 4.0,
+    "required_distinct_observations": 2,
+    "gate_tolerance_m": 2.5,
+    "target_to_blocker_max_m": 20.0,
+    "target_stop_speed_mps": 0.3,
+    "dwell_sec": 2.0,
+    "required_aerial_observers": 2
+  },
+  "route_policy": "Seeded exit is private to target controller; both gate vehicles receive both exits",
+  "truth_usage": "Own pose for feedback; target truth only for offline evaluation and safety interlock",
+  "evidence_views": false,
+  "recording_physics_scope": "Existing navigation center-ground-contact isolation links atNEDz=-0.45m; simple-drive kinematics; no full wheel-ground contact validation"
+}

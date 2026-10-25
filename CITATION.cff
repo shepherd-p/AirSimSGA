@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite AirSimSGA and the upstream software used."
+title: "AirSimSGA: A Unified Sea-Ground-Air Simulation Platform for Heterogeneous Unmanned Systems"
+type: software
+version: 0.1.0
+date-released: 2026-10-26
+license: MIT
+repository-code: "https://github.com/shepherd-p/AirSimSGA"
+authors:
+  - family-names: Peng
+    given-names: Fangwei
+  - family-names: Qi
+    given-names: Juntong
+  - family-names: Peng
+    given-names: Yan
+  - family-names: Wang
+    given-names: Mingming
+  - family-names: Wu
+    given-names: Chong
+abstract: "Source, native simulation extensions, cooperative experiment workflows and numerical records for sea-ground-air robotics."

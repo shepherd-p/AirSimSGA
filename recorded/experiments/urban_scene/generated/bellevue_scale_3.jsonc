@@ -1,0 +1,76 @@
+{
+  "id": "AGBellevueScale3",
+  "clock": {
+    "type": "steppable",
+    "step-ns": 5000000,
+    "real-time-update-rate": 5000000,
+    "pause-on-start": true
+  },
+  "home-geo-point": {
+    "latitude": 47.61,
+    "longitude": -122.203,
+    "altitude": 0.0
+  },
+  "segmentation": {
+    "initialize-ids": true,
+    "ignore-existing": false,
+    "use-owner-name": true
+  },
+  "scene-type": "UnrealNative",
+  "actors": [
+    {
+      "type": "robot",
+      "name": "Car1",
+      "origin": {
+        "xyz": "-87.03 -62.49 -2.0",
+        "rpy-deg": "0 0 0"
+      },
+      "robot-config": "robots/pursuit_target.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Car2",
+      "origin": {
+        "xyz": "11.6 -18.0 -2.0",
+        "rpy-deg": "0 0 -90"
+      },
+      "robot-config": "robots/pursuit_target.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Car3",
+      "origin": {
+        "xyz": "10.7 -124.9 -2.0",
+        "rpy-deg": "0 0 90"
+      },
+      "robot-config": "robots/pursuit_target.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Drone1",
+      "origin": {
+        "xyz": "-87.0 -68.0 -2.0",
+        "rpy-deg": "0 0 0"
+      },
+      "robot-config": "robots/pursuit_uav.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Drone2",
+      "origin": {
+        "xyz": "10.7 -62.3 -2.0",
+        "rpy-deg": "0 0 0"
+      },
+      "robot-config": "robots/pursuit_uav.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Drone3",
+      "origin": {
+        "xyz": "10.7 -116.0 -2.0",
+        "rpy-deg": "0 0 0"
+      },
+      "robot-config": "robots/pursuit_uav.jsonc"
+    }
+  ]
+}

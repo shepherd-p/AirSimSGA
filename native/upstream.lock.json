@@ -1,0 +1,15 @@
+{
+  "project": "ProjectAirSim",
+  "repository": "https://github.com/iamaisim/ProjectAirSim",
+  "commit": "d60706e17f182557b89f042676b2f6af4fd5ab0d",
+  "license": "MIT",
+  "native_profiles": [
+    "main",
+    "moving-deck"
+  ],
+  "runtime_versions_recorded": {
+    "Unreal": "5.2",
+    "Python": "3.10"
+  },
+  "note": "Both profiles are based on this commit. Main excludes local root-CMake mirrors/cache paths and .uproject engine association changes."
+}

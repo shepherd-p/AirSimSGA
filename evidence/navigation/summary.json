@@ -1,0 +1,423 @@
+{
+  "status": "completed",
+  "recorded_utc": "2026-10-02T14:33:18.914606+00:00",
+  "error": null,
+  "survey": [
+    {
+      "junction": {
+        "index": 1,
+        "lane_id": 88198,
+        "center_ned": [
+          -525.509921875,
+          -309.010087890625,
+          -0.5858471298217773
+        ]
+      },
+      "drone_pose_ned": [
+        -525.4374389648438,
+        -309.1062927246094,
+        -54.52542495727539
+      ],
+      "frame": {
+        "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_1.png",
+        "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_1.npz",
+        "time_ns": 50360000000,
+        "shape": [
+          540,
+          960,
+          3
+        ],
+        "payload_sha256": "1e56d66be434d35f2827d9d6b9bce07d47d45df0b66fa0ac6e4072eb86b6e9c2"
+      },
+      "near_frame": {
+        "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_1_near.png",
+        "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_1_near.npz",
+        "time_ns": 64090000000,
+        "shape": [
+          540,
+          960,
+          3
+        ],
+        "payload_sha256": "540845bdfdb4230128746cef9e9731827d8060d5444dd5802895be44ae56cdaa"
+      },
+      "depth_segmentation": {
+        "file": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_1_depth_segmentation.npz",
+        "depth_time_ns": 64090000000,
+        "segmentation_time_ns": 64090000000,
+        "pair_delta_ms": 0.0
+      },
+      "road_surface_assessment": {
+        "valid_center_fraction": 1.0,
+        "median_center_depth_m": 55.406,
+        "expected_road_depth_m": 54.10347629547119,
+        "surface_height_above_road_m": -1.3025237045288094,
+        "visibility": "road_surface_visible"
+      },
+      "sim_time_sec": 64.155
+    },
+    {
+      "junction": {
+        "index": 2,
+        "lane_id": 68441,
+        "center_ned": [
+          -561.97904296875,
+          -190.556337890625,
+          -0.5896600532531738
+        ]
+      },
+      "drone_pose_ned": [
+        -561.8342895507812,
+        -190.69039916992188,
+        -53.53891372680664
+      ],
+      "frame": {
+        "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_2.png",
+        "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_2.npz",
+        "time_ns": 99410000000,
+        "shape": [
+          540,
+          960,
+          3
+        ],
+        "payload_sha256": "67c641972b672272f4bb8bf0eb1b87263f5d2a2731e89cefaa0ee305dd172d04"
+      },
+      "near_frame": {
+        "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_2_near.png",
+        "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_2_near.npz",
+        "time_ns": 113710000000,
+        "shape": [
+          540,
+          960,
+          3
+        ],
+        "payload_sha256": "f87445a1d8928b5954bb30202dab1eb300016e9cb140ce15d1a2bb43bf659937"
+      },
+      "depth_segmentation": {
+        "file": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_2_depth_segmentation.npz",
+        "depth_time_ns": 113710000000,
+        "segmentation_time_ns": 113710000000,
+        "pair_delta_ms": 0.0
+      },
+      "road_surface_assessment": {
+        "valid_center_fraction": 1.0,
+        "median_center_depth_m": 54.281,
+        "expected_road_depth_m": 53.076782817840574,
+        "surface_height_above_road_m": -1.2042171821594252,
+        "visibility": "road_surface_visible"
+      },
+      "sim_time_sec": 114.055
+    },
+    {
+      "junction": {
+        "index": 3,
+        "lane_id": 72453,
+        "center_ned": [
+          -599.302921875,
+          -124.20076757812501,
+          -0.5856052856445312
+        ]
+      },
+      "drone_pose_ned": [
+        -599.2177734375,
+        -124.28545379638672,
+        -52.31648635864258
+      ],
+      "frame": {
+        "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_3.png",
+        "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_3.npz",
+        "time_ns": 140115000000,
+        "shape": [
+          540,
+          960,
+          3
+        ],
+        "payload_sha256": "8612509cd3c8d436ea972332f38d843b178d125f46c9b2956da0558eb5b39c0c"
+      },
+      "near_frame": {
+        "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_3_near.png",
+        "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_3_near.npz",
+        "time_ns": 154520000000,
+        "shape": [
+          540,
+          960,
+          3
+        ],
+        "payload_sha256": "6b1425d1e73489ed1bae1f16cd347944cf06ed9be747c2d84042096d3071c6e7"
+      },
+      "depth_segmentation": {
+        "file": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_3_depth_segmentation.npz",
+        "depth_time_ns": 154520000000,
+        "segmentation_time_ns": 154520000000,
+        "pair_delta_ms": 0.0
+      },
+      "road_surface_assessment": {
+        "valid_center_fraction": 1.0,
+        "median_center_depth_m": 52.656,
+        "expected_road_depth_m": 51.77347979736328,
+        "surface_height_above_road_m": -0.8825202026367194,
+        "visibility": "road_surface_visible"
+      },
+      "sim_time_sec": 154.635
+    }
+  ],
+  "junction_crossings": [
+    {
+      "junction": {
+        "index": 1,
+        "lane_id": 88198,
+        "center_ned": [
+          -525.509921875,
+          -309.010087890625,
+          -0.5858471298217773
+        ]
+      },
+      "car_pose_ned": [
+        -535.0234985351562,
+        -313.7667236328125,
+        -0.5871796011924744
+      ],
+      "frame": {
+        "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_1.png",
+        "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_1.npz",
+        "time_ns": 271235000000,
+        "shape": [
+          720,
+          1280,
+          3
+        ],
+        "payload_sha256": "a574689c8e7d1a69ccb413ccc993fac688e5982c33349d8720002983cf909f86"
+      },
+      "sim_time_sec": 271.42,
+      "car_distance_m": 158.94183821309076
+    },
+    {
+      "junction": {
+        "index": 2,
+        "lane_id": 68441,
+        "center_ned": [
+          -561.97904296875,
+          -190.556337890625,
+          -0.5896600532531738
+        ]
+      },
+      "car_pose_ned": [
+        -556.7168579101562,
+        -201.0745086669922,
+        -0.5871796011924744
+      ],
+      "frame": {
+        "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_2.png",
+        "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_2.npz",
+        "time_ns": 408335000000,
+        "shape": [
+          720,
+          1280,
+          3
+        ],
+        "payload_sha256": "1e90075effd37a5e4ad32b4ffc6ef3e5877b81fcc5a414a7660df206b0e18f73"
+      },
+      "sim_time_sec": 408.54,
+      "car_distance_m": 296.4087907600012
+    },
+    {
+      "junction": {
+        "index": 3,
+        "lane_id": 72453,
+        "center_ned": [
+          -599.302921875,
+          -124.20076757812501,
+          -0.5856052856445312
+        ]
+      },
+      "car_pose_ned": [
+        -590.9803466796875,
+        -132.66290283203125,
+        -0.5871796011924744
+      ],
+      "frame": {
+        "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_3.png",
+        "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_3.npz",
+        "time_ns": 471635000000,
+        "shape": [
+          720,
+          1280,
+          3
+        ],
+        "payload_sha256": "dc908de70f4fff994ff1d1ca59a8e05843ed5f864076626a650fb56723278b79"
+      },
+      "sim_time_sec": 471.8,
+      "car_distance_m": 372.9216066206772
+    }
+  ],
+  "committed_lanes": [
+    79595,
+    88198,
+    83018,
+    89692,
+    68441,
+    84312,
+    72453,
+    84251
+  ],
+  "first_car_pose_ned": [
+    -677.185302734375,
+    -384.8478698730469,
+    -0.5871796011924744
+  ],
+  "last_car_pose_ned": [
+    -677.3985595703125,
+    -170.99099731445312,
+    -0.5871796011924744
+  ],
+  "car_distance_m": 478.47334777094466,
+  "max_cross_track_m": 2.601691971482413,
+  "max_observed_step_speed_mps": 2.962153796969408,
+  "collision_events": [],
+  "captures": [
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\street_start.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\street_start.npz",
+      "time_ns": 7695000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "49c9130ef2853ef058fbd66e40483b9d7883d2238ce467eccfae43fb2a5cb02c"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\scene_start.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\scene_start.npz",
+      "time_ns": 7695000000,
+      "shape": [
+        720,
+        1280,
+        3
+      ],
+      "payload_sha256": "156a5307ffe08969c225cf12bab98fabc1b4036e5172f37aa4a2b2f490309324"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_1.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_1.npz",
+      "time_ns": 50360000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "1e56d66be434d35f2827d9d6b9bce07d47d45df0b66fa0ac6e4072eb86b6e9c2"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_1_near.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_1_near.npz",
+      "time_ns": 64090000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "540845bdfdb4230128746cef9e9731827d8060d5444dd5802895be44ae56cdaa"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_2.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_2.npz",
+      "time_ns": 99410000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "67c641972b672272f4bb8bf0eb1b87263f5d2a2731e89cefaa0ee305dd172d04"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_2_near.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_2_near.npz",
+      "time_ns": 113710000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "f87445a1d8928b5954bb30202dab1eb300016e9cb140ce15d1a2bb43bf659937"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_3.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_3.npz",
+      "time_ns": 140115000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "8612509cd3c8d436ea972332f38d843b178d125f46c9b2956da0558eb5b39c0c"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_3_near.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\aerial_junction_3_near.npz",
+      "time_ns": 154520000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "6b1425d1e73489ed1bae1f16cd347944cf06ed9be747c2d84042096d3071c6e7"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_1.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_1.npz",
+      "time_ns": 271235000000,
+      "shape": [
+        720,
+        1280,
+        3
+      ],
+      "payload_sha256": "a574689c8e7d1a69ccb413ccc993fac688e5982c33349d8720002983cf909f86"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_2.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_2.npz",
+      "time_ns": 408335000000,
+      "shape": [
+        720,
+        1280,
+        3
+      ],
+      "payload_sha256": "1e90075effd37a5e4ad32b4ffc6ef3e5877b81fcc5a414a7660df206b0e18f73"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_3.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\ugv_junction_3.npz",
+      "time_ns": 471635000000,
+      "shape": [
+        720,
+        1280,
+        3
+      ],
+      "payload_sha256": "dc908de70f4fff994ff1d1ca59a8e05843ed5f864076626a650fb56723278b79"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\street_end.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\street_end.npz",
+      "time_ns": 584915000000,
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "payload_sha256": "53c11fc931941275dc36ca3d3047512c1a402642e88b29eed20122ac8b61b218"
+    },
+    {
+      "png": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\scene_capture.png",
+      "payload": "F:\\EpicGamesEnv\\ProjectAirSim_AG_Experiments\\outputs\\citysample_aerial_route_navigation\\20261002_222236_038213_air_ground\\scene_capture.npz",
+      "time_ns": 586355000000,
+      "shape": [
+        720,
+        1280,
+        3
+      ],
+      "payload_sha256": "28325c359b6a0b81b28154083dddd8f402081c4f6f4734fb6e98c846b135450d"
+    }
+  ],
+  "wall_duration_sec": 642.7029999999977,
+  "cleanup_errors": []
+}

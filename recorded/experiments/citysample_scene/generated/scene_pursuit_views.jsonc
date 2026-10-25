@@ -1,0 +1,76 @@
+{
+  "id": "AGCitySamplePursuitViews",
+  "clock": {
+    "type": "steppable",
+    "step-ns": 5000000,
+    "real-time-update-rate": 5000000,
+    "pause-on-start": true
+  },
+  "home-geo-point": {
+    "latitude": 0,
+    "longitude": 0,
+    "altitude": 0
+  },
+  "segmentation": {
+    "initialize-ids": true,
+    "ignore-existing": false,
+    "use-owner-name": true
+  },
+  "scene-type": "UnrealNative",
+  "actors": [
+    {
+      "type": "robot",
+      "name": "Target",
+      "origin": {
+        "xyz": "-998.9713 -1052.1409 -2.0",
+        "rpy-deg": "0 0 -44.9412"
+      },
+      "robot-config": "../configs/robot_ugv_navigation_study.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "GateLeft",
+      "origin": {
+        "xyz": "-935.2663 -1115.7151 -2.0",
+        "rpy-deg": "0 0 -44.9412"
+      },
+      "robot-config": "../urban_scene/robots/pursuit_interceptor.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "GateRight",
+      "origin": {
+        "xyz": "-933.7828 -1112.3511 -2.0",
+        "rpy-deg": "0 0 15.7865"
+      },
+      "robot-config": "generated/pursuit_tracker_ugv.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Drone1",
+      "origin": {
+        "xyz": "-1007.4653 -1043.6643 -2.0",
+        "rpy-deg": "0 0 -44.9412"
+      },
+      "robot-config": "../urban_scene/robots/pursuit_uav.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Drone2",
+      "origin": {
+        "xyz": "-955.0857 -1095.9365 -2.0",
+        "rpy-deg": "0 0 -44.9412"
+      },
+      "robot-config": "../urban_scene/robots/pursuit_uav.jsonc"
+    },
+    {
+      "type": "robot",
+      "name": "Observer",
+      "origin": {
+        "xyz": "0.0000 0.0000 -2.0",
+        "rpy-deg": "0 0 0.0000"
+      },
+      "robot-config": "../urban_scene/observer_probe.jsonc"
+    }
+  ]
+}

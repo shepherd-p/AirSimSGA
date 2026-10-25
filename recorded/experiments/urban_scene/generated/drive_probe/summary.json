@@ -1,0 +1,35 @@
+{
+  "status": "timeout",
+  "scene_id": "AGUrbanDriveProbe",
+  "source_glb_sha256": "9a5e5dbf1348b3b26676fa3ead26562c693bd9dcd004739950ce0ebda7ba46bb",
+  "road_report_sha256": "ba42a0bdcf748e4d68056867a8703e2e2ea5f94fc8ebd8b65910d44551b3e90f",
+  "mesh_actor": "AGUrbanMesh",
+  "initial_pose_ned": [
+    -59.19999694824219,
+    -62.0,
+    -0.000997264520265162
+  ],
+  "last_pose_ned": [
+    -8.052061080932617,
+    -58.82879638671875,
+    -0.000997437397018075
+  ],
+  "goal_points_ned": [
+    [
+      -22.576511467253006,
+      -61.65637939925192
+    ],
+    [
+      -11.832773629544205,
+      -61.546021848755
+    ],
+    [
+      -11.809999496651056,
+      -51.504850814611736
+    ]
+  ],
+  "samples": 433,
+  "collision_messages": 50877,
+  "obstacle_collisions": 0,
+  "sim_duration_sec": 99.22500000000001
+}

@@ -1,0 +1,38 @@
+{
+  "method": "LiDAR-anchored robust RGB-D pose refinement + scalable TSDF + observed zero-crossing extraction",
+  "pose_source": "simulator pose prior refined per-frame against independent LiDAR; not autonomous SLAM",
+  "quality_status": "passed",
+  "voxel_m": 0.1,
+  "sdf_trunc_m": 0.4,
+  "integration_frames": 242,
+  "rejected_pose_frames": 12,
+  "refined_poses": 224,
+  "platform_frames": {
+    "Car1": 115,
+    "Drone1": 127
+  },
+  "integrated_valid_pixels": 43616953,
+  "mesh_vertices": 1892341,
+  "mesh_triangles": 3598410,
+  "removed_tiny_triangles": 138320,
+  "evaluation": {
+    "heldout_frames": 28,
+    "heldout_used_frames": 28,
+    "heldout_rejected_frames": 0,
+    "rays": 81246,
+    "surface_hit_fraction": 0.9932058193634148,
+    "absolute_range_error_median_m": 0.02813100814819336,
+    "absolute_range_error_p90_m": 0.10671565681695938,
+    "range_rmse_m": 0.9737078547477722
+  },
+  "capture_run": "20260928_000727_997657",
+  "limitation": "Only observed surfaces; underside/occluded regions remain incomplete. No texture atlas or pose SLAM.",
+  "lidar_surface_support": {
+    "maximum_vertex_distance_m": 0.35,
+    "vertices_before": 2551831,
+    "triangles_before": 4928924,
+    "rejected_triangles": 1330514,
+    "unsupported_vertex_fraction": 0.2573328719652673,
+    "reason": "Reject RGB-D frustum/occlusion surfaces without independent LiDAR support; leave gaps, never fill them"
+  }
+}
